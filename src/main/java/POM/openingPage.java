@@ -26,6 +26,11 @@ public class openingPage extends ActionsClass{
 	@AndroidFindBy(id="io.beldex.bchat:id/TermsandCondtionsTxt")
 	private WebElement linkTermsAndConditions;
 	
+	@AndroidFindBy(id="com.android.permissioncontroller:id/permission_allow_button")
+	private WebElement buttonAllow;
+
+	@AndroidFindBy(id="com.android.permissioncontroller:id/permission_deny_button")
+	private WebElement buttonDeny;
 	
 	public void clickCreateAccount() {
 		super.click(buttonCreateAccount);
@@ -39,5 +44,11 @@ public class openingPage extends ActionsClass{
 		super.click(linkTermsAndConditions);
 	}
 	
+	public void clickAllow() {
+		super.click(buttonAllow);
+	}
 	
+	public void clickDeny() {
+		super.click(buttonDeny);
+	}
 }

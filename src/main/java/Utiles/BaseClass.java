@@ -26,9 +26,10 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 
-
+import POM.openingPage;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -45,8 +46,7 @@ public class BaseClass  {
 	public AndroidDriver driver;
 	
 	public AppiumDriverLocalService service ;
-	
-	
+	 
 	@BeforeClass
 	public void openApp() throws MalformedURLException {
 //		  service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//itsup//AppData//Roaming//npm//node_modules//appium//build//lib//main.js")).withIPAddress("127.0.0.1").usingPort(4723)
@@ -59,56 +59,45 @@ public class BaseClass  {
 		    
 			 UiAutomator2Options options = new UiAutomator2Options();
 			 //DesiredCapabilities cap = new DesiredCapabilities();
-			 options.setCapability("deviceName", "one plus nord ce 3");		 
-			 options.setCapability("udid", "d6a08b3e");
-			 options.setCapability("platformName","Android");
-			 options.setCapability("platformVersion","13");
-	         
-			 options.setCapability("appPackage", "io.beldex.wallet");
-			 options.setCapability("appActivity", "io.beldex.wallet.MainActivity");
+			 //options.setCapability("deviceName", "one plus nord ce 3");		 
+			 //options.setCapability("udid", "d6a08b3e");
+			 //options.setCapability("platformName","Android");
+			 //options.setCapability("platformVersion","13");
+             //options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-armeabi-v7a.apk");
+			
+				
+			 
+			// options.setCapability("app","C:\\Users\\itsup\\Downloads\\screensecuritydisabled (1).apk");
+			 //URL remoteUrl = new URL("http://localhost:4723/wd/hub");
+			 options.setCapability("appPackage", "io.beldex.bchat");
+			 options.setCapability("appActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity");
 			 options.setCapability("ignoreHiddenApiPolicyError" , true);
 		
-			 //options.setDeviceName("device");
-			 //options.setApp(System.getProperty("user.dir")+"\\Resources\\beldex-official-wallet-mainnet-apk-04-12-2023.apk");
+			 options.setDeviceName("device");
+		
 			
-			
+			 //driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 			 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
-	
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
-		  
+		     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
+
+		    // driver.findElement(By.id("android:id/button1")).click();
+			 //driver.findElement(MobileBy.id("com.android.permissioncontroller:id/permission_deny_button")).click();     
+           
 	}
-	
-	//@SuppressWarnings("deprecation")
-	//Comment --> adb shell dumpsys window | find "mCurrentFocus"
-	//Activity(AppPackage,AppAcitvity)
-	
 //	@BeforeMethod
-//	public void setup() throws InterruptedException {
+//public void preSetup() {
 //		
-//		/**((JavascriptExecutor) driver).executeScript("mobile: startActivity", ImmutableMap.of("intent",
-//                "com.androidsample.generalstore/com.androidsample.generalstore.MainActivity"));
-//       */
-//		//Activity activity =new Activity("com.androidsample.generalstore", "com.androidsample.generalstore.SplashActivity");
-//    	Activity activity =new Activity("io.beldex.wallet", "io.beldex.wallet.MainActivity");
-//		String Appactivity= activity.getAppActivity();
-//	//	String Apppackage=activity.getAppPackage();
-//		//System.out.println(Appactivity);
-//		//System.out.println(Apppackage);
-//		
-//		driver.startActivity(activity);
-//	    
-//		//WebElement pin=driver.findElement(AppiumBy.accessibilityId("Enter PIN"));
-//		
-//		//if(pin.isDisplayed()) {
-//		//for (int i=0;i<4;i++) {
-//			//driver.findElement(AppiumBy.accessibilityId("1")).click();
-//		//}
-//		//}
-//
+//		 
 //	
-//}
-
-
+//		// options.setCapability("appPackage", "com.google.android.permissioncontroller");
+//		 //options.setCapability("appActivity", "com.android.permissioncontroller.permission.ui.GrantPermissionsActivity");
+//		 driver.findElement(By.id("android:id/button1")).click();
+//		 openingPage openingpage = new openingPage(driver);
+//			openingpage.clickAllow();
+//			//com.google.android.permissioncontroller
+//	}
+	
+	
 
 	
 	

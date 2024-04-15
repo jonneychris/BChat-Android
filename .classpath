@@ -38,5 +38,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="/appium"/>
 	<classpathentry kind="src" path="/GenralStoreApk"/>
+	<classpathentry kind="src" path="/officialWallet"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
