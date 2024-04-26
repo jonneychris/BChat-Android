@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-25T13:21:26Z" name="Suite" finished-at="2024-04-25T13:22:34Z" duration-ms="67357">
+  <suite started-at="2024-04-26T12:58:13Z" name="Suite" finished-at="2024-04-26T12:59:09Z" duration-ms="55494">
     <groups>
     </groups>
-    <test started-at="2024-04-25T13:21:26Z" name="Test" finished-at="2024-04-25T13:22:34Z" duration-ms="67357">
-      <class name="Bchat.TestScenarios.Landing_Screen_And_Functionality">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:21:26Z" name="openApp" finished-at="2024-04-25T13:21:51Z" duration-ms="24631" status="PASS">
+    <test started-at="2024-04-26T12:58:13Z" name="Test" finished-at="2024-04-26T12:59:09Z" duration-ms="55494">
+      <class name="Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:58:13Z" name="openApp" finished-at="2024-04-26T12:58:38Z" duration-ms="24592" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="TC_3_Validate_whether_functions_and_buttons_is_Clickable()[pri:0, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:21:51Z" name="TC_3_Validate_whether_functions_and_buttons_is_Clickable" finished-at="2024-04-25T13:21:52Z" duration-ms="442" status="PASS">
+        <test-method signature="TC_47_To_Validate_whether_displaying_same_Name_entered_in_the_display_name_text_box()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:58:38Z" name="TC_47_To_Validate_whether_displaying_same_Name_entered_in_the_display_name_text_box" finished-at="2024-04-26T12:58:45Z" duration-ms="7168" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_3_Validate_whether_functions_and_buttons_is_Clickable -->
-        <test-method signature="TC_8_To_Validate_whether_able_to_navigate_out_And_Open_the_App_Again()[pri:1, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:21:52Z" name="TC_8_To_Validate_whether_able_to_navigate_out_And_Open_the_App_Again" finished-at="2024-04-25T13:21:56Z" duration-ms="4272" status="PASS">
+        </test-method> <!-- TC_47_To_Validate_whether_displaying_same_Name_entered_in_the_display_name_text_box -->
+        <test-method signature="TC_48_To_Validate_Whether_able_to_navigate_to_previous_screen()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:58:45Z" name="TC_48_To_Validate_Whether_able_to_navigate_to_previous_screen" finished-at="2024-04-26T12:58:48Z" duration-ms="2820" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_8_To_Validate_whether_able_to_navigate_out_And_Open_the_App_Again -->
-        <test-method signature="TC_4_To_Validate_the_navigation_to_Create_Account_screen_both_forward_and_backward_direction()[pri:2, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:21:56Z" name="TC_4_To_Validate_the_navigation_to_Create_Account_screen_both_forward_and_backward_direction" finished-at="2024-04-25T13:22:02Z" duration-ms="5818" status="PASS">
+        </test-method> <!-- TC_48_To_Validate_Whether_able_to_navigate_to_previous_screen -->
+        <test-method signature="TC_49_To_Validate_whether_ID_And_Address_are_change_while_navigating_back_and_navigate_into_register_screen()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:58:48Z" name="TC_49_To_Validate_whether_ID_And_Address_are_change_while_navigating_back_and_navigate_into_register_screen" finished-at="2024-04-26T12:58:56Z" duration-ms="8131" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_4_To_Validate_the_navigation_to_Create_Account_screen_both_forward_and_backward_direction -->
-        <test-method signature="TC_5_To_Validate_the_navigation_to_SignIn_screen_both_forward_and_backward_direction()[pri:3, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:22:02Z" name="TC_5_To_Validate_the_navigation_to_SignIn_screen_both_forward_and_backward_direction" finished-at="2024-04-25T13:22:18Z" duration-ms="16675" status="PASS">
+        </test-method> <!-- TC_49_To_Validate_whether_ID_And_Address_are_change_while_navigating_back_and_navigate_into_register_screen -->
+        <test-method signature="TC_50_To_Validate_whether_able_to_copy_ID_and_Address()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:58:56Z" name="TC_50_To_Validate_whether_able_to_copy_ID_and_Address" finished-at="2024-04-26T12:59:01Z" duration-ms="4777" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_5_To_Validate_the_navigation_to_SignIn_screen_both_forward_and_backward_direction -->
-        <test-method signature="TC_6_To_Validate_the_navigation_to_Terms_And_Conditions_screen_both_forward_and_backward_direction()[pri:4, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:22:18Z" name="TC_6_To_Validate_the_navigation_to_Terms_And_Conditions_screen_both_forward_and_backward_direction" finished-at="2024-04-25T13:22:32Z" duration-ms="13524" status="PASS">
+        </test-method> <!-- TC_50_To_Validate_whether_able_to_copy_ID_and_Address -->
+        <test-method signature="TC_52_To_Validate_whether_ID_and_Address_were_Clickable_And_Editable()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:59:01Z" name="TC_52_To_Validate_whether_ID_and_Address_were_Clickable_And_Editable" finished-at="2024-04-26T12:59:01Z" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_6_To_Validate_the_navigation_to_Terms_And_Conditions_screen_both_forward_and_backward_direction -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.Landing_Screen_And_Functionality@6c8bca63]" started-at="2024-04-25T13:22:32Z" name="closeApp" finished-at="2024-04-25T13:22:34Z" duration-ms="1968" status="PASS">
+        </test-method> <!-- TC_52_To_Validate_whether_ID_and_Address_were_Clickable_And_Editable -->
+        <test-method signature="TC_53_To_Validate_the_working_of_next_Button()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:59:01Z" name="TC_53_To_Validate_the_working_of_next_Button" finished-at="2024-04-26T12:59:07Z" duration-ms="5504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_53_To_Validate_the_working_of_next_Button -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality@2364305a]" started-at="2024-04-26T12:59:07Z" name="closeApp" finished-at="2024-04-26T12:59:09Z" duration-ms="2038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- Bchat.TestScenarios.Landing_Screen_And_Functionality -->
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

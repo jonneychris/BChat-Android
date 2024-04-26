@@ -53,9 +53,9 @@ public class baseClass  {
 	
 	@BeforeClass
 	public void openApp() throws InterruptedException, IOException {
-		  service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//itsup//AppData//Roaming//npm//node_modules//appium//build//lib//main.js")).withIPAddress("127.0.0.1").usingPort(4723)
-	  .build();
-		 service.start();
+//		  service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//itsup//AppData//Roaming//npm//node_modules//appium//build//lib//main.js")).withIPAddress("127.0.0.1").usingPort(4723)
+//	  .build();
+//		 service.start();
 		    
 		 //   String path = System.getProperty("user.dir")+"\\reports\\index.html";
 		 
@@ -128,7 +128,7 @@ public class baseClass  {
 		
 		driver.quit();
 		
-		service.stop();
+		//service.stop();
  }
 	
 public List<HashMap<String ,String>> getjsonFile(String filepath) throws IOException {

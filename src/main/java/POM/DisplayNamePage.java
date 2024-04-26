@@ -31,7 +31,8 @@ public class DisplayNamePage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.EditText[@hint='Enter a display name']")
 	private WebElement elementPlacholder;
 	
-	
+	//loader id
+	//android:id/body
 	
 	public void setDisplayName(String displayname) {
 		txtboxDisplayName.click();

@@ -1,22 +1,32 @@
 package Bchat.TestScenarios;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
-
+import POM.CreatePasswordPage;
+import POM.DisplayNamePage;
+import POM.RegisterPage;
 import Utiles.baseClass;
-import POM.openingPage;
+
 
 public class demo extends baseClass{
 
-	@Test
+	DisplayNamePage d;
+	RegisterPage r;
+	CreatePasswordPage c;
+	@BeforeTest
 	public void openapplandingpage() throws InterruptedException {
 		// driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_button")).click();
-		openingPage openingpage = new openingPage(driver);
-		driver.navigate().back();
-		openingpage.openApp();
-		Thread.sleep(5000);
+		
+	landingpage.clickCreateAccount();
+	d = new DisplayNamePage(driver);
+	d.setDisplayName("Chris");
+	d.clickContinue();
+	Thread.sleep(2000);
+	r= new RegisterPage(driver);
+	r.clickNext();
+	
 	}
 	
 	

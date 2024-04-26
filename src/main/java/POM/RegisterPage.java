@@ -73,4 +73,12 @@ public class RegisterPage extends ActionsClass{
 	public boolean isBeldexAddressClickable() {
         return isClickable(textBeldexAddress);
     }
+	
+	public boolean isBChatIdLongClickable() {
+        return super.isLongClickable(textBChatID);
+    }
+	public boolean isBeldexAddressLongClickable() {
+        return isLongClickable(textBeldexAddress);
+    }
+	
 }

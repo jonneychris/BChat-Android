@@ -24,5 +24,13 @@ public class RecoveryPhrasePage extends ActionsClass{
 	@AndroidFindBy(id="io.beldex.bchat:id/registerButton")
 	private WebElement btnCotinue;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/title_name")
+	public WebElement textPageTitle;
+	
+	
+	public String pageTitle() {
+		String PageTitle = textPageTitle.getText();
+		return PageTitle;
+	}
 	
 }

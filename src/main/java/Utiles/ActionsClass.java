@@ -107,6 +107,10 @@ public abstract class ActionsClass {
         return Element.getAttribute("clickable").equals("true");
     }
 	
+	public boolean isLongClickable(WebElement Element) {
+        return Element.getAttribute("long-clickable").equals("true");
+    }
+	
 	
 	
 //	public CreateNewWallet1 Send_keys(String vasu) {
