@@ -16,64 +16,81 @@ public class CreatePasswordPage extends ActionsClass{
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 	}
-	
+	//Locator of Enter Password textbox field
 	@AndroidFindBy(id="io.beldex.bchat:id/enterPinEditTxt")
 	private WebElement txtBoxEnterPassword;
 	
+	//Locator of Re-Enter Password textbox field
 	@AndroidFindBy(id="io.beldex.bchat:id/reEnterPinEditTxt")
 	private WebElement txtBoxReEnterPassword;
 	
+	//Locator of keypad button 0
 	@AndroidFindBy(id="io.beldex.bchat:id/button_0")
 	private WebElement btn_0;
 	
+	//Locator of keypad button 1
 	@AndroidFindBy(id="io.beldex.bchat:id/button_1")
 	private WebElement btn_1;
 	
+	//Locator of keypad button 2
 	@AndroidFindBy(id="io.beldex.bchat:id/button_2")
 	private WebElement btn_2;
 	
+	//Locator of keypad button 3
 	@AndroidFindBy(id="io.beldex.bchat:id/button_3")
 	private WebElement btn_3;
 	
+	//Locator of keypad button 4
 	@AndroidFindBy(id="io.beldex.bchat:id/button_4")
 	private WebElement btn_4;
 	
+	//Locator of keypad button 5
 	@AndroidFindBy(id="io.beldex.bchat:id/button_5")
 	private WebElement btn_5;
 	
+	//Locator of keypad button 6
 	@AndroidFindBy(id="io.beldex.bchat:id/button_6")
 	private WebElement btn_6;
 	
+	//Locator of keypad button 7
 	@AndroidFindBy(id="io.beldex.bchat:id/button_7")
 	private WebElement btn_7;
 	
+	//Locator of keypad button 8
 	@AndroidFindBy(id="io.beldex.bchat:id/button_8")
 	private WebElement btn_8;
 	
+	//Locator of keypad button 9
 	@AndroidFindBy(id="io.beldex.bchat:id/button_9")
 	private WebElement btn_9;
 	
+	//Locator of keypad button delete(x)
 	@AndroidFindBy(id="io.beldex.bchat:id/button_delete")
 	private WebElement btndelete;
 	
+	//Locator of keypad button enter
 	@AndroidFindBy(id="io.beldex.bchat:id/button_enter")
 	private WebElement btnEnter;
 	
+	//Locator of icon show password
 	@AndroidFindBy(xpath="(//android.widget.ImageButton[@content-desc=\"Show password\"])[1]")
 	private WebElement btnShowPassword;
 
+	//Locator of icon show reenter password
 	@AndroidFindBy(xpath="(//android.widget.ImageButton[@content-desc=\"Show password\"])[2]")
 	private WebElement btnShowReEnteredPassword;
 	
+	//Locator of icon tick
 	@AndroidFindBy(id="io.beldex.bchat:id/buttonNew_enter")
 	private WebElement btnTick;
 	
 	
-	
+	//Method to click tick icon
 	public void clickTick() {
 		super.click(btnTick);
 	}
 
+	//Method to set password 0 
 	public void setPassword(int number) {
 		 
 		super.click(btn_0);

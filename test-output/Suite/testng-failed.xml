@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utiles.Listerners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Bchat.TestScenarios.Create_Account_Flow_Functionalities">
+        <methods>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+          <include name="TC_To_Validate_DisplayName_With_Valid_And_Invalid_Datas" invocation-numbers="5"/>
+        </methods>
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Functionalities -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

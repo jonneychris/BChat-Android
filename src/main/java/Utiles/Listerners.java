@@ -17,7 +17,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 
-public class Listerners extends BaseClass  implements ITestListener  {
+public class Listerners extends baseClass  implements ITestListener  {
 
 		
 	

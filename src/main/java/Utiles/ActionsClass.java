@@ -39,8 +39,8 @@ public abstract class ActionsClass {
 	}
 
 	
-	public void scrollgesture(String country) {
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+country+"\"));")).click();;	
+	public void scrollgesture(String point) {
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+point+"\"));")).click();;	
 	}
  
 	public void click(WebElement button) {
@@ -74,8 +74,11 @@ public abstract class ActionsClass {
 				"duration",10000));
 		}
 	
-	public void paste(String text) {
+	public void Copy_And_Paste_Values(String text,WebElement Element) {
 		driver.setClipboardText(text);
+		
+	 Element.sendKeys(driver.getClipboardText());
+		
 	}
 
 	public void swipeUp(){
@@ -99,6 +102,11 @@ public abstract class ActionsClass {
 		actions.moveToElement(element).sendKeys(string).perform();
 		driver.hideKeyboard();
 	}
+	
+	public boolean isClickable(WebElement Element) {
+        return Element.getAttribute("clickable").equals("true");
+    }
+	
 	
 	
 //	public CreateNewWallet1 Send_keys(String vasu) {

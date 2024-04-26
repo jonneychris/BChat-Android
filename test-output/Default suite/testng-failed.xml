@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.demo">
+      <class name="Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities">
         <methods>
-          <include name="openapplandingpage"/>
           <include name="openApp"/>
+          <include name="TC_To_Validate_DisplayName_With_Valid_And_Invalid_Datas" invocation-numbers="4 5 6 7 8"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.demo -->
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

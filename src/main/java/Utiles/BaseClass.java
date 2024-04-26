@@ -1,7 +1,6 @@
 package Utiles;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
@@ -26,7 +25,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 
-import POM.openingPage;
+import POM.LandingPage;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -40,73 +40,95 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 
 
-public class BaseClass  {
+public class baseClass  {
 
 
 	public AndroidDriver driver;
 	
 	public AppiumDriverLocalService service ;
-	 
+	
+	   
+	  public LandingPage landingpage;
+	
+	
 	@BeforeClass
-	public void openApp() throws MalformedURLException {
-//		  service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//itsup//AppData//Roaming//npm//node_modules//appium//build//lib//main.js")).withIPAddress("127.0.0.1").usingPort(4723)
-//	  .build();
-//		 service.start();
+	public void openApp() throws InterruptedException, IOException {
+		  service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//itsup//AppData//Roaming//npm//node_modules//appium//build//lib//main.js")).withIPAddress("127.0.0.1").usingPort(4723)
+	  .build();
+		 service.start();
 		    
 		 //   String path = System.getProperty("user.dir")+"\\reports\\index.html";
 		 
 		 //cap.setBrowserName(System.getProperty("user.dir")+"//Resources//General-Store.apk");
-		    
-			 UiAutomator2Options options = new UiAutomator2Options();
-			 //DesiredCapabilities cap = new DesiredCapabilities();
-			 //options.setCapability("deviceName", "one plus nord ce 3");		 
-			 //options.setCapability("udid", "d6a08b3e");
-			 //options.setCapability("platformName","Android");
-			 //options.setCapability("platformVersion","13");
-             //options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-armeabi-v7a.apk");
+		try {
+			UiAutomator2Options options = new UiAutomator2Options();
 			
+			options.setCapability("automationName", "UiAutomator2");	
+			 options.setCapability("deviceName", "one plus nord ce 3");		 
+			 options.setCapability("platformName","Android");
+			 options.setCapability("platformVersion","13");
+			 options.setCapability("udid", "d6a08b3e");
+			// options.setCapability(MobileCapabilityType.NO_RESET, "true");
+			// options.setCapability("noReset", "true");
+			 options.setCapability("ignoreHiddenApiPolicyError", true);
+			 options.setCapability("appium:fullReset",true);
+			 options.setCapability("autoGrantPermissions", true);
+			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-arm64-v8a-16-04-2024.apk");
+			
+		  	 options.setCapability("appPackage", "io.beldex.bchat");	
+			 //For To wait until the landing screen activity comes 
+			 options.setCapability("appWaitActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity"); 
+			 //options.setCapability("autoLaunch", true);
 				
 			 
-			// options.setCapability("app","C:\\Users\\itsup\\Downloads\\screensecuritydisabled (1).apk");
-			 //URL remoteUrl = new URL("http://localhost:4723/wd/hub");
-			 options.setCapability("appPackage", "io.beldex.bchat");
-			 options.setCapability("appActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity");
-			 options.setCapability("ignoreHiddenApiPolicyError" , true);
-		
-			 options.setDeviceName("device");
-		
-			
-			 //driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 			 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
-		     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
-
-		    // driver.findElement(By.id("android:id/button1")).click();
-			 //driver.findElement(MobileBy.id("com.android.permissioncontroller:id/permission_deny_button")).click();     
-           
+				 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				  landingpage =new LandingPage(driver);	
+				  
+		}
+				 
+		catch(Exception E) {
+			try {
+				UiAutomator2Options options = new UiAutomator2Options();
+				
+				options.setCapability("automationName", "UiAutomator2");	
+				 options.setCapability("deviceName", "one plus nord ce 3");		 
+				 options.setCapability("platformName","Android");
+				 options.setCapability("platformVersion","13");
+				 options.setCapability("udid", "d6a08b3e");
+				// options.setCapability(MobileCapabilityType.NO_RESET, "true");
+				// options.setCapability("noReset", "true");
+				 options.setCapability("ignoreHiddenApiPolicyError", true);
+				 options.setCapability("appium:fullReset",true);
+				 options.setCapability("autoGrantPermissions", true);
+				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-arm64-v8a-16-04-2024.apk");
+				
+			  	 options.setCapability("appPackage", "io.beldex.bchat");	
+				 //For To wait until the landing screen activity comes 
+				 options.setCapability("appWaitActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity"); 
+				 //options.setCapability("autoLaunch", true);
+					
+				 
+				 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
+					 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+					  landingpage =new LandingPage(driver);	
+					  
+			}
+			catch(Exception E1) {
+				E1.printStackTrace();
+			}		    
+		}
+		
 	}
-//	@BeforeMethod
-//public void preSetup() {
-//		
-//		 
-//	
-//		// options.setCapability("appPackage", "com.google.android.permissioncontroller");
-//		 //options.setCapability("appActivity", "com.android.permissioncontroller.permission.ui.GrantPermissionsActivity");
-//		 driver.findElement(By.id("android:id/button1")).click();
-//		 openingPage openingpage = new openingPage(driver);
-//			openingpage.clickAllow();
-//			//com.google.android.permissioncontroller
-//	}
-	
-	
-
 	
 	
 	@AfterClass
  public void closeApp() {
 		
+		
 		driver.quit();
 		
-		//service.stop();
+		service.stop();
  }
 	
 public List<HashMap<String ,String>> getjsonFile(String filepath) throws IOException {
@@ -124,7 +146,7 @@ public List<HashMap<String ,String>> getjsonFile(String filepath) throws IOExcep
 	}
 
 public String Toast() {
-	//driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+	
 	String toastmsg =driver.findElement(By.xpath("//android.widget.Toast")).getAttribute("name");
 	return toastmsg;
 	
