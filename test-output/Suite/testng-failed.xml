@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Create_Account_Flow_Functionalities">
+      <class name="Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities">
         <methods>
           <include name="openApp"/>
+          <include name="TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable"/>
           <include name="closeApp"/>
-          <include name="TC_To_Validate_DisplayName_With_Valid_And_Invalid_Datas" invocation-numbers="5"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

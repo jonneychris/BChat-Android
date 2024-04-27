@@ -2,6 +2,7 @@ package POM;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import Utiles.ActionsClass;
 import io.appium.java_client.android.AndroidDriver;
@@ -143,6 +144,8 @@ public class CreatePasswordPage extends ActionsClass{
 		btnEnter.click();
 	}
 	
+	
+	
 	public String textErrorMsg() {
 		String errorMsg= textErrorMsg.getText();
 		return errorMsg;
@@ -178,7 +181,7 @@ public class CreatePasswordPage extends ActionsClass{
 	}
 	
 	/*
-	 method to set invalid passord
+	 method to set invalid password
 	 */
 	public void setInValidPassword() {
 		txtBoxEnterPassword.click();
@@ -193,11 +196,6 @@ public class CreatePasswordPage extends ActionsClass{
 		
 	}
 	
-	public void setReEnterPassword(int number) {
-		 txtBoxReEnterPassword.click();
-		 
-		
-	}
 	
 	
 	public String checkEnterPaswordPlaceholder() {
@@ -217,7 +215,7 @@ public class CreatePasswordPage extends ActionsClass{
 		for(int i=0;i<4;i++) {
 			btn_Enter_0.click();
 		}
-		btnEnter.click();
+		
 		btnTick.click();
 	}
 		public void setPassword_In_ReEnter_Field_Only() {
@@ -234,7 +232,7 @@ public class CreatePasswordPage extends ActionsClass{
 				btn_Enter_2.click();
 			}
 			btnEnter.click();
-			txtBoxReEnterPassword.click();
+			//txtBoxReEnterPassword.
 			for(int i=0;i<3;i++) {
 	           btn_ReEnter_3.click();			
 			}
@@ -242,25 +240,91 @@ public class CreatePasswordPage extends ActionsClass{
 			
 		}
    
-		public void setPassword_with_below_boundary_values_In_Enter_password_field() {
+		public void setPassword_with_below_boundary_values(String Enter_TextBox_Name) {
+			
+			if(Enter_TextBox_Name.equalsIgnoreCase("EnterPasswordfield")) {
 			txtBoxEnterPassword.click();
 			btn_Enter_0.click();
 			btn_Enter_1.click();
-			btn_Enter_2.click();
-			
+			btn_Enter_2.click();			
 			btnEnter.click();
 			btnTick.click();
+			}
+			else {
+				txtBoxReEnterPassword.click();
+				btn_ReEnter_3.click();
+				btn_ReEnter_4.click();
+				btn_ReEnter_2.click();
+				btnTick.click();
+			}
 			
 		}
+		
 
-		public void setPassword_with_below_boundary_values_In_ReEnter_password_field() {
+		public void setPassword_0(String Enter_textBox_Name) {
+			if(Enter_textBox_Name.equalsIgnoreCase("EnterPasswordfield")) {
 			txtBoxEnterPassword.click();
-			btn_ReEnter_3.click();
-			btn_ReEnter_4.click();
-			btn_ReEnter_2.click();
-			btnTick.click();
-			
+			for(int i=0;i<3;i++) {
+			btn_Enter_0.click();
+		}
+			}
+			else {
+				txtBoxReEnterPassword.click();
+				for(int i=0;i<3;i++) {
+				btn_ReEnter_0.click();
+			}
+			}
+		}
+			public void setPassword_1_In_Enter_field(String Enter_TextBox_Name) {
+				if(Enter_TextBox_Name.equalsIgnoreCase("EnterPasswordfield")) {
+					txtBoxEnterPassword.click();
+					for(int i=0;i<3;i++) {
+					btn_Enter_1.click();
+				}
+					}
+					else if(Enter_TextBox_Name.equalsIgnoreCase("ReEnterPasswordfield")){
+						txtBoxReEnterPassword.click();
+						for(int i=0;i<3;i++) {
+						btn_ReEnter_1.click();
+					}
+					}
+				}
+					
 		}
 
+		public String textbox_Enter_field_Value() {
+			String value= txtBoxEnterPassword.getText();
+			return value;
+		}
+		
+		public String textbox_ReEnter_field_Value() {
+			String value= txtBoxReEnterPassword.getText();
+			return value;
+		}
+		
+		
+		
+     public void delete_Values(String Enter_textBox_Name) {
+    	if(Enter_textBox_Name.equalsIgnoreCase("EnterPasswordfield")) {
+    	 for(int i=0;i<3;i++) {
+    		 btn_Enter_delete.click();
+    	 }
+    	 }
+    	else if(Enter_textBox_Name.equalsIgnoreCase("ReEnterPasswordfield")){
+    		 for(int i=0;i<3;i++) {
+        		 btn_ReEnter_delete.click();
+        	 }
+    	}
+}
 
+     public void Paste_Values_In_Enter_Field(String text){
+    	super.Copy_And_Paste_Values(text, txtBoxEnterPassword);
+ 		
+ 	}
+   
+     public void Paste_Values_In_ReEnter_Field(String text){
+     	super.Copy_And_Paste_Values(text, txtBoxReEnterPassword);
+  		
+  	}
+     
 }

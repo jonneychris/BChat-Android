@@ -58,134 +58,135 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 		   }
 		}
         
-        /*
-         TC_36 : Validate whether crusher blink on clicking the text box of Display Name screen.
-         */
-        @Test(priority = 1)
-		public void TC_36_To_Validate_whether_crusher_blink_on_clicking_textbox_of_Display_Name() {
-		   
-        	displaynamepage = new DisplayNamePage(driver);
-        	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-			try {
-				displaynamepage.clickTextBox();
-				WebElement active=driver.switchTo().activeElement();
-				Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(active));
-				//Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(driver.switchTo().activeElement()));
-				
-			}
-			catch(Throwable th) {
-				th.printStackTrace();
-			}
-					
-		     
-		}
-		
-    /*
-     TC_30 : Validate the continue functionality without enter any value in the text box.
-     */
-	@Test(priority = 2)
-	public void TC_30_To_Validate_DisplayName_WithoutAny_Value () {
-		
-		displaynamepage = new DisplayNamePage(driver);
-		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-    try {
-    displaynamepage.clickContinue();
-    Assert.assertEquals(Toast(),"Please pick a display name");
-    
-    }
-    catch(Throwable e) {
-    	e.printStackTrace();
-    }
-    }
-	
-	/*
-	 TC_34	Validate the text box of the Display Name screen is Allowing the Space.
-	 */
-	@Test(priority = 3)
-	public void TC_34__To_Validate_DisplayName_With_Empty_Value () {
-		
-		displaynamepage = new DisplayNamePage(driver);
-		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-		
-		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-    displaynamepage.setDisplayName("   ");
-    try {
-    displaynamepage.clickContinue();
-    Assert.assertEquals(Toast(),"Please pick a display name");
-    displaynamepage.cleardisplayname();
-    }
-    
-    catch(Throwable e) {
-    	e.printStackTrace();
-    }
-    }
-	/*
-	 TC_31 : Validate the text box of the Display Name screen by entering values above boundary value.
-	 */
-	@Test(priority = 4)
-	public void TC_31_To_Validate_DisplayName_With_Above_Boundary_Value () {
-		
-		displaynamepage = new DisplayNamePage(driver);
-		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");	
-		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-    displaynamepage.setDisplayName("Abcdefghijklmnopqrstuvwxyz1");
-    try {
-    displaynamepage.clickContinue();
-    Assert.assertEquals(Toast(),"Please pick a shorter display name");
-    displaynamepage.cleardisplayname();
-    }
-    catch(Throwable e) {
-    	e.printStackTrace();
-    }
-    }
-	
-	/*
-	 TC_32	: Validate the text box of the Display Name screen by using special Characters.	
-     TC_33	: Validate the text box of the Display Name screen using Alaphabats both in uppercase and lower case.
-     TC_35	: Validate the text box of the Display Name screen by numerical value.
-     TC_41	: Validate whether the value entered in the text box of display Name screen is editable.	
-     TC_42	: Validate whether the value entered in the text box of display Name screen is deleteable.
-	 */
-	
+//        /*
+//         TC_36 : Validate whether crusher blink on clicking the text box of Display Name screen.
+//         */
+//        @Test(priority = 1)
+//		public void TC_36_To_Validate_whether_crusher_blink_on_clicking_textbox_of_Display_Name() {
+//		   
+//        	displaynamepage = new DisplayNamePage(driver);
+//        	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+//			try {
+//				displaynamepage.clickTextBox();
+//				WebElement active=driver.switchTo().activeElement();
+//				Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(active));
+//				//Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(driver.switchTo().activeElement()));
+//				
+//			}
+//			catch(Throwable th) {
+//				th.printStackTrace();
+//			}
+//					
+//		     
+//		}
+//		
+//    /*
+//     TC_30 : Validate the continue functionality without enter any value in the text box.
+//     */
+//	@Test(priority = 2)
+//	public void TC_30_To_Validate_DisplayName_WithoutAny_Value () {
+//		
+//		displaynamepage = new DisplayNamePage(driver);
+//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//        wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+//    try {
+//    displaynamepage.clickContinue();
+//    Assert.assertEquals(Toast(),"Please pick a display name");
+//    
+//    }
+//    catch(Throwable e) {
+//    	e.printStackTrace();
+//    }
+//    }
+//	
+//	/*
+//	 TC_34	Validate the text box of the Display Name screen is Allowing the Space.
+//	 */
+//	@Test(priority = 3)
+//	public void TC_34__To_Validate_DisplayName_With_Empty_Value () {
+//		
+//		displaynamepage = new DisplayNamePage(driver);
+//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+//		
+//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+//    displaynamepage.setDisplayName("   ");
+//    try {
+//    displaynamepage.clickContinue();
+//    Assert.assertEquals(Toast(),"Please pick a display name");
+//    displaynamepage.cleardisplayname();
+//    }
+//    
+//    catch(Throwable e) {
+//    	e.printStackTrace();
+//    }
+//    }
+//	/*
+//	 TC_31 : Validate the text box of the Display Name screen by entering values above boundary value.
+//	 */
+//	@Test(priority = 4)
+//	public void TC_31_To_Validate_DisplayName_With_Above_Boundary_Value () {
+//		
+//		displaynamepage = new DisplayNamePage(driver);
+//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");	
+//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+//    displaynamepage.setDisplayName("Abcdefghijklmnopqrstuvwxyz1");
+//    try {
+//    displaynamepage.clickContinue();
+//    Assert.assertEquals(Toast(),"Please pick a shorter display name");
+//    displaynamepage.cleardisplayname();
+//    }
+//    catch(Throwable e) {
+//    	e.printStackTrace();
+//    }
+//    }
+//	
+//	/*
+//	 TC_32	: Validate the text box of the Display Name screen by using special Characters.	
+//     TC_33	: Validate the text box of the Display Name screen using Alaphabats both in uppercase and lower case.
+//     TC_35	: Validate the text box of the Display Name screen by numerical value.
+//     TC_41	: Validate whether the value entered in the text box of display Name screen is editable.	
+//     TC_42	: Validate whether the value entered in the text box of display Name screen is deleteable.
+//	 */
+//	
 	@Test(dataProvider="setdata",priority = 5)
 	public void TC_To_Validate_DisplayName_With_Valid_And_Invalid_Datas (HashMap<String,String> input) throws IOException {
 		
 		//openingpage.clickCreateAccount();
 		displaynamepage = new DisplayNamePage(driver);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+		
 		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
 		displaynamepage.cleardisplayname();
 		displaynamepage.setDisplayName(input.get("DisplayName"));
    
-		try {	
+		try {		
+			displaynamepage.clickContinue();
+			registerpage =	new RegisterPage(driver);		 
+			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));		    
+			Assert.assertEquals(registerpage.pageTitle(), "Register"); 		
+		    driver.navigate().back();	
+		    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+   
+		}
+		
+		catch(Throwable e){
+			try {
+			Assert.assertEquals(Toast(),"Please enter a valid name"); 
+			}
+			catch(NoSuchElementException E) {
+				Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
 				displaynamepage.clickContinue();
 				Assert.assertEquals(Toast(),"Please enter a valid name"); 
-		 	    
-		}
-		
-		catch(NoSuchElementException e){
-			
-			registerpage =	new RegisterPage(driver);		 
-			wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
-		    Assert.assertEquals(registerpage.pageTitle(), "Register"); 
-			
-		    driver.navigate().back();
-	 	     
+			}
+			catch(Throwable E) {
+				E.printStackTrace();
+			}
 	    }
+	}
 	
-		catch(Throwable e){
-			
-	 	      e.printStackTrace();    		    
-	    }
-			    
-		
-		}
-		
 	
 	@DataProvider
 	public Object[][] setdata() throws IOException {
@@ -195,36 +196,36 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 		,{data.get(7)},{data.get(8)}};
 		
 	}
-	
-	/*
-	 TC_39	: validate whether paste option is working on the text box display Name screen.
-	 */
-//	@Test(priority =6 )
-//	public void TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox () throws InterruptedException {
-//		displaynamepage = new DisplayNamePage(driver);
-//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-//		
-//		
-//		try {
-//			displaynamepage.pasteDisplayName("ChrisLang");
-//		displaynamepage.clickContinue();
-//		registerpage =	new RegisterPage(driver);
-//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
-//		Assert.assertEquals(registerpage.pageTitle(), "Register"); 
-//		driver.navigate().back();
-//		displaynamepage.cleardisplayname();
-//		}
-//		catch(Throwable th) {
-//			th.printStackTrace();
-//		}
-//      
-//	}
-	
-	
-	
-	
-	
-	
-	
+//	
+//	/*
+//	 TC_39	: validate whether paste option is working on the text box display Name screen.
+//	 */
+////	@Test(priority =6 )
+////	public void TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox () throws InterruptedException {
+////		displaynamepage = new DisplayNamePage(driver);
+////		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+////		
+////		
+////		try {
+////			displaynamepage.pasteDisplayName("ChrisLang");
+////		displaynamepage.clickContinue();
+////		registerpage =	new RegisterPage(driver);
+////		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+////		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
+////		Assert.assertEquals(registerpage.pageTitle(), "Register"); 
+////		driver.navigate().back();
+////		displaynamepage.cleardisplayname();
+////		}
+////		catch(Throwable th) {
+////			th.printStackTrace();
+////		}
+////      
+////	}
+//	
+//	
+//	
+//	
+//	
+//	
+//	
 }

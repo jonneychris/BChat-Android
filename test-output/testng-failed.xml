@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utiles.Listerners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_60_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_ReEnter_password"/>
+          <include name="TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable"/>
           <include name="closeApp"/>
         </methods>
       </class> <!-- Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

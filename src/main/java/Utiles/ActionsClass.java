@@ -75,9 +75,9 @@ public abstract class ActionsClass {
 		}
 	
 	public void Copy_And_Paste_Values(String text,WebElement Element) {
-		driver.setClipboardText(text);
 		
-	 Element.sendKeys(driver.getClipboardText());
+		driver.setClipboardText(text);
+     	 Element.sendKeys(driver.getClipboardText());
 		
 	}
 
