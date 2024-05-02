@@ -9,8 +9,10 @@
       <class name="Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable"/>
+          <include name="TC_69_To_Validate_Working_of_Paste_Option_With_different_InValid_values"/>
+          <include name="TC_69_1_To_Validate_Working_of_Paste_Option_With_different_InValid_values"/>
           <include name="closeApp"/>
+          <include name="TC_68_To_Validate_Working_of_Paste_Option_With_different_InValid_values"/>
         </methods>
       </class> <!-- Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities -->
     </classes>

@@ -18,13 +18,14 @@ public class CreatePasswordPage extends ActionsClass{
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 	}
+	
 	//Locator of Enter Password textbox field
 	@AndroidFindBy(id="io.beldex.bchat:id/enterPinEditTxt")
-	private WebElement txtBoxEnterPassword;
+	public WebElement txtBoxEnterPassword;
 	
 	//Locator of Re-Enter Password textbox field
 	@AndroidFindBy(id="io.beldex.bchat:id/reEnterPinEditTxt")
-	private WebElement txtBoxReEnterPassword;
+	public WebElement txtBoxReEnterPassword;
 	
 	
 	//Locator of keypad button 0
@@ -239,6 +240,24 @@ public class CreatePasswordPage extends ActionsClass{
 			btnTick.click();
 			
 		}
+		public void setPassword_with_above_boundary_values_In_both_fields(String textBoxName) {
+			if(textBoxName.equalsIgnoreCase("EnterPasswordField"))
+			{
+			txtBoxEnterPassword.click();
+			for(int i=0;i<6;i++) {
+				btn_Enter_2.click();
+			}
+			}
+			else if(textBoxName.equalsIgnoreCase("ReEnterPasswordField")) {
+			txtBoxReEnterPassword.click();
+			//txtBoxReEnterPassword.
+			for(int i=0;i<6;i++) {
+	           btn_ReEnter_3.click();			
+			}
+			}
+			
+			
+		}
    
 		public void setPassword_with_below_boundary_values(String Enter_TextBox_Name) {
 			
@@ -290,12 +309,13 @@ public class CreatePasswordPage extends ActionsClass{
 					}
 				}
 					
-		}
+		
 
 		public String textbox_Enter_field_Value() {
 			String value= txtBoxEnterPassword.getText();
 			return value;
 		}
+		
 		
 		public String textbox_ReEnter_field_Value() {
 			String value= txtBoxReEnterPassword.getText();
@@ -326,5 +346,27 @@ public class CreatePasswordPage extends ActionsClass{
      	super.Copy_And_Paste_Values(text, txtBoxReEnterPassword);
   		
   	}
+    
+     public void clickPassword() {
+    	 txtBoxEnterPassword.click();
+     }
      
+     public void clickReEnterPassword() {
+    	 txtBoxReEnterPassword.click();
+     }
+     
+     public boolean isPasswordCopyable() {
+    	return super.isLongClickable(txtBoxEnterPassword);
+    	
+     }
+     
+     public boolean isReEnterPasswordCopyable() {
+    	return super.isLongClickable(txtBoxReEnterPassword);
+    	
+     }
+     
+     public void clickEyeIcon() {
+    btnShowPassword.click();
+    btnShowReEnteredPassword.click();
+     }
 }

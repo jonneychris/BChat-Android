@@ -6,8 +6,10 @@
       <class name="Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable"/>
+          <include name="TC_66_Validate_the_Create_password_by_entering_values_above_boundary_value_And_Is_able_To_copy"/>
           <include name="closeApp"/>
+          <include name="TC_72_Validate_whether_crusher_blink_on_clicking_the_Create_password"/>
+          <include name="TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities -->
     </classes>
