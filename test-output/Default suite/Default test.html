@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/6</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 02 19:01:39 IST 2024</td>
+<td>Started on:</td><td>Fri May 03 18:23:49 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>371 seconds (371182 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24395 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_66_Validate_the_Create_password_by_entering_values_above_boundary_value_And_Is_able_To_copy()'><b>TC_66_Validate_the_Create_password_by_entering_values_above_boundary_value_And_Is_able_To_copy</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td><div><pre>java.lang.AssertionError: expected [Create Password] but found [Recovery Phrase]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_66_Validate_the_Create_password_by_entering_values_above_boundary_value_And_Is_able_To_copy(CreatePasswrod_Screen_And_its_Functionalities.java:347)
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.presetup()'><b>presetup</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>org.openqa.selenium.UnsupportedCommandException: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9a49776f-4a6f-498b-ae9a-36d714e25c2e, close {}]
+Capabilities {appium:app: C:\Users\itsup\eclipse-work..., appium:appPackage: io.beldex.bchat, appium:appWaitActivity: com.thoughtcrimes.securesms..., appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\itsup\eclipse-work..., appPackage: io.beldex.bchat, appWaitActivity: com.thoughtcrimes.securesms..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: one plus nord ce 3, fullReset: true, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 13, udid: d6a08b3e}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: d6a08b3e, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: d6a08b3e, appium:fullReset: true, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: d6a08b3e, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9a49776f-4a6f-498b-ae9a-36d714e25c2e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:409)
+	at Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.presetup(Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,87 +123,29 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1963167586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1963167586'><pre>java.lang.AssertionError: expected [Create Password] but found [Recovery Phrase]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_66_Validate_the_Create_password_by_entering_values_above_boundary_value_And_Is_able_To_copy(CreatePasswrod_Screen_And_its_Functionalities.java:347)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_72_Validate_whether_crusher_blink_on_clicking_the_Create_password()'><b>TC_72_Validate_whether_crusher_blink_on_clicking_the_Create_password</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td><div><pre>java.lang.AssertionError: expected [Create Password] but found [Recovery Phrase]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_72_Validate_whether_crusher_blink_on_clicking_the_Create_password(CreatePasswrod_Screen_And_its_Functionalities.java:324)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace757500380", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace757500380'><pre>java.lang.AssertionError: expected [Create Password] but found [Recovery Phrase]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_72_Validate_whether_crusher_blink_on_clicking_the_Create_password(CreatePasswrod_Screen_And_its_Functionalities.java:324)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1954761469", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1954761469'><pre>org.openqa.selenium.UnsupportedCommandException: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9a49776f-4a6f-498b-ae9a-36d714e25c2e, close {}]
+Capabilities {appium:app: C:\Users\itsup\eclipse-work..., appium:appPackage: io.beldex.bchat, appium:appWaitActivity: com.thoughtcrimes.securesms..., appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\itsup\eclipse-work..., appPackage: io.beldex.bchat, appWaitActivity: com.thoughtcrimes.securesms..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: one plus nord ce 3, fullReset: true, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 13, udid: d6a08b3e}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: d6a08b3e, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: d6a08b3e, appium:fullReset: true, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: d6a08b3e, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 9a49776f-4a6f-498b-ae9a-36d714e25c2e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:409)
+	at Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.presetup(Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -217,268 +173,279 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values()'><b>TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities<br>Parameters: {ReEnterPassword=abcd, EnterPassword=abcd}</td>
-<td><div><pre>java.lang.AssertionError: Not able to Paste values other than numbers expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values(CreatePasswrod_Screen_And_its_Functionalities.java:251)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2098390105", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2098390105'><pre>java.lang.AssertionError: Not able to Paste values other than numbers expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values(CreatePasswrod_Screen_And_its_Functionalities.java:251)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>15</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values()'><b>TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities<br>Parameters: {ReEnterPassword=@#$%, EnterPassword=@#$%}</td>
-<td><div><pre>java.lang.AssertionError: Not able to Paste values other than numbers expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values(CreatePasswrod_Screen_And_its_Functionalities.java:251)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1732188153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1732188153'><pre>java.lang.AssertionError: Not able to Paste values other than numbers expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values(CreatePasswrod_Screen_And_its_Functionalities.java:251)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>21</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values()'><b>TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities<br>Parameters: {ReEnterPassword=ABCD, EnterPassword=ABCD}</td>
-<td><div><pre>java.lang.AssertionError: Not able to Paste values other than numbers expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values(CreatePasswrod_Screen_And_its_Functionalities.java:251)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1721416540", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1721416540'><pre>java.lang.AssertionError: Not able to Paste values other than numbers expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values(CreatePasswrod_Screen_And_its_Functionalities.java:251)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>23</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td>Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_57_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field()'><b>TC_57_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>19</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen()'><b>TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen()[pri:3, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1456006896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1456006896'><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen()[pri:3, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_58_To_Validate_with_Valid_value_in_both_enter_password_field_and_in_ReEnter_password_field()'><b>TC_58_To_Validate_with_Valid_value_in_both_enter_password_field_and_in_ReEnter_password_field</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>43</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed()'><b>TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed()[pri:2, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace877898962", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace877898962'><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed()[pri:2, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_60_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_ReEnter_password()'><b>TC_60_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_ReEnter_password</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>3</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed()'><b>TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed()[pri:6, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace397416108", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace397416108'><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed()[pri:6, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_61_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_with_a_value_in_ReEnter_password()'><b>TC_61_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_with_a_value_in_ReEnter_password</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>17</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen()'><b>TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen()[pri:1, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1825228532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1825228532'><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen()[pri:1, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_62_To_Validate_the_next_function_with_value_only_In_ReEnter_password_Field()'><b>TC_62_To_Validate_the_next_function_with_value_only_In_ReEnter_password_Field</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>27</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed()'><b>TC_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed()[pri:5, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1583082378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1583082378'><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed()[pri:5, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_65_To_Validate_the_Pin_number_fields_by_entering_values_below_boundary_value_In_both_Fields()'><b>TC_65_To_Validate_the_Pin_number_fields_by_entering_values_below_boundary_value_In_both_Fields</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>34</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_66_To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field()'><b>TC_66_To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>43</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_71_To_Validate_Create_password_by_pasting_numerical_value()'><b>TC_71_To_Validate_Create_password_by_pasting_numerical_value</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>15</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_73_To_Validate_the_presence_of_placeholder_in_the_Create_password_Fields()'><b>TC_73_To_Validate_the_presence_of_placeholder_in_the_Create_password_Fields</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>1</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable()'><b>TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>55</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities.preSetup()'><b>preSetup</b><br>Test class: Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities</td>
-<td></td>
-<td>9</td>
-<td>Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities@6bffbc6d</td></tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed()'><b>TC_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities</td>
+<td><div><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed()[pri:4, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1487540468", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1487540468'><pre>java.lang.Throwable: Method Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities.TC_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed()[pri:4, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@3d3e5463] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
 </table><p>
 </body>
 </html>

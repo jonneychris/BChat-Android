@@ -6,15 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities">
+      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_69_To_Validate_Working_of_Paste_Option_With_different_InValid_values"/>
-          <include name="TC_69_1_To_Validate_Working_of_Paste_Option_With_different_InValid_values"/>
+          <include name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen"/>
           <include name="closeApp"/>
-          <include name="TC_68_To_Validate_Working_of_Paste_Option_With_different_InValid_values"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

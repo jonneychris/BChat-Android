@@ -3,15 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities">
+      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
         <methods>
+          <include name="TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed"/>
+          <include name="TC_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed"/>
           <include name="openApp"/>
-          <include name="TC_66_Validate_the_Create_password_by_entering_values_above_boundary_value_And_Is_able_To_copy"/>
+          <include name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen"/>
+          <include name="TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen"/>
+          <include name="TC_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed"/>
+          <include name="presetup"/>
           <include name="closeApp"/>
-          <include name="TC_72_Validate_whether_crusher_blink_on_clicking_the_Create_password"/>
-          <include name="TC_To_Validate_Working_of_Paste_Option_With_different_InValid_values" invocation-numbers="0 1 2"/>
+          <include name="TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.CreatePasswrod_Screen_And_its_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

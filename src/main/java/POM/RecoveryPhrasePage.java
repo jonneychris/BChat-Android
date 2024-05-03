@@ -33,4 +33,15 @@ public class RecoveryPhrasePage extends ActionsClass{
 		return PageTitle;
 	}
 	
+	public void ClickContinue() {
+		btnCotinue.click();
+	}
+	
+	public void clickCopyIcon() {
+		btnCopyIcon.click();
+	}
+	
+	
+	
+	
 }
