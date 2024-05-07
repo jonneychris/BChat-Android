@@ -47,16 +47,14 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
   
         @Test(priority = 0)
 		public void TC_37_To_Validate_presence_of_placeholder_in_Display_Name_Textbox() {
-		   try {
+		   
         	landingpage.clickCreateAccount();
-		   }
-		   catch(Exception E) {
         	displaynamepage = new DisplayNamePage(driver);
         	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-			
-				Assert.assertEquals(displaynamepage.NameTextBoxPlachoder(),"Enter a display name");
-		   }
-		}
+			Assert.assertEquals(displaynamepage.NameTextBoxPlachoder(),"Enter a display name");
+		   
+        }
+		
         
 //        /*
 //         TC_36 : Validate whether crusher blink on clicking the text box of Display Name screen.

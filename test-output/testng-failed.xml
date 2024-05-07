@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="Utiles.Listerners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
+      <class name="Bchat.TestScenarios.SignIn_Flow_seed__Screen">
         <methods>
           <include name="openApp"/>
-          <include name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen"/>
+          <include name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" invocation-numbers="0 3"/>
           <include name="closeApp"/>
+          <include name="Validate_the_working_of_next_option_by_pasting_25_blank_space_value"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed__Screen -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -51,5 +51,8 @@ public class RestoreFromSeedPage extends ActionsClass{
 		return PageTitle;
 	}
 	
+	public WebElement BlockheightTextBox () {
+        return txtboxBlockheight;
+	}
 	
 }

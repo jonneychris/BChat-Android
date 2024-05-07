@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
+      <class name="Bchat.TestScenarios.SignIn_Flow_seed__Screen">
         <methods>
           <include name="openApp"/>
-          <include name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen"/>
+          <include name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" invocation-numbers="3 5"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed__Screen -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

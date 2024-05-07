@@ -1,41 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-03T13:14:15Z" name="Suite" finished-at="2024-05-03T13:15:09Z" duration-ms="54816">
+  <suite started-at="2024-05-07T13:49:06Z" name="Suite" finished-at="2024-05-07T13:51:56Z" duration-ms="169926">
     <groups>
     </groups>
-    <test started-at="2024-05-03T13:14:15Z" name="Test" finished-at="2024-05-03T13:15:09Z" duration-ms="54816">
-      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:14:15Z" name="openApp" finished-at="2024-05-03T13:14:38Z" duration-ms="23354" status="PASS">
+    <test started-at="2024-05-07T13:49:06Z" name="Test" finished-at="2024-05-07T13:51:56Z" duration-ms="169926">
+      <class name="Bchat.TestScenarios.SignIn_Flow_seed__Screen">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:06Z" name="openApp" finished-at="2024-05-07T13:49:31Z" duration-ms="25534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="presetup()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:14:38Z" name="presetup" finished-at="2024-05-03T13:14:55Z" duration-ms="16934" status="PASS">
+        <test-method signature="TC_90_1_To_Validate_Whether_Able_to_Navigate_Previous_screen()[pri:0, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:31Z" name="TC_90_1_To_Validate_Whether_Able_to_Navigate_Previous_screen" finished-at="2024-05-07T13:49:38Z" duration-ms="6495" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- presetup -->
-        <test-method signature="TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen()[pri:1, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:14:55Z" name="TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen" finished-at="2024-05-03T13:15:00Z" duration-ms="4730" status="PASS">
+        </test-method> <!-- TC_90_1_To_Validate_Whether_Able_to_Navigate_Previous_screen -->
+        <test-method signature="TC_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box()[pri:1, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:38Z" name="TC_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box" finished-at="2024-05-07T13:49:39Z" duration-ms="1295" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen -->
-        <test-method signature="TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed()[pri:2, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:15:00Z" name="TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed" finished-at="2024-05-03T13:15:01Z" duration-ms="1354" status="PASS">
+        </test-method> <!-- TC_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box -->
+        <test-method signature="TC_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box()[pri:2, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:39Z" name="TC_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box" finished-at="2024-05-07T13:49:41Z" duration-ms="1823" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed -->
-        <test-method signature="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen()[pri:3, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:15:01Z" name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen" finished-at="2024-05-03T13:15:05Z" duration-ms="4147" status="PASS">
+        </test-method> <!-- TC_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box -->
+        <test-method signature="TC_92_To_Validate_the_working_of_the_next_option_without_entering_seed()[pri:3, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:41Z" name="TC_92_To_Validate_the_working_of_the_next_option_without_entering_seed" finished-at="2024-05-07T13:49:44Z" duration-ms="2871" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen -->
-        <test-method signature="TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed()[pri:6, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:15:05Z" name="TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed" finished-at="2024-05-03T13:15:08Z" duration-ms="2353" status="PASS">
+        </test-method> <!-- TC_92_To_Validate_the_working_of_the_next_option_without_entering_seed -->
+        <test-method signature="TC_89_To_Validate_whether_able_to_paste_the_copied_seed()[pri:5, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:44Z" name="TC_89_To_Validate_whether_able_to_paste_the_copied_seed" finished-at="2024-05-07T13:49:47Z" duration-ms="3105" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities@292d1c71]" started-at="2024-05-03T13:15:08Z" name="closeApp" finished-at="2024-05-03T13:15:09Z" duration-ms="1912" status="PASS">
+        </test-method> <!-- TC_89_To_Validate_whether_able_to_paste_the_copied_seed -->
+        <test-method signature="TC_90_To_Validate_whether_able_to_clear_the_entered_seed()[pri:6, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:47Z" name="TC_90_To_Validate_whether_able_to_clear_the_entered_seed" finished-at="2024-05-07T13:49:48Z" duration-ms="1183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_90_To_Validate_whether_able_to_clear_the_entered_seed -->
+        <test-method signature="TC_To_Validate_the_text_box_of_the_restore_from_screen_by_entering_values_below_boundary_value()[pri:7, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:48Z" name="TC_To_Validate_the_text_box_of_the_restore_from_screen_by_entering_values_below_boundary_value" finished-at="2024-05-07T13:49:55Z" duration-ms="7086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_To_Validate_the_text_box_of_the_restore_from_screen_by_entering_values_below_boundary_value -->
+        <test-method signature="TC_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_values_above_boundary_value()[pri:8, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:55Z" name="TC_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_values_above_boundary_value" finished-at="2024-05-07T13:49:59Z" duration-ms="4143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_values_above_boundary_value -->
+        <test-method signature="TC_91_To_Validate_whether_able_to_type_a_seed()[pri:9, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:49:59Z" name="TC_91_To_Validate_whether_able_to_type_a_seed" finished-at="2024-05-07T13:50:03Z" duration-ms="4054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_91_To_Validate_whether_able_to_type_a_seed -->
+        <test-method signature="TC_95_To_Validate_Whether_Entered_seed_is_editable()[pri:10, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:50:03Z" name="TC_95_To_Validate_Whether_Entered_seed_is_editable" finished-at="2024-05-07T13:50:12Z" duration-ms="9086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_95_To_Validate_Whether_Entered_seed_is_editable -->
+        <test-method signature="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed(java.util.HashMap)[pri:11, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:50:13Z" name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" data-provider="setdata" finished-at="2024-05-07T13:50:26Z" duration-ms="13829" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Seed=1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed -->
+        <test-method signature="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed(java.util.HashMap)[pri:11, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:50:26Z" name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" data-provider="setdata" finished-at="2024-05-07T13:50:49Z" duration-ms="22262" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Seed=a b c d e f g h i j k l m n o p q r s t u v w x y}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed -->
+        <test-method signature="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed(java.util.HashMap)[pri:11, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:50:49Z" name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" data-provider="setdata" finished-at="2024-05-07T13:50:59Z" duration-ms="10137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Seed=! @ # $ % ^ & * ( ) ! @ # $ % ^ & * ( ) ! @ # $ %}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed -->
+        <test-method signature="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed(java.util.HashMap)[pri:11, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:50:59Z" name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" data-provider="setdata" finished-at="2024-05-07T13:51:28Z" duration-ms="29312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Seed=cement hello toilet venomous buffet junk duration tanks village ankle lazy joining candy peculiar mayor biscuit almost unquoted vessel slackens jaunt loudly vipers voice venomous }]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed -->
+        <test-method signature="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed(java.util.HashMap)[pri:11, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:51:28Z" name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" data-provider="setdata" finished-at="2024-05-07T13:51:33Z" duration-ms="4476" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Seed=cement hello hi chris buffet junk duration tanks village ankle lazy joining candy peculiar mayor biscuit almost unquoted vessel slackens jaunt loudly vipers voice venomous }]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed -->
+        <test-method signature="Validate_the_working_of_next_option_by_pasting_25_blank_space_value()[pri:12, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:51:33Z" name="Validate_the_working_of_next_option_by_pasting_25_blank_space_value" finished-at="2024-05-07T13:51:45Z" duration-ms="12307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_the_working_of_next_option_by_pasting_25_blank_space_value -->
+        <test-method signature="TC_94_To_Validate_the_working_of_the_next_option_by_entering_Valid_seed()[pri:13, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:51:45Z" name="TC_94_To_Validate_the_working_of_the_next_option_by_entering_Valid_seed" finished-at="2024-05-07T13:51:54Z" duration-ms="8827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_94_To_Validate_the_working_of_the_next_option_by_entering_Valid_seed -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.SignIn_Flow_seed__Screen@6ca0256d]" started-at="2024-05-07T13:51:54Z" name="closeApp" finished-at="2024-05-07T13:51:56Z" duration-ms="1841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed__Screen -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

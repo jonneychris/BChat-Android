@@ -111,8 +111,13 @@ public abstract class ActionsClass {
         return Element.getAttribute("long-clickable").equals("true");
     }
 	
+	public WebElement activeElement() {
+		 return driver.switchTo().activeElement();
+	}
+public void clearClipboard() {
+	driver.getClipboardText();
 	
-	
+	}
 //	public CreateNewWallet1 Send_keys(String vasu) {
 //		Actions ac=new Actions(driver);
 //		ac.sendKeys(vasu).perform();

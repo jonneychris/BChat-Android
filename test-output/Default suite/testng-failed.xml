@@ -3,19 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
+      <class name="Bchat.TestScenarios.SignIn_Flow_seed__Screen">
         <methods>
-          <include name="TC_84_1_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed"/>
-          <include name="TC_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed"/>
           <include name="openApp"/>
-          <include name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen"/>
-          <include name="TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen"/>
-          <include name="TC_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed"/>
-          <include name="presetup"/>
+          <include name="TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" invocation-numbers="0 3"/>
           <include name="closeApp"/>
-          <include name="TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed"/>
+          <include name="Validate_the_working_of_next_option_by_pasting_25_blank_space_value"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed__Screen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
