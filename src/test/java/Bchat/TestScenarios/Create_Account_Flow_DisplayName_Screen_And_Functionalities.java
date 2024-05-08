@@ -99,7 +99,7 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 //    }
 //	
 //	/*
-//	 TC_34	Validate the text box of the Display Name screen is Allowing the Space.
+//	
 //	 */
 //	@Test(priority = 3)
 //	public void TC_34__To_Validate_DisplayName_With_Empty_Value () {
@@ -131,26 +131,20 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 //		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 //    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
 //    displaynamepage.setDisplayName("Abcdefghijklmnopqrstuvwxyz1");
-//    try {
 //    displaynamepage.clickContinue();
 //    Assert.assertEquals(Toast(),"Please pick a shorter display name");
 //    displaynamepage.cleardisplayname();
 //    }
-//    catch(Throwable e) {
-//    	e.printStackTrace();
-//    }
-//    }
 //	
-//	/*
-//	 TC_32	: Validate the text box of the Display Name screen by using special Characters.	
-//     TC_33	: Validate the text box of the Display Name screen using Alaphabats both in uppercase and lower case.
-//     TC_35	: Validate the text box of the Display Name screen by numerical value.
-//     TC_41	: Validate whether the value entered in the text box of display Name screen is editable.	
-//     TC_42	: Validate whether the value entered in the text box of display Name screen is deleteable.
-//	 */
-//	
-	@Test(dataProvider="setdata",priority = 5)
-	public void TC_To_Validate_DisplayName_With_Valid_And_Invalid_Datas (HashMap<String,String> input) throws IOException {
+	/*
+	    TC_34	Validate the text box of the Display Name screen with empty Space.
+        TC_32	: Validate the text box of the Display Name screen by using special Characters.	
+     TC_41	: Validate whether the value entered in the text box of display Name screen is editable.	
+     TC_42	: Validate whether the value entered in the text box of display Name screen is deleteable.
+	 */
+	
+	@Test(dataProvider="setInvaliddata",priority = 5)
+	public void TC_To_Validate_DisplayName_With_Invalid_Datas (HashMap<String,String> input) throws IOException {
 		
 		//openingpage.clickCreateAccount();
 		displaynamepage = new DisplayNamePage(driver);
@@ -158,67 +152,75 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
 		displaynamepage.cleardisplayname();
 		displaynamepage.setDisplayName(input.get("DisplayName"));
-   
-		try {		
-			displaynamepage.clickContinue();
+  		displaynamepage.clickContinue();
+  		Assert.assertEquals(Toast(),"Please enter a valid name"); 
+		
+	}
+	
+	
+	@DataProvider
+	public Object[][] setInvaliddata() throws IOException {
+		
+		List <HashMap <String,String>>data=super.getjsonFile("//Datas//InvalidDisplayName.json");
+		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)},{data.get(3)}};
+		
+	}
+	/*
+	      TC_33	: Validate the text box of the Display Name screen using Alaphabats both in uppercase and lower case.
+          TC_35	: Validate the text box of the Display Name screen by numerical value.
+	 */
+	@Test(dataProvider="setValiddata",priority = 6)
+	public void TC_To_Validate_DisplayName_With_valid_Datas (HashMap<String,String> input) throws IOException {
+		
+		//openingpage.clickCreateAccount();
+		displaynamepage = new DisplayNamePage(driver);
+		
+		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
+		displaynamepage.cleardisplayname();
+		displaynamepage.setDisplayName(input.get("DisplayName"));
+   		displaynamepage.clickContinue();
 			registerpage =	new RegisterPage(driver);		 
 			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));		    
 			Assert.assertEquals(registerpage.pageTitle(), "Register"); 		
 		    driver.navigate().back();	
 		    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-   
-		}
-		
-		catch(Throwable e){
-			try {
-			Assert.assertEquals(Toast(),"Please enter a valid name"); 
-			}
-			catch(NoSuchElementException E) {
-				Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
-				displaynamepage.clickContinue();
-				Assert.assertEquals(Toast(),"Please enter a valid name"); 
-			}
-			catch(Throwable E) {
-				E.printStackTrace();
-			}
-	    }
+  
 	}
 	
 	
 	@DataProvider
-	public Object[][] setdata() throws IOException {
+	public Object[][] setValiddata() throws IOException {
 		
-		List <HashMap <String,String>>data=super.getjsonFile("//Datas//DisplayName.json");
-		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)},{data.get(3)},{data.get(4)},{data.get(5)},{data.get(6)}
-		,{data.get(7)},{data.get(8)}};
+		List <HashMap <String,String>>data=super.getjsonFile("//Datas//ValidDisplayName.json");
+		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)},{data.get(3)},{data.get(4)}};
 		
 	}
 //	
 //	/*
 //	 TC_39	: validate whether paste option is working on the text box display Name screen.
 //	 */
-////	@Test(priority =6 )
-////	public void TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox () throws InterruptedException {
-////		displaynamepage = new DisplayNamePage(driver);
-////		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-////		
-////		
-////		try {
-////			displaynamepage.pasteDisplayName("ChrisLang");
-////		displaynamepage.clickContinue();
-////		registerpage =	new RegisterPage(driver);
-////		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-////		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
-////		Assert.assertEquals(registerpage.pageTitle(), "Register"); 
-////		driver.navigate().back();
-////		displaynamepage.cleardisplayname();
-////		}
-////		catch(Throwable th) {
-////			th.printStackTrace();
-////		}
-////      
-////	}
+//	@Test(priority =6 )
+//	public void TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox () throws InterruptedException {
+//		displaynamepage = new DisplayNamePage(driver);
+//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+//		
+//		
+//		try {
+//			displaynamepage.pasteDisplayName("ChrisLang");
+//		displaynamepage.clickContinue();
+//		registerpage =	new RegisterPage(driver);
+//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
+//		Assert.assertEquals(registerpage.pageTitle(), "Register"); 
+//		driver.navigate().back();
+//		displaynamepage.cleardisplayname();
+//		}
+//		catch(Throwable th) {
+//			th.printStackTrace();
+//		}
+//      
+//	}
 //	
 //	
 //	

@@ -34,7 +34,7 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 		
 		landingpage.clickSignIn();
 		seedpage = new SeedPage(driver);
-		Assert.assertEquals(seedpage.pageTitle(), "Restore from Seed");
+		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		try {
 			 driver.navigate().back();
 			 if(landingpage.WebElementAppList().isDisplayed()||landingpage.WebElementAppList().isDisplayed()) {

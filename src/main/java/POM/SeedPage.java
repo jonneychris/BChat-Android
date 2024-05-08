@@ -120,6 +120,8 @@ public class SeedPage extends ActionsClass {
 	public void clearSeedValues () {
 		SeedTextBox.clear();
 	}
+	
+	
 
 	
 }
