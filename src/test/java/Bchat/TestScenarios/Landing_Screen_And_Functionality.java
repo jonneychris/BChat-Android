@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import POM.DisplayNamePage;
+import POM.LandingPage;
 import POM.RestoreFromSeedPage;
 import POM.TermsAndCondtionsPage;
 
@@ -20,7 +21,7 @@ import Utiles.baseClass;
  */
 public class Landing_Screen_And_Functionality extends baseClass{
 	
-	DisplayNamePage displaynamepage;
+ 	DisplayNamePage displaynamepage;
 	RestoreFromSeedPage restorefromseedpage;
 	TermsAndCondtionsPage termsandcondtionspage;
 	WebDriverWait wait;
@@ -29,10 +30,10 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	/*
 	 TC_3 : Validate whether functions and buttons in the openings screen response for the touch action. 
 	 */
-	@Test(priority = 0)
+	@Test(priority = 0,groups = "Regression")
 	public void  TC_3_Validate_whether_functions_and_buttons_is_Clickable () {
 		
-	
+		landingpage =new LandingPage(driver);
 		Assert.assertTrue(landingpage.isCreateAccountClickable());
 		Assert.assertTrue(landingpage.isSignInClickable());
 		Assert.assertTrue(landingpage.isTermsAndConditionsClickable());
@@ -42,10 +43,10 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	/*
 	TC_8 :	Validate whether able to navigate out of the App.
 	 */
-	@Test(priority = 1)
+	@Test(priority = 1,groups = "Regression")
 	public void TC_8_To_Validate_whether_able_to_navigate_out_And_Open_the_App_Again() {
 		
-	 
+		landingpage =new LandingPage(driver);
 		 Assert.assertTrue(landingpage.WebElementCreateAccount().isDisplayed());
 		 driver.navigate().back();
 		try {
@@ -62,9 +63,9 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	/*
 	TC_4 : Validate the working of navigation to Create Account screen in both forward and backward direction
 	 */
-	@Test(priority = 2)
+	@Test(priority = 2,groups = "Regression")
 	public void TC_4_To_Validate_the_navigation_to_Create_Account_screen_both_forward_and_backward_direction() {
-		
+		landingpage =new LandingPage(driver);
 	 Assert.assertTrue(landingpage.WebElementCreateAccount().isDisplayed());
 	 landingpage.clickCreateAccount();
 	 displaynamepage = new DisplayNamePage(driver);
@@ -90,9 +91,9 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	/*
 	TC_5 : Validate the working of navigation to Sign In screen in both forward and backward direction.
 	 */
-	@Test(priority = 3)
+	@Test(priority = 3,groups = "Regression")
 	public void TC_5_To_Validate_the_navigation_to_SignIn_screen_both_forward_and_backward_direction() {
-		
+		landingpage =new LandingPage(driver);
 		 Assert.assertTrue(landingpage.WebElementCreateAccount().isDisplayed());
 	 landingpage.clickSignIn();
 	 restorefromseedpage =new RestoreFromSeedPage(driver);
@@ -120,8 +121,8 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	TC_6 : Validate the working of navigation to terms & conditions page in both forward and backward direction.
 	 */
 	@Test(priority = 4)
-	public void TC_6_To_Validate_the_navigation_to_Terms_And_Conditions_screen_both_forward_and_backward_direction() {
-		
+	public void TC_6_To_Validate_the_navigation_to_Terms_And_Conditions_screen_both_forward_and_backward_direction() throws InterruptedException {
+		landingpage =new LandingPage(driver);
 		 Assert.assertTrue(landingpage.WebElementCreateAccount().isDisplayed());
 	 landingpage.clickTermsAndConditions();
 	 termsandcondtionspage =new TermsAndCondtionsPage(driver);
@@ -131,6 +132,13 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	 driver.navigate().back();
 	 Assert.assertTrue(landingpage.WebElementCreateAccount().isDisplayed());
 	 
+	}
+	
+	@Test(priority = 5)
+	public void setupTo_Create_Account_screen () {
+		landingpage.clickCreateAccount();
+		 displaynamepage = new DisplayNamePage(driver);
+		 Assert.assertEquals(displaynamepage.pageTitle(),"Display Name");
 	}
 	 
 	}

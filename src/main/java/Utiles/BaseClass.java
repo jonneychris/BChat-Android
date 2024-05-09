@@ -15,8 +15,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -47,11 +49,11 @@ public class baseClass  {
 	
 	public AppiumDriverLocalService service ;
 	
-	   
-	  public LandingPage landingpage;
+	 public LandingPage landingpage;
+	 
 	
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void openApp() throws InterruptedException, IOException {
 //		  service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//itsup//AppData//Roaming//npm//node_modules//appium//build//lib//main.js")).withIPAddress("127.0.0.1").usingPort(4723)
 //	  .build();
@@ -83,8 +85,8 @@ public class baseClass  {
 			 
 			 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
 				 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				  landingpage =new LandingPage(driver);	
 				  
+					landingpage =new LandingPage(driver);
 		}
 				 
 		catch(Exception E) {
@@ -97,7 +99,7 @@ public class baseClass  {
 				 options.setCapability("platformVersion","13");
 				 options.setCapability("udid", "d6a08b3e");
 				// options.setCapability(MobileCapabilityType.NO_RESET, "true");
-				// options.setCapability("noReset", "true");
+				// options.setCap ability("noReset", "true");
 				 options.setCapability("ignoreHiddenApiPolicyError", true);
 				 options.setCapability("appium:fullReset",true);
 				 options.setCapability("autoGrantPermissions", true);
@@ -111,7 +113,7 @@ public class baseClass  {
 				 
 				 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
 					 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-					  landingpage =new LandingPage(driver);	
+						landingpage =new LandingPage(driver);
 					  
 			}
 			catch(Exception E1) {
@@ -122,7 +124,7 @@ public class baseClass  {
 	}
 	
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
  public void closeApp() {
 		
 		

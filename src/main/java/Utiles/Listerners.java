@@ -60,7 +60,7 @@ public class Listerners extends baseClass  implements ITestListener  {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
-		//driver.manage().logs().get("crashlogs");
+		driver.manage().logs().get("crashlogs");
 	}
 
 	@Override

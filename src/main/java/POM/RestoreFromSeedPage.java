@@ -50,7 +50,7 @@ public class RestoreFromSeedPage extends ActionsClass{
 	@AndroidFindBy(id="io.beldex.bchat:id/title_name")
 	public WebElement textPageTitle;
 	
-	@AndroidBy(xpath="//android.view.View[@selected='true']")
+	@AndroidFindBy(xpath = "//android.view.View[@selected='true']")
 	private WebElement todayDate;
 	
 	
@@ -122,7 +122,7 @@ public class RestoreFromSeedPage extends ActionsClass{
     
     public void clearValues () {
     
-    	txtboxBlockheight.clear();
+    	txtboxDisplayName.clear();
     	txtboxBlockheight.clear();
     }
  
@@ -139,7 +139,7 @@ public class RestoreFromSeedPage extends ActionsClass{
     public void selectTodayDate() {
     	btnRestoreFromDate.click();
     	txtboxRestreFromDate.click();
-    	//todayDate.click();
+         todayDate.click();
     	btnOk.click();
     }
     
@@ -148,5 +148,15 @@ public class RestoreFromSeedPage extends ActionsClass{
     	WebElement futureDateWebelement = driver.findElement(By.xpath("//android.view.View[@text='"+date+"']"));
     	futureDateWebelement.click();
     	
+    }
+    
+    public void paste_Value_In_Blockheight(String value) {
+    	txtboxBlockheight.click();
+    	Copy_And_Paste_Values(value, txtboxBlockheight);
+    }
+    
+    public void paste_Value_In_DisplayName(String value) {
+    	txtboxDisplayName.click();
+    	Copy_And_Paste_Values(value, txtboxDisplayName);
     }
 }

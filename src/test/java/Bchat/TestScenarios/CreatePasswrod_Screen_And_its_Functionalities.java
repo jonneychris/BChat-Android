@@ -244,8 +244,8 @@ public class CreatePasswrod_Screen_And_its_Functionalities extends baseClass{
   		
   			createpasswordpage.Paste_Values_In_Enter_Field("abcd");
   			createpasswordpage.Paste_Values_In_ReEnter_Field("abcd");
-  			Assert.assertTrue(createpasswordpage.textbox_Enter_field_Value().isBlank(),"Not able to Paste values other than numbers");
-  			Assert.assertTrue(createpasswordpage.textbox_ReEnter_field_Value().isEmpty(),"Not able to Paste values other than numbers");
+  			Assert.assertTrue(createpasswordpage.textbox_Enter_field_Value().isBlank(),"able to Paste values other than numbers");
+  			Assert.assertTrue(createpasswordpage.textbox_ReEnter_field_Value().isEmpty(),"able to Paste values other than numbers");
   			
   		
   		
@@ -259,8 +259,8 @@ public class CreatePasswrod_Screen_And_its_Functionalities extends baseClass{
 		
 			createpasswordpage.Paste_Values_In_Enter_Field("ABCD");
 			createpasswordpage.Paste_Values_In_ReEnter_Field("ABCD");
-			Assert.assertTrue(createpasswordpage.textbox_Enter_field_Value().isBlank(),"Not able to Paste values other than numbers");
-			Assert.assertTrue(createpasswordpage.textbox_ReEnter_field_Value().isEmpty(),"Not able to Paste values other than numbers");
+			Assert.assertTrue(createpasswordpage.textbox_Enter_field_Value().isBlank(),"able to Paste values other than numbers");
+			Assert.assertTrue(createpasswordpage.textbox_ReEnter_field_Value().isEmpty(),"able to Paste values other than numbers");
 			
 		
 		
@@ -275,8 +275,8 @@ public class CreatePasswrod_Screen_And_its_Functionalities extends baseClass{
 		
 			createpasswordpage.Paste_Values_In_Enter_Field("@#$%");
 			createpasswordpage.Paste_Values_In_ReEnter_Field("@#$%");
-			Assert.assertTrue(createpasswordpage.textbox_Enter_field_Value().isBlank(),"Not able to Paste values other than numbers");
-			Assert.assertTrue(createpasswordpage.textbox_ReEnter_field_Value().isEmpty(),"Not able to Paste values other than numbers");
+			Assert.assertTrue(createpasswordpage.textbox_Enter_field_Value().isBlank(),"able to Paste values other than numbers");
+			Assert.assertTrue(createpasswordpage.textbox_ReEnter_field_Value().isEmpty(),"able to Paste values other than numbers");
 			
 		
 		

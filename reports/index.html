@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Genral apk report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 8, 2024 07:54:43 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 9, 2024 07:18:09 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -67,6 +72,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -81,7 +87,7 @@
           <div class="test-detail">
             <p class="name">preSetup</p>
             <p class="text-sm">
-              <span>7:55:09 pm</span> / <span>00:00:05:142</span>
+              <span>7:18:34 pm</span> / <span>00:00:05:816</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,9 +96,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">preSetup</h5>
-<span class='badge badge-success'>05.08.2024 7:55:09 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:55:14 pm</span>
-<span class='badge badge-default'>00:00:05:142</span>
+<span class='badge badge-success'>05.09.2024 7:18:34 pm</span>
+<span class='badge badge-danger'>05.09.2024 7:18:39 pm</span>
+<span class='badge badge-default'>00:00:05:816</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,7 +111,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:55:14 pm</td>
+        <td>7:18:39 pm</td>
         <td>
           Test Passed
         </td>
@@ -120,9 +126,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">To_Validate_the_presence_of_placeholder_in_the_text_box_of_the_screen</p>
+            <p class="name">TC_To_Validate_DisplayName_With_Above_Boundary_Value</p>
             <p class="text-sm">
-              <span>7:55:14 pm</span> / <span>00:00:02:233</span>
+              <span>7:18:39 pm</span> / <span>00:00:06:730</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -130,10 +136,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">To_Validate_the_presence_of_placeholder_in_the_text_box_of_the_screen</h5>
-<span class='badge badge-success'>05.08.2024 7:55:14 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:55:17 pm</span>
-<span class='badge badge-default'>00:00:02:233</span>
+<h5 class="test-status text-pass">TC_To_Validate_DisplayName_With_Above_Boundary_Value</h5>
+<span class='badge badge-success'>05.09.2024 7:18:39 pm</span>
+<span class='badge badge-danger'>05.09.2024 7:18:46 pm</span>
+<span class='badge badge-default'>00:00:06:730</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -146,7 +152,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:55:17 pm</td>
+        <td>7:18:46 pm</td>
         <td>
           Test Passed
         </td>
@@ -156,40 +162,75 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="fail" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Validate_the_working_of_restore_without_Entering_value_in_display_name_restore_from_blockheight_and_restore_from_date</p>
+            <p class="name">TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox</p>
             <p class="text-sm">
-              <span>7:55:17 pm</span> / <span>00:00:04:781</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:18:46 pm</span> / <span>00:00:05:649</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Validate_the_working_of_restore_without_Entering_value_in_display_name_restore_from_blockheight_and_restore_from_date</h5>
-<span class='badge badge-success'>05.08.2024 7:55:17 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:55:21 pm</span>
-<span class='badge badge-default'>00:00:04:781</span>
+<h5 class="test-status text-fail">TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox</h5>
+<span class='badge badge-success'>05.09.2024 7:18:46 pm</span>
+<span class='badge badge-danger'>05.09.2024 7:18:52 pm</span>
+<span class='badge badge-default'>00:00:05:649</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\itsup\eclipse-workspace\BChat//reportsTC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox.png' src="C:\Users\itsup\eclipse-workspace\BChat//reportsTC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox.png">
+    <div class="title">TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:55:21 pm</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:18:51 pm</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">java.lang.AssertionError: Able to paste invalid datas expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen.TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox(SignIn_Fow_RestorefromBlockheight_Screen.java:270)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -197,40 +238,75 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_valid_display_name_and_Without_entering_both_blockheight_and_restore_from_date</p>
+            <p class="name">TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox</p>
             <p class="text-sm">
-              <span>7:55:21 pm</span> / <span>00:00:35:357</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>7:18:52 pm</span> / <span>00:00:05:343</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_valid_display_name_and_Without_entering_both_blockheight_and_restore_from_date</h5>
-<span class='badge badge-success'>05.08.2024 7:55:21 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:55:57 pm</span>
-<span class='badge badge-default'>00:00:35:357</span>
+<h5 class="test-status text-fail">TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox</h5>
+<span class='badge badge-success'>05.09.2024 7:18:52 pm</span>
+<span class='badge badge-danger'>05.09.2024 7:18:57 pm</span>
+<span class='badge badge-default'>00:00:05:343</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\itsup\eclipse-workspace\BChat//reportsTC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox.png' src="C:\Users\itsup\eclipse-workspace\BChat//reportsTC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox.png">
+    <div class="title">TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox</div>
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:55:57 pm</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:18:56 pm</td>
         <td>
-          Test Passed
+          <textarea readonly class="code-block">java.lang.AssertionError: Able to paste invalid datas expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen.TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox(SignIn_Fow_RestorefromBlockheight_Screen.java:284)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -243,9 +319,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">To_Validate_the_working_of_the_restore_option_with_valid_display_name_and_Invalid_blockheight</p>
+            <p class="name">TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date</p>
             <p class="text-sm">
-              <span>7:55:57 pm</span> / <span>00:00:12:120</span>
+              <span>7:18:57 pm</span> / <span>00:00:59:430</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -253,10 +329,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">To_Validate_the_working_of_the_restore_option_with_valid_display_name_and_Invalid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:55:57 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:56:09 pm</span>
-<span class='badge badge-default'>00:00:12:120</span>
+<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date</h5>
+<span class='badge badge-success'>05.09.2024 7:18:57 pm</span>
+<span class='badge badge-danger'>05.09.2024 7:19:57 pm</span>
+<span class='badge badge-default'>00:00:59:430</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -269,7 +345,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:56:09 pm</td>
+        <td>7:19:57 pm</td>
         <td>
           Test Passed
         </td>
@@ -284,9 +360,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TC_To_Validate_working_of_restore_option_with_Invalid_display_name_and_Invalid_blockheight</p>
+            <p class="name">TC_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes</p>
             <p class="text-sm">
-              <span>7:56:09 pm</span> / <span>00:00:08:721</span>
+              <span>7:19:57 pm</span> / <span>00:00:12:124</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -294,10 +370,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_working_of_restore_option_with_Invalid_display_name_and_Invalid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:56:09 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:56:18 pm</span>
-<span class='badge badge-default'>00:00:08:721</span>
+<h5 class="test-status text-pass">TC_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes</h5>
+<span class='badge badge-success'>05.09.2024 7:19:57 pm</span>
+<span class='badge badge-danger'>05.09.2024 7:20:09 pm</span>
+<span class='badge badge-default'>00:00:12:124</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -310,376 +386,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:56:18 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>7:56:18 pm</span> / <span>00:00:49:430</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:56:18 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:57:07 pm</span>
-<span class='badge badge-default'>00:00:49:430</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:57:07 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="8"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>7:57:07 pm</span> / <span>00:00:21:333</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:57:07 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:57:29 pm</span>
-<span class='badge badge-default'>00:00:21:333</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:57:29 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="9"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>7:57:29 pm</span> / <span>00:00:39:146</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:57:29 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:58:08 pm</span>
-<span class='badge badge-default'>00:00:39:146</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:58:08 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="10"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>7:58:08 pm</span> / <span>00:00:33:032</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:58:08 pm</span>
-<span class='badge badge-danger'>05.08.2024 7:58:41 pm</span>
-<span class='badge badge-default'>00:00:33:032</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>7:58:41 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="11"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>7:58:41 pm</span> / <span>00:01:27:649</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 7:58:41 pm</span>
-<span class='badge badge-danger'>05.08.2024 8:00:08 pm</span>
-<span class='badge badge-default'>00:01:27:649</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:00:08 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>8:00:08 pm</span> / <span>00:02:01:372</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 8:00:08 pm</span>
-<span class='badge badge-danger'>05.08.2024 8:02:10 pm</span>
-<span class='badge badge-default'>00:02:01:372</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:02:10 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>8:02:10 pm</span> / <span>00:02:03:324</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 8:02:10 pm</span>
-<span class='badge badge-danger'>05.08.2024 8:04:13 pm</span>
-<span class='badge badge-default'>00:02:03:324</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:04:13 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="14"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>8:04:13 pm</span> / <span>00:01:57:537</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 8:04:13 pm</span>
-<span class='badge badge-danger'>05.08.2024 8:06:11 pm</span>
-<span class='badge badge-default'>00:01:57:537</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:06:11 pm</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="15"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</p>
-            <p class="text-sm">
-              <span>8:06:11 pm</span> / <span>00:01:05:106</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight</h5>
-<span class='badge badge-success'>05.08.2024 8:06:11 pm</span>
-<span class='badge badge-danger'>05.08.2024 8:07:16 pm</span>
-<span class='badge badge-default'>00:01:05:106</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:07:16 pm</td>
+        <td>7:20:09 pm</td>
         <td>
           Test Passed
         </td>
@@ -698,30 +405,86 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:18:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:18:52 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 8, 2024 07:54:43 pm</h3>
+<h3>May 9, 2024 07:18:09 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 8, 2024 08:07:19 pm</h3>
+<h3>May 9, 2024 07:20:11 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>15</h3>
+<h3>4</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -737,12 +500,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>15</b> tests passed
+<div><small data-tooltip='66%'>
+<b>4</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='33%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -760,9 +523,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>15</b> events passed</small></div>
+<div><small data-tooltip='66%'><b>4</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
+<small data-tooltip='33%'><b>2</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -779,7 +542,7 @@
 </div></div>
 <script>
 var timeline = {
-"preSetup":5.142,"To_Validate_the_presence_of_placeholder_in_the_text_box_of_the_screen":2.233,"Validate_the_working_of_restore_without_Entering_value_in_display_name_restore_from_blockheight_and_restore_from_date":4.781,"TC_To_Validate_the_working_of_the_restore_option_with_valid_display_name_and_Without_entering_both_blockheight_and_restore_from_date":35.357,"To_Validate_the_working_of_the_restore_option_with_valid_display_name_and_Invalid_blockheight":12.12,"TC_To_Validate_working_of_restore_option_with_Invalid_display_name_and_Invalid_blockheight":8.721,"TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight":49.43,"TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight":21.333,"TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight":39.146,"TC_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight":33.032,"TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight":87.649,"TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight":121.372,"TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight":123.324,"TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight":117.537,"TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight":65.106
+"preSetup":5.816,"TC_To_Validate_DisplayName_With_Above_Boundary_Value":6.73,"TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox":5.649,"TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox":5.343,"TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date":59.43,"TC_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes":12.124
 };
 </script>
 <div class="row">
@@ -802,8 +565,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 15,
-failParent: 0,
+passParent: 4,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -819,8 +582,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 15,
-failEvents: 0,
+passEvents: 4,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

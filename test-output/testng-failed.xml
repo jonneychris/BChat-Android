@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.SignIn_Fow_RestorefromSeed_Screen">
+      <class name="Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen">
         <methods>
           <include name="openApp"/>
-          <include name="TC_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight" invocation-numbers="2 3 4"/>
+          <include name="TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox"/>
+          <include name="TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.SignIn_Fow_RestorefromSeed_Screen -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

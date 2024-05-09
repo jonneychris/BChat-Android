@@ -21,6 +21,7 @@ import org.testng.asserts.Assertion;
 import com.google.common.collect.ImmutableMap;
 
 import POM.DisplayNamePage;
+import POM.LandingPage;
 import POM.RegisterPage;
 import POM.RestoreFromSeedPage;
 import Utiles.baseClass;
@@ -28,29 +29,29 @@ import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.PressesKey;
-
+import Bchat.TestScenarios.*;
 
 /*
 Test Scenario:	To check the working of the Create Account Flow Displayname Screen
  */
-public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends baseClass{
+public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends baseClass {
 	
 	 
 	RegisterPage registerpage;
 	WebDriverWait wait;
-    DisplayNamePage displaynamepage;
-	
+	DisplayNamePage displaynamepage;
+   
 	
     /*
      TC_37 :Validate the presence of placeholder in the text box of the Display Name screen.
      */    
   
-        @Test(priority = 0)
+        @Test(priority = 5)
 		public void TC_37_To_Validate_presence_of_placeholder_in_Display_Name_Textbox() {
-		   
-        	landingpage.clickCreateAccount();
+	
+         	landingpage.clickCreateAccount();
         	displaynamepage = new DisplayNamePage(driver);
-        	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+         	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
 			Assert.assertEquals(displaynamepage.NameTextBoxPlachoder(),"Enter a display name");
 		   
         }
@@ -110,16 +111,12 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 //		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 //    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
 //    displaynamepage.setDisplayName("   ");
-//    try {
 //    displaynamepage.clickContinue();
 //    Assert.assertEquals(Toast(),"Please pick a display name");
 //    displaynamepage.cleardisplayname();
 //    }
-//    
-//    catch(Throwable e) {
-//    	e.printStackTrace();
-//    }
-//    }
+    
+    
 //	/*
 //	 TC_31 : Validate the text box of the Display Name screen by entering values above boundary value.
 //	 */
@@ -143,7 +140,7 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
      TC_42	: Validate whether the value entered in the text box of display Name screen is deleteable.
 	 */
 	
-	@Test(dataProvider="setInvaliddata",priority = 5)
+	@Test(dataProvider="setInvaliddata",priority = 6)
 	public void TC_To_Validate_DisplayName_With_Invalid_Datas (HashMap<String,String> input) throws IOException {
 		
 		//openingpage.clickCreateAccount();
@@ -169,7 +166,7 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 	      TC_33	: Validate the text box of the Display Name screen using Alaphabats both in uppercase and lower case.
           TC_35	: Validate the text box of the Display Name screen by numerical value.
 	 */
-	@Test(dataProvider="setValiddata",priority = 6)
+	@Test(dataProvider="setValiddata",priority = 7)
 	public void TC_To_Validate_DisplayName_With_valid_Datas (HashMap<String,String> input) throws IOException {
 		
 		//openingpage.clickCreateAccount();
