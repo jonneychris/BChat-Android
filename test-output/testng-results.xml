@@ -1,124 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-09T13:48:09Z" name="Suite" finished-at="2024-05-09T13:50:11Z" duration-ms="121577">
+  <suite started-at="2024-05-10T13:19:07Z" name="Suite" finished-at="2024-05-10T13:20:11Z" duration-ms="63456">
     <groups>
-      <group name="Smoke">
-        <method signature="SignIn_Fow_RestorefromBlockheight_Screen.TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date()[pri:12, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" name="TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date" class="Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-05-09T13:48:09Z" name="Test" finished-at="2024-05-09T13:50:11Z" duration-ms="121577">
-      <class name="Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:48:09Z" name="openApp" finished-at="2024-05-09T13:48:34Z" duration-ms="24371" status="PASS">
+    <test started-at="2024-05-10T13:19:07Z" name="Test" finished-at="2024-05-10T13:20:11Z" duration-ms="63456">
+      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:19:07Z" name="openApp" finished-at="2024-05-10T13:19:29Z" duration-ms="21719" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="preSetup()[pri:0, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:48:34Z" name="preSetup" finished-at="2024-05-09T13:48:39Z" duration-ms="5823" status="PASS">
+        <test-method signature="PreSetup()[pri:0, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:19:29Z" name="PreSetup" finished-at="2024-05-10T13:19:50Z" duration-ms="20648" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method signature="TC_To_Validate_DisplayName_With_Above_Boundary_Value()[pri:9, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:48:39Z" name="TC_To_Validate_DisplayName_With_Above_Boundary_Value" finished-at="2024-05-09T13:48:46Z" duration-ms="6728" status="PASS">
+        </test-method> <!-- PreSetup -->
+        <test-method signature="To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction()[pri:1, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:19:50Z" name="To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction" finished-at="2024-05-10T13:19:55Z" duration-ms="5177" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_To_Validate_DisplayName_With_Above_Boundary_Value -->
-        <test-method signature="TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox()[pri:10, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:48:46Z" name="TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox" finished-at="2024-05-09T13:48:51Z" duration-ms="4941" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Able to paste invalid datas expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Able to paste invalid datas expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen.TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox(SignIn_Fow_RestorefromBlockheight_Screen.java:270)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction -->
+        <test-method signature="To_Validate_the_blank_screen_While_creating_new_Account()[pri:2, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:19:55Z" name="To_Validate_the_blank_screen_While_creating_new_Account" finished-at="2024-05-10T13:19:55Z" duration-ms="402" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox -->
-        <test-method signature="TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox()[pri:11, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:48:52Z" name="TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox" finished-at="2024-05-09T13:48:56Z" duration-ms="4565" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Able to paste invalid datas expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Able to paste invalid datas expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen.TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox(SignIn_Fow_RestorefromBlockheight_Screen.java:284)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- To_Validate_the_blank_screen_While_creating_new_Account -->
+        <test-method signature="To_Validate_the_Navigation_to_the_settings_screen_in_both_forward_and_backward_direction()[pri:3, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:19:55Z" name="To_Validate_the_Navigation_to_the_settings_screen_in_both_forward_and_backward_direction" finished-at="2024-05-10T13:19:58Z" duration-ms="2822" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox -->
-        <test-method signature="TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date()[pri:12, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:48:57Z" name="TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date" finished-at="2024-05-09T13:49:57Z" duration-ms="59429" status="PASS">
+        </test-method> <!-- To_Validate_the_Navigation_to_the_settings_screen_in_both_forward_and_backward_direction -->
+        <test-method signature="To_Validate_the_Navigation_to_the_search_screen_in_both_forward_and_backward_direction()[pri:4, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:19:58Z" name="To_Validate_the_Navigation_to_the_search_screen_in_both_forward_and_backward_direction" finished-at="2024-05-10T13:20:08Z" duration-ms="10064" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_To_Validate_the_working_of_the_restore_with_valid_display_name_and_valid_restore_date -->
-        <test-method signature="TC_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes()[pri:13, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:49:57Z" name="TC_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes" finished-at="2024-05-09T13:50:09Z" duration-ms="12124" status="PASS">
+        </test-method> <!-- To_Validate_the_Navigation_to_the_search_screen_in_both_forward_and_backward_direction -->
+        <test-method signature="To_Validate_the_presence_of_placeholder_in_the_text_box()[pri:5, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:20:08Z" name="To_Validate_the_presence_of_placeholder_in_the_text_box" finished-at="2024-05-10T13:20:09Z" duration-ms="481" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen@1c55f277]" started-at="2024-05-09T13:50:09Z" name="closeApp" finished-at="2024-05-09T13:50:11Z" duration-ms="2082" status="PASS">
+        </test-method> <!-- To_Validate_the_presence_of_placeholder_in_the_text_box -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.Home_Screen_And_Functionalities@2364305a]" started-at="2024-05-10T13:20:09Z" name="closeApp" finished-at="2024-05-10T13:20:11Z" duration-ms="2113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen -->
+      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

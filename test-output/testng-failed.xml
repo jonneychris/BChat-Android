@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="Utiles.Listerners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen">
+      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox"/>
-          <include name="TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox"/>
           <include name="closeApp"/>
+          <include name="To_Validate_the_Navigation_to_the_search_screen_in_both_forward_and_backward_direction"/>
+          <include name="To_Validate_the_blank_screen_While_creating_new_Account"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen -->
+      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<groups>
+		<run>
+			<include name="Smoke">
+			</include>
+		</run>	
+	</groups>
 	<listeners>
 		<listener class-name="Utiles.Listerners"></listener>
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-   
-      <class name="Bchat.TestScenarios.Create_Account_Flow_Functionalities"/> 
+   <class name="Bchat.TestScenarios.Landing_Screen_And_Functionality"/> 
+   <class name="Bchat.TestScenarios.SignIn_Flow_seed_Screen"/>
+   <class name="Bchat.TestScenarios.SignIn_Flow_restorefromBlockheight_Screen"/>  
+  
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

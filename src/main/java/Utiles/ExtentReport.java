@@ -12,12 +12,12 @@ public class ExtentReport  {
 	public static ExtentReports report() {
 		String path=System.getProperty("user.dir")+"\\reports\\index.html";
 		ExtentSparkReporter report =new ExtentSparkReporter(path);
-		report.config().setReportName("Genral apk report");
+		report.config().setReportName("BChat-Android Report");
 		report.config().setDocumentTitle("Test results");
 		
 	    extent = new ExtentReports();
 		extent.attachReporter(report);
-		extent.setSystemInfo("Tester", "Aravind");
+		extent.setSystemInfo("Tester", "Chris");
 		return extent;
 		//extent.flush();
 	}

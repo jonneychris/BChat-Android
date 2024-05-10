@@ -21,18 +21,29 @@ import Utiles.baseClass;
 /*
  Test Scenario:	To check the working of the Restore from seed functionality in the SigIn flow
  */
-public class SignIn_Flow_seed__Screen extends baseClass{
+public class SignIn_Flow_seed_Screen extends baseClass{
 
 	SeedPage seedpage;
 	RestoreFromSeedPage restorefromseedpage;
 	
+	
 	/*
-	 TC_90.1	To Validate Whether Able to Navigate Previous screen 
+	 presetup method for this class
 	 */
-	@Test(priority =0)
-	public void TC_90_1_To_Validate_Whether_Able_to_Navigate_Previous_screen () {
-		
+	@Test(priority = 5,groups = {"Smoke","Regression"})
+	public void PreSetup () {
 		landingpage.clickSignIn();
+		seedpage = new SeedPage(driver);
+		
+	}
+	
+	
+	/*
+	 TC_94	To Validate Whether Able to Navigate Previous screen 
+	 */
+	@Test(priority =6,groups = {"Regression"})
+	public void TC_94_To_Validate_Whether_Able_to_Navigate_Previous_screen () {
+		
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		try {
@@ -49,10 +60,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}
 	
 	/*
-	Validate the presence of placeholder in the text box of the Display Name screen.
+	TC_96 :Validate the presence of placeholder in the text box of the Display Name screen.
 	*/
-	@Test(priority =1)
-	public void TC_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box () {
+	@Test(priority =7,groups = {"Regression"})
+	public void TC_96_To_Validate_the_presence_of_placeholder_in_the_Restore_From_seed_text_box () {
 		
 		landingpage.clickSignIn();
 		seedpage = new SeedPage(driver);
@@ -62,10 +73,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}
 		
 	/*
-	Validate whether crusher blink on clicking the text box of Restore from screen.
+	TC_ 95 : Validate whether crusher blink on clicking the text box of Restore from screen.
     */
-	@Test(priority =2)
-    public void	TC_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box () {
+	@Test(priority =8,groups = {"Regression"})
+    public void	TC_95_To_Validate_whether_crusher_blink_on_clicking_the_Restore_From_Seed_text_Box () {
 	
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -80,11 +91,11 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 		}
 
 	/*
-	 TC_92 :	Validate the working of the next option without entering seed.
+	 TC_102 :	Validate the working of the next option without entering seed.
 	 */
-	@Test(priority =3)
-	 public void TC_92_To_Validate_the_working_of_the_next_option_without_entering_seed () {
-		landingpage.clickSignIn();
+	@Test(priority =9,groups = {"Regression"})
+	 public void TC_102_To_Validate_the_working_of_the_next_option_without_entering_seed () {
+		
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clickNext();
@@ -94,10 +105,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	
 	
 //	/*
-//	 TC_ :	Validate the working of the paste button without copying seed.
+//	 TC_101 :	Validate the working of the paste button without copying seed.
 //	 */
-//	@Test(priority =4)
-//	 public void TC_To_Validate_the_working_of_the_paste_button_without_copying_seed () {
+//	@Test(priority =10,groups = {"Regression"})
+//	 public void TC_101_To_Validate_the_working_of_the_paste_button_without_copying_seed () {
 //		
 //		seedpage = new SeedPage(driver);
 //		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
@@ -108,10 +119,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 //	}
 	
 	/*
-	 TC_89 : Validate whether able to paste the copied seed.	
+	 TC_92 : Validate whether able to paste the copied seed.	
 	 */
-	@Test(priority =5)
-	public void TC_89_To_Validate_whether_able_to_paste_the_copied_seed () {
+	@Test(priority =11,groups = {"Regression"})
+	public void TC_92_To_Validate_whether_able_to_paste_the_copied_seed () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();
@@ -120,10 +131,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}
 	
 	/*
-	 TC_90 :  Validate whether able to clear the entered seed
+	 TC_93 :  Validate whether able to clear the entered seed
 	 */
-	@Test(priority =6)
-	 public void TC_90_To_Validate_whether_able_to_clear_the_entered_seed () {
+	@Test(priority =12,groups = {"Regression"})
+	 public void TC_93_To_Validate_whether_able_to_clear_the_entered_seed () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		Assert.assertEquals(seedpage.SeedValueCount(),"25/25");
@@ -132,10 +143,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	 }
 	
 	/*
-	Validate the text box of the restore from screen by entering values below boundary value.
+	TC_98 : Validate the text box of the restore from screen by entering values below boundary value.
 	*/
-	@Test(priority = 7)
-	public void TC_To_Validate_the_text_box_of_the_restore_from_screen_by_entering_values_below_boundary_value () {
+	@Test(priority = 13,groups = {"Regression"})
+	public void TC_98_To_Validate_the_text_box_of_the_restore_from_screen_by_entering_values_below_boundary_value () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.set_Below_Boundary_SeedValue();
@@ -150,10 +161,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}
 
 	/*
-	Validate the text box of the restore from screen by entering values above boundary value.
+	TC_97 : Validate the text box of the restore from screen by entering values above boundary value.
    */
-	@Test(priority = 8)
-	public void TC_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_values_above_boundary_value () {
+	@Test(priority = 14,groups = {"Regression"})
+	public void TC_97_To_Validate_the_text_box_of_the_restore_from_seed_by_entering_values_above_boundary_value () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();
@@ -162,10 +173,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}
 
 	/*
-	 TC_91 : Validate whether able to type a seed.
+	 TC_99 : Validate whether able to type a seed.
 	 */
-	@Test(priority = 9)
-	 public void TC_91_To_Validate_whether_able_to_type_a_seed () {
+	@Test(priority = 15,groups = {"Regression"})
+	 public void TC_99_To_Validate_whether_able_to_type_a_seed () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();
@@ -174,10 +185,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	 }
 	
 	/*
-	 TC_95 :	Validate Whether entered seed is editable
+	 TC_105 :	Validate Whether entered seed is editable
 	 */
-	@Test(priority = 10)
-  public void TC_95_To_Validate_Whether_Entered_seed_is_editable () {
+	@Test(priority = 16,groups = {"Regression"})
+  public void TC_105_To_Validate_Whether_Entered_seed_is_editable () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();
@@ -191,10 +202,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}	
 	
 	/*
-	 TC_93 :	Validate the working of the next option by entering Invalid seed.
+	 TC_103 :	Validate the working of the next option by entering Invalid seed.
 	 */
-	@Test(dataProvider = "setdata",priority = 11)
-	 public void TC_93_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed ( HashMap <String,String> input) {
+	@Test(dataProvider = "setdata",priority = 17,groups = {"Regression"})
+	 public void TC_103_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed ( HashMap <String,String> input) {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();
@@ -221,10 +232,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	
 	
 	/*
-	 Validate the working of next option by pasting 25 blank space value
+	 TC_100 : Validate the working of next option by pasting 25 blank space value
 	 */
-	@Test(priority = 12)
-	public void Validate_the_working_of_next_option_by_pasting_25_blank_space_value (){
+	@Test(priority = 18,groups = {"Regression"})
+	public void TC_100_To_Validate_the_working_of_next_option_by_pasting_25_blank_space_value (){
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();
@@ -235,10 +246,10 @@ public class SignIn_Flow_seed__Screen extends baseClass{
 	}
 	
 	/*
-	 TC_94 :	Validate the working of the next option by entering Valid seed.
+	 TC_104 :	Validate the working of the next option by entering Valid seed.
 	 */
-	@Test(priority = 13)
-	public void TC_94_To_Validate_the_working_of_the_next_option_by_entering_Valid_seed () {
+	@Test(priority = 19,groups = {"Regression","Smoke"})
+	public void TC_104_To_Validate_the_working_of_the_next_option_by_entering_Valid_seed () {
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
 		seedpage.clearSeedValues();

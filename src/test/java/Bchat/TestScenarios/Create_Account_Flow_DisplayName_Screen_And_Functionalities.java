@@ -42,97 +42,106 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 	DisplayNamePage displaynamepage;
    
 	
+	/*
+	 PreSetup method to this class
+	 */
+	@Test(priority = 5,groups = {"Regression","Smoke"})
+	public void PreSetup () {
+		landingpage.clickCreateAccount();
+    	displaynamepage = new DisplayNamePage(driver);
+     	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+	}
+	
+	
+	
     /*
      TC_37 :Validate the presence of placeholder in the text box of the Display Name screen.
      */    
-  
-        @Test(priority = 5)
+        @Test(priority = 6, groups = {"Regression"} )
 		public void TC_37_To_Validate_presence_of_placeholder_in_Display_Name_Textbox() {
 	
-         	landingpage.clickCreateAccount();
         	displaynamepage = new DisplayNamePage(driver);
-         	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
 			Assert.assertEquals(displaynamepage.NameTextBoxPlachoder(),"Enter a display name");
 		   
         }
 		
         
-//        /*
-//         TC_36 : Validate whether crusher blink on clicking the text box of Display Name screen.
-//         */
-//        @Test(priority = 1)
-//		public void TC_36_To_Validate_whether_crusher_blink_on_clicking_textbox_of_Display_Name() {
-//		   
-//        	displaynamepage = new DisplayNamePage(driver);
-//        	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-//			try {
-//				displaynamepage.clickTextBox();
-//				WebElement active=driver.switchTo().activeElement();
-//				Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(active));
-//				//Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(driver.switchTo().activeElement()));
-//				
-//			}
-//			catch(Throwable th) {
-//				th.printStackTrace();
-//			}
-//					
-//		     
-//		}
-//		
-//    /*
-//     TC_30 : Validate the continue functionality without enter any value in the text box.
-//     */
-//	@Test(priority = 2)
-//	public void TC_30_To_Validate_DisplayName_WithoutAny_Value () {
-//		
-//		displaynamepage = new DisplayNamePage(driver);
-//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-//    try {
-//    displaynamepage.clickContinue();
-//    Assert.assertEquals(Toast(),"Please pick a display name");
-//    
-//    }
-//    catch(Throwable e) {
-//    	e.printStackTrace();
-//    }
-//    }
-//	
-//	/*
-//	
-//	 */
-//	@Test(priority = 3)
-//	public void TC_34__To_Validate_DisplayName_With_Empty_Value () {
-//		
-//		displaynamepage = new DisplayNamePage(driver);
-//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-//		
-//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-//    displaynamepage.setDisplayName("   ");
-//    displaynamepage.clickContinue();
-//    Assert.assertEquals(Toast(),"Please pick a display name");
-//    displaynamepage.cleardisplayname();
-//    }
+        /*
+         TC_36 : Validate whether crusher blink on clicking the text box of Display Name screen.
+         */
+        @Test(priority = 7,groups = {"Regression"})
+		public void TC_36_To_Validate_whether_crusher_blink_on_clicking_textbox_of_Display_Name() {
+		   
+        	displaynamepage = new DisplayNamePage(driver);
+        	Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+			try {
+				displaynamepage.clickTextBox();
+				WebElement active=driver.switchTo().activeElement();
+				Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(active));
+				//Assert.assertTrue(displaynamepage.txtboxDisplayName.equals(driver.switchTo().activeElement()));
+				
+			}
+			catch(Throwable th) {
+				th.printStackTrace();
+			}
+					
+		     
+		}
+		
+    /*
+     TC_30 : Validate the continue functionality without enter any value in the text box.
+     */
+	@Test(priority = 8,groups = {"Regression"})
+	public void TC_30_To_Validate_DisplayName_WithoutAny_Value () {
+		
+		displaynamepage = new DisplayNamePage(driver);
+		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+    try {
+    displaynamepage.clickContinue();
+    Assert.assertEquals(Toast(),"Please pick a display name");
+    
+    }
+    catch(Throwable e) {
+    	e.printStackTrace();
+    }
+    }
+	
+	/*
+	
+	 */
+	@Test(priority = 9,groups = {"Regression"})
+	public void TC_34_To_Validate_DisplayName_With_Empty_Value () {
+		
+		displaynamepage = new DisplayNamePage(driver);
+		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+		
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+    displaynamepage.setDisplayName("   ");
+    displaynamepage.clickContinue();
+    Assert.assertEquals(Toast(),"Please pick a display name");
+    displaynamepage.cleardisplayname();
+    }
     
     
-//	/*
-//	 TC_31 : Validate the text box of the Display Name screen by entering values above boundary value.
-//	 */
-//	@Test(priority = 4)
-//	public void TC_31_To_Validate_DisplayName_With_Above_Boundary_Value () {
-//		
-//		displaynamepage = new DisplayNamePage(driver);
-//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");	
-//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-//    displaynamepage.setDisplayName("Abcdefghijklmnopqrstuvwxyz1");
-//    displaynamepage.clickContinue();
-//    Assert.assertEquals(Toast(),"Please pick a shorter display name");
-//    displaynamepage.cleardisplayname();
-//    }
-//	
+	/*
+	 TC_31 : Validate the text box of the Display Name screen by entering values above boundary value.
+	 */
+	@Test(priority = 10,groups = {"Regression"})
+	public void TC_31_To_Validate_DisplayName_With_Above_Boundary_Value () {
+		
+		displaynamepage = new DisplayNamePage(driver);
+		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");	
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
+    displaynamepage.setDisplayName("Abcdefghijklmnopqrstuvwxyz1");
+    displaynamepage.clickContinue();
+    Assert.assertEquals(Toast(),"Please pick a shorter display name");
+    displaynamepage.cleardisplayname();
+    }
+	
 	/*
 	    TC_34	Validate the text box of the Display Name screen with empty Space.
         TC_32	: Validate the text box of the Display Name screen by using special Characters.	
@@ -140,7 +149,7 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
      TC_42	: Validate whether the value entered in the text box of display Name screen is deleteable.
 	 */
 	
-	@Test(dataProvider="setInvaliddata",priority = 6)
+	@Test(dataProvider="setInvaliddata",priority = 11,groups = {"Regression"})
 	public void TC_To_Validate_DisplayName_With_Invalid_Datas (HashMap<String,String> input) throws IOException {
 		
 		//openingpage.clickCreateAccount();
@@ -166,7 +175,7 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 	      TC_33	: Validate the text box of the Display Name screen using Alaphabats both in uppercase and lower case.
           TC_35	: Validate the text box of the Display Name screen by numerical value.
 	 */
-	@Test(dataProvider="setValiddata",priority = 7)
+	@Test(dataProvider="setValiddata",priority = 12,groups = {"Regression","Smoke"})
 	public void TC_To_Validate_DisplayName_With_valid_Datas (HashMap<String,String> input) throws IOException {
 		
 		//openingpage.clickCreateAccount();
@@ -182,7 +191,7 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 			Assert.assertEquals(registerpage.pageTitle(), "Register"); 		
 		    driver.navigate().back();	
 		    wait.until(ExpectedConditions.visibilityOf(displaynamepage.textPageTitle));
-  
+		    Assert.assertEquals(displaynamepage.pageTitle(), "Display Name"); 
 	}
 	
 	
@@ -193,36 +202,36 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 		return new Object[][] {{data.get(0)},{data.get(1)},{data.get(2)},{data.get(3)},{data.get(4)}};
 		
 	}
-//	
-//	/*
-//	 TC_39	: validate whether paste option is working on the text box display Name screen.
-//	 */
-//	@Test(priority =6 )
-//	public void TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox () throws InterruptedException {
-//		displaynamepage = new DisplayNamePage(driver);
-//		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
-//		
-//		
-//		try {
-//			displaynamepage.pasteDisplayName("ChrisLang");
-//		displaynamepage.clickContinue();
-//		registerpage =	new RegisterPage(driver);
-//		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
-//		Assert.assertEquals(registerpage.pageTitle(), "Register"); 
-//		driver.navigate().back();
-//		displaynamepage.cleardisplayname();
-//		}
-//		catch(Throwable th) {
-//			th.printStackTrace();
-//		}
-//      
-//	}
-//	
-//	
-//	
-//	
-//	
-//	
-//	
+	
+	/*
+	 TC_39	: validate whether paste option is working on the text box display Name screen.
+	 */
+	@Test(priority =13,groups = {"Regression"} )
+	public void TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox () throws InterruptedException {
+		displaynamepage = new DisplayNamePage(driver);
+		Assert.assertEquals(displaynamepage.pageTitle(), "Display Name");
+		
+		
+		try {
+			displaynamepage.pasteDisplayName("ChrisLang");
+		displaynamepage.clickContinue();
+		registerpage =	new RegisterPage(driver);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
+		Assert.assertEquals(registerpage.pageTitle(), "Register"); 
+		driver.navigate().back();
+		displaynamepage.cleardisplayname();
+		}
+		catch(Throwable th) {
+			th.printStackTrace();
+		}
+      
+	}
+	
+	
+	
+	
+	
+	
+	
 }

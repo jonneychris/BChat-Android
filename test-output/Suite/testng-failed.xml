@@ -5,15 +5,26 @@
     <listener class-name="Utiles.Listerners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen">
+      <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_To_Validate_whether_able_to_paste_Alphabets_Values_in_blockheight_textbox"/>
-          <include name="TC_To_Validate_whether_able_to_paste_Speical_Character_Values_in_blockheight_textbox"/>
           <include name="closeApp"/>
+          <include name="TC_84_And_85_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.SignIn_Fow_RestorefromBlockheight_Screen -->
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities -->
+      <class name="Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities">
+        <methods>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+          <include name="TC_To_Validate_DisplayName_With_valid_Datas" invocation-numbers="4"/>
+        </methods>
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

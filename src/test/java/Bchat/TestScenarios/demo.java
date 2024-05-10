@@ -1,10 +1,13 @@
 package Bchat.TestScenarios;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -12,6 +15,9 @@ import org.testng.annotations.Test;
 
 import POM.CreatePasswordPage;
 import POM.DisplayNamePage;
+import POM.HomePage;
+import POM.RecoveryPhrasePage;
+import POM.RecoverySeed_Page;
 import POM.RegisterPage;
 import POM.RestoreFromSeedPage;
 import POM.SeedPage;
@@ -20,10 +26,17 @@ import Utiles.baseClass;
 
 public class demo extends baseClass{
 
-	RestoreFromSeedPage restorefromseedpage;
-	SeedPage seedpage;
+
+	CreatePasswordPage createpasswordpage;
+	RecoveryPhrasePage recoveryphrasepage;
+	HomePage homepage;
+	RecoverySeed_Page recoveryseedpage ;
+	DisplayNamePage displaynamepage;
+    RegisterPage registerpage;
+	WebDriverWait wait;
 	
-//	public void openapplandingpage() throws InterruptedException {
+	
+	//	public void openapplandingpage() throws InterruptedException {
 //		// driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_button")).click();
 //		
 //	landingpage.clickSignIn();
@@ -53,18 +66,30 @@ public class demo extends baseClass{
 //		
 //	}
 	
-	
-	@Test(priority = 0)
-	public void method1() {
-		System.out.println("test case 1");
+	@Test
+	public void homescreen() {
+
+	wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	landingpage.clickCreateAccount();
+	displaynamepage =new DisplayNamePage(driver);
+	Assert.assertEquals(displaynamepage.pageTitle(),"Display Name");
+	displaynamepage.setDisplayName("Chris");
+	displaynamepage.clickContinue();
+	registerpage= new RegisterPage(driver);
+	wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
+	Assert.assertEquals(registerpage.pageTitle(),"Register");
+	registerpage.clickNext();
+	createpasswordpage = new CreatePasswordPage(driver);
+	Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
+	createpasswordpage.setValidPassword();
+	recoveryphrasepage =new RecoveryPhrasePage(driver);
+	Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Phrase");
+	recoveryphrasepage.clickCopyIcon();
+	recoveryphrasepage.ClickContinue();
+	homepage = new HomePage(driver);
+	Assert.assertEquals(homepage.Pagetitle(),"BChat");
+	homepage.OpenNewChat();
 	}
-	
-	@Test(priority = 1)
-	public void method2() {
-		System.out.println("test case 2");
-	}
-	
-	
 	}
 	
 	

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="Smoke">
+			</include>
+		</run>	
+	</groups>
+	<listeners>
+		<listener class-name="Utiles.Listerners"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+   <class name="Bchat.TestScenarios.Landing_Screen_And_Functionality"/> 
+   <class name="Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities"/> 
+   <class name="Bchat.TestScenarios.Create_Account_Flow_Register_Screen_And_Functionality"/>
+   <class name="Bchat.TestScenarios.CreatePassword_Screen_And_its_Functionalities"/>
+   <class name="Bchat.TestScenarios.Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
