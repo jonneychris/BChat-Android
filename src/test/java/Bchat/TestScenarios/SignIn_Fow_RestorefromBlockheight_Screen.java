@@ -76,7 +76,7 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	public void TC_115_To_Validate_the_presence_of_placeholder_in_the_text_box_of_the_screen () {
 		restorefromseedpage = new RestoreFromSeedPage(driver);
 		Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
-	    Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "Display Name");
+	    Assert.assertEquals(restorefromseedpage.NamePlaceholder(), "Enter Name");
 	    Assert.assertEquals(restorefromseedpage.BlockheightPlaceholder(), "Restore from Blockheight");
 	    restorefromseedpage.clickBtnDate();
 	    Assert.assertEquals(restorefromseedpage.datePlaceholder(), "Restore from date");

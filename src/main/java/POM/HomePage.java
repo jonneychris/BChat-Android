@@ -45,13 +45,8 @@ public class HomePage extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.widget.ImageView[@bounds='[750,2070][990,2293]']")
 	private WebElement groupsIcon;
-	//[750,2070][990,2293]
-//	[792,2106][972,2286]
+	
 	/*
-	 *
-	 * 00000000-0000-35b1-ffff-ffff000002a9
-	 * 
-	 * 00000000-0000-35b1-ffff-ffff000002a9
 	 //00000000-0000-356d-ffff-ffff0000012e
 	//const div = document.getElementById("myDIV");
 	//div.getElementsByTagName("*")[3].style.backgroundColor = "red";

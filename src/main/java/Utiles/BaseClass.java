@@ -75,7 +75,7 @@ public class baseClass  {
 			 options.setCapability("ignoreHiddenApiPolicyError", true);
 			 options.setCapability("appium:fullReset",true);
 			 options.setCapability("autoGrantPermissions", true);
-			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-arm64-v8a-16-04-2024.apk");
+			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-arm64-v8a.apk");
 			
 		  	 options.setCapability("appPackage", "io.beldex.bchat");	
 			 //For To wait until the landing screen activity comes 

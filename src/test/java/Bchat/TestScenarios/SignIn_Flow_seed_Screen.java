@@ -68,7 +68,7 @@ public class SignIn_Flow_seed_Screen extends baseClass{
 		landingpage.clickSignIn();
 		seedpage = new SeedPage(driver);
 		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
-		Assert.assertEquals(seedpage.Placeholder(),"Enter your recovery seed to restore your account.");
+		Assert.assertEquals(seedpage.Placeholder(),"Enter your Seed");
 		
 	}
 		

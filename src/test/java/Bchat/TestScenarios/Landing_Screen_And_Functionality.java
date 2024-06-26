@@ -99,7 +99,7 @@ public class Landing_Screen_And_Functionality extends baseClass{
 	 restorefromseedpage =new RestoreFromSeedPage(driver);
 	 wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	  wait.until(ExpectedConditions.visibilityOf(restorefromseedpage.textPageTitle));
-	 Assert.assertEquals(restorefromseedpage.pageTitle(),"Restore from Seed");
+	 Assert.assertEquals(restorefromseedpage.pageTitle(),"Restore Seed");
 
 	 try {
 		 driver.navigate().back();
