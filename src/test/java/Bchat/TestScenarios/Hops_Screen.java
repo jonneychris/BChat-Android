@@ -91,6 +91,7 @@ public class Hops_Screen extends baseClass{
 			turnOn_Mobile_Wifi();
 		}
 		Assert.assertEquals(hopspage.pageTitle(), "Hops");
+		
 	}
 	
 

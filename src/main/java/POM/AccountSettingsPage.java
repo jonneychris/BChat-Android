@@ -95,6 +95,9 @@ public class AccountSettingsPage extends ActionsClass{
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='App Lock']")
 	private WebElement optionAppLock;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Chat Settings']")
+	private WebElement optionChatSettings;
+	
 	@AndroidFindBy(xpath="//android.widget.LinearLayout/android.widget.TextView[2][@text='1 image in total']")
 	private WebElement ShareScreentitle;
 
@@ -119,6 +122,9 @@ public class AccountSettingsPage extends ActionsClass{
     	optionBeldexAddress.click();
     }
     
+    public void click_option_Chat_settings () {
+    	optionChatSettings.click();
+    }
     public void ClickQRCode () {
     	optionQrCode.click();
     }

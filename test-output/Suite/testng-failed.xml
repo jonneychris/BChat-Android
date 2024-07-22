@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.App_Lock_Screen_And_Its_functionalities">
+      <class name="Bchat.TestScenarios.ChatSetteing_Screen_And_Functionalities">
         <methods>
+          <include name="To_Validate_whether_paste_option_is_working_on_Conversation_length_limit_field"/>
           <include name="openApp"/>
-          <include name="To_Validate_whether_values_entered_in_the_pin_number_fields_are_visible"/>
+          <include name="To_Validate_whether_entered_value_in_conversation_length_limit_field_is_displayed_In_Chat_Settings"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.App_Lock_Screen_And_Its_functionalities -->
+      </class> <!-- Bchat.TestScenarios.ChatSetteing_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
