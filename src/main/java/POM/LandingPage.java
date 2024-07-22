@@ -101,4 +101,5 @@ public boolean isTermsAndConditionsClickable() {
 	return isClickable(linkTermsAndConditions);
 	
 }
+
 }

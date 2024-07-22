@@ -16,7 +16,7 @@ public class DisplayNamePage extends ActionsClass {
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@AndroidFindBy(id="io.beldex.bchat:id/displayNameEditText")
@@ -34,10 +34,11 @@ public class DisplayNamePage extends ActionsClass {
 	//loader id
 	//android:id/body
 	
-	public void setDisplayName(String displayname) {
+	public String setDisplayName(String displayname) {
 		txtboxDisplayName.click();
 		txtboxDisplayName.sendKeys(displayname);
 	    //super.Send_keys(txtboxDisplayName, displayname);	
+		return displayname;
 	}
 
 	

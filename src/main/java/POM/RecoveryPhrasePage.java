@@ -18,11 +18,12 @@ public class RecoveryPhrasePage extends ActionsClass{
 		// TODO Auto-generated constructor stub
 	}
 	
-	@AndroidFindBy(id="io.beldex.bchat:id/recoveryPhraseCopyIcon")
+	@AndroidFindBy(id="io.beldex.bchat:id/copyButton")
 	private WebElement btnCopyIcon;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/registerButton")
 	private WebElement btnCotinue;
+	
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/title_name")
 	public WebElement textPageTitle;

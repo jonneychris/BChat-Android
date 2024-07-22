@@ -21,19 +21,17 @@ public class HomePage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/bchatHeaderImage")
 	private WebElement pageTitle;
 	
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Save your seed']")
 	private WebElement PopupSaveSeed;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/okButton")
 	private WebElement buttonOk;
 	
-	@AndroidFindBy(id="io.beldex.bchat:id/singleModeImageView")
-	private WebElement btnSettingsDrawer;
-	
-	@AndroidFindBy(id="io.beldex.bchat:id/drawer_settings_title")
-	private WebElement titleSettings;
-	
-	@AndroidFindBy(id="io.beldex.bchat:id/searchBarTitle")
+	@AndroidFindBy(id="io.beldex.bchat:id/profileButton")
+	private WebElement btnMenuDrawer;
+		
+	@AndroidFindBy(xpath="android.widget.TextView[@text='Search']")
 	private WebElement titleSearch;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/searchBarBackButton")
@@ -43,36 +41,50 @@ public class HomePage extends ActionsClass {
 	private WebElement btncancel;
 	
 	
-	@AndroidFindBy(xpath="//android.widget.ImageView[@bounds='[750,2070][990,2293]']")
+	@AndroidFindBy(accessibility="clear")
+	private WebElement btntextboxcancel;
+	
+	@AndroidFindBy(className="android.widget.Button")
 	private WebElement groupsIcon;
 	
-	/*
-	 //00000000-0000-356d-ffff-ffff0000012e
-	//const div = document.getElementById("myDIV");
-	//div.getElementsByTagName("*")[3].style.backgroundColor = "red";
-	//*/
+	//@AndroidFindBy(id="io.beldex.bchat:id/gradientView")
+	//private WebElement chathistory;
 	 
-	@AndroidFindBy(xpath="//android.widget.ImageView[@bounds='[456,2106][636,2286]']")
-	private WebElement iconNewChat;
 	
-	@AndroidFindBy(xpath="//android.widget.ImageView[@bounds='[792,1782][972,1928]']")
-	private WebElement iconSocialgroup;
-	
-	@AndroidFindBy (xpath="//android.widget.ImageView[@bounds='[506,1819][686,1999]']")
-	private WebElement iconSecretgroup;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/emptyStateContainerText")
 	public WebElement BlankChatScreen;
 	
+	@AndroidFindBy (xpath="//android.view.View[@bounds='[480,1632][1026,1800]']")
+	private WebElement btnNewChat;
+	//android.view.View[1][480,1632][1026,1800]
+	//[480,1632][1026,1800]
+	//android.view.View
+	
+	@AndroidFindBy (xpath="//android.view.View[@bounds='[480,1800][1026,1968]']")
+	private WebElement btnSecretGroup;
+	
+	@AndroidFindBy (xpath="//android.view.View[@bounds='[480,1968][1026,2136]']")
+	private WebElement btnSocialGroup;
+	
 	//@AndroidFindBy(xpath="//android.widget.ImageView[@bounds='[45,190][165,280]']")
 	//private WebElement backButton;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Note to Self']")
+	private WebElement optionNoteToMyself;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search people and groups']")
 	private WebElement textboxSearch;
 	
+	//[48,325][1032,493]
+	
 	public  String popuptitle() {
 		String popupTitle = PopupSaveSeed.getText();
 		return popupTitle;
+	}
+	
+	public void click_Option_Note_To_Myself () {
+		optionNoteToMyself.click();
 	}
 	
 	public void clickok() {
@@ -84,16 +96,13 @@ public class HomePage extends ActionsClass {
 		return title;
 	}
 	
-	public void clickSettingsDrawer() {
-		btnSettingsDrawer.click();
-	}
-	
-	public String settingsTitle() {
-		 return titleSettings.getText();
+	public void clickMenuDrawer() {
+		btnMenuDrawer.click();
 	}
 	
 	public String searchTitle() {
-		 return titleSearch.getText();
+		 String text= titleSearch.getText();
+		 return text;
 	}
 	
 	public void clickSearch() {
@@ -107,17 +116,17 @@ public class HomePage extends ActionsClass {
 	
 	public void OpenNewChat() {
 		groupsIcon.click();
-		iconNewChat.click();
+		btnNewChat.click();
 	}
 
 public void openNewSecretGroup() {
 	groupsIcon.click();
-	iconSecretgroup.click();
+	btnSecretGroup.click();
 	}
 
 public void openJoinSocialGroup() {
 	groupsIcon.click();
-	iconSocialgroup.click();
+	btnSocialGroup.click();
 }
 
 
@@ -127,5 +136,32 @@ public String SearchPlaceholder () {
 
 public void ClickCancel() {
 	btncancel.click();
+}
+
+public void pastevalues(String text) {
+	textboxSearch.click();
+	Copy_And_Paste_Values(text, textboxSearch);
+}
+
+public void clearTextBox () {
+	textboxSearch.clear();
+}
+
+public void enterValues (String text) {
+	textboxSearch.click();
+	textboxSearch.sendKeys(text);
+}
+
+public void click_cancel_icon_inside_textbox () {
+	btntextboxcancel.click();
+}
+
+public boolean visiblity_of_placeholder () {
+	boolean result =textboxSearch.isDisplayed();
+	return result;
+}
+public boolean visblity_of_crusor() {
+	boolean result =textboxSearch.equals(activeElement());
+ return result;
 }
 }

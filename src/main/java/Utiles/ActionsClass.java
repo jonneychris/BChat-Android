@@ -29,6 +29,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public abstract class ActionsClass {
 	
@@ -36,13 +37,34 @@ public abstract class ActionsClass {
 	public ActionsClass(AndroidDriver driver) {
 		
 		this.driver=driver;
+		
 	}
 
 	
-	public void scrollgesture(String point) {
-		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+point+"\"));")).click();;	
+	
+	public void scrollgesture_Using_text(String point) {
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+point+"\"));"));	
 	}
  
+	public void scrollgesture_Using_WebElement(WebElement Element) {
+		((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", 
+				ImmutableMap.of("elementId", ((RemoteWebElement) Element).getId(),
+						"direction", "down",
+					    "percent", 1.0));
+	}
+	
+	public void scroll_the_page (int left,int top, int height ,String direction) {
+	
+		boolean canScrollMore;
+		do 
+		{
+		 canScrollMore = (Boolean) ((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
+	    "left", left, "top", top, "width", 200, "height", height,
+	    "direction", direction,
+	    "percent", 3.0	    
+	));
+		}while(canScrollMore); 
+	}
 	public void click(WebElement button) {
 		button.click();
 	}
@@ -81,22 +103,17 @@ public abstract class ActionsClass {
 		
 	}
 
-	public void swipeUp(){
+	public void swipeGesture(int pointFromLeft , int pointFromTop, int width , int height ,String direction){
 		// Java
 		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-		    "left", 100, "top", 100, "width", 200, "height", 200,
-		    "direction", "up",
+		    "left", pointFromLeft, "top", pointFromTop, "width", width, "height", height,
+		    "direction", direction,
 		    "percent", 0.75
 		));
 	}
-	public void swipeleft(){
-		// Java
-		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-		    "left", 500, "top", 100, "width", 200, "height", 200,
-		    "direction", "up",
-		    "percent", 0.75
-		));
-	}
+	
+		
+	
 	public void Send_keys(WebElement element,String string) {
 		Actions actions =new Actions(driver);
 		actions.moveToElement(element).sendKeys(string).perform();
@@ -112,18 +129,18 @@ public abstract class ActionsClass {
     }
 	
 	public WebElement activeElement() {
-		 return driver.switchTo().activeElement();
+		 WebElement result = driver.switchTo().activeElement();
+		return result;
 	}
-public void clearClipboard() {
+	
+	public void clearClipboard() {
 	driver.getClipboardText();
 	
 	}
-//	public CreateNewWallet1 Send_keys(String vasu) {
-//		Actions ac=new Actions(driver);
-//		ac.sendKeys(vasu).perform();
-//		return this;
-//	}
-	
+
+	public void Android_Key_Enter () {
+		((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
+	}
 	
 	
 	
