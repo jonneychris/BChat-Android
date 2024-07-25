@@ -50,7 +50,7 @@ public class AccountSettingsPage extends ActionsClass{
 	@AndroidFindBy(className = "android.widget.Button")
 	private WebElement btnLinkBNS;
 	
-	@AndroidFindBy(xpath="//android.view.View[@bounds='[48,1306][1032,1432]']")
+	@AndroidFindBy(accessibility = "Read more about BNS")
 	private WebElement OptionAboutBNS;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='About BNS']")
@@ -97,6 +97,9 @@ public class AccountSettingsPage extends ActionsClass{
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Chat Settings']")
 	private WebElement optionChatSettings;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Blocked Contacts']")
+	private WebElement optionBlockedContacts;
 	
 	@AndroidFindBy(xpath="//android.widget.LinearLayout/android.widget.TextView[2][@text='1 image in total']")
 	private WebElement ShareScreentitle;
@@ -226,4 +229,10 @@ public class AccountSettingsPage extends ActionsClass{
 		return LinkBNSPopupScreenTitle;
     	
     }
+    
+    public void click_Blocked_contact_Option () {
+    	optionBlockedContacts.click();
+    }
+    
+    
 }

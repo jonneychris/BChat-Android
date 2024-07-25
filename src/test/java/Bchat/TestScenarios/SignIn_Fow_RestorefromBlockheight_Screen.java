@@ -204,7 +204,7 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	   	restorefromseedpage.clickBtnRestore();
 	   	 createpasswordpage = new CreatePasswordPage(driver);
 	   	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-	   	 wait.until(ExpectedConditions.visibilityOf(createpasswordpage.textPageTitle));
+	   	// wait.until(ExpectedConditions.visibilityOf(createpasswordpage.textPageTitle));
 	   	Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 	   	try {
 	   	driver.navigate().back();

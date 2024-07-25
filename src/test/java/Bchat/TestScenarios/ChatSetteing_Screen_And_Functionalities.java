@@ -184,10 +184,10 @@ public class ChatSetteing_Screen_And_Functionalities extends baseClass{
    }
    
    /*
-  Validate the Whether able to change the value in the converstion length limit
+  Validate the Whether able to change the value in the conversation length limit
    */
   @Test(priority = 5)
-   public void To_Validate_the_Whether_able_to_change_the_value_in_the_converstion_length_limit () {
+   public void To_Validate_the_Whether_able_to_change_the_value_in_the_conversation_length_limit () {
 	  
 	  chatsettingspage = new ChatSettingsPage(driver);
   	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");

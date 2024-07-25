@@ -16,6 +16,7 @@ public class ExtentReport  {
 		report.config().setDocumentTitle("Test results");
 		
 	    extent = new ExtentReports();
+
 		extent.attachReporter(report);
 		extent.setSystemInfo("Tester", "Chris");
 		return extent;

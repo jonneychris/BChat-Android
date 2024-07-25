@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.ChatSetteing_Screen_And_Functionalities">
+      <class name="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="To_Validate_working_of_enter_is_send_option_in_messaging_screen_in_off_condition"/>
-          <include name="To_Validate_whether_entered_value_in_conversation_length_limit_field_is_displayed_In_Chat_Settings"/>
-          <include name="To_Validate_Conversation_length_limit_field_Whether_allowing_space"/>
-          <include name="To_Validate_the_working_of_delete_button_in_Delete_all_old_messages_now"/>
+          <include name="PreSetup"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_Whether_able_to_change_the_value_in_the_converstion_length_limit"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.ChatSetteing_Screen_And_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

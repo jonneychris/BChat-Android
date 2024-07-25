@@ -138,9 +138,7 @@ public abstract class ActionsClass {
 	
 	}
 
-	public void Android_Key_Enter () {
-		((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
-	}
+	
 	
 	
 	

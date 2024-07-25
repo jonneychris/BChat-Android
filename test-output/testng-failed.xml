@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.ChatSetteing_Screen_And_Functionalities">
+      <class name="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities">
         <methods>
-          <include name="To_Validate_whether_paste_option_is_working_on_Conversation_length_limit_field"/>
           <include name="openApp"/>
-          <include name="To_Validate_whether_entered_value_in_conversation_length_limit_field_is_displayed_In_Chat_Settings"/>
           <include name="closeApp"/>
+          <include name="To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen"/>
+          <include name="To_Validate_whether_able_to_unblock_the_blocked_contacts"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.ChatSetteing_Screen_And_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

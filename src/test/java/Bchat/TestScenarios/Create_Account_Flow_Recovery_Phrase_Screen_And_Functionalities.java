@@ -127,7 +127,12 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 		driver.navigate().back();
 		createpasswordpage = new CreatePasswordPage(driver);
        Assert.assertEquals(createpasswordpage.pageTitle(), "Create Password");
-       createpasswordpage.clickTick();
+       displaynamepage =new DisplayNamePage(driver);
+       displaynamepage.clickContinue();
+       createpasswordpage = new CreatePasswordPage(driver);
+		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
+		createpasswordpage.setValidPassword();
+       
 	}
 	
 	/*

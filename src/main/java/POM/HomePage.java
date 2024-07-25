@@ -76,7 +76,27 @@ public class HomePage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search people and groups']")
 	private WebElement textboxSearch;
 	
-	//[48,325][1032,493]
+	@AndroidFindBy(xpath="//android.widget.LinearLayout[1]")
+	private WebElement FirstChatItem;
+	
+	
+	@AndroidFindBy(xpath="//android.widget.LinearLayout[2]")
+	private WebElement SecondChatItem;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Block']")
+	private WebElement optionBlock;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[1][@text='Block Contact']")
+	private WebElement BlockContactPopupTitle;
+	
+	@AndroidFindBy(xpath="//android.view.View[1]/android.widget.Button")
+	private WebElement btnCancelInBlockContactPopup;
+	
+	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.Button")
+	private WebElement btnYesInBlockContactPopup;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/conversationViewDisplayNameTextView")
+	private WebElement DisplayNameOfChatItem;
 	
 	public  String popuptitle() {
 		String popupTitle = PopupSaveSeed.getText();
@@ -163,5 +183,22 @@ public boolean visiblity_of_placeholder () {
 public boolean visblity_of_crusor() {
 	boolean result =textboxSearch.equals(activeElement());
  return result;
+}
+
+public void Block_First_Contact () {
+	longPress(DisplayNameOfChatItem);
+	optionBlock.click();
+	btnYesInBlockContactPopup.click();		
+}
+
+public void Block_Second_Contact () {
+	longPress(SecondChatItem);
+	optionBlock.click();
+	btnYesInBlockContactPopup.click();		
+}
+
+public String get_DisplayName_Or_Id_Of_ChatItem() {
+	 return DisplayNameOfChatItem.getText();
+	
 }
 }
