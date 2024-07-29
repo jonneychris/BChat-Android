@@ -83,8 +83,7 @@ public class AccountSettingsPage extends ActionsClass{
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Verifying...']")
 	private WebElement loadingAnimationScreen;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Changelog']")
-	private WebElement optionChangeLog;
+	
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Verified']")
 	private WebElement btnVerified;
@@ -101,9 +100,46 @@ public class AccountSettingsPage extends ActionsClass{
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Blocked Contacts']")
 	private WebElement optionBlockedContacts;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Clear Data']")
+	private WebElement optionClearData;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Feedback']")
+	private WebElement optionFeedback;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='FAQ']")
+	private WebElement optionFAQ;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Changelog']")
+	private WebElement optionChangeLog;
+
+	@AndroidFindBy(accessibility = "feedback@beldex.io, feedback@beldex.io")
+	private WebElement feedbackmailid;
+	
 	@AndroidFindBy(xpath="//android.widget.LinearLayout/android.widget.TextView[2][@text='1 image in total']")
 	private WebElement ShareScreentitle;
 
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Frequently Asked Questions']")
+	private WebElement FAQPageTitle;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@index='1']")
+	private WebElement changelogPageTitle;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='1.0.0']")
+	private WebElement firstlog;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='2.5.0']")
+	private WebElement log2_5_0;
+
+	@AndroidFindBy(xpath="//android.widget.TextView[1][@text='Initial Release']")
+	private WebElement firstLogContent;
+	
+	public void Click_back_arrow () {
+		btnBackArrow.click();
+	}
+	
+	public WebElement lastLog () {
+		return log2_5_0;
+	}
 	
 	public WebElement ElementChangelog() {
 		return optionChangeLog;
@@ -234,5 +270,39 @@ public class AccountSettingsPage extends ActionsClass{
     	optionBlockedContacts.click();
     }
     
+    public void click_Clear_Data_option (){
+	optionClearData.click();
+    }
     
+    public void click_Feedback_option (){
+    	optionFeedback.click();
+    }
+
+    public void click_FAQ_option (){
+    	optionFAQ.click();
+    }
+
+    public void click_Changelog_option (){
+    	optionChangeLog.click();
+    }
+
+    public String feedback_mail_Id () {
+    	return feedbackmailid.getText();
+    }
+
+    public String FAQ_Page_Title () {
+    	return FAQPageTitle.getText(); 
+    }
+    
+    public String ChangeLog_PageTitle () {
+    	return changelogPageTitle.getText();
+    }
+    
+    public void click_First_Log () {
+    	firstlog.click();
+    }
+    
+    public WebElement FirstLog_content () {
+    	return firstlog;
+    }
 }

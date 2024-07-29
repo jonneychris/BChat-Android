@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utiles.ActionsClass;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -33,6 +34,15 @@ public class NoteToMyselfPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/back_to_home_Btn")
 	private WebElement btnbackArrow ;
 	
+	@AndroidFindBy(accessibility ="Media message")
+	private WebElement linkPreview;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/microphoneOrSendButtonContainer")
+	private WebElement btnSend;
+	
+	public void click_send_Button () {
+		btnSend.click();
+	}
 	public void clickTextBox () {
 		messageTextbox.click();
 	}
@@ -53,4 +63,7 @@ public class NoteToMyselfPage extends ActionsClass {
 	   messageTextbox.sendKeys(value);
 	}
 	
+	public WebElement Link_Preview () {
+		return linkPreview;
+	}
 }

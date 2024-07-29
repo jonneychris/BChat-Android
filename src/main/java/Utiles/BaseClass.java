@@ -64,7 +64,7 @@ public class baseClass  {
 		 //cap.setBrowserName(System.getProperty("user.dir")+"//Resources//General-Store.apk");
 		try {
 			UiAutomator2Options options = new UiAutomator2Options();
-			
+		
 			options.setCapability("automationName", "UiAutomator2");	
 			 options.setCapability("deviceName", "one plus nord ce 3");		 
 			 options.setCapability("platformName","Android");
@@ -81,8 +81,8 @@ public class baseClass  {
 			 //For To wait until the landing screen activity comes 
 			 options.setCapability("appWaitActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity"); 
 			 //options.setCapability("autoLaunch", true);
-				
-			 
+		
+			// driver = new AndroidDriver(new URL(null), options);
 			 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
 				 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				  

@@ -91,7 +91,13 @@ public class MenuPage extends ActionsClass {
 		return optionAbout.getText();
     	
     }
+    
+    public void click_option_Wallet () {
+    	optionWallet.click();
+    }
      
-     
+    public void click_option_Settings () {
+    	optionSettings.click();
+    }
 }
 

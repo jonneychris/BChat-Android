@@ -42,7 +42,8 @@ public class ClearDataPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.Button")
 	private WebElement btnClearOrDelete;
 	
-	
+	@AndroidFindBy(className = "android.widget.ProgressBar")
+	private WebElement loadingAnimation;
 
 
 
@@ -77,5 +78,9 @@ public class ClearDataPage extends ActionsClass {
 	
 	public void click_option_deleteAccount () {
 		optionDeleteAccount.click();
+	}
+	
+	public WebElement Loading_animation() {
+		return loadingAnimation;
 	}
 }

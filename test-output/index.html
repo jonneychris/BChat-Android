@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -20,9 +21,9 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -49,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\itsup\eclipse-workspace\BChat\Blocked_contacts_testng.xml</span>
+                    <span>C:\Users\itsup\eclipse-workspace\BChat\Settings_testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,27 +103,32 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="Presetup">Presetup</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="PreSetup">PreSetup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_the_working_of_cancel_button_in_unblock_users_popup">To_Validate_the_working_of_cancel_button_in_unblock_users_popup</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition">To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen">To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_the_working_of_Start_wallet">To_Validate_the_working_of_Start_wallet</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_whether_able_to_unblock_the_blocked_contacts">To_Validate_whether_able_to_unblock_the_blocked_contacts</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet">To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_whether_blocked_contacts_is_showing">To_Validate_whether_blocked_contacts_is_showing</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_Validate_whether_able_to_navigate_back_to_Menu_screen">To_Validate_whether_able_to_navigate_back_to_Menu_screen</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities" class="method navigator-link" hash-for-method="To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet">To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -140,42 +146,49 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities</span>
+              <span class="class-name">Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Presetup">
-                  </a> <!-- Presetup -->
-                  <span class="method-name">Presetup</span>
+                  <a name="PreSetup">
+                  </a> <!-- PreSetup -->
+                  <span class="method-name">PreSetup</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="To_Validate_the_working_of_cancel_button_in_unblock_users_popup">
-                  </a> <!-- To_Validate_the_working_of_cancel_button_in_unblock_users_popup -->
-                  <span class="method-name">To_Validate_the_working_of_cancel_button_in_unblock_users_popup</span>
+                  <a name="To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition">
+                  </a> <!-- To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition -->
+                  <span class="method-name">To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen">
-                  </a> <!-- To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen -->
-                  <span class="method-name">To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen</span>
+                  <a name="To_Validate_the_working_of_Start_wallet">
+                  </a> <!-- To_Validate_the_working_of_Start_wallet -->
+                  <span class="method-name">To_Validate_the_working_of_Start_wallet</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="To_Validate_whether_able_to_unblock_the_blocked_contacts">
-                  </a> <!-- To_Validate_whether_able_to_unblock_the_blocked_contacts -->
-                  <span class="method-name">To_Validate_whether_able_to_unblock_the_blocked_contacts</span>
+                  <a name="To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet">
+                  </a> <!-- To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet -->
+                  <span class="method-name">To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="To_Validate_whether_blocked_contacts_is_showing">
-                  </a> <!-- To_Validate_whether_blocked_contacts_is_showing -->
-                  <span class="method-name">To_Validate_whether_blocked_contacts_is_showing</span>
+                  <a name="To_Validate_whether_able_to_navigate_back_to_Menu_screen">
+                  </a> <!-- To_Validate_whether_able_to_navigate_back_to_Menu_screen -->
+                  <span class="method-name">To_Validate_whether_able_to_navigate_back_to_Menu_screen</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet">
+                  </a> <!-- To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet -->
+                  <span class="method-name">To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,19 +196,19 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\itsup\eclipse-workspace\BChat\Blocked_contacts_testng.xml</span>
+            <span class="header-content">C:\Users\itsup\eclipse-workspace\BChat\Settings_testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Utiles.Listerners&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities&quot;/&gt;
+      &lt;class name=&quot;Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -235,32 +248,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen')
-data.setCell(0, 2, 'Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities')
-data.setCell(0, 3, 102126);
+data.setCell(0, 1, 'To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition')
+data.setCell(0, 2, 'Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities')
+data.setCell(0, 3, 49823);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Presetup')
-data.setCell(1, 2, 'Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities')
-data.setCell(1, 3, 70293);
+data.setCell(1, 1, 'PreSetup')
+data.setCell(1, 2, 'Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities')
+data.setCell(1, 3, 27561);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'To_Validate_the_working_of_cancel_button_in_unblock_users_popup')
-data.setCell(2, 2, 'Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities')
-data.setCell(2, 3, 58099);
+data.setCell(2, 1, 'To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet')
+data.setCell(2, 2, 'Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities')
+data.setCell(2, 3, 15854);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'To_Validate_whether_blocked_contacts_is_showing')
-data.setCell(3, 2, 'Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities')
-data.setCell(3, 3, 48349);
+data.setCell(3, 1, 'To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet')
+data.setCell(3, 2, 'Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities')
+data.setCell(3, 3, 9938);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'To_Validate_whether_able_to_unblock_the_blocked_contacts')
-data.setCell(4, 2, 'Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities')
-data.setCell(4, 3, 740);
+data.setCell(4, 1, 'To_Validate_the_working_of_Start_wallet')
+data.setCell(4, 2, 'Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities')
+data.setCell(4, 3, 7743);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'To_Validate_whether_able_to_navigate_back_to_Menu_screen')
+data.setCell(5, 2, 'Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities')
+data.setCell(5, 3, 1439);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -286,38 +303,43 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Bchat.TestScenarios.Blocked_Contact_Screen_And_Its_Functionalities</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">openApp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">Presetup</span>
-                <span class="method-start">20027 ms</span>
+                <span class="method-name">PreSetup</span>
+                <span class="method-start">17576 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">To_Validate_whether_blocked_contacts_is_showing</span>
-                <span class="method-start">90331 ms</span>
+                <span class="method-name">To_Validate_whether_able_to_navigate_back_to_Menu_screen</span>
+                <span class="method-start">45148 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">To_Validate_the_working_of_cancel_button_in_unblock_users_popup</span>
-                <span class="method-start">138680 ms</span>
+                <span class="method-name">To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet</span>
+                <span class="method-start">46590 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">To_Validate_whether_able_to_unblock_the_blocked_contacts</span>
-                <span class="method-start">196779 ms</span>
+                <span class="method-name">To_Validate_the_working_of_Start_wallet</span>
+                <span class="method-start">62444 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen</span>
-                <span class="method-start">197529 ms</span>
+                <span class="method-name">To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet</span>
+                <span class="method-start">70191 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition</span>
+                <span class="method-start">80130 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">299660 ms</span>
+                <span class="method-start">129957 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

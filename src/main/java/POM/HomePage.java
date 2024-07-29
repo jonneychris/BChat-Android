@@ -1,5 +1,8 @@
 package POM;
 
+import java.util.List;
+
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -97,6 +100,9 @@ public class HomePage extends ActionsClass {
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/conversationViewDisplayNameTextView")
 	private WebElement DisplayNameOfChatItem;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/recyclerView")
+	private WebElement oldMessages;
 	
 	public  String popuptitle() {
 		String popupTitle = PopupSaveSeed.getText();
@@ -198,7 +204,17 @@ public void Block_Second_Contact () {
 }
 
 public String get_DisplayName_Or_Id_Of_ChatItem() {
-	 return DisplayNameOfChatItem.getText();
+	 return DisplayNameOfChatItem.getText();	 
+}
+
+public List OldMessages () {
+	int messagelist =oldMessages.getSize();
+	 
+	for(int i=0;i <=  ;i++) {
+		
+	}
+	return null;
 	
 }
+
 }

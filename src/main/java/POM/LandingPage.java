@@ -41,6 +41,9 @@ public class LandingPage extends ActionsClass{
 	
 	@AndroidFindBy(id="com.android.launcher:id/recent_container")
 	private WebElement AppList;
+
+	@AndroidFindBy(xpath="//android.widget.TextView[1][@index='0']")
+	private WebElement pageTitle;
 	
 	public void clickCreateAccount() {
 		super.click(buttonCreateAccount);
@@ -102,4 +105,11 @@ public boolean isTermsAndConditionsClickable() {
 	
 }
 
+public String pageTitle () {
+	return pageTitle.getText();
+}
+
+public WebElement landingpage_Element () {
+	return pageTitle;
+}
 }
