@@ -15,7 +15,7 @@ public class PasswordPage extends ActionsClass {
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@AndroidFindBy(id="io.beldex.bchat:id/userPinEditTxt")

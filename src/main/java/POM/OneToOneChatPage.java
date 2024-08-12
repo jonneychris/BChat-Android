@@ -35,6 +35,12 @@ public class OneToOneChatPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/microphoneOrSendButtonContainer")
 	private WebElement btnSend;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/acceptMessageRequestButton")
+	private WebElement btnAccept;
+	
+	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.Button")
+	private WebElement btnAcceptInPopup;
+	
 	public void clickTextBox () {
 		messageTextbox.click();
 	}
@@ -63,4 +69,9 @@ public class OneToOneChatPage extends ActionsClass {
 		 return profileNameOrId.getText();
 	}
  
+	public void click_Accept () {
+		btnAccept.click();
+		btnAcceptInPopup.click();
+	}
+	
 }

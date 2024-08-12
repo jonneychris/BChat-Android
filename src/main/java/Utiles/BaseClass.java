@@ -66,30 +66,27 @@ public class baseClass  {
 			UiAutomator2Options options = new UiAutomator2Options();
 		
 			options.setCapability("automationName", "UiAutomator2");	
-			 options.setCapability("deviceName", "one plus nord ce 3");		 
+			 options.setCapability("deviceName", "one plus nord ce 3");
 			 options.setCapability("platformName","Android");
-			 options.setCapability("platformVersion","13");
+			 options.setCapability("platformVersion","14");
 			 options.setCapability("udid", "d6a08b3e");
-			// options.setCapability(MobileCapabilityType.NO_RESET, "true");
-			// options.setCapability("noReset", "true");
-			 options.setCapability("ignoreHiddenApiPolicyError", true);
-			 options.setCapability("appium:fullReset",true);
-			 options.setCapability("autoGrantPermissions", true);
-			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-arm64-v8a-18-07-2024-Mainnet-Apk (1).apk");
+			 options.setCapability("appium:ignoreHiddenApiPolicyError", true);
+			 options.setCapability("appium:appium:fullReset",true);
+			 options.setCapability("appium:autoGrantPermissions", true);
+			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.6.0-arm64-v8a.apk");
 			
-		  	 options.setCapability("appPackage", "io.beldex.bchat");	
+		  	 options.setCapability("appium:appPackage", "io.beldex.bchat");	
 			 //For To wait until the landing screen activity comes 
-			 options.setCapability("appWaitActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity"); 
+			 options.setCapability("appWaitActivity", "io.beldex.bchat.onboarding.LandingActivity"); 
 			 //options.setCapability("autoLaunch", true);
-		
-			// driver = new AndroidDriver(new URL(null), options);
+			 
 			 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
 				 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				  
 					landingpage =new LandingPage(driver);
 		}
 				 
-		catch(Exception E) {
+	catch(Exception E) {
 			try {
 				UiAutomator2Options options = new UiAutomator2Options();
 				
@@ -103,7 +100,7 @@ public class baseClass  {
 				 options.setCapability("ignoreHiddenApiPolicyError", true);
 				 options.setCapability("appium:fullReset",true);
 				 options.setCapability("autoGrantPermissions", true);
-				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.0-arm64-v8a-16-04-2024.apk");
+				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.6.0-arm64-v8a.apk");
 				
 			  	 options.setCapability("appPackage", "io.beldex.bchat");	
 				 //For To wait until the landing screen activity comes 
@@ -124,7 +121,7 @@ public class baseClass  {
 	}
 	
 	
-	@AfterClass(alwaysRun = true)
+	@AfterClass//(alwaysRun = true)
  public void closeApp() {
 		
 		

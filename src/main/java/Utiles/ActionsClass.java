@@ -46,6 +46,10 @@ public abstract class ActionsClass {
 		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+point+"\"));"));	
 	}
  
+	public void scrollAndClick_Using_text(String point) {
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+point+"\"));")).click();	
+	}
+	
 	public void scrollgesture_Using_WebElement(WebElement Element) {
 		((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", 
 				ImmutableMap.of("elementId", ((RemoteWebElement) Element).getId(),

@@ -16,18 +16,10 @@ public class demo extends baseClass {
 	
    
 	
-	   public static void main (String[] args) {
-		 
-		   
-		   boolean canScrollMore =true ;
-		   int i=5;
-			do {
-				int i1=0;
-			  System.out.println(i1++);
-		
-			}
-			while(canScrollMore);
-		   
+	  @Test
+	  public void demo() {
+		  
+		  
 	   }
 	  
 	

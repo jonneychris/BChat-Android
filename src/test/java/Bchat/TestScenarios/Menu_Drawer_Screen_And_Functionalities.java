@@ -13,7 +13,7 @@ import POM.HomePage;
 import POM.MenuPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -24,7 +24,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	MenuPage menupage;
@@ -33,6 +33,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	SecretGroupPage secretgrouppage;
 	WebDriverWait wait;
 	String EnterDisplayName;
+	
 	
 	/*
 	 Pre Setup to menu screen

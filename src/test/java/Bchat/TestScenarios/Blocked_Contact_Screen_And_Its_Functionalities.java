@@ -30,7 +30,6 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	MenuPage menupage;

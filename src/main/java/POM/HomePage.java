@@ -207,14 +207,14 @@ public String get_DisplayName_Or_Id_Of_ChatItem() {
 	 return DisplayNameOfChatItem.getText();	 
 }
 
-public List OldMessages () {
-	int messagelist =oldMessages.getSize();
-	 
-	for(int i=0;i <=  ;i++) {
-		
-	}
-	return null;
-	
-}
+//public List OldMessages () {
+//	int messagelist =oldMessages.getSize();
+//	 
+//	for(int i=0;i <=  ;i++) {
+//		
+//	}
+//	return null;
+//	
+//}
 
 }

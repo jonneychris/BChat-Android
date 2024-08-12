@@ -17,7 +17,7 @@ import POM.HomePage;
 import POM.MenuPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -29,7 +29,7 @@ public class App_Lock_Screen_And_Its_functionalities extends baseClass{
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	SocialGroupPage socialgrouppage;

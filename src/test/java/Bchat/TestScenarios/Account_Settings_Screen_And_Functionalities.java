@@ -17,7 +17,7 @@ import POM.MenuPage;
 import POM.MyAccountPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -29,7 +29,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	SocialGroupPage socialgrouppage;
@@ -186,18 +186,18 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 //	
 //	}
 //	
-//	/*
-//	To validate the working of the share qr code.
-//	*/
-//	@Test(priority = 7)
-//    public void To_validate_the_working_of_the_share_qr_code () {
-//		accountsettingspage =new AccountSettingsPage(driver);
-//		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
-//		accountsettingspage.ClickQRCode();
-//		accountsettingspage.clickSharebtn();
-//		Assert.assertEquals(accountsettingspage.Share_Screen_Title(), "1 image in total");
-//		accountsettingspage.click_Cancel_In_share_option();
-//	}
+	/*
+	To validate the working of the share qr code.
+	*/
+	@Test(priority = 7)
+    public void To_validate_the_working_of_the_share_qr_code () {
+		accountsettingspage =new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.ClickQRCode();
+		accountsettingspage.clickSharebtn();
+		Assert.assertEquals(accountsettingspage.Share_Screen_Title(), "1 image in total");
+		accountsettingspage.click_Cancel_In_share_option();
+	}
 //	
 //	
 //	/*

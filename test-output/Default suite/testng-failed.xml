@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities">
+      <class name="Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow">
         <methods>
           <include name="openApp"/>
-          <include name="To_Validate_the_working_of_Start_wallet"/>
+          <include name="To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Settings_Screen_And_Its_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

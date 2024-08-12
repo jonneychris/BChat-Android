@@ -43,7 +43,7 @@ public class MenuPage extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Message Requests']")
 	private WebElement optionMessageRequest;
-
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Recovery Seed']")
 	private WebElement optionRecoverySeed;
 	
@@ -91,6 +91,10 @@ public class MenuPage extends ActionsClass {
 		return optionAbout.getText();
     	
     }
+
+    public void click_Notification_option() {
+		optionNotification.click();
+	}
     
     public void click_option_Wallet () {
     	optionWallet.click();
@@ -98,6 +102,14 @@ public class MenuPage extends ActionsClass {
      
     public void click_option_Settings () {
     	optionSettings.click();
+    }
+    
+    public void click_option_Message_requests () {
+    	optionMessageRequest.click();
+    }
+    
+    public void click_option_Recovery_Seed () {
+    	optionRecoverySeed.click();
     }
 }
 
