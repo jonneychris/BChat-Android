@@ -56,16 +56,32 @@ public class MenuPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Help']")
 	private WebElement optionHelp;
 	
+	@AndroidFindBy(id="com.google.android.gm:id/compose_body_parent")
+	private WebElement gmailScreen;
+	
+	@AndroidFindBy(accessibility = "support beldex, support@beldex.io")
+	private WebElement ToMailIdInGmail;
+	
+	@AndroidFindBy(id = "android:id/content_preview_text")
+	private WebElement InvitePopup;
+	
+	@AndroidFindBy(accessibility = "Cancel")
+	private WebElement btnCancelInInvite;
+	
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Invite']")
 	private WebElement optionInvite;
 
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='About']")
 	private WebElement optionAbout;
 	
+	@AndroidFindBy(accessibility = "Back")
+	private WebElement btnBackArrow;
+	
 	@AndroidFindBy(className="android.widget.Switch")
 	private WebElement optionThemeChange;
 	
-
+ 
 	public String pagetitle() {
 	String title=	pagetitle.getText();
 	return title;
@@ -111,5 +127,50 @@ public class MenuPage extends ActionsClass {
     public void click_option_Recovery_Seed () {
     	optionRecoverySeed.click();
     }
+    
+    
+    public void click_option_ReportIssue () {
+    	optionsReportIssue.click();
+    }
+    
+    public void click_option_Help () {
+    	optionHelp.click();
+    }
+    
+    public void click_option_Invite() {
+		optionInvite.click();
+	}
+    
+    public void click_option_About () {
+    	optionAbout.click();
+    }
+    
+    public void click_Back_Arrow () {
+    	btnBackArrow.click();
+    }
+    
+    public String About_Screen_Title () {
+    	return optionAbout.getText();
+    }
+    
+    public void click_cancel_In_Inivite () {
+    	btnCancelInInvite.click();
+    }
+
+    public WebElement get_Invite_Screen_element () {
+    	return InvitePopup;
+    }
+    
+    public String get_to_mail_Id () {
+    	return ToMailIdInGmail.getText();
+    }
+    
+    public WebElement get_element_of_GmailScreen () {
+    	return gmailScreen;
+    }
+
+    public void click_theme_ChnageButton() {
+		optionThemeChange.click();
+	}
 }
 

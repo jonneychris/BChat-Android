@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utiles.ActionsClass;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -26,6 +27,45 @@ public class NewChatPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.Button[@index='1']")
 	private WebElement btnLetsBChat;
 	
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Your Chat ID']")
+	private WebElement btnYourBchatId;
+	
+	@AndroidFindBy(accessibility = "Back")
+	private WebElement btnBackArrow;
+	
+	@AndroidFindBy(className = "android.widget.ImageView")
+	private WebElement optionUploadFromGallery;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Scan QR'")
+	private WebElement ScanQRCodeTitle;
+	
+	@AndroidFindBy(xpath = "//android.widget.ImageView[@index='1']")
+	private WebElement btnScanner;
+	
+	@AndroidFindBy(xpath="(//android.widget.TextView[@text='Photos'])[1]")
+	private WebElement optionGallery;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Albums']")
+	private WebElement optionAlbums;
+	
+	@AndroidFindBy(accessibility = "QR code,1 item,")
+	private WebElement QrCodeFolder;
+	
+	@AndroidFindBy(accessibility = "Invalid Qr,1 item,")
+	private WebElement InvalidQRCodeFolder;
+	
+	@AndroidFindBy(accessibility = "Bchat,1 item,")
+	private WebElement imageFolder;
+	
+	@AndroidFindBy(id="com.oneplus.gallery:id/base_album_item_img")
+	private WebElement QrCodePhoto;
+	
+	@AndroidFindBy(className = "android.widget.TextView")
+	private WebElement loader;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/defaultRoomsLoader")
+	private WebElement imageLoader;
+	
 	public String Pagetitle() {
 		String title = pageTitle.getText();
 		return title;
@@ -41,4 +81,81 @@ public class NewChatPage extends ActionsClass {
 		btnLetsBChat.click();
 	}
 	
+	public void Check_with_Invalid() {
+		BchatIDOrBNSNameTextBox.sendKeys("bdb1c18ew438f0p6694760cl8oiaf644efdbrtfeeb4c389036fk6db91951584b24");
+		btnLetsBChat.click();
+	}
+	
+	public void Enter_BNS_Name(String value) {
+		BchatIDOrBNSNameTextBox.sendKeys(value);
+		
+	}
+	
+	
+	public void click_Your_BchatId () {
+		btnYourBchatId.click();
+	}
+	
+	public void click_Lets_Bchat () {
+		btnLetsBChat.click();
+	}
+	
+	public void click_Back_Arrow () {
+		btnBackArrow.click();
+	}
+	
+	public void Upload_valid_Qr_code () {
+		btnScanner.click();
+		optionUploadFromGallery.click();
+		optionGallery.click();
+		optionAlbums.click();
+	QrCodeFolder.click();
+		QrCodePhoto.click();
+	}
+	
+	public void Upload_Invalid_Qr_Code () {
+		
+		optionUploadFromGallery.click();
+		optionGallery.click();
+		optionAlbums.click();
+   // 	InvalidQRCodeFolder.click();
+   //		QrCodePhoto.click();
+	}
+	
+	public void Upload_image () {
+		btnScanner.click();
+		optionUploadFromGallery.click();
+		optionGallery.click();
+		optionAlbums.click();
+	//	imageFolder.click();
+	//	QrCodePhoto.click();
+	}
+	
+	public WebElement Element_of_Loader () {
+		return loader;
+	}
+	
+	public WebElement Element_of_NewChat_screen () {
+		return pageTitle;
+	}
+	
+	public void clear_textBox () {
+		BchatIDOrBNSNameTextBox.clear();
+	}
+	
+	public void Paste_Values_In_textBox (String value) {
+		Copy_And_Paste_Values(value, BchatIDOrBNSNameTextBox);
+	}
+	
+	public WebElement imageLoader () {
+		return imageLoader;
+	}
+	
+	public String scan_Qr_Screen_title () {
+		return ScanQRCodeTitle.getText();
+	}
+	
+	public String get_Values_from_TextBox () {
+		return BchatIDOrBNSNameTextBox.getText();
+	}
 }

@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import Utiles.ActionsClass;
 import io.appium.java_client.AppiumDriver;
@@ -37,8 +38,9 @@ public class Listerners extends baseClass  implements ITestListener  {
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		test.pass("Test Passed");
+		
 	}
-
+	
 	@Override
 	public void onTestFailure(ITestResult result) {
 		

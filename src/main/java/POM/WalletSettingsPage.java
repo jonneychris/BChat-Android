@@ -129,6 +129,15 @@ public class WalletSettingsPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.ImageView[1]")
 	private WebElement CopyOrSendIconofFirstAddress;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=''No Contacts]")
+	private WebElement ContentNoContacts;
+	
+	@AndroidFindBy(className = "android.widget.Button")
+	private WebElement closeIcon;
+	
+	@AndroidFindBy(xpath="//android.view.View[1]/android.widget.TextView[@index='0']")
+	private WebElement firstContactNameInAddressBook;
+	
 	public String walletSettings_screen_Title () {
     	return WalletSettingsScreenTitle.getText();
     }
@@ -376,6 +385,31 @@ public class WalletSettingsPage extends ActionsClass {
     public void click_CopyOrSend_Of_FirstAddress () {
     	CopyOrSendIconofFirstAddress.click();
     }
+    
+    public String Element_No_Contacts () {
+    	return ContentNoContacts.getText();
+    }
+    
+    public void clear_search_textbox () {
+    	SearchTextBox.clear();
+    }
+    
+    public String get_values_In_searchTextBox () {
+    	return SearchTextBox.getText();
+    }
+    
+    public void paste_Values_In_Searchtextbox (String value) {
+    	Copy_And_Paste_Values(value, SearchTextBox);
+    }
+    
+    public void click_closeIcon_In_searchtextbox () {
+    	closeIcon.click();
+    }
+    
+    public String get_Name_Of_FirstContact_In_AddressBook () {
+    	return firstContactNameInAddressBook.getText();
+    }
+    
 }
 
 

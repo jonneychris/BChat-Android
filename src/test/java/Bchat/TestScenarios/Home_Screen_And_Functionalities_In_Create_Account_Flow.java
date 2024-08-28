@@ -13,7 +13,6 @@ import POM.HomePage;
 import POM.MenuPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -23,7 +22,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	MenuPage menupage;
@@ -66,7 +65,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	Validate whether able to navigate to the device home page directly.
 	*/
 	@Test(priority = 1)
-	public void To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction () {
+	public void To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction () throws InterruptedException {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		driver.navigate().back();
@@ -75,6 +74,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 			 landingpage.openApp();
 	}
 		 Assert.assertEquals(homepage.Pagetitle(),"BChat");
+	
 	}
 	
 	/*
@@ -147,7 +147,8 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 		//homepage.clickBackArrow();
 		driver.navigate().back();
 	}
-
+	
+	
 	/*
 	  Validate the navigation to the join social group screen
 	 */

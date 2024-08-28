@@ -1,4 +1,5 @@
 package Utiles;
+import java.awt.datatransfer.Clipboard;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
@@ -69,6 +70,7 @@ public abstract class ActionsClass {
 	));
 		}while(canScrollMore); 
 	}
+	
 	public void click(WebElement button) {
 		button.click();
 	}
@@ -76,7 +78,7 @@ public abstract class ActionsClass {
 	public void longPress(WebElement Element) {
 			((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", 
 					ImmutableMap.of("elementId", ((RemoteWebElement) Element).getId(),
-					"duration",10000));
+					"duration",3000));
 			}
 
 	public  static String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException {
@@ -139,10 +141,10 @@ public abstract class ActionsClass {
 	
 	public void clearClipboard() {
 	driver.getClipboardText();
-	
+    
 	}
-
 	
+
 	
 	
 	

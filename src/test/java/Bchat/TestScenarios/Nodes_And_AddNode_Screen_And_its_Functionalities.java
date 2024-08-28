@@ -151,7 +151,7 @@ public class Nodes_And_AddNode_Screen_And_its_Functionalities extends baseClass{
 		Assert.assertEquals(walletsettingspage.walletSettings_screen_Title(), "Wallet settings");
 		Assert.assertEquals(walletsettingspage.get_Current_Node(), "publicnode1.rpcnode.stream");
 	}
-	
+
 	/*
 	 Validate the working of the cancel button in all popup
 	 */

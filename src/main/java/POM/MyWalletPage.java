@@ -1,10 +1,12 @@
 package POM;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import Utiles.ActionsClass;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -117,8 +119,62 @@ public class MyWalletPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='OK']")
 	private WebElement btnOkInCalendar;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Ok']")
+	private WebElement btnOkInFilterCalendar;
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[1][@text='Wallet Syncing..']")
 	private WebElement statusSyncing;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[1][@index='0']")
+	private WebElement BlocksRemaining;
+	
+	@AndroidFindBy(accessibility = "Change to previous month")
+	private WebElement ChangeToPreviousMonth;
+	
+	@AndroidFindBy(xpath = "//android.widget.CheckBox[1]")
+	private WebElement IncomingCheckBox;
+	
+	@AndroidFindBy(xpath = "//android.widget.CheckBox[2]")
+	private WebElement OutgoingCheckBox;
+	
+	@AndroidFindBy(accessibility = "Filter By Date")
+	private WebElement btnFilterDate;
+	
+	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"From Date\"])[1]")
+	private WebElement btnFromDate;
+	
+	@AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"To Date\"])[1]")
+	private WebElement btnToDate;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Select Date Range']")
+	private WebElement FilterByDatePopup;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Cancel']")
+	private WebElement btnCancelInFilter;
+	
+	@AndroidFindBy(xpath="//android.widget.ImageView[2][@index='5']")
+	private WebElement firstTransactionInHistory;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[2][@index='2']")
+	private WebElement firsttransactionamount;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Details']")
+	private WebElement DetailsScreentitle;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[5][@index='5']")
+	private WebElement transactionID;
+	
+	@AndroidFindBy(xpath ="com.android.chrome:id/url_bar")
+	private WebElement explorerUrl;
+	
+	@AndroidFindBy(xpath="//android.widget.ScrollView/android.widget.TextView[11]")
+	private WebElement amountInDetailsScreen;
+	
+	@AndroidFindBy(xpath="//android.widget.ScrollView/android.widget.ImageView[2]")
+	private WebElement copyIconInDetails;
+	
+	@AndroidFindBy(accessibility = "back arrow")
+	private WebElement backarrowInDetails;
 	
 	public String Enable_Wallet_Screen_Title () {
 		return enableWalletScreenTitle.getText();
@@ -272,4 +328,78 @@ public class MyWalletPage extends ActionsClass {
     	return statusSyncing.getText();
     }
     
+    public void click_Filter_By_date () {
+    	btnFilterDate.click();
+    }
+
+    public void Select_FromDate_previousMonth (int date) {
+    	
+    	btnFromDate.click();
+    	ChangeToPreviousMonth.click();
+    	driver.findElement(By.xpath("//android.widget.TextView["+date+"]/android.widget.Button[@index='1']")).click();
+    	btnOkInFilterCalendar.click();
+    }
+    
+    public void click_Incoming_CheckBox () {
+    	IncomingCheckBox.click();
+    }
+    
+    public void click_Outgoing_CheckBox () {
+    	OutgoingCheckBox.click();
+    }
+    
+    public void Select_ToDate_As_TodayDate () {
+    	btnToDate.click();
+    	btnOkInFilterCalendar.click();
+    }
+    
+    public String Filter_By_Date_Popup_Title() {
+		return FilterByDatePopup.getText();
+	}
+    
+    public void click_ok_In_FilterDate () {
+    	btnOkInFilterCalendar.click();
+    }
+    
+    public int get_Blocks_Remaining (){
+    	String blocksRemaining = BlocksRemaining.getText();
+    	String blocksCount = blocksRemaining.replaceAll(",", "").substring(0, 7).trim();
+    	 return Integer.parseInt(blocksCount); 	
+    }
+    
+    public void click_Cancel_In_FilterDate () {
+    	btnCancelInFilter.click();
+    }
+    
+    public void click_First_Transaction () {
+    	firstTransactionInHistory.click();
+    }
+    
+    public String get_first_Transaction_amount () {
+    	return firsttransactionamount.getText();
+    }
+    
+    public String Details_screen_title () {
+    	return DetailsScreentitle.getText();
+    }
+    
+    public String get_Amount_In_details () {
+    	return amountInDetailsScreen.getText();
+    }
+    
+    public void click_CopyIcon_In_details () {
+    	copyIconInDetails.click();
+    }
+    
+    public void click_transactionID () {
+    	transactionID.click();
+    }
+    
+    public String get_Explorer_Url () {
+    	return explorerUrl.getText();
+    }
+    
+    public void click_BackArrow_In_details () {
+    	backarrowInDetails.click();
+    }
 }

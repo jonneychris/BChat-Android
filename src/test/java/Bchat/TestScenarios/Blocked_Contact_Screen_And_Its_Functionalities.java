@@ -11,18 +11,19 @@ import org.testng.annotations.Test;
 
 import POM.AccountSettingsPage;
 import POM.BlockedContactsPage;
+import POM.ChatPage;
 import POM.CreatePasswordPage;
 import POM.DisplayNamePage;
 import POM.HomePage;
 import POM.MenuPage;
 import POM.NewChatPage;
-import POM.OneToOneChatPage;
+
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
-import Utiles.BaseClass;
+
 import Utiles.baseClass;
 
 public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
@@ -38,7 +39,7 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 	SecretGroupPage secretgrouppage;
 	WebDriverWait wait;
 	AccountSettingsPage accountsettingspage;
-	OneToOneChatPage onetonechatpage;
+	ChatPage chatpage;
 	BlockedContactsPage blockedcontactspage;
 	
 	@Test(priority = 0)
@@ -69,10 +70,10 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 		homepage.OpenNewChat();
 		newchatpage = new NewChatPage(driver);
 		   newchatpage.Check_with_ValidId_1();
-		onetonechatpage = new OneToOneChatPage(driver);
-		onetonechatpage.Set_Values_In_Message_textbox("Hello");
-		onetonechatpage.click_Send_Button();
-		onetonechatpage.click_Back_Arrow();
+		chatpage = new ChatPage(driver);
+		chatpage.Set_Values_In_Message_textbox("Hello");
+		chatpage.click_Send_Button();
+		chatpage.click_Back_Arrow();
 
 		homepage.clickMenuDrawer();
 		

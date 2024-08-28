@@ -1,73 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-12T17:20:32 IST" name="Suite" finished-at="2024-08-12T17:35:49 IST" duration-ms="917423">
+  <suite started-at="2024-08-27T19:38:13 IST" name="Suite" finished-at="2024-08-27T19:44:13 IST" duration-ms="359988">
     <groups>
     </groups>
-    <test started-at="2024-08-12T17:20:32 IST" name="Test" finished-at="2024-08-12T17:35:49 IST" duration-ms="917423">
-      <class name="Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:20:32 IST" name="openApp" finished-at="2024-08-12T17:20:52 IST" duration-ms="20470" status="PASS">
+    <test started-at="2024-08-27T19:38:13 IST" name="Test" finished-at="2024-08-27T19:44:13 IST" duration-ms="359988">
+      <class name="Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:38:13 IST" name="openApp" finished-at="2024-08-27T19:38:37 IST" duration-ms="24494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="PreSetup()[pri:0, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:20:52 IST" name="PreSetup" finished-at="2024-08-12T17:30:58 IST" duration-ms="605590" status="PASS">
+        <test-method signature="preSetup()[pri:0, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:38:37 IST" name="preSetup" finished-at="2024-08-27T19:39:04 IST" duration-ms="26994" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PreSetup -->
-        <test-method signature="To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount()[pri:1, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:30:58 IST" name="To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount" finished-at="2024-08-12T17:31:13 IST" duration-ms="14955" status="PASS">
+        </test-method> <!-- preSetup -->
+        <test-method signature="To_Validate_whether_able_to_navigate_back_to_HomeScreen()[pri:1, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:39:04 IST" name="To_Validate_whether_able_to_navigate_back_to_HomeScreen" finished-at="2024-08-27T19:39:09 IST" duration-ms="4412" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount -->
-        <test-method signature="To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount()[pri:2, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:31:13 IST" name="To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount" finished-at="2024-08-12T17:32:02 IST" duration-ms="48729" status="PASS">
+        </test-method> <!-- To_Validate_whether_able_to_navigate_back_to_HomeScreen -->
+        <test-method signature="To_Validate_whether_suggested_social_groups_showing()[pri:2, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:39:09 IST" name="To_Validate_whether_suggested_social_groups_showing" finished-at="2024-08-27T19:40:04 IST" duration-ms="55398" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount -->
-        <test-method signature="To_Validate_amount_entered_in_BDX_conversion_to_selected_currency()[pri:3, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:32:02 IST" name="To_Validate_amount_entered_in_BDX_conversion_to_selected_currency" finished-at="2024-08-12T17:32:03 IST" duration-ms="923" status="PASS">
+        </test-method> <!-- To_Validate_whether_suggested_social_groups_showing -->
+        <test-method signature="To_Validate_whether_able_to_join_the_groups_shown_in_suggestion()[pri:3, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:40:04 IST" name="To_Validate_whether_able_to_join_the_groups_shown_in_suggestion" finished-at="2024-08-27T19:40:14 IST" duration-ms="9733" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_amount_entered_in_BDX_conversion_to_selected_currency -->
-        <test-method signature="To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance()[pri:4, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:32:03 IST" name="To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance" finished-at="2024-08-12T17:32:09 IST" duration-ms="6867" status="PASS">
+        </test-method> <!-- To_Validate_whether_able_to_join_the_groups_shown_in_suggestion -->
+        <test-method signature="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_Invalid_URL()[pri:4, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:40:14 IST" name="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_Invalid_URL" finished-at="2024-08-27T19:40:23 IST" duration-ms="9393" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance -->
-        <test-method signature="To_Validate_the_working_of_send_amount_functionality_without_internet_connection()[pri:5, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:32:09 IST" name="To_Validate_the_working_of_send_amount_functionality_without_internet_connection" finished-at="2024-08-12T17:33:03 IST" duration-ms="54020" status="PASS">
+        </test-method> <!-- To_Validate_next_option_in_Join_SocialGroup_by_entering_a_Invalid_URL -->
+        <test-method signature="To_Validate_the_next_option_without_entering_values_in_url()[pri:5, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:40:23 IST" name="To_Validate_the_next_option_without_entering_values_in_url" finished-at="2024-08-27T19:40:24 IST" duration-ms="561" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_send_amount_functionality_without_internet_connection -->
-        <test-method signature="To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen()[pri:6, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:33:03 IST" name="To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen" finished-at="2024-08-12T17:33:08 IST" duration-ms="4722" status="PASS">
+        </test-method> <!-- To_Validate_the_next_option_without_entering_values_in_url -->
+        <test-method signature="To_Validate_the_presence_of_placeholder_inside_the_textbox()[pri:6, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:40:24 IST" name="To_Validate_the_presence_of_placeholder_inside_the_textbox" finished-at="2024-08-27T19:41:01 IST" duration-ms="37557" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen -->
-        <test-method signature="To_Validate_the_working_of_cancel_button_in_confirm_popup()[pri:7, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:33:08 IST" name="To_Validate_the_working_of_cancel_button_in_confirm_popup" finished-at="2024-08-12T17:33:59 IST" duration-ms="51273" status="PASS">
+        </test-method> <!-- To_Validate_the_presence_of_placeholder_inside_the_textbox -->
+        <test-method signature="To_Validate_the_next_option_in_join_socialGroup_with_empty_space_value()[pri:7, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:01 IST" name="To_Validate_the_next_option_in_join_socialGroup_with_empty_space_value" finished-at="2024-08-27T19:41:03 IST" duration-ms="1529" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_cancel_button_in_confirm_popup -->
-        <test-method signature="To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field()[pri:8, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:33:59 IST" name="To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field" finished-at="2024-08-12T17:34:09 IST" duration-ms="9839" status="PASS">
+        </test-method> <!-- To_Validate_the_next_option_in_join_socialGroup_with_empty_space_value -->
+        <test-method signature="To_Validate_the_textbox_of_join_socialGroup_using_special_Characters()[pri:8, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:03 IST" name="To_Validate_the_textbox_of_join_socialGroup_using_special_Characters" finished-at="2024-08-27T19:41:22 IST" duration-ms="19727" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field -->
-        <test-method signature="To_validate_the_amount_text_box_by_entering_lengthy_amount_value()[pri:9, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:34:09 IST" name="To_validate_the_amount_text_box_by_entering_lengthy_amount_value" finished-at="2024-08-12T17:34:10 IST" duration-ms="1091" status="PASS">
+        </test-method> <!-- To_Validate_the_textbox_of_join_socialGroup_using_special_Characters -->
+        <test-method signature="To_Validate_Whether_value_entered_inside_textbox_is_editable()[pri:9, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:22 IST" name="To_Validate_Whether_value_entered_inside_textbox_is_editable" finished-at="2024-08-27T19:41:23 IST" duration-ms="918" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_validate_the_amount_text_box_by_entering_lengthy_amount_value -->
-        <test-method signature="To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes()[pri:10, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:34:10 IST" name="To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes" finished-at="2024-08-12T17:34:25 IST" duration-ms="15007" status="PASS">
+        </test-method> <!-- To_Validate_Whether_value_entered_inside_textbox_is_editable -->
+        <test-method signature="To_Validate_the_textbox_of_join_socialGroup_using_numerical_values()[pri:10, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:23 IST" name="To_Validate_the_textbox_of_join_socialGroup_using_numerical_values" finished-at="2024-08-27T19:41:25 IST" duration-ms="1482" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes -->
-        <test-method signature="To_Validate_the_working_of_send_functionality_by_using_contacts_book()[pri:11, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:34:25 IST" name="To_Validate_the_working_of_send_functionality_by_using_contacts_book" finished-at="2024-08-12T17:34:47 IST" duration-ms="21763" status="PASS">
+        </test-method> <!-- To_Validate_the_textbox_of_join_socialGroup_using_numerical_values -->
+        <test-method signature="To_Validate_the_textbox_of_join_socialGroup_using_Alphabets_both_in_upperCase_and_lowerCase()[pri:11, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:25 IST" name="To_Validate_the_textbox_of_join_socialGroup_using_Alphabets_both_in_upperCase_and_lowerCase" finished-at="2024-08-27T19:41:27 IST" duration-ms="2605" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_send_functionality_by_using_contacts_book -->
-        <test-method signature="To_Validate_the_working_of_send_functionality_with_valid_Address_and_Valid_Amount()[pri:12, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:34:47 IST" name="To_Validate_the_working_of_send_functionality_with_valid_Address_and_Valid_Amount" finished-at="2024-08-12T17:35:47 IST" duration-ms="59867" status="PASS">
+        </test-method> <!-- To_Validate_the_textbox_of_join_socialGroup_using_Alphabets_both_in_upperCase_and_lowerCase -->
+        <test-method signature="To_Validate_Whether_able_to_paste_values_in_textbox()[pri:12, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:27 IST" name="To_Validate_Whether_able_to_paste_values_in_textbox" finished-at="2024-08-27T19:41:29 IST" duration-ms="1540" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- To_Validate_the_working_of_send_functionality_with_valid_Address_and_Valid_Amount -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow@6dab9b6d]" started-at="2024-08-12T17:35:47 IST" name="closeApp" finished-at="2024-08-12T17:35:49 IST" duration-ms="2230" status="PASS">
+        </test-method> <!-- To_Validate_Whether_able_to_paste_values_in_textbox -->
+        <test-method signature="To_Validate_Scanner_in_the_Join_SocialGroup_by_scanning_a_Invalid_BarCode()[pri:13, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:41:29 IST" name="To_Validate_Scanner_in_the_Join_SocialGroup_by_scanning_a_Invalid_BarCode" finished-at="2024-08-27T19:42:00 IST" duration-ms="30603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_Scanner_in_the_Join_SocialGroup_by_scanning_a_Invalid_BarCode -->
+        <test-method signature="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL()[pri:14, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:42:00 IST" name="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL" finished-at="2024-08-27T19:43:03 IST" duration-ms="63004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL -->
+        <test-method signature="To_Validate_whether_able_to_join_socialGroup_without_internet_connection()[pri:15, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:43:03 IST" name="To_Validate_whether_able_to_join_socialGroup_without_internet_connection" finished-at="2024-08-27T19:44:08 IST" duration-ms="65586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Validate_whether_able_to_join_socialGroup_without_internet_connection -->
+        <test-method signature="To_validate_whether_cursor_blinks_while_clicking_the_textbox()[pri:16, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:44:08 IST" name="To_validate_whether_cursor_blinks_while_clicking_the_textbox" finished-at="2024-08-27T19:44:11 IST" duration-ms="2991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_validate_whether_cursor_blinks_while_clicking_the_textbox -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities@72437d8d]" started-at="2024-08-27T19:44:11 IST" name="closeApp" finished-at="2024-08-27T19:44:13 IST" duration-ms="1374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- Bchat.TestScenarios.Send_Screen_And_Its_Functionality_In_SignIn_Flow -->
+      </class> <!-- Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

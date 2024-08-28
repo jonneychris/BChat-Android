@@ -454,7 +454,7 @@ public class My_Wallet_Screen_And_Functionalities_In_Create_Account_Flow extends
 	
 	}
 	
-	
+
 	/*
 	Validate whether able to paste numerical value in blockheight text box
 	*/

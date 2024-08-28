@@ -31,11 +31,10 @@ import POM.LandingPage;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileCommand;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
@@ -52,6 +51,7 @@ public class baseClass  {
 	 public LandingPage landingpage;
 	 
 	
+
 	
 	@BeforeClass(alwaysRun = true)
 	public void openApp() throws InterruptedException, IOException {
@@ -79,13 +79,13 @@ public class baseClass  {
 			 //For To wait until the landing screen activity comes 
 			 options.setCapability("appWaitActivity", "io.beldex.bchat.onboarding.LandingActivity"); 
 			 //options.setCapability("autoLaunch", true);
-			 
+	 		 
 			 driver = new AndroidDriver( new URL("http://127.0.0.1:4723"), options);
 				 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				  
 					landingpage =new LandingPage(driver);
 		}
-				 
+		 
 	catch(Exception E) {
 			try {
 				UiAutomator2Options options = new UiAutomator2Options();
@@ -157,7 +157,7 @@ public void turnOff_Mobile_Wifi () {
 	 driver.openNotifications();
 	driver.findElement(By.id("com.android.systemui:id/hl_tile_one_holder")).click();
 	((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-		    "left", 350, "top", 2345, "width", 100, "height", 1345,
+		    "left", 350, "top", 2345, "width", 100, "height", 2345,
 		    "direction", "Up",
 		    "percent", 0.75
 		));
@@ -168,10 +168,16 @@ public void turnOn_Mobile_Wifi () {
 	 driver.openNotifications();
 	driver.findElement(By.id("com.android.systemui:id/hl_tile_one_holder")).click();
 	((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-		    "left", 350, "top", 2345, "width", 100, "height", 1345,
+		    "left", 350, "top", 2375, "width", 100, "height", 2345,
 		    "direction", "Up",
 		    "percent", 0.75
 		));
+}
+
+public void Minimize_the_App (){
+	
+	driver.runAppInBackground(Duration.ofSeconds(15));
+	driver.currentActivity();
 }
 }
 
