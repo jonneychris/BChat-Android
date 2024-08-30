@@ -6,14 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities">
+      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_whether_able_to_join_socialGroup_without_internet_connection"/>
           <include name="openApp"/>
           <include name="closeApp"/>
-          <include name="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL"/>
+          <include name="To_Validate_the_working_of_Mark_All_As_Read_option"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

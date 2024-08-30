@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities">
+      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_whether_able_to_join_socialGroup_without_internet_connection"/>
           <include name="openApp"/>
+          <include name="To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts"/>
+          <include name="To_Validate_the_working_of_notification_settings_All_options_in_group_chat"/>
           <include name="closeApp"/>
-          <include name="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL"/>
-          <include name="To_Validate_whether_able_to_join_the_groups_shown_in_suggestion"/>
-          <include name="To_Validate_the_next_option_in_join_socialGroup_with_empty_space_value"/>
-          <include name="To_Validate_the_textbox_of_join_socialGroup_using_Alphabets_both_in_upperCase_and_lowerCase"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities -->
+      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

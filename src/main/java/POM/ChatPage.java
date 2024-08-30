@@ -76,6 +76,9 @@ public class ChatPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/attachmentsButtonContainer")
 	private WebElement btnattachments;
 	
+	@AndroidFindBy(id="io.beldex.bchat:id/blockedBanner")
+	private WebElement Elementblocked;
+	
 	public void clickTextBox () {
 		messageTextbox.click();
 	}
@@ -166,4 +169,13 @@ public class ChatPage extends ActionsClass {
 		btndeleteInpopup.click();
 	}
 	
+	public void Send_one_msg () {
+		Set_Values_In_Message_textbox("Hii");
+		click_Send_Button();
+		click_Back_Arrow();
+	}
+	
+	public WebElement Element_of_Blocked_Banner () {
+		return Elementblocked;
+	}
 }
