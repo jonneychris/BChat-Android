@@ -131,6 +131,7 @@ public class Create_Account_Flow_Register_Screen_And_Functionality extends baseC
 		registerpage =new RegisterPage(driver);
 		
 		try {
+			Thread.sleep(5000);
 			registerpage.clickNext();
 			createpasswordpage = new CreatePasswordPage(driver);
 			Assert.assertEquals(createpasswordpage.pageTitle(), "Create Password");

@@ -1,5 +1,6 @@
 package POM;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -54,7 +55,7 @@ public class NewChatPage extends ActionsClass {
 	@AndroidFindBy(accessibility = "Invalid Qr,1 item,")
 	private WebElement InvalidQRCodeFolder;
 	
-	@AndroidFindBy(accessibility = "Bchat,1 item,")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.oneplus.gallery:id/albumset_title\" and @text=\"documents\"]")
 	private WebElement imageFolder;
 	
 	@AndroidFindBy(id="com.oneplus.gallery:id/base_album_item_img")
@@ -71,6 +72,10 @@ public class NewChatPage extends ActionsClass {
 		return title;
 	}
 
+	public void id_for_Message_Request () {
+		BchatIDOrBNSNameTextBox.sendKeys("bde004ef778926d42e6ab0f8327a645b3ad51159e3183a7ac512029012981f784b");
+		btnLetsBChat.click();
+	}
 	public void Check_with_ValidId_1 () {
 		BchatIDOrBNSNameTextBox.sendKeys("bdfdd35e38a8c0c3022b9ba791b611bab297fec0ca3a6e82547435876419ff2e0b");
 		btnLetsBChat.click();
@@ -109,26 +114,56 @@ public class NewChatPage extends ActionsClass {
 		optionUploadFromGallery.click();
 		optionGallery.click();
 		optionAlbums.click();
-	QrCodeFolder.click();
+	    try{
+	    	QrCodeFolder.click();
 		QrCodePhoto.click();
+	    }
+	    catch (NoSuchElementException e) {
+			driver.navigate().back();
+			optionUploadFromGallery.click();
+			optionGallery.click();
+			optionAlbums.click();
+			QrCodeFolder.click();
+			QrCodePhoto.click();
+		}
 	}
 	
 	public void Upload_Invalid_Qr_Code () {
-		
-		optionUploadFromGallery.click();
-		optionGallery.click();
-		optionAlbums.click();
-   // 	InvalidQRCodeFolder.click();
-   //		QrCodePhoto.click();
-	}
-	
-	public void Upload_image () {
 		btnScanner.click();
 		optionUploadFromGallery.click();
 		optionGallery.click();
 		optionAlbums.click();
-	//	imageFolder.click();
-	//	QrCodePhoto.click();
+		try {
+    	InvalidQRCodeFolder.click();
+   		QrCodePhoto.click();
+		}
+		catch (NoSuchElementException e) {
+			driver.navigate().back();
+			optionUploadFromGallery.click();
+			optionGallery.click();
+			optionAlbums.click();
+			InvalidQRCodeFolder.click();
+	   		QrCodePhoto.click();
+		}
+	}
+	
+	public void Upload_image () {
+		
+		optionUploadFromGallery.click();
+		optionGallery.click();
+		optionAlbums.click();
+		try {
+		imageFolder.click();
+		QrCodePhoto.click();
+		}
+		catch (NoSuchElementException e) {
+			driver.navigate().back();
+			optionUploadFromGallery.click();
+			optionGallery.click();
+			optionAlbums.click();
+			imageFolder.click();
+			QrCodePhoto.click();
+		}
 	}
 	
 	public WebElement Element_of_Loader () {

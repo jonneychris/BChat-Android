@@ -42,7 +42,7 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 	ChatPage chatpage;
 	BlockedContactsPage blockedcontactspage;
 	
-	@Test(priority = 0)
+	@Test(priority = 0,groups ={"Regression","Smoke"} )
 	public void Presetup () throws InterruptedException {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		landingpage.clickCreateAccount();
@@ -84,42 +84,42 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 	  
 	}
 	
-//	/*
-//	Validate whether able to navigate back to the my account screen.
-//	*/
-//	@Test(priority = 1)
-//	public void To_Validate_whether_able_to_navigate_back_to_my_account_screen () {
-//		 blockedcontactspage = new BlockedContactsPage(driver);
-//		 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
-//		 blockedcontactspage.click_Back_Arrow();
-//		  accountsettingspage = new AccountSettingsPage(driver);
-//		  Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
-//		
-//	}
-//	
-//	
-//	
-//	
-//	
-//	/*
-//	Validate the Blocked Contacts screen when there is no blocked contact
-//	*/
-//	@Test (priority = 2)
-//	public void To_Validate_the_Blocked_Contacts_screen_when_there_is_no_blocked_contact () {
-//	
-//		accountsettingspage = new AccountSettingsPage(driver);
-//		  accountsettingspage.click_Blocked_contact_Option();
-//		  
-//		  blockedcontactspage = new BlockedContactsPage(driver);
-//		  Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
-//		  Assert.assertEquals(blockedcontactspage.Empty_Screen_content(), "No blocked contacts yet");
-//		 
-//	}
+	/*
+	Validate whether able to navigate back to the my account screen.
+	*/
+	@Test(priority = 1,groups ={"Regression"} )
+	public void To_Validate_whether_able_to_navigate_back_to_my_account_screen () {
+		 blockedcontactspage = new BlockedContactsPage(driver);
+		 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
+		 blockedcontactspage.click_Back_Arrow();
+		  accountsettingspage = new AccountSettingsPage(driver);
+		  Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		
+	}
+	
+	
+	
+	
+	
+	/*
+	Validate the Blocked Contacts screen when there is no blocked contact
+	*/
+	@Test (priority = 2,groups ={"Regression","Smoke"} )
+	public void To_Validate_the_Blocked_Contacts_screen_when_there_is_no_blocked_contact () {
+	
+		accountsettingspage = new AccountSettingsPage(driver);
+		  accountsettingspage.click_Blocked_contact_Option();
+		  
+		  blockedcontactspage = new BlockedContactsPage(driver);
+		  Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
+		  Assert.assertEquals(blockedcontactspage.Empty_Screen_content(), "No blocked contacts yet");
+		 
+	}
 
 	/*
 	Validate whether blocked contacts is showing.
 	*/
-	@Test (priority = 3)
+	@Test (priority = 3,groups ={"Regression","Smoke"} )
 	public void To_Validate_whether_blocked_contacts_is_showing () {
 		  blockedcontactspage = new BlockedContactsPage(driver);
 		  Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
@@ -142,7 +142,7 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 	/*
 	 	Validate the working of the cancel button in the unblock users popup.
 	 */
-	@Test(priority = 4)
+	@Test(priority = 4,groups ={"Regression"} )
 	public void To_Validate_the_working_of_cancel_button_in_unblock_users_popup () {
 		blockedcontactspage = new BlockedContactsPage(driver);
 		 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
@@ -154,7 +154,7 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 	/*
 	Validate whether able to unblock the blocked contacts.
     */
-	@Test(priority = 5)
+	@Test(priority = 5,groups ={"Regression"} )
 	public void To_Validate_whether_able_to_unblock_the_blocked_contacts () {
 		blockedcontactspage = new BlockedContactsPage(driver);
 		 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
@@ -169,7 +169,7 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 
 	Validate whether able to unblock by multiselect the contacts in the blocked contacts screen.
 	*/
-	@Test(priority = 6)
+	@Test(priority = 6,groups ={"Regression"} )
 	public void To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen() {
 		blockedcontactspage = new BlockedContactsPage(driver);
 		 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
@@ -179,11 +179,11 @@ public class Blocked_Contact_Screen_And_Its_Functionalities extends baseClass {
 		 homepage.OpenNewChat();
 		 newchatpage = new NewChatPage(driver);
 		 newchatpage.Check_with_ValidId_2();
-		 onetonechatpage = new OneToOneChatPage(driver);
-		 onetonechatpage.Set_Values_In_Message_textbox("Hello");
-		 onetonechatpage.click_Send_Button();
+		 chatpage = new ChatPage(driver);
+		 chatpage.Set_Values_In_Message_textbox("Hello");
+		 chatpage.click_Send_Button();
 
-		 onetonechatpage.click_Back_Arrow();
+		 chatpage.click_Back_Arrow();
 		 
 		 homepage.Block_First_Contact();
 		 homepage.Block_Second_Contact();

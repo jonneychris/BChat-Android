@@ -31,7 +31,7 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	/*
 	 PreSetup Method for this class
 	 */
-	@Test(priority = 20,alwaysRun = true)
+	@Test(priority = 20,groups = {"Regression","Smoke"})
 	public void preSetup () {
 		try {
 		landingpage.clickSignIn();
@@ -203,7 +203,7 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	   	restorefromseedpage.setBlockheight("3000000");
 	   	restorefromseedpage.clickBtnRestore();
 	   	 createpasswordpage = new CreatePasswordPage(driver);
-	   	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	   	 
 	   	// wait.until(ExpectedConditions.visibilityOf(createpasswordpage.textPageTitle));
 	   	Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 	   	try {
@@ -302,7 +302,7 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	   		restorefromseedpage.clickBtnRestore();
 	   	 createpasswordpage = new CreatePasswordPage(driver);
 	   	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-	   	 wait.until(ExpectedConditions.visibilityOf(createpasswordpage.textPageTitle));
+	   	 wait.until(ExpectedConditions.visibilityOf(createpasswordpage.getTextPageTitle()));
 	   		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 	   
 	   	}
@@ -334,7 +334,7 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	   		restorefromseedpage.clickBtnRestore();
 	   	 createpasswordpage = new CreatePasswordPage(driver);
 	   	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-	   	 wait.until(ExpectedConditions.visibilityOf(createpasswordpage.textPageTitle));
+	   	 wait.until(ExpectedConditions.visibilityOf(createpasswordpage.getTextPageTitle()));
 	   		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 	   
 	}
@@ -345,11 +345,13 @@ public class SignIn_Fow_RestorefromBlockheight_Screen extends baseClass{
 	 No need of create Password screen validation, because create password screen scenarios tested in create account flow
 	 */
 	@Test(priority = 35,groups = {"Regression","Smoke"})
-	public void TC_TO_validate_Navigation_To_home_with_Valid_Password() {
+	public void TC_TO_validate_Navigation_To_home_with_Valid_Password() throws InterruptedException {
 		createpasswordpage = new CreatePasswordPage(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
 		try {
 		createpasswordpage.setValidPassword();
+		Thread.sleep(2000);
+		createpasswordpage.clickOk();
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		}

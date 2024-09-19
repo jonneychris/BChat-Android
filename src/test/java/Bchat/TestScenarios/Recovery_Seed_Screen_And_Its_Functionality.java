@@ -72,66 +72,66 @@ public class Recovery_Seed_Screen_And_Its_Functionality extends baseClass{
 		menupage.click_option_Recovery_Seed();
 	}
 	
-//	/*
-//	Validate whether able to navigate back to the home screen
-//	*/
-//	@Test(priority = 1)
-//	public void To_Validate_whether_able_to_navigate_back_to_home_screen () {
-//		recoveryseedpage = new RecoverySeedPage(driver);
-//		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
-//		recoveryseedpage.click_BackArrow();
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//	}
-//	
-//	
-//	
-//	/*
-//	Validate the working of the yes,I'm Safe option.
-//	*/
-//	@Test(priority = 2)
-//	public void To_Validate_the_working_of_yesIm_Safe_button () {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		homepage.clickMenuDrawer();
-//	    menupage =new MenuPage(driver);
-//		Assert.assertEquals(menupage.pagetitle(),"Menu");
-//		menupage.click_option_Recovery_Seed();
-//		recoveryseedpage = new RecoverySeedPage(driver);
-//		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
-//		recoveryseedpage.click_Yes_Iam_Safe();
-//		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
-//	}
-//	
-//	
-//	/*
-//	validate Wehther able to navigate back to the previous screen from pin screen
-//	*/
-//	@Test(priority = 3)
-//	public void To_validate_Wehther_able_to_navigate_back_to_previous_screen_from_pin_screen () {
-//		recoveryseedpage = new RecoverySeedPage(driver);
-//		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
-//		recoveryseedpage.click_BackArrow();
-//		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
-//		
-//	}
-//
-//	
-//	/*
-//	Validate whether the value entered in the pin field is visible.
-//	*/
-//	@Test(priority = 4)
-//	public void To_Validate_whether_the_value_entered_in_pin_field_is_visible ()
-//	{
-//		recoveryseedpage = new RecoverySeedPage(driver);
-//		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
-//		recoveryseedpage.click_Yes_Iam_Safe();
-//   
-//		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");	
-//		recoveryseedpage.Enter_Value_1();
-//		Assert.assertNotEquals(recoveryseedpage.text_Value_inPin_fields(), "[1, 1, 1]");
-//		recoveryseedpage.Delete_Values_In_password();
-//	}
+	/*
+	Validate whether able to navigate back to the home screen
+	*/
+	@Test(priority = 1)
+	public void To_Validate_whether_able_to_navigate_back_to_home_screen () {
+		recoveryseedpage = new RecoverySeedPage(driver);
+		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
+		recoveryseedpage.click_BackArrow();
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+	}
+	
+	
+	
+	/*
+	Validate the working of the yes,I'm Safe option.
+	*/
+	@Test(priority = 2)
+	public void To_Validate_the_working_of_yesIm_Safe_button () {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		homepage.clickMenuDrawer();
+	    menupage =new MenuPage(driver);
+		Assert.assertEquals(menupage.pagetitle(),"Menu");
+		menupage.click_option_Recovery_Seed();
+		recoveryseedpage = new RecoverySeedPage(driver);
+		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
+		recoveryseedpage.click_Yes_Iam_Safe();
+		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
+	}
+	
+	
+	/*
+	validate Wehther able to navigate back to the previous screen from pin screen
+	*/
+	@Test(priority = 3)
+	public void To_validate_Wehther_able_to_navigate_back_to_previous_screen_from_pin_screen () {
+		recoveryseedpage = new RecoverySeedPage(driver);
+		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
+		recoveryseedpage.click_BackArrow();
+		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
+		
+	}
+
+	
+	/*
+	Validate whether the value entered in the pin field is visible.
+	*/
+	@Test(priority = 4)
+	public void To_Validate_whether_the_value_entered_in_pin_field_is_visible ()
+	{
+		recoveryseedpage = new RecoverySeedPage(driver);
+		Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
+		recoveryseedpage.click_Yes_Iam_Safe();
+   
+		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");	
+		recoveryseedpage.Enter_Value_1();
+		Assert.assertNotEquals(recoveryseedpage.text_Value_inPin_fields(), "[1, 1, 1]");
+		recoveryseedpage.Delete_Values_In_password();
+	}
 	
 	
 	/*
@@ -141,7 +141,6 @@ public class Recovery_Seed_Screen_And_Its_Functionality extends baseClass{
 	@Test(priority = 5)
 	public void To_Validate_whether_value_entered_in_pin_field_is_deletable_and_Editable () {
 		recoveryseedpage = new RecoverySeedPage(driver);
-		recoveryseedpage.click_Yes_Iam_Safe();
 		Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
 		recoveryseedpage.Enter_Value_1();
 		recoveryseedpage.Delete_Values_In_password();
@@ -163,6 +162,10 @@ public class Recovery_Seed_Screen_And_Its_Functionality extends baseClass{
 		Assert.assertEquals(Toast(), "Invalid Password.");
 		}
 		catch (StaleElementReferenceException e) {
+			recoveryseedpage.Enter_InValid_Pin();
+			Assert.assertEquals(Toast(), "Invalid Password.");
+		}
+		catch (NoSuchElementException e) {
 			recoveryseedpage.Enter_InValid_Pin();
 			Assert.assertEquals(Toast(), "Invalid Password.");
 		}

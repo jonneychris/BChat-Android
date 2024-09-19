@@ -3,6 +3,7 @@ package POM;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -67,6 +68,30 @@ public class SocialGroupPage extends ActionsClass {
 	
 	@AndroidFindBy(accessibility = "Back")
 	private WebElement btnBackArrow;
+	
+	@AndroidFindBy(id = "io.beldex.bchat:id/readButton")
+	private  WebElement btnCommunityGuidelines; 
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/title")
+	private WebElement communityGudlinesScreenTitle ;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/conversationTitleView")
+	private WebElement groupName;
+	
+	@AndroidFindBy(accessibility ="More options")
+    private WebElement btnMoreoption;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/title\" and @text=\"Add members\"]")
+	private WebElement optionAddMembers;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/contentView")
+	private WebElement ContactInList;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/addButton")
+	private WebElement btnAdd;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/conversationSubtitleView")
+	private WebElement memberCount;
 	
 	public String Pagetitle() {
 		String title = pageTitle.getText();
@@ -141,8 +166,37 @@ public class SocialGroupPage extends ActionsClass {
 		list.add(MasterNodegroup);
 		list.add(cryptoNewsgroup);
 		
-		return list;
-		
+		return list;	
+	}
+	
+	public void open_Community_Guidelines () {
+		btnCommunityGuidelines.click();
+	}
+	
+	public String community_Guidelines_Screen_title () {
+		return communityGudlinesScreenTitle.getText();
 	}
 
+	public String groupName () {
+		return groupName.getText();
+	}
+	
+	public void Add_Member () {
+		try {
+    		clickGesture(1005, 180);
+        	}
+        	catch (NoSuchElementException e) {
+            	btnMoreoption.click();
+    		}
+		optionAddMembers.click();
+		ContactInList.click();
+	    btnAdd.click();
+	}
+	
+	public int get_Member_Count () {
+	String MemeberCount = memberCount.getText();
+	int count = Integer.parseInt(MemeberCount.substring(0,2));
+	return count;
+	
+	}
 }

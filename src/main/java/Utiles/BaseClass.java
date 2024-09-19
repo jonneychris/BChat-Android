@@ -121,12 +121,11 @@ public class baseClass  {
 	}
 	
 	
-	@AfterClass//(alwaysRun = true)
+	@AfterClass(alwaysRun = true)
  public void closeApp() {
 		
 		
 		driver.quit();
-		
 		//service.stop();
  }
 	
@@ -176,8 +175,12 @@ public void turnOn_Mobile_Wifi () {
 
 public void Minimize_the_App (){
 	
-	driver.runAppInBackground(Duration.ofSeconds(15));
+	driver.runAppInBackground(Duration.ofSeconds(10));
 	driver.currentActivity();
+}
+
+public void Close_the_app () {
+	driver.runAppInBackground(null);	
 }
 }
 

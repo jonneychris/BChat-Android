@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow">
+      <class name="Bchat.TestScenarios.SignIn_Flow_seed_Screen">
         <methods>
           <include name="openApp"/>
-          <include name="To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts"/>
-          <include name="To_Validate_the_working_of_notification_settings_All_options_in_group_chat"/>
+          <include name="TC_TO_validate_Navigation_To_home_with_Valid_Password"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed_Screen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

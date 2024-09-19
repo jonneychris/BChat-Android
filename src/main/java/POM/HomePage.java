@@ -2,6 +2,7 @@ package POM;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -131,6 +132,9 @@ public class HomePage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Unmute']")
 	private WebElement optionUnMute;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Details']")
+	private WebElement optionDetails;
+	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Mark all as read']")
 	private WebElement optionMarkAllAsRead;
 	
@@ -161,6 +165,15 @@ public class HomePage extends ActionsClass {
 	
 	@AndroidFindBy(className = "android.widget.Button")
 	private WebElement btnOkInMutePopup;
+	
+	@AndroidFindBy(xpath="//android.view.View/android.widget.ImageView[@index='3']")
+	private WebElement dropdown;
+	
+	@AndroidFindBy(xpath="(//android.view.View/android.view.View[2]/android.view.View[1])[1]")
+	private WebElement firstRequest;
+	
+	@AndroidFindBy(xpath="(//android.view.View/android.view.View[2]/android.view.View[3])[1]")
+	private WebElement secondRequest;
 	
 	public  String popuptitle() {
 		String popupTitle = PopupSaveSeed.getText();
@@ -194,8 +207,7 @@ public class HomePage extends ActionsClass {
 	}
 	
 	public void clickSearch() {
-		textboxSearch.click();
-		
+		textboxSearch.click();	
 	}
 	
 	public void clickBackArrow() {
@@ -236,7 +248,7 @@ public void clearTextBox () {
 }
 
 public void enterValues (String text) {
-	textboxSearch.click();
+	textboxplacholder.click();
 	textboxSearch.sendKeys(text);
 }
 
@@ -385,6 +397,35 @@ public void Mute_Notificaion_of_Chat () {
 		
 	}
 	
+    public void open_Note_to_Myself () {
+	  textboxplacholder.click();
+	  optionNoteToMyself.click();
+	}
+    
+    public void click_DropDown() {
+    	dropdown.click();
+    }
+    
+    public void click_first_request () {
+    	firstRequest.click();
+    }
+    
+    
+    public void Find_and_open_oneToone_Chat () {
+    	for(int i=0 ;i<9;i++) {
+    		
+    		WebElement Element = driver.findElement(By.xpath("(//android.view.ViewGroup/android.widget.TextView[1])["+i+"]"));
+    		longPress(Element);
+    		if(optionDetails.isDisplayed()) {
+    			Element.click();
+    			break;
+    		}
+    }
+    }
+    
+    public WebElement Element_Of_chat_Item () {
+    	 return FirstChatItem;
+    }
 //public List OldMessages () {
 //	int messagelist =oldMessages.getSize();
 //	 

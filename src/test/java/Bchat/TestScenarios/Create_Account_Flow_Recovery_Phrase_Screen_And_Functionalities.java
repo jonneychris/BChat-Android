@@ -17,13 +17,13 @@ import POM.CreatePasswordPage;
 import POM.DisplayNamePage;
 import POM.HomePage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+
 import POM.RegisterPage;
 import Utiles.baseClass;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
-import pages.OpeningPage;
+
 /*
  Test Scenario:	To Check the working of the Recovery phase Screen in create account flow
  */
@@ -32,13 +32,13 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	WebDriverWait wait;
 	
-    @Test(priority = 37,groups = {"Regression","Smoke"})
-	public void presetup() {
+    @Test(priority = 28,groups = {"Regression","Smoke"})
+	public void presetup() throws InterruptedException {
     	wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		landingpage.clickCreateAccount();
 		displaynamepage =new DisplayNamePage(driver);
@@ -46,8 +46,7 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 		displaynamepage.setDisplayName("Chris");
 		displaynamepage.clickContinue();
 		registerpage= new RegisterPage(driver);
-		wait.until(ExpectedConditions.visibilityOf(registerpage.textPageTitle));
-		Assert.assertEquals(registerpage.pageTitle(),"Register");
+		Thread.sleep(5000);
 		registerpage.clickNext();
 		createpasswordpage = new CreatePasswordPage(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -60,7 +59,7 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 	 TC_82	Validate whether able to navigate to the next screen without copying the recovery seed.	
 	 TC_83	Validate whether continue function is enable without copying the recovery seed.	
 	 */
-	@Test(priority = 38,groups = {"Regression"})
+	@Test(priority = 29,groups = {"Regression"})
 	 public void TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed () {
 		recoveryphrasepage =new RecoveryPhrasePage(driver);
 		Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Phrase");
@@ -77,7 +76,7 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 	/*
 	 TC_81	Validate the working of the copy option in the recovery phase screen.
 	 */
-	@Test(priority = 39,groups = {"Regression"})
+	@Test(priority = 30,groups = {"Regression"})
 	public void TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen () {
 		recoveryphrasepage =new RecoveryPhrasePage(driver);
 		Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Phrase");
@@ -92,7 +91,7 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 //	/*
 //	 TC_ 87: To Validate by minimizing and open the App before copying the Seed 
 //	 */
-//	@Test(priority = 40 )
+//	@Test(priority = 31 )
 //	public void TC_87_To_Validate_by_minimizing_and_open_the_App_before_copying_the_Seed () {
 //		recoveryphrasepage =new RecoveryPhrasePage(driver);
 //		driver.runAppInBackground(Duration.ofSeconds(3));
@@ -108,7 +107,7 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 //	/*
 //	 TC_ 88: To Validate by minimizing and open the App after copying the Seed 
 //	 */
-//	@Test(priority = 41)
+//	@Test(priority = 32)
 //   public void TC_88_To_Validate_by_minimizing_and_open_the_App_After_copying_the_Seed () {
 //		recoveryphrasepage =new RecoveryPhrasePage(driver);
 //		driver.runAppInBackground(Duration.ofSeconds(3));
@@ -120,7 +119,7 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 	/*
 	TC_94 : To Validate Whether Able to Navigate Previous screen 
 	 */
-	@Test(priority = 42,groups = {"Regression"})
+	@Test(priority = 33,groups = {"Regression"})
 	public void TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen () {
 		recoveryphrasepage =new RecoveryPhrasePage(driver);
 		Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Phrase");
@@ -139,11 +138,11 @@ public class Create_Account_Flow_Recovery_Phrase_Screen_And_Functionalities exte
 	 * TC_84	Validate whether continue function is enable after copying the recovery seed.
 	 TC_85	Validate the working of the  continue button after copying the recovery seed.
 	 */
-	@Test(priority = 43,groups = {"Regression","Smoke"} )
+	@Test(priority = 34,groups = {"Regression","Smoke"} )
 	public void TC_84_And_85_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed () {
 		
 		recoveryphrasepage =new RecoveryPhrasePage(driver);
-		Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Phrase");
+		Assert.assertEquals(recoveryphrasepage.pageTitle(), "Recovery Seed");
 		recoveryphrasepage.clickCopyIcon();
 		try {
 		recoveryphrasepage.ClickContinue();

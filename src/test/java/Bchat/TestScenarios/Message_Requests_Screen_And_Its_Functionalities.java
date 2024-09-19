@@ -17,9 +17,10 @@ import POM.HomePage;
 import POM.MenuPage;
 import POM.MessageRequestPage;
 import POM.NewChatPage;
-import POM.OneToOneChatPage;
+import POM.ChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+import POM.RecoverySeedPage;
+
 import POM.RegisterPage;
 import POM.RestoreFromSeedPage;
 import POM.SecretGroupPage;
@@ -32,7 +33,7 @@ public class Message_Requests_Screen_And_Its_Functionalities extends baseClass{
 	CreatePasswordPage createpasswordpage;
 	
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	RecoverySeedPage recoveryseedpage ;
 	
     RegisterPage registerpage;
 	MenuPage menupage;
@@ -40,7 +41,7 @@ public class Message_Requests_Screen_And_Its_Functionalities extends baseClass{
 	WebDriverWait wait;
 	MessageRequestPage messagerequestpage;
 	RestoreFromSeedPage restorefromseedpage;
-	OneToOneChatPage onetoonechatpage ;
+	ChatPage chatpage ;
 	AccountSettingsPage accountsettingspage;
 	BlockedContactsPage blockedContactsPage;
 	
@@ -49,7 +50,10 @@ public class Message_Requests_Screen_And_Its_Functionalities extends baseClass{
 	 */
 	@Test(priority = 0)
 	public void preSetup () throws InterruptedException {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		
+		
+		
 		landingpage.clickSignIn();
 		seedpage = new SeedPage(driver);
 		seedpage.setSeedValue("else vaults hitched impel acidic afield woken yesterday casket adrenalin boldly unsafe fowls smash itches omnibus lagoon legion badge fictional pirate scamper tilt uptight badge");
@@ -134,8 +138,8 @@ public class Message_Requests_Screen_And_Its_Functionalities extends baseClass{
 		Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
 		String IdorName =messagerequestpage.Element_Of_First_Received_Request().getText();
 		messagerequestpage.Accept_First_Request_In_List();
-		onetoonechatpage = new OneToOneChatPage(driver);
-		onetoonechatpage.click_Accept();
+		chatpage = new ChatPage(driver);
+		chatpage.click_Accept();
 		driver.navigate().back();
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");

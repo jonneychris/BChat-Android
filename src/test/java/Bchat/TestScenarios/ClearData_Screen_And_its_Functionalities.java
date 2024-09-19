@@ -16,7 +16,7 @@ import POM.LandingPage;
 import POM.MenuPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -28,7 +28,7 @@ public class ClearData_Screen_And_its_Functionalities extends baseClass {
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	SocialGroupPage socialgrouppage;
@@ -42,7 +42,7 @@ public class ClearData_Screen_And_its_Functionalities extends baseClass {
 	/*
 	 PreSetup to clera data popup screen
 	 */
-	@Test(priority = 0)
+	@Test(priority = 0,groups ={"Regression","Smoke"} )
 	
 	public void preSetup () throws InterruptedException {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -81,7 +81,7 @@ public class ClearData_Screen_And_its_Functionalities extends baseClass {
 	/*
      Validate whether able to navigate back to the Account Settings screen from clear data popup
  	*/
-	@Test(priority = 1)
+	@Test(priority = 1,groups ={"Regression"} )
 	public void To_Validate_whether_able_to_navigate_back_to_Account_Settings_Screen () {
 		cleardatapage = new ClearDataPage(driver);
 		Assert.assertEquals(cleardatapage.pageTitle(),"Clear All Data");
@@ -94,7 +94,7 @@ public class ClearData_Screen_And_its_Functionalities extends baseClass {
 	/*
     Validate the working of the cancel button in all popup 
 	*/
-	@Test(priority = 2)
+	@Test(priority = 2,groups ={"Regression"} )
 	public void To_Validate_the_working_of_cancel_button_in_all_popup () {
 		accountsettingspage= new AccountSettingsPage(driver);
 		accountsettingspage.click_Clear_Data_option();
@@ -119,7 +119,7 @@ public class ClearData_Screen_And_its_Functionalities extends baseClass {
 	/*
     Validate the working of the clear all data option 
      */
-	@Test(priority = 3)
+	@Test(priority = 3,groups ={"Regression","Smoke"} )
 	public void To_Validate_the_working_of_clear_all_data_option () {
 		accountsettingspage= new AccountSettingsPage(driver);
 		accountsettingspage.click_Clear_Data_option();
@@ -139,7 +139,7 @@ public class ClearData_Screen_And_its_Functionalities extends baseClass {
     /*
      Validate the working of the delete option.
     */
-	@Test(priority = 4)
+	@Test(priority = 4,groups ={"Regression","Smoke"} )
 	public void To_Validate_the_working_of_delete_option () throws InterruptedException {
 	        preSetup();
 	    	cleardatapage = new ClearDataPage(driver);

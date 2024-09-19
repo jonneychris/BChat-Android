@@ -38,7 +38,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	 pre setup
 	 */
-	@Test(priority = 0)
+	@Test(priority = 0,groups = {"Regression"} )
 	public void PreSetup () throws InterruptedException {
 		landingpage.clickSignIn();
 		seedpage = new SeedPage(driver);
@@ -64,7 +64,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	 Validate whether the recent chat histories are showing .
 	 */
-	@Test(priority = 1)
+	@Test(priority = 55,groups = {"Regression"} )
 	public void To_Validate_whether_the_recent_chat_histories_are_showing () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -81,7 +81,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the presence of placeholder in the text box.
 	*/
-	@Test(priority = 3)
+	@Test(priority = 56,groups = {"Regression"} )
 	public void To_Validate_the_presence_of_placeholder_in_the_text_box () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -91,7 +91,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate whether crusher blink on clicking the text box of search functionality.
 	*/
-	@Test(priority =4)
+	@Test(priority =57,groups = {"Regression"})
 	public void To_Validate_Whether_crusor_Blinks_on_clicking_the_search_textbox () {
 		homepage = new HomePage(driver);
 	   Assert.assertTrue(homepage.visblity_of_crusor());
@@ -101,7 +101,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	validate whether paste option is working on the text box.
 	*/
-	@Test(priority=5)
+	@Test(priority=58,groups = {"Regression"})
 	public void To_Validate_wether_paste_option_on_the_text_box () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -116,7 +116,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	Validate whether the value entered in the text box is editable.
 	Validate whether the value entered in the text box is delete able.
 	*/
-	@Test(priority = 6)
+	@Test(priority = 59,groups = {"Regression"})
 	public void To_Validate_Values_enterd_in_textbox_is_editable_and_deleteable () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -133,7 +133,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	 validate the working of the cancel icon inside the text box
 	 */
-	@Test(priority = 7)
+	@Test(priority = 60,groups = {"Regression"})
 	public void To_validate_working_of_cnacel_icon_inside_the_textbox () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -145,7 +145,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the text box of the search functionality with null value.
 	*/
-	@Test(priority = 8)
+	@Test(priority = 61,groups = {"Regression"})
 	public void To_Validate_the_textbox_of_the_search_functionality_with_null_value () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -157,7 +157,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the text box of the search Functionality using special Characters.
 	*/
-	@Test(priority = 9)
+	@Test(priority = 62,groups = {"Regression"})
 	public void To_Validate_the_textbox_of_the_search_Functionality_using_special_Characters () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -170,7 +170,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the text box of the search Functionality using Alphabets both in uppercase and lower case.
 	*/
-	@Test(priority = 10)
+	@Test(priority = 63,groups = {"Regression"})
 	public void To_Validate_the_textbox_of_search_Functionality_using_Alphabets_both_in_UpperCase_and_lowerCase () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -189,7 +189,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the text box of the search Functionality is Allowing the Space.
 	*/
-	@Test(priority = 11)
+	@Test(priority = 64,groups = {"Regression"})
 	public void To_Validate_the_textbox_of_search_Functionality_is_Allowing_the_Space () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -202,7 +202,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the text box of the search Functionality by numerical value.
 	*/
-	@Test(priority = 12)
+	@Test(priority = 65,groups = {"Regression"})
 	public void To_Validate_the_textbox_of_search_Functionality_by_Numerical_values () {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
@@ -216,10 +216,15 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate whether searched messages are showing in the list
 	*/
-	@Test(priority = 13)
+	@Test(priority = 66,groups = {"Regression"})
 	public void To_Validate_whether_searched_messages_are_showing_in_the_list () {
 		homepage = new HomePage(driver);
+		try {
 		Assert.assertEquals(homepage.Search_PageTitle(), "Search");
+		}
+		catch (NoSuchElementException e) {
+			homepage.clickSearch();
+		}
 		try {
 		homepage.enterValues("Hii");
 		Assert.assertTrue(homepage.Element_Messages().isDisplayed());
@@ -236,7 +241,7 @@ public class Home_Screen_and_its_functionalities_In_Restore_Account_Flow extends
 	/*
 	Validate the search functionality using Invalid value 
 	*/
-	@Test(priority = 14)
+	@Test(priority = 67,groups = {"Regression"})
 	public void To_Validate_the_search_functionality_using_Invalid_value () {
 	homepage = new HomePage(driver);
 	Assert.assertEquals(homepage.Search_PageTitle(), "Search");

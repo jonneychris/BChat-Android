@@ -21,10 +21,10 @@ public class SettingsPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/title")
 	private WebElement pageTitle;
 	
-	@AndroidFindBy(xpath="//android.widget.LinearLayout[5]/android.widget.LinearLayout[2]/android.widget.Switch")
+	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[3]")
 	private WebElement optionStartWallet;
 	
-	@AndroidFindBy(xpath="//android.widget.LinearLayout[6]/android.widget.LinearLayout[2]/android.widget.Switch")
+	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[4]")
 	private WebElement optionPayAsYouChat;
 	
 	@AndroidFindBy(xpath="//android.widget.LinearLayout[8]/android.widget.LinearLayout[2]/android.widget.Switch")
@@ -50,6 +50,9 @@ public class SettingsPage extends ActionsClass {
 
    @AndroidFindBy(id="io.beldex.bchat:id/back")
    private WebElement btnBackArrow;
+   
+   @AndroidFindBy(id="android:id/button1")
+   private WebElement setupPin;
    
    public void click_Back_Arrow () {
 	   btnBackArrow.click();
@@ -83,5 +86,15 @@ public class SettingsPage extends ActionsClass {
 	   btncancel.click();
    }
    
+   public void click_Voice_Call () {
+	   optionVoiceCalls.click();
+   }
    
+   public void click_Enable () {
+	   btnEnableInCallsPopup.click();
+   }
+   
+   public void Click_SetupPin () {
+	   setupPin.click();
+   }
 }

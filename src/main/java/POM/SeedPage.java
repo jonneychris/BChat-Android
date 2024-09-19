@@ -83,9 +83,9 @@ public class SeedPage extends ActionsClass {
 	}
 	
 	
-	public void EnterSeedValue() {
+	public void EnterSeedValue(String value) {
 		SeedTextBox.click();
-		SeedTextBox.sendKeys("cement apology toilet venomous buffet junk duration tanks village ankle lazy joining candy peculiar mayor biscuit almost unquoted vessel slackens jaunt loudly vipers voice venomous");
+		SeedTextBox.sendKeys(value);
 	    
 	}
 	

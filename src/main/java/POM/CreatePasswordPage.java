@@ -135,7 +135,7 @@ public class CreatePasswordPage extends ActionsClass{
 	}
 	
 	public String pageTitle() {
-		String PageTitle = textPageTitle.getText();
+		String PageTitle = getTextPageTitle().getText();
 		return PageTitle;
 	}
 
@@ -285,4 +285,12 @@ public class CreatePasswordPage extends ActionsClass{
 				return list;
     	
     }
+
+	public WebElement getTextPageTitle() {
+		return textPageTitle;
+	}
+
+	public void setTextPageTitle(WebElement textPageTitle) {
+		this.textPageTitle = textPageTitle;
+	}
 }

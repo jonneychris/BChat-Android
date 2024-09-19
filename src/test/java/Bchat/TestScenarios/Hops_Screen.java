@@ -16,7 +16,8 @@ import POM.HopsPage;
 import POM.MenuPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+import POM.RecoverySeedPage;
+
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -28,7 +29,7 @@ public class Hops_Screen extends baseClass{
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	RecoverySeedPage recoveryseedpage ;
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	SocialGroupPage socialgrouppage;

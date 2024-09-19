@@ -71,6 +71,15 @@ public abstract class ActionsClass {
 		}while(canScrollMore); 
 	}
 	
+
+	public void clickGesture (int x, int y) {
+		// Java
+		driver.executeScript("mobile: clickGesture", ImmutableMap.of(
+				"x", x, "y", y
+		    
+		));
+	}
+	
 	public void click(WebElement button) {
 		button.click();
 	}
@@ -78,7 +87,7 @@ public abstract class ActionsClass {
 	public void longPress(WebElement Element) {
 			((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", 
 					ImmutableMap.of("elementId", ((RemoteWebElement) Element).getId(),
-					"duration",3000));
+					"duration",5000));
 			}
 
 	public  static String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException {
@@ -118,7 +127,6 @@ public abstract class ActionsClass {
 		));
 	}
 	
-		
 	
 	public void Send_keys(WebElement element,String string) {
 		Actions actions =new Actions(driver);
@@ -144,6 +152,14 @@ public abstract class ActionsClass {
     
 	}
 	
+	public void drap_Gesture (WebElement element, int x, int y) {
+		// Java
+		((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
+		    "elementId", ((RemoteWebElement) element).getId(),
+		    "endX", x,
+		    "endY", y
+		));
+	}
 
 	
 	

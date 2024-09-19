@@ -17,7 +17,6 @@ import POM.MenuPage;
 import POM.MyAccountPage;
 import POM.NewChatPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;
@@ -28,7 +27,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	CreatePasswordPage createpasswordpage;
 	RecoveryPhrasePage recoveryphrasepage;
 	HomePage homepage;
-	RecoverySeed_Page recoveryseedpage ;
+	
 	DisplayNamePage displaynamepage;
     RegisterPage registerpage;
 	SocialGroupPage socialgrouppage;
@@ -38,7 +37,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	MenuPage menupage;
 	MyAccountPage myaccountpage ;
 	
-	@Test(priority = 0)
+	@Test(priority = 0,groups ={"Regression","Smoke"} )
    public void presetup () throws InterruptedException{
 	   wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		landingpage.clickCreateAccount();
@@ -70,7 +69,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	   /*
 		Validate whether able to copy the Bchat Id and beldex Address
 		*/
-	@Test(priority =1)
+	@Test(priority =1,groups ={"Regression","Smoke"} )
 	public void To_validate_whether_Able_to_Copy_Bchat_ID_and_Beldex_Address () {
 		
 		   myaccountpage =new  MyAccountPage(driver);
@@ -104,7 +103,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	 Validate whether able to change the profile name.
 	 */
-	@Test(priority =2 )
+	@Test(priority =2,groups ={"Regression","Smoke"}  )
 	public void To_Validate_Whether_Able_to_Change_the_profile_name () {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -125,7 +124,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/* 
 	Validate whether able to change the profile name multiple times.
 	*/
-	@Test(priority =3)
+	@Test(priority =3,groups ={"Regression"} )
 	public void To_Validate_Whether_Able_to_change_Profile_Name_Multiple_times () {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -166,7 +165,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	Validate the working of the share button QR code Functionality.
     */
-	@Test(priority =4)
+	@Test(priority =4,groups ={"Regression","Smoke"} )
 	public void To_Validate_Working_of_Share_Button () {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -182,7 +181,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	Validate the navigation to home screen in both forward and backward direction.
 	*/
-	@Test(priority = 5)
+	@Test(priority = 5,groups ={"Regression"} )
 	public void	To_Validate_the_navigation_to_home_screen () {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -199,7 +198,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	 Validate whether profile photo functionality is enable.
 	 */
-	@Test(priority =6)
+	@Test(priority =6,groups ={"Regression"} )
 	public void To_Validate_whether_profile_photo_functionality_is_enable () {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -213,7 +212,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	 Validate whether remove picture button in profile popup is not clickable when there is no profile picture
 	 */
-	@Test(priority = 7)
+	@Test(priority = 7,groups ={"Regression"} )
 	public void To_Validate_whether_remove_picture_button_not_clickable_when_there_is_no_profile_picture () {
 		myaccountpage =new  MyAccountPage(driver);
 		Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -227,7 +226,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	 	Validate whether able to upload picture from gallery option of the device.
 	 */
-	@Test(priority = 8)
+	@Test(priority = 8,groups ={"Regression","Smoke"} )
 	public void To_Validate_whether_able_to_upload_picture_from_gallery_option_in_device () throws InterruptedException {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -248,7 +247,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	Validate whether able to upload picture using camera option of the device.
 	*/
-	@Test(priority = 9)
+	@Test(priority = 9,groups ={"Regression","Smoke"} )
 	public void To_Validate_whether_able_to_upload_picture_using_camera_option_of_the_device () throws InterruptedException {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -266,7 +265,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	/*
 	Validate whether able to remove the uploaded profile photo.
 	*/
-	@Test(priority = 10)
+	@Test(priority = 10,groups ={"Regression","Smoke"} )
 	public void To_Validate_whether_able_to_remove_the_uploaded_profile_photo () throws InterruptedException {
 		myaccountpage =new  MyAccountPage(driver);
 		  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
@@ -287,7 +286,7 @@ public class My_Account_Screen_And_its_functionalities extends baseClass {
 	Validate the working of the upload profile photo without internet
 	Validate Whether Able to Edit display Name without internet
 	*/
-	@Test(priority = 11)
+	@Test(priority = 11,groups ={"Regression"} )
 	public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () {
 		myaccountpage =new  MyAccountPage(driver);
 		 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");

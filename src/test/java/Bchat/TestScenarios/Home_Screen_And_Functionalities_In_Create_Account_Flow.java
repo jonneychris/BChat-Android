@@ -35,7 +35,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	ChatPage chatpage;
 	
 	
-	@Test(priority = 0)
+	@Test(priority = 0,groups = {"Regression"} )
 	public void PreSetup () throws InterruptedException {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		landingpage.clickCreateAccount();
@@ -65,114 +65,114 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	
 	
 	
-//	/*
-//	Validate the all possible navigation from the home screen in both forward and backward direction
-//	Validate whether able to navigate to the device home page directly.
-//	*/
-//	@Test(priority = 1)
-//	public void To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction () throws InterruptedException {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		driver.navigate().back();
-//		 driver.navigate().back();
-//		 if(landingpage.WebElementAppList().isDisplayed()||landingpage.WebElementAppList().isDisplayed()) {
-//			 landingpage.openApp();
-//	}
-//		 Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//	
-//	}
-//	
-//	/*
-//	 Validate the blank screen While creating new Account
-//	 */
-//	@Test(priority = 2)
-//	public void To_Validate_the_blank_screen_While_creating_new_Account () {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		Assert.assertTrue(homepage.BlankChatScreen.isDisplayed());
-//	}
-//	
-//	
-//	/*
-//	Validate the navigation to the settings screen in both forward and backward direction.
-//	*/
-//	@Test(priority = 3)
-//	public void To_Validate_the_Navigation_to_the_Menu_screen_in_both_forward_and_backward_direction() {
-//		homepage = new HomePage(driver);
-//		menupage =new MenuPage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		homepage.clickMenuDrawer();
-//		Assert.assertEquals(menupage.pagetitle(), "Menu");
-//		homepage.ClickCancel();
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//	}
-//	
-//	/*
-//	Validate the navigation to the Search screen in both forward and backward direction.
-//	*/
-//	@Test(priority = 4)
-//	public void To_Validate_the_Navigation_to_the_search_screen_in_both_forward_and_backward_direction() {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		homepage.clickSearch();
-//		//Assert.assertEquals(homepage.searchTitle(), "Search");
-//	  // homepage.clickBackArrow();
-//	     driver.navigate().back();
-//	     driver.navigate().back();
-//		Assert.assertEquals(homepage.Pagetitle(), "BChat");
-//	   
-//	}
-//	
-//	
-//	/*
-//	 Validate the navigation to the new chat screen
-//	 */
-//	
-//	@Test(priority=5)
-//	public void To_validate_the_navigation_to_newChat_screen () {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		homepage.OpenNewChat();
-//		newchatpage = new NewChatPage(driver);
-//		Assert.assertEquals(newchatpage.Pagetitle(), "New Chat");
-//		//homepage.clickBackArrow();
-//		driver.navigate().back();
-//	}
-//	
-//    /*
-// 	 validate the navigation to the create secret group screen	
-//    */
-//	@Test(priority=6)
-//	public void To_validate_the_navigation_to_Create_SecretGroup_screen () {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		homepage.openNewSecretGroup();
-//		secretgrouppage =new SecretGroupPage(driver);
-//		Assert.assertEquals(secretgrouppage.Pagetitle(), "Secret Group");
-//		//homepage.clickBackArrow();
-//		driver.navigate().back();
-//	}
-//	
-//	
-//	/*
-//	  Validate the navigation to the join social group screen
-//	 */
-//	@Test(priority=7)
-//	public void To_validate_the_navigation_to_Join_Social_screen () {
-//		homepage = new HomePage(driver);
-//		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-//		homepage.openJoinSocialGroup();
-//		socialgrouppage = new SocialGroupPage(driver);
-//		Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");
-//		//homepage.clickBackArrow();
-//		driver.navigate().back();
-//	}
-//	
+	/*
+	Validate the all possible navigation from the home screen in both forward and backward direction
+	Validate whether able to navigate to the device home page directly.
+	*/
+	@Test(priority = 36,groups = {"Regression"} )
+	public void To_Validate_navigation_from_the_home_screen_in_both_forward_and_backward_direction () throws InterruptedException {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		driver.navigate().back();
+		 driver.navigate().back();
+		 if(landingpage.WebElementAppList().isDisplayed()||landingpage.WebElementAppList().isDisplayed()) {
+			 landingpage.openApp();
+	}
+		 Assert.assertEquals(homepage.Pagetitle(),"BChat");
+	
+	}
+	
+	/*
+	 Validate the blank screen While creating new Account
+	 */
+	@Test(priority = 37,groups = {"Regression"} )
+	public void To_Validate_the_blank_screen_While_creating_new_Account () {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertTrue(homepage.BlankChatScreen.isDisplayed());
+	}
+	
+	
+	/*
+	Validate the navigation to the settings screen in both forward and backward direction.
+	*/
+	@Test(priority = 38,groups = {"Regression"} )
+	public void To_Validate_the_Navigation_to_the_Menu_screen_in_both_forward_and_backward_direction() {
+		homepage = new HomePage(driver);
+		menupage =new MenuPage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		homepage.clickMenuDrawer();
+		Assert.assertEquals(menupage.pagetitle(), "Menu");
+		homepage.ClickCancel();
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+	}
+	
+	/*
+	Validate the navigation to the Search screen in both forward and backward direction.
+	*/
+	@Test(priority = 39,groups = {"Regression"} )
+	public void To_Validate_the_Navigation_to_the_search_screen_in_both_forward_and_backward_direction() {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		homepage.clickSearch();
+		//Assert.assertEquals(homepage.searchTitle(), "Search");
+	  // homepage.clickBackArrow();
+	     driver.navigate().back();
+	     driver.navigate().back();
+		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+	   
+	}
+	
+	
+	/*
+	 Validate the navigation to the new chat screen
+	 */
+	
+	@Test(priority = 40,groups = {"Regression"} )
+	public void To_validate_the_navigation_to_newChat_screen () {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		homepage.OpenNewChat();
+		newchatpage = new NewChatPage(driver);
+		Assert.assertEquals(newchatpage.Pagetitle(), "New Chat");
+		//homepage.clickBackArrow();
+		driver.navigate().back();
+	}
+	
+    /*
+ 	 validate the navigation to the create secret group screen	
+    */
+	@Test(priority = 41,groups = {"Regression"} )
+	public void To_validate_the_navigation_to_Create_SecretGroup_screen () {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		homepage.openNewSecretGroup();
+		secretgrouppage =new SecretGroupPage(driver);
+		Assert.assertEquals(secretgrouppage.Pagetitle(), "Secret Group");
+		//homepage.clickBackArrow();
+		driver.navigate().back();
+	}
+	
+	
+	/*
+	  Validate the navigation to the join social group screen
+	 */
+	@Test(priority = 42,groups = {"Regression"} )
+	public void To_validate_the_navigation_to_Join_Social_screen () {
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		homepage.openJoinSocialGroup();
+		socialgrouppage = new SocialGroupPage(driver);
+		Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");
+		//homepage.clickBackArrow();
+		driver.navigate().back();
+	}
+	
 
 	/*
 	Validate the working of home screen without internet connection
 	*/
-	@Test(priority = 8)
+	@Test(priority = 43,groups = {"Regression"} )
 	public void To_Validate_the_working_of_home_Screen_without_internet_connection () throws InterruptedException {
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -185,7 +185,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	/*
      Validate whether able to pin a particular group or person chat.
      */
-    @Test(priority = 9)
+    @Test(priority = 44,groups = {"Regression"} )
     public void To_Validate_whether_able_to_pin_particular_group_or_person_chat () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -206,7 +206,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	/*
      Validate whether able to unpin a pinned particular group or person chat.
      */
-    @Test(priority=10)
+    @Test(priority=45,groups = {"Regression"})
     public void To_Validate_whether_able_to_unpin_a_pinned_particular_group_or_personchat () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -225,7 +225,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	/*
      Validate whether able to mute the notifications of the a particular group or person chat.
     */
-    @Test(priority=11)
+    @Test(priority=46,groups = {"Regression"})
     public void To_Validate_whether_able_to_mute_notifications_of_particular_group_or_person_chat () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -237,7 +237,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 	/*
      Validate whether able to Unmute the notifications of the muted contacts.
 	*/
-    @Test(priority=12)
+    @Test(priority=47,groups = {"Regression"})
     public void To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -254,7 +254,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
     /*
      Validate Whether able to block the chat
      */
-    @Test(priority=13)
+    @Test(priority=48,groups = {"Regression"})
     public void To_Validate_Whether_able_to_block_the_chat () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -268,7 +268,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
     /*
     Validate Whether able to Unblock the chat
     */
-    @Test(priority=14)
+    @Test(priority=49,groups = {"Regression"})
     public void To_Validate_Whether_able_to_Unblock_the_chat () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -288,7 +288,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
     /*
      Validate whether able to delete the chats from chat history of the home screen 
      */
-    @Test(priority=15)
+    @Test(priority=50,groups = {"Regression"})
     public void To_Validate_whether_able_to_delete_the_chats_from_chat_history_of_home_screen () {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -303,7 +303,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
     /*
      Validate the working of the notification settings mention options in group chat
      */
-    @Test(priority=16)
+    @Test(priority=51,groups = {"Regression"})
     public void To_Validate_the_working_of_notification_settings_mention_options_in_group_chat () throws InterruptedException {
     	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -329,7 +329,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
     /*
     Validate the working of the notification settings All options in group chat
     */
-   @Test(priority=17)
+   @Test(priority=52,groups = {"Regression"})
    public void To_Validate_the_working_of_notification_settings_All_options_in_group_chat () {
    	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -347,7 +347,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
    /*
     Validate the Working of cancel button in All popup
     */
-   @Test(priority=18)
+   @Test(priority=53,groups = {"Regression"})
    public void To_Validate_the_Working_of_cancel_button_in_All_popup () {
    	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -362,13 +362,14 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
    /*
     Validate the working of Mark All As Read option.
     */
-   @Test(priority=19)
-   public void To_Validate_the_working_of_Mark_All_As_Read_option () {
+   @Test(priority=54,groups = {"Regression"})
+   public void To_Validate_the_working_of_Mark_All_As_Read_option () throws InterruptedException {
 	 	homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		Assert.assertTrue(homepage.Element_of_Unread_Msg_Count().isDisplayed());
 		homepage.Select_Mark_All_As_read();
 		try {
+			Thread.sleep(2000);
 		Assert.assertFalse(homepage.Element_of_Unread_Msg_Count().isDisplayed());
 		}
 		catch (NoSuchElementException e) {

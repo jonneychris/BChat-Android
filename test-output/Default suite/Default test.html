@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>32/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 30 17:58:09 IST 2024</td>
+<td>Started on:</td><td>Thu Sep 19 18:21:37 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>692 seconds (692800 ms)</td>
+<tr><td>Total time:</td><td>811 seconds (811520 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,269 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_working_of_notification_settings_All_options_in_group_chat()'><b>To_Validate_the_working_of_notification_settings_All_options_in_group_chat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.id: io.beldex.bchat:id/mute_icon})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$xkSQmogQ.isDisplayed(Unknown Source)
-	at Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_working_of_notification_settings_All_options_in_group_chat(Home_Screen_And_Functionalities_In_Create_Account_Flow.java:328)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@45b15381 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: io.beldex.bchat:id/mute_icon})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 34 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1999415998", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1999415998'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.id: io.beldex.bchat:id/mute_icon})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$xkSQmogQ.isDisplayed(Unknown Source)
-	at Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_working_of_notification_settings_All_options_in_group_chat(Home_Screen_And_Functionalities_In_Create_Account_Flow.java:328)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@45b15381 (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.id: io.beldex.bchat:id/mute_icon})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 34 more
-</pre></div></td>
-<td>80</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts()'><b>To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;Mute notifications&apos;]})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$xkSQmogQ.click(Unknown Source)
-	at POM.HomePage.UnMute_Notificaion_of_Chat(HomePage.java:315)
-	at Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts(Home_Screen_And_Functionalities_In_Create_Account_Flow.java:245)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2e73d5eb (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 33 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;Mute notifications&apos;]})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 35 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1001946422", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1001946422'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;Mute notifications&apos;]})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$xkSQmogQ.click(Unknown Source)
-	at POM.HomePage.UnMute_Notificaion_of_Chat(HomePage.java:315)
-	at Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_Unmute_notifications_of_muted_contacts(Home_Screen_And_Functionalities_In_Create_Account_Flow.java:245)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@2e73d5eb (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 33 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;Mute notifications&apos;]})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.24.0&apos;, revision: &apos;748ffc9bc3&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 35 more
-</pre></div></td>
-<td>86</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -339,60 +76,165 @@ Driver info: driver.version: RemoteWebDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_delete_the_chats_from_chat_history_of_home_screen()'><b>To_Validate_whether_able_to_delete_the_chats_from_chat_history_of_home_screen</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_Invalid_Datas()'><b>TC_To_Validate_DisplayName_With_Invalid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=Chri!@#4}</td>
 <td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>3</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_working_of_Mark_All_As_Read_option()'><b>To_Validate_the_working_of_Mark_All_As_Read_option</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable()'><b>TC_76_And_77_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>70</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>71</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.PreSetup()'><b>PreSetup</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_49_To_Validate_whether_ID_And_Address_are_change_while_navigating_back_and_navigate_into_register_screen()'><b>TC_49_To_Validate_whether_ID_And_Address_are_change_while_navigating_back_and_navigate_into_register_screen</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>22</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>8</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_unpin_a_pinned_particular_group_or_personchat()'><b>To_Validate_whether_able_to_unpin_a_pinned_particular_group_or_personchat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_valid_Datas()'><b>TC_To_Validate_DisplayName_With_valid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=chris}</td>
 <td></td>
-<td>77</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>17</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_mute_notifications_of_particular_group_or_person_chat()'><b>To_Validate_whether_able_to_mute_notifications_of_particular_group_or_person_chat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_66_To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field()'><b>TC_66_To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>6</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>52</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_Whether_able_to_Unblock_the_chat()'><b>To_Validate_Whether_able_to_Unblock_the_chat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_52_To_Validate_whether_ID_and_Address_were_Clickable_And_Editable()'><b>TC_52_To_Validate_whether_ID_and_Address_were_Clickable_And_Editable</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>120</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>0</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_working_of_notification_settings_mention_options_in_group_chat()'><b>To_Validate_the_working_of_notification_settings_mention_options_in_group_chat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_58_To_Validate_with_Valid_value_in_both_enter_password_field_and_in_ReEnter_password_field()'><b>TC_58_To_Validate_with_Valid_value_in_both_enter_password_field_and_in_ReEnter_password_field</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>31</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>43</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_working_of_home_Screen_without_internet_connection()'><b>To_Validate_the_working_of_home_Screen_without_internet_connection</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_34_To_Validate_DisplayName_With_Empty_Value()'><b>TC_34_To_Validate_DisplayName_With_Empty_Value</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>19</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>3</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_the_Working_of_cancel_button_in_All_popup()'><b>To_Validate_the_Working_of_cancel_button_in_All_popup</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_59_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_and_repeat_it_for_multiple_time()'><b>TC_59_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_and_repeat_it_for_multiple_time</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
 <td></td>
-<td>60</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>124</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_Whether_able_to_block_the_chat()'><b>To_Validate_Whether_able_to_block_the_chat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_valid_Datas()'><b>TC_To_Validate_DisplayName_With_valid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=chrislang24}</td>
 <td></td>
-<td>26</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>16</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow.To_Validate_whether_able_to_pin_particular_group_or_person_chat()'><b>To_Validate_whether_able_to_pin_particular_group_or_person_chat</b><br>Test class: Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow</td>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_Invalid_Datas()'><b>TC_To_Validate_DisplayName_With_Invalid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=12345^&*}</td>
 <td></td>
-<td>56</td>
-<td>Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow@78e4deb0</td></tr>
+<td>4</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_valid_Datas()'><b>TC_To_Validate_DisplayName_With_valid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=ChrisLang}</td>
+<td></td>
+<td>8</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_31_To_Validate_DisplayName_With_Above_Boundary_Value()'><b>TC_31_To_Validate_DisplayName_With_Above_Boundary_Value</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>3</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.PreSetup()'><b>PreSetup</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_valid_Datas()'><b>TC_To_Validate_DisplayName_With_valid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=123456}</td>
+<td></td>
+<td>44</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_62_To_Validate_the_next_function_with_value_only_In_Enter_password_Field()'><b>TC_62_To_Validate_the_next_function_with_value_only_In_Enter_password_Field</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>63</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_valid_Datas()'><b>TC_To_Validate_DisplayName_With_valid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=CHRIS}</td>
+<td></td>
+<td>23</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_53_To_Validate_the_working_of_next_Button()'><b>TC_53_To_Validate_the_working_of_next_Button</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>29</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_37_To_Validate_presence_of_placeholder_in_Display_Name_Textbox()'><b>TC_37_To_Validate_presence_of_placeholder_in_Display_Name_Textbox</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_60_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_ReEnter_password()'><b>TC_60_To_Validate_the_next_function_without_entering_a_value_in_Enter_password_and_ReEnter_password</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_84_And_85_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed()'><b>TC_84_And_85_To_Validate_the_working_of_the_continue_button_after_copying_the_recovery_seed</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>55</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_57_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field()'><b>TC_57_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>15</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_Invalid_Datas()'><b>TC_To_Validate_DisplayName_With_Invalid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=chrisl ang}</td>
+<td></td>
+<td>45</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_48_To_Validate_Whether_able_to_navigate_to_previous_screen()'><b>TC_48_To_Validate_Whether_able_to_navigate_to_previous_screen</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>14</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen()'><b>TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen()'><b>TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>105</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_30_To_Validate_DisplayName_WithoutAny_Value()'><b>TC_30_To_Validate_DisplayName_WithoutAny_Value</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_50_To_Validate_whether_able_to_copy_ID_and_Address()'><b>TC_50_To_Validate_whether_able_to_copy_ID_and_Address</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox()'><b>TC_39_To_Validate_Whether_Able_To_Paste_Values_In_TextBox</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>4</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed()'><b>TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>12</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_To_Validate_DisplayName_With_Invalid_Datas()'><b>TC_To_Validate_DisplayName_With_Invalid_Datas</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities<br>Parameters: {DisplayName=!@#$%^&}</td>
+<td></td>
+<td>10</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities.TC_36_To_Validate_whether_crusher_blink_on_clicking_textbox_of_Display_Name()'><b>TC_36_To_Validate_whether_crusher_blink_on_clicking_textbox_of_Display_Name</b><br>Test class: Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities@33065d67</td></tr>
 </table><p>
 </body>
 </html>

@@ -5,14 +5,32 @@
     <listener class-name="Utiles.Listerners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow">
+      <class name="Bchat.TestScenarios.SignIn_Flow_seed_Screen">
         <methods>
+          <include name="TC_110_To_Validate_the_working_of_the_restore_option_with_valid_datas_display_name_and_valid_blockheight" invocation-numbers="0 1 2 3 4"/>
           <include name="openApp"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_working_of_Mark_All_As_Read_option"/>
+          <include name="TC_103_To_Validate_the_working_of_the_next_option_by_entering_Invalid_seed" invocation-numbers="3"/>
+          <include name="TC_111_And_116_To_Validate_the_working_of_the_restore_option_with_Invalid_display_names_and_valid_blockheight_and_Date" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow -->
+      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed_Screen -->
+      <class name="Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities">
+        <methods>
+          <include name="TC_59_To_Validate_with_Valid_value_in_enter_password_field_and_Invalid_value_in_ReEnter_password_field_and_repeat_it_for_multiple_time"/>
+          <include name="openApp"/>
+          <include name="TC_58_To_Validate_with_Valid_value_in_both_enter_password_field_and_in_ReEnter_password_field"/>
+          <include name="closeApp"/>
+          <include name="TC_82_To_Validate_whether_able_to_navigate_to_the_next_screen_without_copying_the_recovery_seed"/>
+          <include name="TC_81_To_Validate_the_working_of_the_copy_option_in_the_recovery_phase_screen"/>
+          <include name="TC_85_To_Validate_Whether_Able_to_Navigate_Previous_screen"/>
+        </methods>
+      </class> <!-- Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

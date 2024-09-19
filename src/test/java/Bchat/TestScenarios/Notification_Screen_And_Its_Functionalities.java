@@ -15,7 +15,7 @@ import POM.MenuPage;
 import POM.NewChatPage;
 import POM.NotificationPage;
 import POM.RecoveryPhrasePage;
-import POM.RecoverySeed_Page;
+import POM.RecoverySeedPage;
 import POM.RegisterPage;
 import POM.SecretGroupPage;
 import POM.SocialGroupPage;

@@ -52,40 +52,14 @@ public class demo extends baseClass {
 	
 		
 
-		landingpage.clickSignIn();
-		seedpage = new SeedPage(driver);
-		Assert.assertTrue(seedpage.SeedTextBox().isDisplayed());
-		seedpage.pasteSeedValue();
-		seedpage.clickNext();
-		restorefromseedpage = new RestoreFromSeedPage(driver);
-	   	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());
-	   	restorefromseedpage.clearValues();
-		restorefromseedpage.setDisplayName("Chris");
-		restorefromseedpage.setBlockheight("3200000");
-	   	restorefromseedpage.clickBtnRestore();
-	   	createpasswordpage = new CreatePasswordPage(driver);
-	   	Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
-	   	createpasswordpage.setValidPassword();
-	   	Thread.sleep(2000);
-	   	createpasswordpage.clickOk();
-	   	homepage = new HomePage(driver);
-	   	Assert.assertEquals(homepage.Pagetitle(),"BChat");
-	   
-	   	try{
-	   		wait = new WebDriverWait(driver, Duration.ofMinutes(5));
-	   	}
-	   	catch (Exception e) {
-			// TODO: handle exception
-		}
-	   	wait.until(ExpectedConditions.invisibilityOf(homepage.BlankChatScreen));
-	   	List <WebElement> list =driver.findElements(By.id("io.beldex.bchat:id/gradientView"));
-  	System.out.println(list);	
-	}
+		   landingpage.clickTermsAndConditions();
+		  
 		
-	
+ 
+		
 		
 	}
-	 
+}
 	  
 	
 //		  public static void main(String[] args) {
