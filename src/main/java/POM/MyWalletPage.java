@@ -113,7 +113,7 @@ public class MyWalletPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Restore from BlockHeight']")
 	private WebElement placholder;
 	
-	@AndroidFindBy(className = "Calendar")
+	@AndroidFindBy(accessibility  = "Calendar")
 	private WebElement btnCalendar;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='OK']")
@@ -401,5 +401,9 @@ public class MyWalletPage extends ActionsClass {
     
     public void click_BackArrow_In_details () {
     	backarrowInDetails.click();
+    }
+    
+    public WebElement Element_of_First_Transaction () {
+    	return firstTransactionInHistory;
     }
 }

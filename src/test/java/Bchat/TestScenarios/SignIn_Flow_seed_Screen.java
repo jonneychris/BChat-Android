@@ -546,7 +546,7 @@ public class SignIn_Flow_seed_Screen extends baseClass{
 	/*
 	TC_119 : validate the working of the restore option by paste values in textboxes.
 	*/
-	@Test(priority = 26,groups = {"Regression"})
+	@Test(priority = 26,groups = {"Regression","Smoke"})
 	public void TC_119_To_validate_the_working_of_the_restore_option_by_paste_values_in_textboxes () {
 		restorefromseedpage = new RestoreFromSeedPage(driver);
 	   	Assert.assertTrue(restorefromseedpage.BlockheightTextBox().isDisplayed());

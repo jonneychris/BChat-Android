@@ -129,7 +129,7 @@ public class WalletSettingsPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.ImageView[1]")
 	private WebElement CopyOrSendIconofFirstAddress;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text=''No Contacts]")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='No Contacts']")
 	private WebElement ContentNoContacts;
 	
 	@AndroidFindBy(className = "android.widget.Button")
@@ -137,6 +137,11 @@ public class WalletSettingsPage extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.view.View[1]/android.widget.TextView[@index='0']")
 	private WebElement firstContactNameInAddressBook;
+	
+	@AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.view.View\").instance(9)")
+	private WebElement SearchedCurrency;
+	
+	
 	
 	public String walletSettings_screen_Title () {
     	return WalletSettingsScreenTitle.getText();
@@ -410,6 +415,13 @@ public class WalletSettingsPage extends ActionsClass {
     	return firstContactNameInAddressBook.getText();
     }
     
+    public WebElement Element_of_Copy_Icon () {
+    	return CopyOrSendIconofFirstAddress;
+    }
+    
+    public void click_Searched_Currency () {
+    	SearchedCurrency.click();
+    }
 }
 
 

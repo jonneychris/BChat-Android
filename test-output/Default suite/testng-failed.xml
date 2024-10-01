@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.SignIn_Flow_seed_Screen">
+      <class name="Bchat.TestScenarios.Menu_Drawer_Screen_And_Functionalities">
         <methods>
           <include name="openApp"/>
-          <include name="TC_TO_validate_Navigation_To_home_with_Valid_Password"/>
+          <include name="To_Validate_whether_record_option_in_message_functionality_is_enable"/>
           <include name="closeApp"/>
+          <include name="To_Validate_whether_the_functions_and_icons_response_fo_touch_action"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed_Screen -->
+      </class> <!-- Bchat.TestScenarios.Menu_Drawer_Screen_And_Functionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

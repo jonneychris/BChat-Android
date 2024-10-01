@@ -175,7 +175,7 @@ public void turnOn_Mobile_Wifi () {
 
 public void Minimize_the_App (){
 	
-	driver.runAppInBackground(Duration.ofSeconds(10));
+	driver.runAppInBackground(Duration.ofSeconds(5));
 	driver.currentActivity();
 }
 

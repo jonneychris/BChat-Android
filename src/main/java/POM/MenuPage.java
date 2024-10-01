@@ -35,25 +35,25 @@ public class MenuPage extends ActionsClass {
 	
 	
 
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Settings']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Settings\"]")
 	private WebElement optionSettings;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Notification']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Notification\"]")
 	private WebElement optionNotification;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Message Requests']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Message Requests\"]")
 	private WebElement optionMessageRequest;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Recovery Seed']")
 	private WebElement optionRecoverySeed;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Wallet']")
+	@AndroidFindBy(id="io.beldex.bchat:id/navigation_SubIcon")
 	private WebElement optionWallet;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Report Issue']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Report Issue\"]")
 	private WebElement optionsReportIssue;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Help']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Help\"]")
 	private WebElement optionHelp;
 	
 	@AndroidFindBy(id="com.google.android.gm:id/compose_body_parent")
@@ -69,10 +69,10 @@ public class MenuPage extends ActionsClass {
 	private WebElement btnCancelInInvite;
 	
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Invite']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Invite\"]")
 	private WebElement optionInvite;
 
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='About']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"About\"]")
 	private WebElement optionAbout;
 	
 	@AndroidFindBy(accessibility = "Back")
@@ -82,6 +82,8 @@ public class MenuPage extends ActionsClass {
 	private WebElement optionThemeChange;
 	
  
+
+	
 	public String pagetitle() {
 	String title=	pagetitle.getText();
 	return title;
@@ -172,5 +174,12 @@ public class MenuPage extends ActionsClass {
     public void click_theme_ChnageButton() {
 		optionThemeChange.click();
 	}
+    
+    public void click_Close_Icon () {
+    
+    	Closeicon.click();
+    	
+    	
+    }
 }
 

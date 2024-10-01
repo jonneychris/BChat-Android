@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utiles.Listerners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Bchat.TestScenarios.SignIn_Flow_seed_Screen">
+      <class name="Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow">
         <methods>
+          <include name="To_validate_the_working_of_search_box_with_valid_value"/>
           <include name="openApp"/>
-          <include name="TC_TO_validate_Navigation_To_home_with_Valid_Password"/>
           <include name="closeApp"/>
+          <include name="To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin"/>
+          <include name="To_Validate_whether_selected_option_is_displayed_in_wallet_Settings_and_My_Wallet_screen"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.SignIn_Flow_seed_Screen -->
+      </class> <!-- Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

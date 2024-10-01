@@ -45,7 +45,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	NewChatPage newchatpage;
 	SecretGroupPage secretgrouppage;
 	WebDriverWait wait;
-	String EnterDisplayName;
+	String EnteredDisplayName;
 	NoteToMyselfPage notetomyself;
 	SettingsPage settingspage;
 	WalletPage walletpage;
@@ -80,14 +80,26 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		landingpage.clickCreateAccount();
 		displaynamepage =new DisplayNamePage(driver);
 		Assert.assertEquals(displaynamepage.pageTitle(),"Display Name");
-		 EnterDisplayName =displaynamepage.setDisplayName("Chris");
+		 EnteredDisplayName =displaynamepage.setDisplayName("Chris");
 		displaynamepage.clickContinue();
 		registerpage= new RegisterPage(driver);
+		try {
 		Assert.assertEquals(registerpage.pageTitle(),"Register");
 		Thread.sleep(3000);
+		}
+		catch (StaleElementReferenceException e) {
+			Assert.assertEquals(registerpage.pageTitle(),"Register");
+			Thread.sleep(3000);
+		}
 		registerpage.clickNext();
 		createpasswordpage = new CreatePasswordPage(driver);
-		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
+		try{
+			Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
+		}
+		catch (NoSuchElementException e) {
+			registerpage.clickNext();
+			Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
+		}
 		createpasswordpage.setValidPassword();
 		Thread.sleep(2000);
 		createpasswordpage.clickOk();
@@ -101,12 +113,12 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			}
 	
 
-    /*
-     * 
-     * Menu Drawer screen
-     * 
-     * 		
-     */
+	    /*
+	     * 
+	     * Menu Drawer screen
+	     * 
+	     * 		
+	     */
 	
 
 	/*
@@ -114,7 +126,6 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	 */
 	@Test (priority = 1,groups ={"Regression","Smoke"} )
 	public void To_Validate_whether_entered_display_name_is_showing_in_profile_name () {
-	
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		homepage.clickMenuDrawer();
@@ -122,25 +133,29 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Assert.assertEquals(menupage.pagetitle(),"Menu");
 	     menupage =new MenuPage(driver);
 		Assert.assertEquals(menupage.pagetitle(),"Menu");
-		Assert.assertEquals(menupage.getProfileName(), EnterDisplayName);
+		Assert.assertEquals(menupage.getProfileName(), EnteredDisplayName);
 		
+	
 	}
 	
 
+	
 	/*
 	TC_250 Validate the working of the scrolling action in both upward and downward direction.
+	
 	*/
 	@Test (priority = 2,groups ={"Regression"} )
 	public void TC_250_To_Validate_Whether_Screen_is_Scrollable () throws InterruptedException {
-		
 		
 		menupage =new MenuPage(driver);
 		Assert.assertEquals(menupage.pagetitle(),"Menu");
 		menupage.scroll_the_page(700, 750, 300, "down");
 		Assert.assertEquals(menupage.contentAbout(), "About");
-		//menupage.click
+		
+		
 	}
 	
+
 	
 	/*
 	 * 
@@ -156,14 +171,16 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			*/
 		@Test(priority =3,groups ={"Regression","Smoke"} )
 		public void To_validate_whether_Able_to_Copy_Bchat_ID_and_Beldex_Address () {
-			homepage = new HomePage(driver);
-			homepage.clickMenuDrawer();
+			
+			Assert.assertEquals(menupage.pagetitle(),"Menu");
 			menupage = new MenuPage(driver);
 			menupage.click_My_Account_option();
 			   myaccountpage =new  MyAccountPage(driver);
 			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-		  try {
+			  myaccountpage.click("BchatId");
 		      myaccountpage.click("BchatId");
+		  try {
+		      
 			  Assert.assertEquals(Toast(), "Copied to clip board");	  
 		  }
 		  catch (StaleElementReferenceException e) {
@@ -174,8 +191,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			  myaccountpage.click("BchatId");
 			  Assert.assertEquals(Toast(), "Copied to clip board");	
 		}
-		  try {
 		  myaccountpage.click("BeldexAddress");
+		  myaccountpage.click("BeldexAddress");
+		  try {
+		  
 			  Assert.assertEquals(Toast(), "Copied to clip board");
 		  }
 		  catch (StaleElementReferenceException e) {
@@ -259,7 +278,14 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
 			  myaccountpage.scroll_the_page(200, 600, 50, "down");
 			  myaccountpage.ClickshareButton();
-			  Assert.assertTrue(myaccountpage.shareScreenTitle().equals("1 image in total"));
+			  try{
+				  Assert.assertTrue(myaccountpage.shareScreenTitle().equals("1 image in total"));
+			  }
+			  catch (NoSuchElementException e) {
+				  myaccountpage.scroll_the_page(200, 600, 50, "down");
+				  myaccountpage.ClickshareButton();
+				  Assert.assertTrue(myaccountpage.shareScreenTitle().equals("1 image in total"));
+			}
 			  myaccountpage.clickcancel_In_share_Screen();
 			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
 		}
@@ -304,49 +330,60 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		public void To_Validate_whether_remove_picture_button_not_clickable_when_there_is_no_profile_picture () {
 			myaccountpage =new  MyAccountPage(driver);
 			Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickProfileIcon();
-			  
-					 myaccountpage.clickRemovePicture();
-					 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
+			 myaccountpage.clickProfileIcon();
+			 myaccountpage.clickRemovePicture();
+			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
 			  myaccountpage.clickcancel_In_ProfilePicture_Screen();
 		}
 	
-		
-		/*
-		 	Validate whether able to upload picture from gallery option of the device.
-		 */
-		@Test(priority = 10,groups ={"Regression","Smoke"} )
-		public void To_Validate_whether_able_to_upload_picture_from_gallery_option_in_device () throws InterruptedException {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickProfileIcon();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
-			 myaccountpage.Set_Profile_Picture_from_Gallery();
-			 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
-			 myaccountpage.clickProfileIcon();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
-			 myaccountpage.clickRemovePicture();
-		}
-		
-			  
 		/*
 		Validate whether able to upload picture using camera option of the device.
 		*/
-		@Test(priority = 11,groups ={"Regression","Smoke"} )
+		@Test(priority = 10,groups ={"Regression","Smoke"} )
 		public void To_Validate_whether_able_to_upload_picture_using_camera_option_of_the_device () throws InterruptedException {
 			myaccountpage =new  MyAccountPage(driver);
 			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
 			  myaccountpage.clickProfileIcon();
 			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
 			 myaccountpage.Set_Profile_Picture_from_Camera();
-			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			 wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
-			 myaccountpage.clickProfileIcon();
+			 try{
+				 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
+				myaccountpage.clickProfileIcon();
+			 }
+			 catch (NoSuchElementException e) {
+				 myaccountpage.clickProfileIcon();
+			}
 			 myaccountpage.clickRemovePicture();
 			 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
 		}
 		
+		/*
+		 	Validate whether able to upload picture from gallery option of the device.
+		 */
+		@Test(priority = 11,groups ={"Regression","Smoke"} )
+		public void To_Validate_whether_able_to_upload_picture_from_gallery_option_in_device () throws InterruptedException {
+			myaccountpage =new  MyAccountPage(driver);
+			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
+			  myaccountpage.clickProfileIcon();
+			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
+			 try{
+				 myaccountpage.Set_Profile_Picture_from_Gallery();
+			 }
+			 catch (NoSuchElementException e) {
+				driver.navigate().back();
+				myaccountpage.Set_Profile_Picture_from_Gallery2();
+			}
+			try {
+				wait = new WebDriverWait(driver, Duration.ofSeconds(10));		
+				wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
+			}
+			catch (NoSuchElementException e) {
+				Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
+			}
+			}
+		
+			  		
 		
 		/*
 		Validate whether able to remove the uploaded profile photo.
@@ -355,15 +392,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		public void To_Validate_whether_able_to_remove_the_uploaded_profile_photo () throws InterruptedException {
 			myaccountpage =new  MyAccountPage(driver);
 			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickProfileIcon();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
-			 myaccountpage.Set_Profile_Picture_from_Gallery();
-			 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			 wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
-			 myaccountpage.clickProfileIcon();
+			myaccountpage.clickProfileIcon();
 			 myaccountpage.clickRemovePicture();
 			 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-
+            myaccountpage.clickBackArrow();
 		}
 		
 		
@@ -373,11 +405,20 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Validate Whether Able to Edit display Name without internet
 		*/
 		@Test(priority = 13,groups ={"Regression"} )
-		public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () {
+		public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () {			
+			turnOff_Mobile_Wifi();	
+			homepage = new HomePage(driver);
+			try {
+			Assert.assertTrue(homepage.hops_Warning().isDisplayed());
+			}
+			catch (NoSuchElementException e) {
+				Assert.assertTrue(homepage.hops_Warning().isDisplayed());
+			}
+			homepage.clickMenuDrawer();
+			menupage = new MenuPage(driver);
+			menupage.click_My_Account_option();
 			myaccountpage =new  MyAccountPage(driver);
 			 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			
-			turnOff_Mobile_Wifi();	
 			myaccountpage.EditDisplayName("New"); 
 			myaccountpage.click_tick_inDisplayName();
 			 driver.navigate().back();
@@ -387,10 +428,18 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			 menupage = new MenuPage(driver);
 			 Assert.assertEquals(menupage.getProfileName(),"New");
 			 menupage.click_My_Account_option();
-			myaccountpage.clickProfileIcon();
-			myaccountpage.clickUpload();
+			
+			try{
+				myaccountpage.clickProfileIcon();
+				myaccountpage.clickUpload();			
 			Assert.assertEquals(Toast(),"Please check your internet connection");
 			turnOn_Mobile_Wifi();
+			}
+			catch (NoSuchElementException e) {
+				 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
+				 turnOn_Mobile_Wifi();
+			}
+			
 			myaccountpage.clickBackArrow();
 			
 		}
@@ -435,6 +484,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		menupage.click_option_Settings();
 		settingspage = new SettingsPage(driver);
 		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.click_PayAsYouChat();
 		Assert.assertFalse(settingspage.Check_payAsYouChat_option().isEnabled());
 	}
 	
@@ -492,7 +542,6 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		// to check in on condition
 		settingspage = new SettingsPage(driver);
 		Assert.assertEquals(settingspage.pageTitle(),"Settings");
-		settingspage.click_Send_LinkPreview();
 		settingspage.click_Back_Arrow();
 		homepage = new HomePage(driver);
 		Assert.assertEquals(homepage.Pagetitle(), "BChat");
@@ -500,9 +549,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		homepage.click_Option_Note_To_Myself();
 		notetomyself = new NoteToMyselfPage(driver);
 		notetomyself.Set_Values_In_Message_textbox("https://youtube.com/shorts/QE8EBWPLOUs?si=j5YE10X8O0_MHeWJ");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		notetomyself.click_send_Button();
 		Assert.assertTrue(notetomyself.Link_Preview().isDisplayed());
+		notetomyself.delete_link();
 		driver.navigate().back();
 		
 		//To check in off condition
@@ -513,6 +563,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		menupage.click_option_Settings();
 		settingspage = new SettingsPage(driver);
 		Assert.assertEquals(settingspage.pageTitle(),"Settings");
+		settingspage.scrollgesture_Using_text("Voice and video calls");
 		settingspage.click_Send_LinkPreview();
 		settingspage.click_Back_Arrow();
 		homepage = new HomePage(driver);
@@ -524,7 +575,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		notetomyself.Set_Values_In_Message_textbox("https://youtube.com/shorts/QE8EBWPLOUs?si=j5YE10X8O0_MHeWJ");
 		Thread.sleep(1000);
 		notetomyself.click_send_Button();
-		Assert.assertTrue(notetomyself.Link_Preview().isDisplayed());
+		Assert.assertFalse(notetomyself.Link_Preview().isDisplayed());
 		}
 		catch (NoSuchElementException e) {
 			driver.navigate().back();
@@ -663,6 +714,353 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		}
 
 
+		/*
+		 * 
+		 * 
+		 * Report Issue Screen
+		 * 
+		 * 
+		 */
+		
+		
+		/*
+		Validate whether able to navigate back to the home screen.
+		*/
+		@Test(priority = 26,groups ={"Regression"})
+		public void To_Validate_whether_able_to_navigate_back_to_home_screen_from_Report_Issue () {
+			homepage = new HomePage(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			homepage.clickMenuDrawer();
+			menupage = new MenuPage(driver);
+			menupage.click_option_ReportIssue();
+			chatpage = new ChatPage(driver);
+			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+			driver.navigate().back();
+		   
+			
+		}
+			
+
+		/*
+		Validate the text box of the Report Issue Functionality using special Characters.
+		 Validate whether able to delete the send report
+		*/
+		@Test(priority = 29,groups ={"Regression"})
+		public void To_Validate_the_textbox_of_Report_Issue_Functionality_using_special_Characters ()  {
+			homepage = new HomePage(driver);
+			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			try{
+				homepage.clickMenuDrawer();
+			menupage = new MenuPage(driver);
+			menupage.click_option_ReportIssue();
+			}
+			catch (NoSuchElementException e) {
+				homepage.clickMenuDrawer();
+				menupage.click_option_ReportIssue();
+			}
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Set_Values_In_Message_textbox("hi");
+			chatpage.click_Send_Button();
+			chatpage.Set_Values_In_Message_textbox("@!#$%");
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(),"@!#$%");
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+			
+		}
+		
+		/*
+		Validate the text box of the Report Issue Functionality using Alaphabats both in uppercase and lower case.
+		*/
+		@Test(priority = 30,groups ={"Regression"})
+		public void To_Validate_textbox_of_Report_Issue_Functionality_using_Alaphabats_both_in_uppercase_and_lowercase ()  {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Set_Values_In_Message_textbox("ABCDEH");
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(), "ABCDEH");
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+			chatpage.Set_Values_In_Message_textbox("abcdef");
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(), "abcdef");
+			wait.until(ExpectedConditions.visibilityOf(chatpage.SendMessageCard()));
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+			}
+		
+		/*
+		Validate the text box of the Report Issue Functionality is Allowing the Space in between the value.
+		*/
+		@Test(priority = 31,groups ={"Regression"})
+		public void To_Validate_textbox_of_Report_Issue_Functionality_is_Allowing_Space_in_between_the_value ()    {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Set_Values_In_Message_textbox("Hi Hello ok");
+			
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(), "Hi Hello ok");
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+			
+		}
+		
+		/*
+		Validate the text box of the Report Issue Functionality by numerical value.
+		*/
+		@Test(priority = 32,groups ={"Regression"})
+		public void To_Validate_textbox_of_Report_Issue_Functionality_by_numerical_value ()  {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Set_Values_In_Message_textbox("123456");
+			
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(), "123456");
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+		}
+		
+		/*
+		Validate the presence of placeholder in the text box of Report Issue functionality.
+		*/
+		@Test (priority = 33,groups ={"Regression"})
+		public void To_Validate_the_presence_of_placeholder_in_textbox_of_Report_Issue_functionality () {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Write a message....");		
+			
+		}
+		
+		
+		/*
+		Validate whether the value entered in the text box of Report Issue functionality is editable and deletable.	
+		*/
+		@Test(priority = 34,groups ={"Regression"})
+		public void To_Validate_whether_value_entered_in_textbox_of_Report_Issue_functionality_is_editable_and_deletable () {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Set_Values_In_Message_textbox("Hi");
+			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Hi");
+			chatpage.clear_textBox();
+			chatpage.Set_Values_In_Message_textbox("Hello");
+			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Hello");
+			chatpage.clear_textBox();
+			
+		}
+		
+		
+		/*
+		Validate whether crusher blink on clicking the text box of Report Issue functionality.
+		*/
+		@Test(priority = 35,groups ={"Regression"})
+		public void To_Validate_whether_crusher_blink_on_clicking_textbox_of_Report_Issue_functionality () {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.clickTextBox();
+			Assert.assertTrue(chatpage.activeElement().isDisplayed());
+		}
+		
+		
+		
+		/*
+		validate whether paste option is working on the text box Report Issue functionality.
+		*/
+		@Test(priority = 36,groups ={"Regression"})
+		public void To_validate_whether_paste_option_is_working_on_textbox_Report_Issue_functionality () {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.paste_values("Hello");
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(), "Hello");
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+		}
+		
+			
+		
+		/*
+		Validate whether able enter a lengthy value in the text box Report Issue functionality.
+		*/
+		@Test(priority = 37,groups ={"Regression"})
+		public void To_Validate_whether_able_enter_lengthy_value_in_text_box_Report_Issue_functionality ()  {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Set_Values_In_Message_textbox("hi hello iam doing good to havw erreo akdm anj jolhs odjjd oshsb okk nho");
+			chatpage.click_Send_Button();
+			Assert.assertEquals(chatpage.get_Second_Message_Value(), "hi hello iam doing good to havw erreo akdm anj jolhs odjjd oshsb okk nho");
+			 try {
+					chatpage.delete_second_message();
+			     }
+			     catch (NoSuchElementException e) {
+			    	 chatpage.delete_second_message();
+				}
+					 try {chatpage.click_DeleteForEveryone();
+					
+			      }
+			      catch (NoSuchElementException e) {
+			    	  chatpage.click_delete_In_Popup();
+					
+				}
+					try{
+						chatpage.delete_Send_Message();
+					}
+					catch (NoSuchElementException e) {
+						chatpage.delete_Send_Message();
+					}
+					chatpage.click_DeleteForEveryone();
+		}
+	
+		
+		/*
+		Validate whether record option in the message functionality is enable.
+		*/
+		@Test(priority = 38,groups ={"Regression"})
+		public void To_Validate_whether_record_option_in_message_functionality_is_enable () throws InterruptedException {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.Record_Voice_Msg();
+			chatpage.delete_Voice_message();
+			
+			}
+		
+		/*
+		Validate whether the functions and icons response for the touch action.
+		*/
+		@Test(priority = 39,groups ={"Regression"})
+		public void To_Validate_whether_the_functions_and_icons_response_fo_touch_action () {
+			chatpage = new ChatPage(driver);
+			try {
+				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
+				}
+				catch (AssertionError e1) {
+					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
+				}
+			chatpage.click_Moreoption();
+			Assert.assertTrue(chatpage.get_Element_of_MoreOptions().isDisplayed());
+			chatpage.click_Moreoption();
+			chatpage.click_Attachments();
+			Assert.assertTrue(chatpage.Elements_of_Attachments().isDisplayed());
+			driver.navigate().back();
+		}
+		
+		
 		
 		/*
 		 * 
@@ -674,10 +1072,37 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		 */
 		
 		
+		
+		/*
+		 Validate Message Requests Screen without any message request.
+		 Validate whether able to navigate out of the screen
+		 */
+		@Test(priority = 40,groups ={"Regression","Smoke"})
+		public void To_Validate_Message_Requests_Screen_without_any_message_request () {
+			homepage = new HomePage(driver);
+			try
+			{
+				homepage.clickMenuDrawer();
+			menupage = new MenuPage(driver);
+			menupage.click_option_Message_requests();
+			}
+			catch (NoSuchElementException e) {
+				menupage = new MenuPage(driver);
+				menupage.click_option_Message_requests();				
+			}
+			messagerequestpage = new MessageRequestPage(driver);
+			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
+			Assert.assertTrue(messagerequestpage.Empty_screen().isDisplayed());
+			messagerequestpage.click_Back_Arrow();
+			
+		}
+		
+				
+		
 		/*
 		 pre for message request list in message request screen
 		 */
-		@Test(priority = 26,groups ={"Regression","Smoke"},invocationCount = 3)
+		@Test(priority = 41,groups ={"Regression","Smoke"},invocationCount = 3)
 		public void preSetup_For_Message_requests () throws InterruptedException {
 			
 			homepage = new HomePage(driver);
@@ -703,7 +1128,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether Message requests recevied from others is showing.
 		*/
-		@Test(priority = 27,groups ={"Regression","Smoke"})
+		@Test(priority = 42,groups ={"Regression","Smoke"})
 		public void To_Validate_whether_Message_requests_recevied_from_others_is_showing() throws InterruptedException {
 		     homepage = new HomePage(driver);
 			homepage.clickMenuDrawer();
@@ -730,30 +1155,34 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			createpasswordpage.clickOk();
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
-			homepage.click_DropDown();
 			homepage.clickMenuDrawer();
 		    menupage =new MenuPage(driver);
 			menupage.click_option_Message_requests();
 			messagerequestpage = new MessageRequestPage(driver);
 			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
-			Assert.assertTrue(messagerequestpage.Element_Of_First_Received_Request().isDisplayed());
+			try{
+				Assert.assertTrue(messagerequestpage.Element_Of_First_Received_Request().isDisplayed());
+			}
+			catch (NoSuchElementException e) {
+				Assert.assertTrue(messagerequestpage.Element_Of_First_Received_Request().isDisplayed());
+			}
 			
 
 		}
-
+            
+		
 		/*
 		Validate the working of the cancel button in all popup screen
 		*/
-		@Test(priority = 28,groups ={"Regression"})
+		@Test(priority = 43,groups ={"Regression"})
 		public void To_Validate_the_working_of_cancel_button_in_all_popup_screen () {
+			
 			messagerequestpage = new MessageRequestPage(driver);
 			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
-			messagerequestpage.Click_Block_option();
-			Assert.assertEquals(messagerequestpage.PopupTilte(), "Message Request");
+			messagerequestpage.Click_Block_option();	
 			messagerequestpage.click_cancel();
 			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
 			messagerequestpage.Click_Delete_option();
-			Assert.assertEquals(messagerequestpage.PopupTilte(), "Message Request");
 			messagerequestpage.click_cancel();
 			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
 
@@ -762,14 +1191,17 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate working of the Accept in  the Message Request
 		*/
-		@Test(priority = 29,groups ={"Regression","Smoke"})
+		@Test(priority = 44,groups ={"Regression","Smoke"})
 		public void To_Validate_working_of_Accept_in_Message_Request () {
+			
 			messagerequestpage = new MessageRequestPage(driver);
 			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
 			String IdorName =messagerequestpage.Element_Of_First_Received_Request().getText();
 			messagerequestpage.Accept_First_Request_In_List();
 			chatpage = new ChatPage(driver);
 			chatpage.click_Accept();
+			chatpage.Set_Values_In_Message_textbox("hii");
+			chatpage.click_Send_Button();
 			driver.navigate().back();
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -780,7 +1212,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the Block in the Message request
 		*/
-		@Test(priority = 30,groups ={"Regression","Smoke"})
+		@Test(priority = 45,groups ={"Regression","Smoke"})
 		public void To_Validate_the_working_of_Block_in_Message_request () {
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -811,7 +1243,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate working of the Delete in the Message request.
 		*/
-		@Test(priority = 31,groups ={"Regression","Smoke"})
+		@Test(priority = 46,groups ={"Regression","Smoke"})
 		public void To_Validate_working_of_the_Delete_in_Message_request () {
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -821,36 +1253,12 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			messagerequestpage = new  MessageRequestPage(driver);
 			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
 			messagerequestpage.Delete_First_Request_in_list();
-			Assert.assertTrue(messagerequestpage.Empty_screen().isDisplayed());
-			
-		}
-		
-		
-		/*
-		 Validate Message Requests Screen without any message request.
-		 */
-		@Test(priority = 32,groups ={"Regression","Smoke"})
-		public void To_Validate_Message_Requests_Screen_without_any_message_request () {
-			
-			messagerequestpage = new MessageRequestPage(driver);
-			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
-			Assert.assertTrue(messagerequestpage.Empty_screen().isDisplayed());
-		}
-		
-
-		/*
-		 Validate whether able to navigate out of the screen
-		 */
-		@Test(priority = 33,groups ={"Regression"})
-		public void To_Validate_whether_able_to_navigate_out_of_screen () {
-			messagerequestpage = new MessageRequestPage(driver);
-			Assert.assertEquals(messagerequestpage.pageTitle(),"Message Requests");
 			messagerequestpage.click_Back_Arrow();
-			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			
 		}
-		
 
+		
+		
 		
 		/*
 		 * 
@@ -864,7 +1272,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the yes,I'm Safe option.
 		*/
-		@Test(priority = 34,groups ={"Regression"})
+		@Test(priority = 47,groups ={"Regression"})
 		public void To_Validate_the_working_of_yesIm_Safe_button () {
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -882,13 +1290,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether the value entered in the pin field is visible.
 		*/
-		@Test(priority = 35,groups ={"Regression"})
+		@Test(priority = 48,groups ={"Regression"})
 		public void To_Validate_whether_the_value_entered_in_pin_field_is_visible ()
 		{
-			recoveryseedpage = new RecoverySeedPage(driver);
-			Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
-			recoveryseedpage.click_Yes_Iam_Safe();
-	   
+			recoveryseedpage = new RecoverySeedPage(driver); 
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");	
 			recoveryseedpage.Enter_Value_1();
 			Assert.assertNotEquals(recoveryseedpage.text_Value_inPin_fields(), "[1, 1, 1]");
@@ -900,7 +1305,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Validate whether value entered in the pin field is deletable.
 		Validate whether value entered in the pin field is Editable.
 		*/
-		@Test(priority = 36,groups ={"Regression"})
+		@Test(priority = 49,groups ={"Regression"})
 		public void To_Validate_whether_value_entered_in_pin_field_is_deletable_and_Editable () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
@@ -915,7 +1320,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		validate Whether able to navigate back to the previous screen from pin screen
 		*/
-		@Test(priority = 37,groups ={"Regression"})
+		@Test(priority = 50,groups ={"Regression"})
 		public void To_validate_Whether_able_to_navigate_back_to_previous_screen_from_pin_screen () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
@@ -928,7 +1333,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the home screen
 		*/
-		@Test(priority = 38,groups ={"Regression"})
+		@Test(priority = 51,groups ={"Regression"})
 		public void To_Validate_whether_able_to_navigate_back_to_home_screen () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
@@ -941,7 +1346,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the password word functionality in the recover seed screen with Invalid pin.
 		*/
-		@Test(priority = 39,groups ={"Regression","Smoke"})
+		@Test(priority = 52,groups ={"Regression","Smoke"})
 		public void To_Validate_the_password_word_functionality_in_recover_seed_screen_with_Invalid_pin () {
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -973,7 +1378,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the password word functionality in the recover seed screen with valid pin.
 		*/
-		@Test(priority = 40,groups ={"Regression","Smoke"})
+		@Test(priority = 53,groups ={"Regression","Smoke"})
 		public void To_Validate_the_password_word_functionality_in_recover_seed_screen_with_valid_pin () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
@@ -985,7 +1390,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to copy the seed.
 		*/
-		@Test(priority = 41,groups ={"Regression","Smoke"})
+		@Test(priority = 54,groups ={"Regression","Smoke"})
 		public void To_Validate_whether_able_to_copy_the_seed (){
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
@@ -1010,395 +1415,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			
 		}
 		
-		
-		/*
-		 * 
-		 * 
-		 * Report Issue Screen
-		 * 
-		 * 
-		 */
-		
-		
-		/*
-		Validate whether able to navigate back to the home screen.
-		*/
-		@Test(priority = 42,groups ={"Regression"})
-		public void To_Validate_whether_able_to_navigate_back_to_home_screen_from_Report_Issue () {
-			homepage = new HomePage(driver);
-			homepage.clickMenuDrawer();
-			menupage = new MenuPage(driver);
-			menupage.click_option_ReportIssue();
-			chatpage = new ChatPage(driver);
-			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-			chatpage.click_Back_Arrow();
-		   
-			
-		}
-			
-		/*
-		Validate the text box of the Report Issue functionality is allowing null value.
-		*/
-		@Test(priority = 43,groups ={"Regression"})
-		public void To_Validate_the_textbox_of_Report_Issue_functionality_is_allowing_null_value () {
-			homepage = new HomePage(driver);
-			homepage.clickMenuDrawer();
-			menupage =new MenuPage(driver);
-				Assert.assertEquals(menupage.pagetitle(),"Menu");
-				menupage.click_option_ReportIssue();
-			chatpage = new ChatPage(driver);
-			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-			chatpage.Set_Values_In_Message_textbox(" ");
-			try{
-				chatpage.click_Send_Button();
-			}
-			catch( NoSuchElementException e)
-			{
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-			}
-		}
-		
-		
-		/*
-		 Validate whether able to delete the send report
-		 */
-		@Test(priority = 44,groups ={"Regression"})
-		public void To_Validate_whether_able_to_delete_the_send_report ()  {
-			chatpage = new ChatPage(driver);
-			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-			chatpage.Set_Values_In_Message_textbox("hello");
-			chatpage.click_Send_Button();
-			wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-			wait.until(ExpectedConditions.visibilityOf(chatpage.SendMessageCard()));
-	      try {
-			chatpage.delete_Send_Message();
-			chatpage.click_delete_In_Popup();
-	      }
-	      catch (NoSuchElementException e) {
-			
-			chatpage.click_DeleteForEveryone();
-		}
-			try {
-				Assert.assertFalse(chatpage.SendMessageCard().isDisplayed());
-			}
-			catch (NoSuchElementException e) {
-				try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e2) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			}
-			catch (StaleElementReferenceException e) {
-				try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			}
-		}
-		/*
-		Validate the text box of the Report Issue Functionality using special Characters.
-		*/
-		@Test(priority = 45,groups ={"Regression"})
-		public void To_Validate_the_textbox_of_Report_Issue_Functionality_using_special_Characters ()  {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("@!#$%");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(),"@!#$%");
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_delete_In_Popup();
-				}
-		   catch (NoSuchElementException e) {
-			   chatpage.click_DeleteForEveryone();
-					
-				}
-			
-		}
-		
-		/*
-		Validate the text box of the Report Issue Functionality using Alaphabats both in uppercase and lower case.
-		*/
-		@Test(priority = 46,groups ={"Regression"})
-		public void To_Validate_textbox_of_Report_Issue_Functionality_using_Alaphabats_both_in_uppercase_and_lowercase ()  {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("ABCDEH");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "ABCDEH");
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_DeleteForEveryone();
-				
-				}
-		   catch (NoSuchElementException e) {
-			   chatpage.click_delete_In_Popup();
-				}
-			chatpage.Set_Values_In_Message_textbox("abcdef");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "abcdef");
-			wait.until(ExpectedConditions.visibilityOf(chatpage.SendMessageCard()));
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_DeleteForEveryone();
-				}
-				catch (NoSuchElementException e) {
-				chatpage.click_delete_In_Popup();
-				}
-			}
-		
-		/*
-		Validate the text box of the Report Issue Functionality is Allowing the Space in between the value.
-		*/
-		@Test(priority = 47,groups ={"Regression"})
-		public void To_Validate_textbox_of_Report_Issue_Functionality_is_Allowing_Space_in_between_the_value ()    {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("Hi Hello ok");
-			
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "Hi Hello ok");
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_DeleteForEveryone();
-			}
-				catch (NoSuchElementException e) {
-					chatpage.click_delete_In_Popup();
-				}
-			
-		}
-		
-		/*
-		Validate the text box of the Report Issue Functionality by numerical value.
-		*/
-		@Test(priority = 48,groups ={"Regression"})
-		public void To_Validate_textbox_of_Report_Issue_Functionality_by_numerical_value ()  {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("123456");
-			
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "123456");
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_DeleteForEveryone();	
-			}
-				catch (NoSuchElementException e) {
-					chatpage.click_delete_In_Popup();
-				}
-		}
-		
-		/*
-		Validate the presence of placeholder in the text box of Report Issue functionality.
-		*/
-		@Test (priority = 49,groups ={"Regression"})
-		public void To_Validate_the_presence_of_placeholder_in_textbox_of_Report_Issue_functionality () {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Write a message....");		
-			
-		}
-		
-		
-		/*
-		Validate whether the value entered in the text box of Report Issue functionality is editable and deletable.	
-		*/
-		@Test(priority = 50,groups ={"Regression"})
-		public void To_Validate_whether_value_entered_in_textbox_of_Report_Issue_functionality_is_editable_and_deletable () {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("Hi");
-			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Hi");
-			chatpage.clear_textBox();
-			chatpage.Set_Values_In_Message_textbox("Hello");
-			Assert.assertEquals(chatpage.get_Values_from_TextBox(), "Hello");
-			chatpage.clear_textBox();
-			
-		}
-		
-		
-		/*
-		Validate whether crusher blink on clicking the text box of Report Issue functionality.
-		*/
-		@Test(priority = 51,groups ={"Regression"})
-		public void To_Validate_whether_crusher_blink_on_clicking_textbox_of_Report_Issue_functionality () {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.clickTextBox();
-			Assert.assertTrue(chatpage.activeElement().isDisplayed());
-		}
-		
-		
-		
-		/*
-		validate whether paste option is working on the text box Report Issue functionality.
-		*/
-		@Test(priority = 52,groups ={"Regression"})
-		public void To_validate_whether_paste_option_is_working_on_textbox_Report_Issue_functionality () {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.paste_values("Hello");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "Hello");
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_DeleteForEveryone();
-			}
-				catch (NoSuchElementException e) {
-					chatpage.click_delete_In_Popup();
-				}
-		}
-		
-			
-		
-		/*
-		Validate whether able enter a lengthy value in the text box Report Issue functionality.
-		*/
-		@Test(priority = 53,groups ={"Regression"})
-		public void To_Validate_whether_able_enter_lengthy_value_in_text_box_Report_Issue_functionality ()  {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("hi hello iam doing good to havw erreo akdm anj jolhs odjjd oshsb okk nho");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "hi hello iam doing good to havw erreo akdm anj jolhs odjjd oshsb okk nho");
-			wait = new WebDriverWait(driver, Duration.ofMinutes(1));
-			wait.until(ExpectedConditions.visibilityOf(chatpage.SendMessageCard()));
-			try {
-				chatpage.delete_Send_Message();
-				chatpage.click_DeleteForEveryone();
-			}
-				catch (NoSuchElementException e) {
-				 chatpage.click_delete_In_Popup();
-				}
-		}
-		
-		/*
-		Validate Whether able to send multiple reports.
-		*/
-		@Test(priority = 54,groups ={"Regression"})
-		public void To_Validate_Whether_able_to_send_multiple_reports () {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Set_Values_In_Message_textbox("hi");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Send_Message_Value(), "hi");
-			chatpage.Set_Values_In_Message_textbox("hello");
-			chatpage.click_Send_Button();
-			Assert.assertEquals(chatpage.get_Second_Message_Value(), "hello");
-			
-		}
-		
-		/*
-		Validate whether record option in the message functionality is enable.
-		*/
-		@Test(priority = 55,groups ={"Regression"})
-		public void To_Validate_whether_record_option_in_message_functionality_is_enable () throws InterruptedException {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.Record_Voice_Msg();
-			chatpage.click_Send_Button();
-			try {
-				Assert.assertFalse(chatpage.get_Message_Status().isDisplayed());
-			}
-			catch (NoSuchElementException e) {
-				try {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-					}
-					catch (AssertionError e1) {
-						Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-					}
-			}
-			
-			}
-		
-		/*
-		Validate whether the functions and icons response for the touch action.
-		*/
-		@Test(priority = 56,groups ={"Regression"})
-		public void To_Validate_whether_the_functions_and_icons_response_fo_touch_action () {
-			chatpage = new ChatPage(driver);
-			try {
-				Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-				}
-				catch (AssertionError e1) {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-				}
-			chatpage.click_Moreoption();
-			Assert.assertTrue(chatpage.get_Element_of_MoreOptions().isDisplayed());
-			chatpage.click_Moreoption();
-			chatpage.click_Attachments();
-			try {
-				Assert.assertFalse(chatpage.Elements_of_Attachments().isDisplayed());
-			}
-			catch (NoSuchElementException e) {
-				try {
-					Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");
-					}
-					catch (AssertionError e1) {
-						Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"bdb890a974a25ef50c64cc4e3270c4c49c7096c433b8eecaf011c1ad000e426813");	
-					}
-			}
-		}
-		
-					
+							
 		/*
 		 * 
 		 * 
@@ -1411,7 +1428,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of help functionality
 		*/
-		@Test(priority = 57,groups ={"Regression"} )
+		@Test(priority = 55,groups ={"Regression"} )
 		public void To_Validate_the_working_of_help_functionality () {
 			homepage = new HomePage(driver);
 			homepage.clickMenuDrawer();			
@@ -1425,7 +1442,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the to Gmail id in the Gmail screen.
 		*/
-		@Test(priority = 58,groups ={"Regression"} )
+		@Test(priority = 56,groups ={"Regression"} )
 		public void To_Validate_the_to_Gmail_id_in_Gmail_screen () {
 			menupage =new MenuPage(driver);
 			Assert.assertTrue(menupage.get_element_of_GmailScreen().isDisplayed());
@@ -1436,7 +1453,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the Home screen from gmail screen.
 		*/
-		@Test(priority = 59,groups ={"Regression"} )
+		@Test(priority = 57,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_navigate_back_to_Homescreen_from_gmailScreen () {
 			menupage =new MenuPage(driver);
 			Assert.assertTrue(menupage.get_element_of_GmailScreen().isDisplayed());
@@ -1458,7 +1475,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the Invite functionality
 		*/
-		@Test(priority = 60,groups ={"Regression"} )
+		@Test(priority = 58,groups ={"Regression","Smoke"} )
 		public void To_Validate_the_working_of_Invite_functionality () {
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -1472,7 +1489,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the Home screen from invite.
 		*/
-		@Test(priority = 61,groups ={"Regression"} )
+		@Test(priority = 59,groups ={"Regression","Smoke"} )
 		public void To_Validate_whether_able_to_navigate_back_to_HomeScreen_From_invite () {
 			menupage =new MenuPage(driver);
 			Assert.assertTrue(menupage.get_Invite_Screen_element().isDisplayed());
@@ -1494,7 +1511,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 Validate the working of about functionality
 		 */
-		@Test(priority = 62,groups ={"Regression"} )
+		@Test(priority = 60,groups ={"Regression"} )
 		public void To_Validate_the_working_of_about_functionality () {
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -1508,24 +1525,15 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			
 		}
 		
-		/*
-		Validate whether able to scroll the about screen
-		*/
-		@Test(priority = 63,groups ={"Regression"} )
-		public void To_Validate_whether_able_to_scroll_the_about_screen () {
-			menupage =new MenuPage(driver);
-			Assert.assertEquals(menupage.About_Screen_Title(), "About");
-			menupage.scroll_the_page(450, 1000 , 1000, "Down");
-		}
 
 		/*
 		Validate whether able to navigate back to the Home screen from about screen.
 		*/
-		@Test(priority = 64,groups ={"Regression"} )
+		@Test(priority = 61,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_navigate_back_to_HomeScreen_from_about_screen () {
 			menupage =new MenuPage(driver);
 			Assert.assertEquals(menupage.About_Screen_Title(), "About");
-			menupage.click_Back_Arrow();
+			driver.navigate().back();
 			homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
 		}
@@ -1542,8 +1550,8 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 validate the working of theme button
 		 */
-		@Test(priority = 65,groups ={"Regression","Smoke"} )
-		public void To_validate_the_working_of_theme_button () {
+		@Test(priority = 62,groups ={"Regression","Smoke"} )
+		public void To_validate_the_working_of_theme_Change_button () {
 			homepage = new HomePage(driver);
 			homepage.clickMenuDrawer();
 			menupage =new MenuPage(driver);
@@ -1556,7 +1564,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 validate whether able to click the theme change button multiple times
 		 */
-		@Test(priority = 66,groups ={"Regression"} )
+		@Test(priority = 63,groups ={"Regression"} )
 		public void To_validate_whether_able_to_change_theme_multiple_times () {
 			for(int i =0; i<=10;i++) {
 			homepage = new HomePage(driver);

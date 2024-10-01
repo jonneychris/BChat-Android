@@ -207,7 +207,7 @@ public class HomePage extends ActionsClass {
 	}
 	
 	public void clickSearch() {
-		textboxSearch.click();	
+		textboxplacholder.click();	
 	}
 	
 	public void clickBackArrow() {

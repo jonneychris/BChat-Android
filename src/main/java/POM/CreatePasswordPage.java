@@ -183,6 +183,18 @@ public class CreatePasswordPage extends ActionsClass{
 		
 	}
 
+	public void setValidPassword_with_0() {
+		
+		for(int i=0;i<4;i++) {
+		btn_Enter_0.click();
+		}
+		btnNext.click();
+		for(int i=0;i<4;i++) {
+		 btn_Enter_0.click();
+		}
+		btnNext.click();
+		
+	}
    public  String textErrorMsg() {
 		String errorMessage=Toast();
 		return errorMessage;

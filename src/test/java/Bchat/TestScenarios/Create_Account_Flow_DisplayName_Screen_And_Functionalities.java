@@ -43,12 +43,12 @@ Test Scenario:	To check the working of the Create Account Flow Displayname Scree
 public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends baseClass {
 	
 	 
-	RegisterPage registerpage;
-	WebDriverWait wait;
-	DisplayNamePage displaynamepage;
-   CreatePasswordPage createpasswordpage;
-   RecoveryPhrasePage recoveryphrasepage;
-	HomePage homepage;
+	 RegisterPage registerpage;
+	 WebDriverWait wait;
+	 DisplayNamePage displaynamepage;
+     CreatePasswordPage createpasswordpage;
+     RecoveryPhrasePage recoveryphrasepage;
+	 HomePage homepage;
 	
 	/*
 	 PreSetup method to this class
@@ -559,11 +559,11 @@ public class Create_Account_Flow_DisplayName_Screen_And_Functionalities extends 
 	
 	
 	
-	/*
-	 * 
-	 * Recovery seed screen
-	 * 
-	 */
+			/*
+			 * 
+			 * Recovery seed screen
+			 * 
+			 */
 
 		
 	

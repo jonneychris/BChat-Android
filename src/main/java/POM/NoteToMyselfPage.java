@@ -40,6 +40,12 @@ public class NoteToMyselfPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/microphoneOrSendButtonContainer")
 	private WebElement btnSend;
 	
+	@AndroidFindBy(accessibility = "Delete message")
+	private WebElement deleteIcon;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Delete\"]")
+	private WebElement btndeleteInPopup;
+	
 	public void click_send_Button () {
 		btnSend.click();
 	}
@@ -65,5 +71,11 @@ public class NoteToMyselfPage extends ActionsClass {
 	
 	public WebElement Link_Preview () {
 		return linkPreview;
+	}
+	
+	public void delete_link () {
+		longPress(linkPreview);
+		deleteIcon.click();
+		btndeleteInPopup.click();
 	}
 }

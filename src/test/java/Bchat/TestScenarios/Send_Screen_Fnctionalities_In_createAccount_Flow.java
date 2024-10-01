@@ -89,60 +89,60 @@ public class Send_Screen_Fnctionalities_In_createAccount_Flow  extends baseClass
 	}
 	
 	
-//	/*
-//	 validate whether able to navigate out of the Send screen
-//	 */
-//	@Test(priority = 1)
-//	public void To_validate_whether_able_to_navigate_out_of_the_Send_screen () {
-//		sendPage = new SendPage(driver);
-//		Assert.assertEquals(sendPage.pagetitle(),"Send");
-//		sendPage.click_BackArrow();
-//		mywalletpage = new MyWalletPage(driver);
-//		Assert.assertEquals(mywalletpage.MyWalletScreenTitle(),"My Wallet");
-//		mywalletpage.click_Send_option();
-//	
-//	}
-//	
-//	
-//	/*
-//	 validate the working of the scan option
-//	 */
-//	@Test(priority = 2)
-//	public void To_validate_the_working_of_the_scan_option () {
-//		sendPage = new SendPage(driver);
-//		Assert.assertEquals(sendPage.pagetitle(),"Send");
-//		sendPage.click_scanner();
-//		mywalletpage = new MyWalletPage(driver);
-//		Assert.assertEquals(mywalletpage.Scan_Page_Title(),"Scan");
-//		mywalletpage.Click_Back_Arrow();
-//		Assert.assertEquals(sendPage.pagetitle(), "Send");
-//	}
-//	
-//	/*
-//	 validate the working of the address book option
-//	 */
-//	@Test(priority = 3)
-//	public void To_validate_the_working_of_AddressBook_option () {
-//		sendPage = new SendPage(driver);
-//		Assert.assertEquals(sendPage.pagetitle(),"Send");
-//		sendPage.click_AddressBook();
-//		walletsettingspage = new WalletSettingsPage(driver);
-//		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(),"Address Book");
-//		walletsettingspage.click_Back_Arrow();
-//		Assert.assertEquals(sendPage.pagetitle(), "Send");
-//	}
-//	
-//	
-//	/*
-//	 validate the working of the send function without values in both address and amount
-//	 */
-//	@Test(priority = 4)
-//	public void To_validate_the_working_of_send_function_without_values_in_both_address_and_amount () {
-//		sendPage = new SendPage(driver);
-//		Assert.assertEquals(sendPage.pagetitle(),"Send");
-//		sendPage.click_send();
-//		Assert.assertEquals(sendPage.pagetitle(), "Send");
-//	}
+	/*
+	 validate whether able to navigate out of the Send screen
+	 */
+	@Test(priority = 1)
+	public void To_validate_whether_able_to_navigate_out_of_the_Send_screen () {
+		sendPage = new SendPage(driver);
+		Assert.assertEquals(sendPage.pagetitle(),"Send");
+		sendPage.click_BackArrow();
+		mywalletpage = new MyWalletPage(driver);
+		Assert.assertEquals(mywalletpage.MyWalletScreenTitle(),"My Wallet");
+		mywalletpage.click_Send_option();
+	
+	}
+	
+	
+	/*
+	 validate the working of the scan option
+	 */
+	@Test(priority = 2)
+	public void To_validate_the_working_of_the_scan_option () {
+		sendPage = new SendPage(driver);
+		Assert.assertEquals(sendPage.pagetitle(),"Send");
+		sendPage.click_scanner();
+		mywalletpage = new MyWalletPage(driver);
+		Assert.assertEquals(mywalletpage.Scan_Page_Title(),"Scan");
+		mywalletpage.Click_Back_Arrow();
+		Assert.assertEquals(sendPage.pagetitle(), "Send");
+	}
+	
+	/*
+	 validate the working of the address book option
+	 */
+	@Test(priority = 3)
+	public void To_validate_the_working_of_AddressBook_option () {
+		sendPage = new SendPage(driver);
+		Assert.assertEquals(sendPage.pagetitle(),"Send");
+		sendPage.click_AddressBook();
+		walletsettingspage = new WalletSettingsPage(driver);
+		Assert.assertEquals(walletsettingspage.AddressBook_screen_title(),"Address Book");
+		walletsettingspage.click_Back_Arrow();
+		Assert.assertEquals(sendPage.pagetitle(), "Send");
+	}
+	
+	
+	/*
+	 validate the working of the send function without values in both address and amount
+	 */
+	@Test(priority = 4)
+	public void To_validate_the_working_of_send_function_without_values_in_both_address_and_amount () {
+		sendPage = new SendPage(driver);
+		Assert.assertEquals(sendPage.pagetitle(),"Send");
+		sendPage.click_send();
+		Assert.assertEquals(sendPage.pagetitle(), "Send");
+	}
 	
 	
 	/*

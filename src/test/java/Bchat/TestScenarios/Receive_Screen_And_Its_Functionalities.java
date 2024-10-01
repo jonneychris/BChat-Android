@@ -83,35 +83,35 @@ public class Receive_Screen_And_Its_Functionalities extends baseClass {
 	}
 	
 	
-//	/*
-//	Validate whether able to copy the wallet Address.
-//	*/
-//	@Test(priority = 1)
-//	public void To_Validate_whether_able_to_copy_the_wallet_Address () throws InterruptedException {
-//		
-//		mywalletpage = new MyWalletPage(driver);
-//		Assert.assertEquals(mywalletpage.MyWalletScreenTitle(), "My Wallet");
-//		mywalletpage.click_Recive_option();
-//		
-//		Assert.assertEquals(mywalletpage.Receive_Page_Title(),"Receive");
-//		receivepage = new  ReceivePage(driver);
-//		receivepage.click_copyIcon_In_receiveScreen();
-//		Assert.assertEquals(Toast(),"Copied to clip board");
-//	}
-//	
-//	/*
-//	 Validate the working of the share button
-//	 */
-//	@Test(priority = 2)
-//	public void To_Validate_the_working_of_share_button () {
-//		mywalletpage = new MyWalletPage(driver);
-//		Assert.assertEquals(mywalletpage.Receive_Page_Title(),"Receive");
-//		receivepage = new  ReceivePage(driver);
-//		receivepage.click_share();
-//		Assert.assertEquals(receivepage.Share_Screen_Title(), "1 image in total");
-//		receivepage.click_Cancel();
-//		Assert.assertEquals(mywalletpage.Receive_Page_Title(),"Receive");
-//	}
+	/*
+	Validate whether able to copy the wallet Address.
+	*/
+	@Test(priority = 1)
+	public void To_Validate_whether_able_to_copy_the_wallet_Address () throws InterruptedException {
+		
+		mywalletpage = new MyWalletPage(driver);
+		Assert.assertEquals(mywalletpage.MyWalletScreenTitle(), "My Wallet");
+		mywalletpage.click_Recive_option();
+		
+		Assert.assertEquals(mywalletpage.Receive_Page_Title(),"Receive");
+		receivepage = new  ReceivePage(driver);
+		receivepage.click_copyIcon_In_receiveScreen();
+		Assert.assertEquals(Toast(),"Copied to clip board");
+	}
+	
+	/*
+	 Validate the working of the share button
+	 */
+	@Test(priority = 2)
+	public void To_Validate_the_working_of_share_button () {
+		mywalletpage = new MyWalletPage(driver);
+		Assert.assertEquals(mywalletpage.Receive_Page_Title(),"Receive");
+		receivepage = new  ReceivePage(driver);
+		receivepage.click_share();
+		Assert.assertEquals(receivepage.Share_Screen_Title(), "1 image in total");
+		receivepage.click_Cancel();
+		Assert.assertEquals(mywalletpage.Receive_Page_Title(),"Receive");
+	}
 	
 	/*
 	Validate the amount text box with valid amount value.

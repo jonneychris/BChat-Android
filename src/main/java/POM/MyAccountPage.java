@@ -68,8 +68,11 @@ public class MyAccountPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/back")
     private WebElement BackArrow; 
 
-	@AndroidFindBy(xpath = "//android.widget.LinearLayout[4]/android.widget.ImageView")
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@text=\"Photos\"])[2]")
 	private WebElement optionsPhotos;
+	
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@text=\"Photos\"])[1]")
+	private WebElement optionsPhotos2;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Camera']")
 	private WebElement optionCamera;
@@ -176,12 +179,19 @@ public class MyAccountPage extends ActionsClass {
  	   FirstImageInGallery.click();
  	   btnCrop.click();   
    }
+   public void Set_Profile_Picture_from_Gallery2 () {
+		  btnUpload.click();
+		   optionsPhotos2.click();
+	 	   FirstFolderInGallery.click();
+	 	   FirstImageInGallery.click();
+	 	   btnCrop.click();   
+	   }
    
    public void Set_Profile_Picture_from_Camera () throws InterruptedException {
 	   btnUpload.click();
 	   optionCamera.click();
  	   btntakePhoto.click();
- 	   Thread.sleep(2000);
+ 	   Thread.sleep(3000);
  	   btntickAfterTakingPhoto.click();
  	   btnCrop.click();   
    }

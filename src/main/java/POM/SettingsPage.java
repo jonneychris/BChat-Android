@@ -27,10 +27,10 @@ public class SettingsPage extends ActionsClass {
 	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[4]")
 	private WebElement optionPayAsYouChat;
 	
-	@AndroidFindBy(xpath="//android.widget.LinearLayout[8]/android.widget.LinearLayout[2]/android.widget.Switch")
+	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[6]")
 	private WebElement optionSendLinkPreview;
 	
-	@AndroidFindBy(xpath="//android.widget.LinearLayout[9]/android.widget.LinearLayout[2]/android.widget.Switch")
+	@AndroidFindBy(xpath="(//android.widget.Switch[@resource-id=\"android:id/checkbox\"])[7]")
 	private WebElement optionVoiceCalls;
 
    @AndroidFindBy(id="io.beldex.bchat:id/callPermissionEnableButton")

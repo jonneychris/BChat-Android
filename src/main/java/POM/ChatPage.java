@@ -302,8 +302,12 @@ public class ChatPage extends ActionsClass {
 	
 	public void delete_Send_Message () {
 		longPress(sendMessageCard);
+		btnDelete.click();		
+	}
+	
+	public void delete_second_message () {
+		longPress(SecondMessageCard);
 		btnDelete.click();
-		
 	}
     public void click_DeleteForEveryone () {
 		optionDeleteForEveryone.click();
