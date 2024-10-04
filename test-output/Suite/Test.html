@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>49/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>49/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 01 19:10:38 IST 2024</td>
+<td>Started on:</td><td>Fri Oct 04 17:59:50 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>2099 seconds (2099839 ms)</td>
+<tr><td>Total time:</td><td>1863 seconds (1863873 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Regression </td>
 </tr><tr>
@@ -67,250 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_search_box_with_valid_value()'><b>To_validate_the_working_of_search_box_with_valid_value</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [df618052-6011-44b0-baac-1a8fca70fe9b, getElementText {id=00000000-0000-0619-0000-07df000002fe}]
-Capabilities {appium:app: C:\Users\itsup\eclipse-work..., appium:appPackage: io.beldex.bchat, appium:appWaitActivity: io.beldex.bchat.onboarding...., appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\itsup\eclipse-work..., appPackage: io.beldex.bchat, appWaitActivity: io.beldex.bchat.onboarding...., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: one plus nord ce 3, fullReset: true, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: d6a08b3e}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: d6a08b3e, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: d6a08b3e, appium:fullReset: true, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: d6a08b3e, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Element: [[AndroidDriver:  on ANDROID (df618052-6011-44b0-baac-1a8fca70fe9b)] -&gt; xpath: //android.view.View[3]/android.widget.TextView[2]]
-Session ID: df618052-6011-44b0-baac-1a8fca70fe9b
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:79)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$6XPL4doh.getText(Unknown Source)
-	at POM.WalletSettingsPage.get_currency_Value(WalletSettingsPage.java:330)
-	at Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_search_box_with_valid_value(MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.java:875)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace265644189", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace265644189'><pre>org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [df618052-6011-44b0-baac-1a8fca70fe9b, getElementText {id=00000000-0000-0619-0000-07df000002fe}]
-Capabilities {appium:app: C:\Users\itsup\eclipse-work..., appium:appPackage: io.beldex.bchat, appium:appWaitActivity: io.beldex.bchat.onboarding...., appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\itsup\eclipse-work..., appPackage: io.beldex.bchat, appWaitActivity: io.beldex.bchat.onboarding...., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: one plus nord ce 3, fullReset: true, ignoreHiddenApiPolicyError: true, platformName: ANDROID, platformVersion: 14, udid: d6a08b3e}, appium:deviceApiLevel: 34, appium:deviceManufacturer: OnePlus, appium:deviceModel: CPH2467, appium:deviceName: d6a08b3e, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: d6a08b3e, appium:fullReset: true, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 107, appium:takesScreenshot: true, appium:udid: d6a08b3e, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Element: [[AndroidDriver:  on ANDROID (df618052-6011-44b0-baac-1a8fca70fe9b)] -&gt; xpath: //android.view.View[3]/android.widget.TextView[2]]
-Session ID: df618052-6011-44b0-baac-1a8fca70fe9b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:79)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$6XPL4doh.getText(Unknown Source)
-	at POM.WalletSettingsPage.get_currency_Value(WalletSettingsPage.java:330)
-	at Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_search_box_with_valid_value(MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.java:875)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>87</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_selected_option_is_displayed_in_wallet_Settings_and_My_Wallet_screen()'><b>To_Validate_whether_selected_option_is_displayed_in_wallet_Settings_and_My_Wallet_screen</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td><div><pre>java.lang.AssertionError: expected [0.000] but found [0.232]
-	at Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_selected_option_is_displayed_in_wallet_Settings_and_My_Wallet_screen(MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.java:915)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace837923432", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace837923432'><pre>java.lang.AssertionError: expected [0.000] but found [0.232]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_selected_option_is_displayed_in_wallet_Settings_and_My_Wallet_screen(MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.java:915)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>95</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin()'><b>To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;Wallet settings&apos;]})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$6XPL4doh.getText(Unknown Source)
-	at POM.WalletSettingsPage.walletSettings_screen_Title(WalletSettingsPage.java:147)
-	at Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin(MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.java:1040)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@60b553f (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 33 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;Wallet settings&apos;]})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 35 more
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1266568468", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1266568468'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.widget.TextView[@text=&apos;Wallet settings&apos;]})
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$6XPL4doh.getText(Unknown Source)
-	at POM.WalletSettingsPage.walletSettings_screen_Title(WalletSettingsPage.java:147)
-	at Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin(MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.java:1040)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@60b553f (tried for 1 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
-	... 33 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.widget.TextView[@text=&apos;Wallet settings&apos;]})
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
-	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 35 more
-</pre></div></td>
-<td>83</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -320,250 +76,250 @@ Driver info: driver.version: RemoteWebDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_whether_able_to_paste_contactName_in_search_textbox()'><b>To_validate_whether_able_to_paste_contactName_in_search_textbox</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_transactions_filter_by_date()'><b>To_Validate_the_working_of_transactions_filter_by_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>1</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>116</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Navigate_to_Address_book()'><b>To_Validate_the_Navigate_to_Address_book</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_ChangePin_functionality_by_entering_a_valid_value_in_Newpin_and_invalid_value_in_ReEnter_pin()'><b>To_Validate_the_ChangePin_functionality_by_entering_a_valid_value_in_Newpin_and_invalid_value_in_ReEnter_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>12</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>65</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_set_new_pin_with_old_pin_value()'><b>To_Validate_whether_able_to_set_new_pin_with_old_pin_value</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_cancel_icon_inside_the_search_textbox()'><b>To_validate_the_working_of_cancel_icon_inside_the_search_textbox</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>40</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>7</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
 <td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_with_valid_Address_and_Valid_Amount()'><b>To_Validate_the_working_of_send_functionality_with_valid_Address_and_Valid_Amount</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>64</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>9</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_both_date()'><b>To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_both_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_amount_functionality_without_internet_connection()'><b>To_Validate_the_working_of_send_amount_functionality_without_internet_connection</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>3</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>41</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_cancel_button_in_filter_by_date()'><b>To_Validate_the_working_of_cancel_button_in_filter_by_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount()'><b>To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>3</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>43</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen()'><b>To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_transaction_histories_are_visible()'><b>To_Validate_whether_transaction_histories_are_visible</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>68</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>284</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount()'><b>To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_Transactionfilter_by_date_without_selecting_To_date()'><b>To_Validate_the_working_of_Transactionfilter_by_date_without_selecting_To_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>1</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_transactions_filter_by_date()'><b>To_Validate_the_working_of_transactions_filter_by_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>27</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_node_screen_without_internet_connection()'><b>To_Validate_the_node_screen_without_internet_connection</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>61</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_cancel_icon_in_all_popup()'><b>To_Validate_the_working_of_cancel_icon_in_all_popup</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>60</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_currency_list_is_Scrollable()'><b>To_Validate_whether_currency_list_is_Scrollable</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>60</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>62</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
 <td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_blocks_sync_happens_well_when_we_disconnect_internet_and_connect_internet_while_blocks_syncing()'><b>To_Validate_whether_blocks_sync_happens_well_when_we_disconnect_internet_and_connect_internet_while_blocks_syncing</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
 <td>13</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_blocks_syncing_while_minimize_and_open_the_app()'><b>To_validate_the_working_of_blocks_syncing_while_minimize_and_open_the_app</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_select_all_options_in_DisplayBalanceAs()'><b>To_Validate_whether_able_to_select_all_options_in_DisplayBalanceAs</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>82</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_select_all_options_in_Decimals()'><b>To_Validate_whether_able_to_select_all_options_in_Decimals</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>77</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_copy_icon_in_address_book()'><b>To_validate_the_working_of_copy_icon_in_address_book</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>3</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_pin_functionality_by_entering_a_valid_old_pin()'><b>To_Validate_the_Change_pin_functionality_by_entering_a_valid_old_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>6</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_select_all_options_in_currency()'><b>To_Validate_whether_able_to_select_all_options_in_currency</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>76</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.PreSetup()'><b>PreSetup</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>120</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field()'><b>To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>14</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance()'><b>To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>49</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_by_using_contacts_book()'><b>To_Validate_the_working_of_send_functionality_by_using_contacts_book</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>48</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_copy_icon_in_transaction_details()'><b>To_validate_the_working_of_copy_icon_in_transaction_details</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>3</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_cancel_button_in_confirm_popup()'><b>To_Validate_the_working_of_cancel_button_in_confirm_popup</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>51</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_amount_functionality_without_internet_connection()'><b>To_Validate_the_working_of_send_amount_functionality_without_internet_connection</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>11</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_Whether_able_to_do_transactions_before_Blocks_synchronized()'><b>To_Validate_Whether_able_to_do_transactions_before_Blocks_synchronized</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>1</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_Pin_functionality_by_entering_a_valid_Create_pin_and_valid_ReEnter_pin()'><b>To_Validate_the_Change_Pin_functionality_by_entering_a_valid_Create_pin_and_valid_ReEnter_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>31</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_transaction_histories_are_visible()'><b>To_Validate_whether_transaction_histories_are_visible</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>370</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount()'><b>To_Validate_the_working_of_send_functionality_with_Invalid_Address_and_Valid_Amount</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>55</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_amount_entered_in_BDX_conversion_to_selected_currency()'><b>To_Validate_amount_entered_in_BDX_conversion_to_selected_currency</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>0</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_working_of_All_options_in_Fee_Priority()'><b>To_Validate_working_of_All_options_in_Fee_Priority</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_screen_navigation_occurs_well_inside_wallet_while_blocks_syncing()'><b>To_Validate_screen_navigation_occurs_well_inside_wallet_while_blocks_syncing</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_search_option_with_Invalid_contactName()'><b>To_validate_the_working_of_search_option_with_Invalid_contactName</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>13</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_ChangePin_functionality_by_entering_a_valid_value_in_Newpin_and_invalid_value_in_ReEnter_pin()'><b>To_Validate_the_ChangePin_functionality_by_entering_a_valid_value_in_Newpin_and_invalid_value_in_ReEnter_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>43</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
 <td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_node_changes_well_while_blocks_syncing()'><b>To_Validate_node_changes_well_while_blocks_syncing</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>8</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>13</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes()'><b>To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_select_all_options_in_currency()'><b>To_Validate_whether_able_to_select_all_options_in_currency</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>2</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_reconnect_and_rescan_option_while_blocks_syncing()'><b>To_Validate_the_working_of_reconnect_and_rescan_option_while_blocks_syncing</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>0</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_whether_same_amount_showing_in_transaction_history_and_details()'><b>To_validate_whether_same_amount_showing_in_transaction_history_and_details</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>19</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_transaction_details_dropdown()'><b>To_Validate_the_working_of_transaction_details_dropdown</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>35</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_amount_text_box_by_entering_lengthy_amount_value()'><b>To_validate_the_amount_text_box_by_entering_lengthy_amount_value</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>0</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_Transactionfilter_by_date_without_selecting_To_date()'><b>To_Validate_the_working_of_Transactionfilter_by_date_without_selecting_To_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>48</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validatethe_Whether_able_to_navigate_to_next_screen_without_entering_a_values_in_pin_fields()'><b>To_Validatethe_Whether_able_to_navigate_to_next_screen_without_entering_a_values_in_pin_fields</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>98</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Addressbook_screen_while_having_a_contacts()'><b>To_Validate_the_Addressbook_screen_while_having_a_contacts</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_navigation_to_explorer_page_on_clicking_transactionId()'><b>To_validate_the_navigation_to_explorer_page_on_clicking_transactionId</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>3</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>66</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
 <td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_Working_Of_blocks_syncing_while_navigate_to_homescreen_and_back_Mywallet_screen()'><b>To_validate_Working_Of_blocks_syncing_while_navigate_to_homescreen_and_back_Mywallet_screen</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>48</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>9</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_from_date()'><b>To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_from_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin()'><b>To_Validate_the_Change_pin_functionality_by_entering_Incorrect_old_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
-<td>4</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_cancel_icon_inside_the_search_textbox()'><b>To_validate_the_working_of_cancel_icon_inside_the_search_textbox</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
-<td></td>
-<td>8</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>41</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 <tr>
 <td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_beldex_hidden_option_in_DisplayBalanceAs()'><b>To_Validate_the_working_of_beldex_hidden_option_in_DisplayBalanceAs</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
 <td></td>
 <td>2</td>
-<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@6e4566f1</td></tr>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_blocks_syncing_while_minimize_and_open_the_app()'><b>To_validate_the_working_of_blocks_syncing_while_minimize_and_open_the_app</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>7</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes()'><b>To_Validate_Whether_Able_To_Paste_Values_in_text_Boxes</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>3</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount()'><b>To_Validate_the_working_of_send_functionality_with_valid_Address_and_Invalid_Amount</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_cancel_button_in_filter_by_date()'><b>To_Validate_the_working_of_cancel_button_in_filter_by_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>4</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_navigation_to_explorer_page_on_clicking_transactionId()'><b>To_validate_the_navigation_to_explorer_page_on_clicking_transactionId</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>5</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_search_option_with_Invalid_contactName()'><b>To_validate_the_working_of_search_option_with_Invalid_contactName</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>52</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_both_date()'><b>To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_both_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>8</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_amount_entered_in_BDX_conversion_to_selected_currency()'><b>To_Validate_amount_entered_in_BDX_conversion_to_selected_currency</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_select_all_options_in_DisplayBalanceAs()'><b>To_Validate_whether_able_to_select_all_options_in_DisplayBalanceAs</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>9</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validatethe_Whether_able_to_navigate_to_next_screen_without_entering_a_values_in_pin_fields()'><b>To_Validatethe_Whether_able_to_navigate_to_next_screen_without_entering_a_values_in_pin_fields</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>62</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_transaction_details_dropdown()'><b>To_Validate_the_working_of_transaction_details_dropdown</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_set_new_pin_with_old_pin_value()'><b>To_Validate_whether_able_to_set_new_pin_with_old_pin_value</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>60</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_Whether_able_to_do_transactions_before_Blocks_synchronized()'><b>To_Validate_Whether_able_to_do_transactions_before_Blocks_synchronized</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_screen_navigation_occurs_well_inside_wallet_while_blocks_syncing()'><b>To_Validate_screen_navigation_occurs_well_inside_wallet_while_blocks_syncing</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>35</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_from_date()'><b>To_Validate_the_working_of_Transaction_filter_by_date_without_selecting_from_date</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>49</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Navigate_to_Address_book()'><b>To_Validate_the_Navigate_to_Address_book</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>50</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_Pin_functionality_by_entering_a_valid_Create_pin_and_valid_ReEnter_pin()'><b>To_Validate_the_Change_Pin_functionality_by_entering_a_valid_Create_pin_and_valid_ReEnter_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>110</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_reconnect_and_rescan_option_while_blocks_syncing()'><b>To_Validate_the_working_of_reconnect_and_rescan_option_while_blocks_syncing</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_node_screen_without_internet_connection()'><b>To_Validate_the_node_screen_without_internet_connection</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>62</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_working_of_All_options_in_Fee_Priority()'><b>To_Validate_working_of_All_options_in_Fee_Priority</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>4</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_copy_icon_in_transaction_details()'><b>To_validate_the_working_of_copy_icon_in_transaction_details</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>50</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen()'><b>To_Validate_whether_the_values_in_text_boxes_got_cleared_after_navigate_to_pin_screen</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>58</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_copy_icon_in_address_book()'><b>To_validate_the_working_of_copy_icon_in_address_book</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>2</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_amount_text_box_by_entering_lengthy_amount_value()'><b>To_validate_the_amount_text_box_by_entering_lengthy_amount_value</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_whether_able_to_paste_contactName_in_search_textbox()'><b>To_validate_whether_able_to_paste_contactName_in_search_textbox</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>1</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_send_functionality_by_using_contacts_book()'><b>To_Validate_the_working_of_send_functionality_by_using_contacts_book</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>66</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance()'><b>To_validate_the_working_of_send_amount_functionality_with_amount_greater_than_balance</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>95</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field()'><b>To_validate_whether_able_to_enter_multiple_dots_and_commas_in_amount_field</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>9</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_cancel_button_in_confirm_popup()'><b>To_Validate_the_working_of_cancel_button_in_confirm_popup</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>40</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_whether_able_to_select_all_options_in_Decimals()'><b>To_Validate_whether_able_to_select_all_options_in_Decimals</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>40</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_working_of_cancel_icon_in_all_popup()'><b>To_Validate_the_working_of_cancel_icon_in_all_popup</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>55</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Addressbook_screen_while_having_a_contacts()'><b>To_Validate_the_Addressbook_screen_while_having_a_contacts</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>4</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.PreSetup()'><b>PreSetup</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>96</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_Validate_the_Change_pin_functionality_by_entering_a_valid_old_pin()'><b>To_Validate_the_Change_pin_functionality_by_entering_a_valid_old_pin</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>6</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
+<tr>
+<td title='Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow.To_validate_whether_same_amount_showing_in_transaction_history_and_details()'><b>To_validate_whether_same_amount_showing_in_transaction_history_and_details</b><br>Test class: Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow</td>
+<td></td>
+<td>0</td>
+<td>Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow@7dda48d9</td></tr>
 </table><p>
 </body>
 </html>

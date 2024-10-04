@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -138,7 +139,7 @@ public class WalletSettingsPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.view.View[1]/android.widget.TextView[@index='0']")
 	private WebElement firstContactNameInAddressBook;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.view.View\").instance(9)")
+	@AndroidFindBy(uiAutomator = "//android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View")
 	private WebElement SearchedCurrency;
 	
 	
@@ -345,7 +346,12 @@ public class WalletSettingsPage extends ActionsClass {
     public void Select_All_options_InDecimals () {
     	for(int i=1;i<=4;i++) {
     		optionDecimals.click();
-    		driver.findElement(By.xpath("//android.view.View/android.view.View["+i+"]")).click();	
+    		try{
+    			driver.findElement(By.xpath("//android.view.View/android.view.View["+i+"]")).click();	
+    		}
+    		catch (StaleElementReferenceException e) {
+    			driver.findElement(By.xpath("//android.view.View/android.view.View["+i+"]")).click();
+			}
     	}
     }
     
