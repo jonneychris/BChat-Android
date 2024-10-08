@@ -86,6 +86,9 @@ public class ChatPage extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]")
 	private WebElement firstFolder;
 	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/mediapicker_image_item_thumbnail\"])[1]")
+	private WebElement firstImageInAllMedia;
+	
 	@AndroidFindBy(xpath="//android.widget.FrameLayout[1]/android.widget.ImageView[1][@index='0']")
 	private WebElement AllMediaInGallery;
 	
@@ -164,8 +167,11 @@ public class ChatPage extends ActionsClass {
 	@AndroidFindBy(id="android:id/button1")
 	private WebElement btnAddInAddToHomeScreen;
 	
-	@AndroidFindBy(accessibility = "bd5d68c6bf36b9ab603ea36cb69fb25d08092532ed1706d5cdb537c79f08f1641e")
-	private WebElement ShortcutIconInList;
+	@AndroidFindBy(accessibility = "Chris")
+	private WebElement ShortcutIconofNoteToSelf;
+	
+	@AndroidFindBy(accessibility = "test")
+	private WebElement ShortcutIconoffriend;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Copy text']")
 	private WebElement optionCopytext;
@@ -253,6 +259,9 @@ public class ChatPage extends ActionsClass {
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/positiveButton")
 	private WebElement btnYesInPopup;
+	
+	@AndroidFindBy(accessibility = "Media message")
+	private WebElement ElementofMediaFile;
 	
 	public void clickTextBox () {
 		messageTextbox.click();
@@ -356,13 +365,24 @@ public class ChatPage extends ActionsClass {
 		AllMediaInGallery.click();
 		Thread.sleep(1000);
 		firstFolder.click();
+		try {
+		    firstImageInAllMedia.click();
 		btnSendInImage.click();
-	}
+		}
+		catch (org.openqa.selenium.NoSuchElementException e) {
+			firstImageInAllMedia.click();
+			btnSendInImage.click();
+		}
+		}
+	
 	
 	public void click_delete_In_Popup () {
 		btndeleteInpopup.click();
 	}
 	
+	public void click_cancel_in_delete_for_me () {
+		btnCancel.click();
+	}
 	public void click_Cancel_in_popup () {
 		btncancelInpopup.click();
 	}
@@ -465,9 +485,14 @@ public class ChatPage extends ActionsClass {
 			closeIconInSearch.click();
 		}
 		
-		public void click_ShortCut_icon () {
-			ShortcutIconInList.click();
+		public void click_ShortCut_icon_of_Note_to_Self () {
+			ShortcutIconofNoteToSelf.click();
 		}
+	
+		public void click_ShortCut_icon_of_friend () {
+			ShortcutIconoffriend.click();
+		}
+		
 		
 		public void check_Copy_text_option () {
 			longPress(messageCard);
@@ -646,6 +671,10 @@ public class ChatPage extends ActionsClass {
 			Set_Values_In_Message_textbox("Hii");
 			btnSend.click();
 			
+		}
+		
+		public WebElement Element_of_Media_file () {
+			return ElementofMediaFile;
 		}
 		
 }

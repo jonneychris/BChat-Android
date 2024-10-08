@@ -16,10 +16,11 @@
   <!--  <class name="Bchat.TestScenarios.Create_Account_Flow_DisplayName_Screen_And_Functionalities"/> -->  
  <!--   <class name="Bchat.TestScenarios.SignIn_Flow_seed_Screen"/> -->
  <!-- <class name="Bchat.TestScenarios.Menu_Drawer_Screen_And_Functionalities"></class> -->
+  <!--   <class name="Bchat.TestScenarios.Account_Settings_Screen_And_Functionalities"></class> -->
  <!--   <class name="Bchat.TestScenarios.My_Wallet_Screen_And_Functionalities_In_Create_Account_Flow"></class> -->
-   <class name="Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow"></class>
- <!--   <class name="Bchat.TestScenarios.Account_Settings_Screen_And_Functionalities"></class> -->
-  
+  <!-- <class name="Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow"></class> -->
+
+  	<class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow"> </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

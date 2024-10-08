@@ -169,6 +169,10 @@ public class SocialGroupPage extends ActionsClass {
 		return list;	
 	}
 	
+	public WebElement Element_of_bchat () {
+		return bchatgroup;
+	}
+	
 	public void open_Community_Guidelines () {
 		btnCommunityGuidelines.click();
 	}
@@ -198,5 +202,9 @@ public class SocialGroupPage extends ActionsClass {
 	int count = Integer.parseInt(MemeberCount.substring(0,2));
 	return count;
 	
+	}
+	
+	public void join_CryptoNews () {
+		cryptoNewsgroup.click();
 	}
 }

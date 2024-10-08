@@ -37,7 +37,7 @@ public class NewChatPage extends ActionsClass {
 	@AndroidFindBy(className = "android.widget.ImageView")
 	private WebElement optionUploadFromGallery;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Scan QR'")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Scan QR']")
 	private WebElement ScanQRCodeTitle;
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageView[@index='1']")
@@ -60,6 +60,9 @@ public class NewChatPage extends ActionsClass {
 	
 	@AndroidFindBy(id="com.oneplus.gallery:id/base_album_item_img")
 	private WebElement QrCodePhoto;
+	
+	@AndroidFindBy(accessibility = "Select")
+	private WebElement btnSelect;
 	
 	@AndroidFindBy(className = "android.widget.TextView")
 	private WebElement loader;
@@ -87,7 +90,7 @@ public class NewChatPage extends ActionsClass {
 	}
 	
 	public void Check_with_Invalid() {
-		BchatIDOrBNSNameTextBox.sendKeys("bdb1c18ew438f0p6694760cl8oiaf644efdbrtfeeb4c389036fk6db91951584b24");
+		BchatIDOrBNSNameTextBox.sendKeys("dgrb1c18ew438hajajakKbf0p6694760cl8oiaf644efdbrtfeeb4c389036fk6db91951584b24");
 		btnLetsBChat.click();
 	}
 	
@@ -117,6 +120,7 @@ public class NewChatPage extends ActionsClass {
 	    try{
 	    	QrCodeFolder.click();
 		QrCodePhoto.click();
+		btnSelect.click();
 	    }
 	    catch (NoSuchElementException e) {
 			driver.navigate().back();
@@ -125,6 +129,7 @@ public class NewChatPage extends ActionsClass {
 			optionAlbums.click();
 			QrCodeFolder.click();
 			QrCodePhoto.click();
+			btnSelect.click();
 		}
 	}
 	
@@ -136,6 +141,7 @@ public class NewChatPage extends ActionsClass {
 		try {
     	InvalidQRCodeFolder.click();
    		QrCodePhoto.click();
+   		btnSelect.click();
 		}
 		catch (NoSuchElementException e) {
 			driver.navigate().back();
@@ -144,17 +150,19 @@ public class NewChatPage extends ActionsClass {
 			optionAlbums.click();
 			InvalidQRCodeFolder.click();
 	   		QrCodePhoto.click();
+	   		btnSelect.click();
 		}
 	}
 	
 	public void Upload_image () {
-		
+		btnScanner.click();
 		optionUploadFromGallery.click();
 		optionGallery.click();
 		optionAlbums.click();
 		try {
 		imageFolder.click();
 		QrCodePhoto.click();
+		btnSelect.click();
 		}
 		catch (NoSuchElementException e) {
 			driver.navigate().back();
@@ -163,6 +171,7 @@ public class NewChatPage extends ActionsClass {
 			optionAlbums.click();
 			imageFolder.click();
 			QrCodePhoto.click();
+			btnSelect.click();
 		}
 	}
 	

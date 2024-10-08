@@ -48,10 +48,11 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
     RestoreFromSeedPage restorefromseedpage;
 	SettingsPage settingspage;
 	MyWalletPage mywalletpage;
+	
 	/*
 	 pre Setup
 	 */
-	@Test(priority = 0, invocationCount = 2)
+	@Test(priority = 0, invocationCount = 2,groups = {"Regression","Smoke"})
 	public void PreSetup () throws InterruptedException {
 		landingpage = new LandingPage(driver);
 		try {
@@ -106,7 +107,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether record option in the message functionality is enabled before message request got accepted
 	*/
-	@Test(priority = 1)
+	@Test(priority = 1,groups = {"Regression"})
 	public void To_Validate_whether_record_option_in_message_functionality_is_enabled_before_message_request_got_accepted () throws InterruptedException {
 	
 		chatpage = new ChatPage(driver);
@@ -125,7 +126,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether attachment option in the message functionality is enabled before message request got accepted
 	*/
-	@Test(priority = 2)
+	@Test(priority = 2,groups = {"Regression"})
 	public void To_Validate_whether_attachment_option_in_message_functionality_is_enabled_before_message_request_got_accepted () throws InterruptedException {
 		
 		chatpage = new ChatPage(driver);
@@ -148,7 +149,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Setup for clear data
 	 */
-	@Test(priority = 3)
+	@Test(priority = 3,groups = {"Regression"})
 	public void setup_for_clear_data () throws InterruptedException {
 		
 		driver.navigate().back();
@@ -188,7 +189,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 validate the working of message request drop down
 	 */
-	@Test(priority = 4,dependsOnMethods = "setup_for_clear_data")
+	@Test(priority = 4,dependsOnMethods = "setup_for_clear_data",groups = {"Regression"})
 	public void To_validate_the_working_of_message_request_drop_down () throws InterruptedException {
 	   	homepage = new HomePage(driver);
 	   	Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -202,7 +203,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 validate the working of cancel button in all popup
 	 */
-	@Test(priority = 5)
+	@Test(priority = 5,groups = {"Regression"})
 	public void To_validate_the_working_of_cancel_button_in_all_popup () {
 		   chatpage = new ChatPage(driver);
 		   Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Test");
@@ -216,7 +217,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 validate the working of the decline option
 	 */
-	@Test(priority = 6)
+	@Test(priority = 6,groups = {"Regression"})
 	public void To_validate_the_working_of_the_decline_option () {
 		   chatpage = new ChatPage(driver);
 		   Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Test");
@@ -229,7 +230,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate whether text box is enable before accept the request
 	 */
-	@Test(priority =7)
+	@Test(priority =7,groups = {"Regression"})
 	public void To_Validate_whether_textbox_is_enable_before_accept_the_request () {
 		homepage = new HomePage(driver);
 	   	Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -245,7 +246,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether attachments is enable before accept the request
 	*/
-	@Test(priority = 8)
+	@Test(priority = 8,groups = {"Regression"})
 	public void To_Validate_whether_attachments_is_enable_before_accept_the_request () {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Test");
@@ -257,7 +258,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether voice record is enable before accept the request
 	*/
-	@Test(priority = 9)
+	@Test(priority = 9,groups = {"Regression"})
 	public void To_Validate_whether_voice_record_is_enable_before_accept_the_request () throws InterruptedException {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Test");
@@ -269,7 +270,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether call icon showing before accept the request
 	*/
-	@Test(priority = 10)
+	@Test(priority = 10,groups = {"Regression"})
 	public void To_Validate_whether_call_icon_showing_before_accept_the_request () {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Test");
@@ -285,7 +286,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 validate the working of accept option
 	 */
-	@Test(priority = 11)
+	@Test(priority = 11,groups = {"Regression"})
 	public void To_validate_the_working_of_accept_option () {
 		
 		 chatpage = new ChatPage(driver);
@@ -297,7 +298,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether call icon showing After accept the request
 	*/
-	@Test(priority = 12)
+	@Test(priority = 12,groups = {"Regression"})
 	public void To_Validate_whether_call_icon_showing_After_accept_the_request () {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -310,7 +311,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate the working of delete function while recording voice message
 	 */
-	@Test(priority = 13)
+	@Test(priority = 13,groups = {"Regression"})
 	public void To_Validate_the_working_of_delete_function_while_recording_voice_message () throws InterruptedException {
 		
 		chatpage = new ChatPage(driver);
@@ -328,7 +329,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether able to enable voice call using shortcut
 	*/
-	@Test(priority = 14)
+	@Test(priority = 14,groups = {"Regression"})
 	public void To_Validate_whether_able_to_enable_voice_call_using_shortcut () throws InterruptedException {
 		
 		
@@ -347,7 +348,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 validate the working of the call icon
 	 */
-	@Test(priority = 15)
+	@Test(priority = 15,groups = {"Regression"})
 	public void To_validate_the_working_of_the_call_icon () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -360,7 +361,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate working of the Mute option in the menu bar
 	*/
-	@Test(priority = 16)
+	@Test(priority = 16,groups = {"Regression"})
 	public void To_Validate_working_of_Mute_option_in_the_menu_bar () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -372,7 +373,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate the working of unmute option in the menu bar
 	 */
-	@Test(priority = 17)
+	@Test(priority = 17,groups = {"Regression"})
 	public void To_Validate_the_working_of_unmute_option_in_the_menu_bar () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -388,7 +389,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate the working of Block option in the menu bar () {
 	*/
-	@Test(priority = 18)
+	@Test(priority = 18,groups = {"Regression"})
 	public void To_Validate_the_working_of_Block_option_in_the_menu_bar () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -401,7 +402,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate whether message and call functionalities are enabled during contact is blocked 
 	 */
-	@Test(priority = 19)
+	@Test(priority = 19,groups = {"Regression"})
 	public void To_Validate_whether_message_and_call_functionalities_are_enabled_during_contact_is_blocked () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -428,7 +429,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate the working of unblock option in menu bar
 	 */
-	@Test(priority = 20)
+	@Test(priority = 20,groups = {"Regression"})
 	public void To_Validate_the_working_of_unblock_option_in_menu_bar () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -442,7 +443,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 
 	 */
-	@Test(priority = 21)
+	@Test(priority = 21,groups = {"Regression"})
 	public void To_Validate_Search_option_in_the_menu_bar_with_valid_value () {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -456,7 +457,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 
 	 */
-	@Test(priority = 22)
+	@Test(priority = 22,groups = {"Regression"})
 	public void To_Validate_Search_option_in_the_menu_bar_with_invalid_value () {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -470,7 +471,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate the working of the Add to home screen option in the menu bar.
 	*/
-	@Test(priority = 23)
+	@Test(priority = 23,groups = {"Regression"})
 	public void To_Validate_the_working_of_the_Add_To_home_screen_option_in_menu_bar () {
 		chatpage = new ChatPage(driver);
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -478,14 +479,14 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 		chatpage.Click_Add_In_Add_To_HomeScreen();
 		chatpage.click_Back_Arrow();
 		driver.navigate().back();
-		chatpage.click_ShortCut_icon();
+		chatpage.click_ShortCut_icon_of_friend();
 		 Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
 	}
 	
 	/*
 	Validate the working of the all media screen when empty
 	*/
-	@Test(priority = 24)
+	@Test(priority = 24,groups = {"Regression"})
 	public void To_Validate_All_media_screen_when_empty () {
 		chatpage = new ChatPage(driver);
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"test");
@@ -499,7 +500,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate Whether able to send  Alphabets both in uppercase and lower case.
 	*/
-	@Test(priority = 25)
+	@Test(priority = 25,groups = {"Regression"})
 	public void To_Validate_Whether_able_to_send_Alphabets_both_in_uppercase_and_lower_case () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -528,7 +529,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate the navigation to the message details screen
 	*/
-	@Test(priority = 26)
+	@Test(priority = 26,groups = {"Regression"})
 	public void To_Validate_the_navigation_to_message_details_screen () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -553,7 +554,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate Whether able to send special Characters.
 	*/
-	@Test(priority = 27)
+	@Test(priority = 27,groups = {"Regression"})
 	public void To_Validate_Whether_able_to_send_special_Characters () {
 				chatpage = new ChatPage(driver);
 				try {
@@ -571,7 +572,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate the text box of the Messaging Functionality is Allowing the Space in between the value.
 	 */
-	@Test(priority = 28)
+	@Test(priority = 28,groups = {"Regression"})
 	public void To_Validate_the_textbox_of_Messaging_Functionality_is_Allowing_the_Space_in_between_the_value () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -597,7 +598,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate Whether able to send  numerical value.
 	 */
-	@Test(priority = 29)
+	@Test(priority = 29,groups = {"Regression"})
 	public void To_Validate_Whether_able_to_send_numerical_value () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -621,7 +622,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 * Validate the presence of placeholder in the text box of Message functionality.
 	 */
-	@Test(priority = 30)
+	@Test(priority = 30,groups = {"Regression"})
 	public void To_Validate_the_presence_of_placeholder_in_the_textbox_of_Message_functionality () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -636,7 +637,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	  Validate whether crusher blink on clicking the text box of Message functionality.
 	 */
-	@Test(priority = 31)
+	@Test(priority = 31,groups = {"Regression"})
 	public void To_Validate_whether_crusher_blink_on_clicking_the_textbox_of_Message_functionality () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -654,7 +655,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 * validate whether paste option is working on the text box Message functionality.
 	 */
-	@Test(priority = 32)
+	@Test(priority = 32,groups = {"Regression"})
 	public void To_validate_whether_paste_option_is_working_on_the_textbox_Message_functionality () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -678,7 +679,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 * Validate whether the value entered in the text box of Message functionality is editable and deleteable.
 	 */
-	@Test(priority = 33)
+	@Test(priority = 33,groups = {"Regression"})
 	public void To_Validate_whether_the_value_entered_in_textbox_of_Message_functionality_is_editable_and_deleteable () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -698,7 +699,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 *Validate whether able enter a lengthy value in the text box Message functionality.
 	 */
-	@Test(priority = 34)
+	@Test(priority = 34,groups = {"Regression"})
 	public void To_Validate_whether_able_enter_a_lengthy_value_in_textbox_Message_functionality () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -725,7 +726,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate the text box of the Messaging functionality is allowing null value.
 	 */
-	@Test(priority = 35)
+	@Test(priority = 35,groups = {"Regression"})
 	public void To_Validate_Whether_able_to_send_null_value (){
 		chatpage = new ChatPage(driver);
 		try {
@@ -748,7 +749,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 *Validate the Message Functionality response without internet.
 	 */
-	@Test(priority = 36)
+	@Test(priority = 36,groups = {"Regression"})
 	public void To_Validate_the_Message_Functionality_response_without_internet () throws InterruptedException {
 		chatpage = new ChatPage(driver);
 		try {
@@ -778,7 +779,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate whether able to delete both send and received messages in the chat screen	
 	 */
-	@Test(priority = 37)
+	@Test(priority = 37,groups = {"Regression"})
 	public void To_Validate_whether_able_to_delete_both_send_and_received_messages_in_the_chat_screen () {
 		
 	
@@ -809,7 +810,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether the chat history present above message text box is deletable.
 	*/
-	@Test(priority = 38)
+	@Test(priority = 38,groups = {"Regression"})
 	public void To_Validate_whether_the_chat_history_present_above_message_textbox_is_deletable () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -829,7 +830,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate the working of disappearing message in on condition.
 	*/
-	@Test(priority = 39)
+	@Test(priority = 39,groups = {"Regression"})
 	public void To_Validate_the_working_of_disappearing_message_in_on_condition () throws InterruptedException {
 		
 		chatpage = new ChatPage(driver);
@@ -855,7 +856,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	validate the working of disappearing message in off condition.
 	*/
-	@Test(priority = 40)
+	@Test(priority = 40,groups = {"Regression"})
 	public void To_validate_the_working_of_disappearing_message_in_off_condition () throws InterruptedException {
 		chatpage = new ChatPage(driver);
 		try {
@@ -878,7 +879,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether able to reply received message
 	*/
-	@Test(priority = 41)	
+	@Test(priority = 41,groups = {"Regression"})	
 	public void To_Validate_whether_able_to_reply_received_message () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -894,7 +895,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate whether able to share the files,photos.
 	*/
-	@Test(priority = 42)
+	@Test(priority = 42,groups = {"Regression"})
 	public void To_Validate_whether_able_to_share_the_files_photos_in_the_note_to_myself () throws InterruptedException {
 		chatpage = new ChatPage(driver);
 		try {
@@ -911,7 +912,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	Validate the working of the record option
 	*/
-	@Test(priority = 43)
+	@Test(priority = 43,groups = {"Regression"})
 	public void To_Validate_the_working_of_record_option () throws InterruptedException {
 		chatpage = new ChatPage(driver);
 		try {
@@ -929,7 +930,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	validate the all media with image
 	*/
-	@Test(priority = 44)
+	@Test(priority = 44,groups = {"Regression"})
 	public void To_validate_the_all_media_with_image () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -951,7 +952,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	validate whether able to enable pay as you chat using shortcut
 	*/
-	@Test(priority = 45)
+	@Test(priority = 45,groups = {"Regression"})
 	public void To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -988,7 +989,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	validate whether able to disable pay as you chat using shortcut
 	*/
-	@Test(priority = 46)
+	@Test(priority = 46,groups = {"Regression"})
 	public void To_validate_whether_able_to_disable_pay_as_you_chat_using_shortcut () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -1012,7 +1013,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 *Validate whether able to download media 
 	 */
-	@Test(priority = 47)
+	@Test(priority = 47,groups = {"Regression"})
 	public void To_Validate_whether_able_to_download_media () throws InterruptedException {
 		chatpage = new ChatPage(driver);
 		try {
@@ -1040,7 +1041,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 *Validate the working of the forward media files option
 	 */
-	@Test(priority = 48)
+	@Test(priority = 48,groups = {"Regression"})
 	public void To_Validate_the_working_of_the_forwarding_media_files_option () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -1058,7 +1059,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate whether able to download voice Message 
 	 */
-	@Test(priority = 49)
+	@Test(priority = 49,groups = {"Regression"})
 	public void To_Validate_whether_able_to_download_voice_Message () {
 		chatpage = new ChatPage(driver);
 		try {
@@ -1085,7 +1086,7 @@ public class OneToOne_Chat_Screen_And_its_functionalities extends baseClass{
 	/*
 	 Validate Whether able to delete voice message and image
 	 */
-    @Test(priority = 50)
+    @Test(priority = 50,groups = {"Regression"})
     public void To_Validate_Whether_able_to_delete_voice_message_and_image () {
     	chatpage = new ChatPage(driver);
     	try {

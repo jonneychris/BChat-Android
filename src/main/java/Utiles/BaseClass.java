@@ -100,11 +100,11 @@ public class baseClass  {
 				 options.setCapability("ignoreHiddenApiPolicyError", true);
 				 options.setCapability("appium:fullReset",true);
 				 options.setCapability("autoGrantPermissions", true);
-				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.6.0-arm64-v8a.apk");
+				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.3-arm64-v8a-27-09-2024-mainnet-apk.apk");
 				
 			  	 options.setCapability("appPackage", "io.beldex.bchat");	
 				 //For To wait until the landing screen activity comes 
-				 options.setCapability("appWaitActivity", "com.thoughtcrimes.securesms.onboarding.LandingActivity"); 
+				 options.setCapability("appWaitActivity", ".onboarding.LandingActivity"); 
 				 //options.setCapability("autoLaunch", true);
 					
 				 
@@ -151,9 +151,10 @@ public String Toast() {
 	
 }
 
-public void turnOff_Mobile_Wifi () {
+public void turnOff_Mobile_Wifi () throws InterruptedException {
 	
 	 driver.openNotifications();
+	 Thread.sleep(1000);
 	driver.findElement(By.id("com.android.systemui:id/hl_tile_one_holder")).click();
 	((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
 		    "left", 350, "top", 2345, "width", 100, "height", 2345,
@@ -162,9 +163,10 @@ public void turnOff_Mobile_Wifi () {
 		));
 }
 
-public void turnOn_Mobile_Wifi () {
+public void turnOn_Mobile_Wifi () throws InterruptedException {
 	
 	 driver.openNotifications();
+	 Thread.sleep(1000);
 	driver.findElement(By.id("com.android.systemui:id/hl_tile_one_holder")).click();
 	((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
 		    "left", 350, "top", 2375, "width", 100, "height", 2345,

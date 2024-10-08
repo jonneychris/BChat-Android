@@ -405,7 +405,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Validate Whether Able to Edit display Name without internet
 		*/
 		@Test(priority = 13,groups ={"Regression"} )
-		public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () {			
+		public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () throws InterruptedException {			
 			turnOff_Mobile_Wifi();	
 			homepage = new HomePage(driver);
 			try {

@@ -87,7 +87,7 @@ public abstract class ActionsClass {
 	public void longPress(WebElement Element) {
 			((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", 
 					ImmutableMap.of("elementId", ((RemoteWebElement) Element).getId(),
-					"duration",5000));
+					"duration",3000));
 			}
 
 	public  static String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException {
