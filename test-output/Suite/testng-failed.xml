@@ -7,22 +7,18 @@
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
-        <include name="Regression"/>
+        <include name="Smoke"/>
       </run>
     </groups>
     <classes>
-      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow">
+      <class name="Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities">
         <methods>
-          <include name="To_Validate_whether_able_to_share_the_files_photos_in_the_note_to_myself"/>
-          <include name="To_Validate_the_presence_of_placeholder_in_the_text_box"/>
           <include name="openApp"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_textbox_of_Messaging_Functionality_using_Alphabets_both_in_UpperCase_and_lowerCase"/>
-          <include name="To_Validate_the_textbox_of_Messaging_Functionality_is_Allowing_the_Space_in_between_the_value"/>
-          <include name="To_Validate_the_next_option_in_join_socialGroup_with_empty_space_value"/>
-          <include name="To_Validate_the_textbox_of_join_socialGroup_using_special_Characters"/>
+          <include name="To_Validate_the_working_of_unblock_option_in_menu_bar"/>
+          <include name="To_Validate_whether_able_to_share_the_files_photos_in_the_note_to_myself"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow -->
+      </class> <!-- Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

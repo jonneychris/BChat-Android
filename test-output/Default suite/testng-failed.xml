@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities">
+      <class name="Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities">
         <methods>
-          <include name="To_Validate_Whether_able_to_delete_the_send_message"/>
           <include name="openApp"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_working_of_cancel_button_in_delete_popup"/>
+          <include name="To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities -->
+      </class> <!-- Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 08 16:31:38 IST 2024</td>
+<td>Started on:</td><td>Thu Oct 10 18:09:13 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>708 seconds (708019 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5928 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,79 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities.closeApp()'><b>closeApp</b><br>Test class: Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.android.AndroidDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at Utiles.baseClass.closeApp(baseClass.java:128)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace569138567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace569138567'><pre>java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.android.AndroidDriver.quit()&quot; because &quot;this.driver&quot; is null
+	at Utiles.baseClass.closeApp(baseClass.java:128)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities@548d708a</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,15 +149,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_cancel_button_in_delete_popup()'><b>To_Validate_the_working_of_cancel_button_in_delete_popup</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td><div><pre>java.lang.AssertionError: expected [!@#$$%&amp;] but found [Hii]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_cancel_button_in_delete_popup(Search_Screen_and_Note_To_Self_functionalities.java:281)
+<td title='Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities.To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut()'><b>To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut</b><br>Test class: Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities</td>
+<td><div><pre>java.lang.NullPointerException: The provided search context cannot be null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:924)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.requireWebDriverReference(AppiumFieldDecorator.java:129)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.&lt;init&gt;(AppiumFieldDecorator.java:86)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.&lt;init&gt;(AppiumFieldDecorator.java:100)
+	at POM.ChatPage.&lt;init&gt;(ChatPage.java:20)
+	at Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities.To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut(OneToOne_Chat_Screen_And_its_functionalities.java:947)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,15 +185,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1350894905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1350894905'><pre>java.lang.AssertionError: expected [!@#$$%&amp;] but found [Hii]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_cancel_button_in_delete_popup(Search_Screen_and_Note_To_Self_functionalities.java:281)
+</pre></div><a href='#' onClick='toggleBox("stack-trace707635461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace707635461'><pre>java.lang.NullPointerException: The provided search context cannot be null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:924)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.requireWebDriverReference(AppiumFieldDecorator.java:129)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.&lt;init&gt;(AppiumFieldDecorator.java:86)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.&lt;init&gt;(AppiumFieldDecorator.java:100)
+	at POM.ChatPage.&lt;init&gt;(ChatPage.java:20)
+	at Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities.To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut(OneToOne_Chat_Screen_And_its_functionalities.java:947)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,200 +223,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_Whether_able_to_delete_the_send_message()'><b>To_Validate_Whether_able_to_delete_the_send_message</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at org.testng.Assert.assertFalse(Assert.java:89)
-	at Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_Whether_able_to_delete_the_send_message(Search_Screen_and_Note_To_Self_functionalities.java:310)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace100048427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace100048427'><pre>java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at org.testng.Assert.assertFalse(Assert.java:89)
-	at Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_Whether_able_to_delete_the_send_message(Search_Screen_and_Note_To_Self_functionalities.java:310)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>71</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.PreSetup()'><b>PreSetup</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>83</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_validate_the_search_option_with_invalid_value()'><b>To_validate_the_search_option_with_invalid_value</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>15</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_textbox_of_Messaging_Functionality_using_Alphabets_both_in_UpperCase_and_lowerCase()'><b>To_Validate_the_textbox_of_Messaging_Functionality_using_Alphabets_both_in_UpperCase_and_lowerCase</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>145</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_Add_To_home_screen()'><b>To_Validate_the_working_of_Add_To_home_screen</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_navigation_to_message_details_screen()'><b>To_Validate_the_navigation_to_message_details_screen</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>6</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_presence_of_placeholder_in_the_text_box()'><b>To_Validate_the_presence_of_placeholder_in_the_text_box</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>7</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_validate_the_all_media_with_image()'><b>To_validate_the_all_media_with_image</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>65</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_whether_the_value_entered_in_textbox_of_Message_functionality_is_editable_and_deleteable()'><b>To_Validate_whether_the_value_entered_in_textbox_of_Message_functionality_is_editable_and_deleteable</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>33</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_whether_crusher_blink_on_clicking_the_textbox_of_Message_functionality()'><b>To_Validate_whether_crusher_blink_on_clicking_the_textbox_of_Message_functionality</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>1</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_record_option()'><b>To_Validate_the_working_of_record_option</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>22</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_whether_able_enter_a_lengthy_value_in_textbox_Message_functionality()'><b>To_Validate_whether_able_enter_a_lengthy_value_in_textbox_Message_functionality</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>24</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_textbox_of_the_Messaging_Functionality_using_special_Characters()'><b>To_Validate_the_textbox_of_the_Messaging_Functionality_using_special_Characters</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>39</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_All_media_screen_when_empty()'><b>To_Validate_All_media_screen_when_empty</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>5</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_whether_able_to_unselect_the_selected_message()'><b>To_Validate_whether_able_to_unselect_the_selected_message</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>4</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_validate_whether_paste_option_is_working_on_the_textbox_Note_to_myself_functionality()'><b>To_validate_whether_paste_option_is_working_on_the_textbox_Note_to_myself_functionality</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>14</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_textbox_of_Messaging_Functionality_by_numerical_value()'><b>To_Validate_the_textbox_of_Messaging_Functionality_by_numerical_value</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>13</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_copy_text_option()'><b>To_Validate_the_working_of_copy_text_option</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>5</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_textbox_of_Messaging_Functionality_is_Allowing_the_Space_in_between_the_value()'><b>To_Validate_the_textbox_of_Messaging_Functionality_is_Allowing_the_Space_in_between_the_value</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>11</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_working_of_cancel_button_in_Add_to_home_screen_popup()'><b>To_Validate_the_working_of_cancel_button_in_Add_to_home_screen_popup</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>18</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_whether_able_to_share_the_files_photos_in_the_note_to_myself()'><b>To_Validate_whether_able_to_share_the_files_photos_in_the_note_to_myself</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>50</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_presence_of_placeholder_in_textbox_of_Message_functionality()'><b>To_Validate_the_presence_of_placeholder_in_textbox_of_Message_functionality</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>17</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
-<tr>
-<td title='Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities.To_Validate_the_search_option_with_valid_value()'><b>To_Validate_the_search_option_with_valid_value</b><br>Test class: Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities</td>
-<td></td>
-<td>17</td>
-<td>Bchat.TestScenarios.Search_Screen_and_Note_To_Self_functionalities@17f62e33</td></tr>
+<td>Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities@548d708a</td></tr>
 </table><p>
 </body>
 </html>

@@ -86,7 +86,7 @@ public class ChatPage extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]")
 	private WebElement firstFolder;
 	
-	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/mediapicker_image_item_thumbnail\"])[1]")
+	@AndroidFindBy(xpath="//android.widget.GridView[@resource-id=\"io.beldex.bchat:id/mediapicker_item_list\"]/android.widget.FrameLayout[1]")
 	private WebElement firstImageInAllMedia;
 	
 	@AndroidFindBy(xpath="//android.widget.FrameLayout[1]/android.widget.ImageView[1][@index='0']")
@@ -285,7 +285,8 @@ public class ChatPage extends ActionsClass {
 	public void Set_Values_In_Message_textbox (String value) {
 		messageTextbox.click();
 	   messageTextbox.sendKeys(value);
-	   driver.navigate().back();
+	   driver.hideKeyboard();
+	  // driver.navigate().back();
 	}
 	
 	public void click_Send_Button () {
@@ -339,7 +340,7 @@ public class ChatPage extends ActionsClass {
 
 	public void Record_Voice_Msg () throws InterruptedException {
 		drap_Gesture(btnSend, 950, 1990);
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	}
 	
 	public WebElement get_Element_of_MoreOptions () {
@@ -366,12 +367,15 @@ public class ChatPage extends ActionsClass {
 		Thread.sleep(1000);
 		firstFolder.click();
 		try {
+			Thread.sleep(1000);
 		    firstImageInAllMedia.click();
 		btnSendInImage.click();
 		}
 		catch (org.openqa.selenium.NoSuchElementException e) {
-			firstImageInAllMedia.click();
-			btnSendInImage.click();
+			driver.navigate().back();
+				firstFolder.click();
+				firstImageInAllMedia.click();
+				btnSendInImage.click();
 		}
 		}
 	
@@ -426,7 +430,7 @@ public class ChatPage extends ActionsClass {
 		
 		
 		public void open_Message_details_Screen () {
-			longPress(messageCard);
+			longPress(messageStatus);
 			clickGesture(1005, 180);
 		   optionMessageDetails.click();
 		}
@@ -613,9 +617,14 @@ public class ChatPage extends ActionsClass {
 		}
 		
 		public void delete_Received_Message () {
-			longPress(messageCard);
+			longPress(firstMessage);
 			btnDelete.click();
-			btndeleteInpopup.click();
+			try{
+				btndeleteInpopup.click();
+			}
+			catch (org.openqa.selenium.NoSuchElementException e) {
+				optionDeleteForMe.click();
+			}
 		}
 		
 		public void click_Settings_option () {

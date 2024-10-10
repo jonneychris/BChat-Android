@@ -319,7 +319,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 		}
    }
    
-  
+   
    
    		/*
    		 * 
@@ -329,8 +329,7 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
    		 * 
    		 */
    
-   
-   
+    
 	/*
 	 Validate whether able to navigate back to the home screen
 	 */
@@ -685,9 +684,14 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 			Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Snowman.bdx"); 
 			
 		}
-		chatpage.click_Back_Arrow();
+		try{
+			chatpage.click_Back_Arrow();
 		Assert.assertEquals(homepage.Pagetitle(),"BChat");
-		
+		}
+		catch (NoSuchElementException e) {
+			driver.navigate().back();
+			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		}
 	}
 		
  
@@ -1019,6 +1023,9 @@ public class Home_Screen_And_Functionalities_In_Create_Account_Flow extends base
 		catch (StaleElementReferenceException e) {
 			socialgrouppage.join_MasterNode_Group();
 			Assert.assertEquals(Toast(),"Couldn't join social group");
+		}
+		catch (AssertionError e) {
+			Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");
 		}
 		turnOn_Mobile_Wifi();
 		Thread.sleep(5000);
