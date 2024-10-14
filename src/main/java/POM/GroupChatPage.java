@@ -1,6 +1,7 @@
 package POM;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -111,6 +112,15 @@ public class GroupChatPage extends ActionsClass{
     @AndroidFindBy(xpath="//android.widget.FrameLayout[1]/android.widget.ImageView[1][@index='0']")
 	private WebElement AllMediaInGallery;
     
+    @AndroidFindBy(id="io.beldex.bchat:id/mediapicker_menu_add")
+	private WebElement Allmediaplusbutton;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/mediapicker_select_off\"])[1]")
+	private WebElement firstImageInAllMedia;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/mediasend_count_button_text")
+	private WebElement btnArrowInGallery;
+    
     @AndroidFindBy(accessibility = "Send")
 	private WebElement btnSendInImage;
     
@@ -183,7 +193,12 @@ public class GroupChatPage extends ActionsClass{
     	catch (NoSuchElementException e) {
     		addMemberIcon.click();
 		}
-    	ContactInList.click();
+    	try{
+    		ContactInList.click();
+    	}
+    	catch (StaleElementReferenceException e) {
+    		ContactInList.click();
+		}
     	btnAdd.click();
     	btnApplyChanges.click();
     }
@@ -305,19 +320,33 @@ public class GroupChatPage extends ActionsClass{
     return  messageStatus;	
     }
     
-    public void Send_image () throws InterruptedException {
+	public void Send_image () throws InterruptedException {
 		btnattachments.click();
 		optionGallery.click();
 		AllMediaInGallery.click();
-		Thread.sleep(1000);
-		firstFolder.click();
+		try {
+			Allmediaplusbutton.click();
+		    firstImageInAllMedia.click();
+		    btnArrowInGallery.click();
 		btnSendInImage.click();
-	}
+		}
+		catch (org.openqa.selenium.NoSuchElementException e) {
+			driver.navigate().back();
+			driver.navigate().back();
+				btnattachments.click();
+				optionGallery.click();
+				AllMediaInGallery.click();				
+				Allmediaplusbutton.click();
+			    firstImageInAllMedia.click();
+			    btnArrowInGallery.click();
+			btnSendInImage.click();
+		}
+		}
     
     public void Record_Voice_Msg () throws InterruptedException {
 	//	longPress(btnSend);
 		drap_Gesture(btnSend, 950, 1990);
-	   Thread.sleep(2000);
+	   
     }
 	
     public void deleteMessage () {
@@ -335,18 +364,19 @@ public class GroupChatPage extends ActionsClass{
     	longPress(messageStatus);
     	try {
         deleteIcon.click();
-    	}
+          try{
+        	  btndeleteInpopup.click();
+          }
+        catch (NoSuchElementException e) {
+        	btnDeleteForMe.click();
+		    }
+        }
     	catch (NoSuchElementException e) {
 			btn_More_option();
 			optionDeleteMessage.click();
+			btnDeleteForMe.click();
 		}
-    	try {
-        	btnDeleteForMe.click();
-        	}
-        	catch (NoSuchElementException e) {
-    			btndeleteInpopup.click();
-    		}
-    }
+    	 }
     
     public void Click_Back_Arrow () {
     	btnBackArrow.click();

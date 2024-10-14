@@ -7,18 +7,21 @@
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
-        <include name="Smoke"/>
+        <include name="Regression"/>
       </run>
     </groups>
     <classes>
-      <class name="Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities">
+      <class name="Bchat.TestScenarios.CreateSecret_Group_and_Its_Functionality">
         <methods>
+          <include name="To_Validate_whether_able_to_set_group_name_with_mixed_values"/>
+          <include name="To_validate_whether_able_to_set_group_name_with_special_characters"/>
           <include name="openApp"/>
+          <include name="To_validate_whether_able_to_set_group_name_with_numerical_values"/>
+          <include name="To_validate_whether_able_to_set_group_name_with_space_in_between_values"/>
           <include name="closeApp"/>
-          <include name="To_Validate_the_working_of_unblock_option_in_menu_bar"/>
-          <include name="To_Validate_whether_able_to_share_the_files_photos_in_the_note_to_myself"/>
+          <include name="To_validate_the_presence_of_placeholder_in_group_name_textbox"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities -->
+      </class> <!-- Bchat.TestScenarios.CreateSecret_Group_and_Its_Functionality -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

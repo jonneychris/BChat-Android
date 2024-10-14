@@ -20,8 +20,9 @@
  <!--   <class name="Bchat.TestScenarios.My_Wallet_Screen_And_Functionalities_In_Create_Account_Flow"></class> -->
   <!-- <class name="Bchat.TestScenarios.MyWallet_Screen_And_WalletSettings_screen_Functionalities_In_restore_Account_flow"></class> -->
   <!--	<class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow"> </class> -->
-  
-    <class name="Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities"> </class>
+  <!-- <class name="Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities"> </class> -->
+      <class name="Bchat.TestScenarios.CreateSecret_Group_and_Its_Functionality"> </class>
+ 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

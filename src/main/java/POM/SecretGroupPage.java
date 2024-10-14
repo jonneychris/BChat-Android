@@ -65,6 +65,7 @@ public class SecretGroupPage extends ActionsClass {
 	
 	public void Enter_values_in_GroupName (String value) {
 		groupNameTextbox.sendKeys(value);
+		driver.hideKeyboard();
 	}
 	
 	public void click_Back_Arrow () {
@@ -96,7 +97,7 @@ public class SecretGroupPage extends ActionsClass {
 	}
 	
 	public void multiselect_contacts_In_List () {	
-		for(int i=1;i<=3;i++) {
+		for(int i=1;i<=2;i++) {
 			driver.findElement(By.xpath("//android.view.View["+i+"]/android.widget.CheckBox")).click();
 		}
 	}

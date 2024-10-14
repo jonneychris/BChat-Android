@@ -86,8 +86,14 @@ public class ChatPage extends ActionsClass {
 	@AndroidFindBy(xpath="//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]")
 	private WebElement firstFolder;
 	
-	@AndroidFindBy(xpath="//android.widget.GridView[@resource-id=\"io.beldex.bchat:id/mediapicker_item_list\"]/android.widget.FrameLayout[1]")
+	@AndroidFindBy(id="io.beldex.bchat:id/mediapicker_menu_add")
+	private WebElement Allmediaplusbutton;
+	
+	@AndroidFindBy(xpath="(//android.widget.ImageView[@resource-id=\"io.beldex.bchat:id/mediapicker_select_off\"])[1]")
 	private WebElement firstImageInAllMedia;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/mediasend_count_button_text")
+	private WebElement btnArrowInGallery;
 	
 	@AndroidFindBy(xpath="//android.widget.FrameLayout[1]/android.widget.ImageView[1][@index='0']")
 	private WebElement AllMediaInGallery;
@@ -365,17 +371,25 @@ public class ChatPage extends ActionsClass {
 		optionGallery.click();
 		AllMediaInGallery.click();
 		Thread.sleep(1000);
-		firstFolder.click();
+		
 		try {
 			Thread.sleep(1000);
+			Allmediaplusbutton.click();
 		    firstImageInAllMedia.click();
+		    btnArrowInGallery.click();
 		btnSendInImage.click();
 		}
 		catch (org.openqa.selenium.NoSuchElementException e) {
 			driver.navigate().back();
-				firstFolder.click();
-				firstImageInAllMedia.click();
-				btnSendInImage.click();
+			driver.navigate().back();
+				btnattachments.click();
+				optionGallery.click();
+				AllMediaInGallery.click();
+				Thread.sleep(1000);
+				Allmediaplusbutton.click();
+			    firstImageInAllMedia.click();
+			    btnArrowInGallery.click();
+			btnSendInImage.click();
 		}
 		}
 	
