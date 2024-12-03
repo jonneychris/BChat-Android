@@ -35,39 +35,39 @@ public class MyAccountPage extends ActionsClass {
 	//[588,578][684,674]
 	@AndroidFindBy(xpath="//android.widget.ImageView[@index='1']")
 	private WebElement EditdisplayNameIcon;
-	
-	
+		
 	@AndroidFindBy(id="io.beldex.bchat:id/share")
 	private WebElement btnShare;
 
-	
-	@AndroidFindBy(className="android.widget.EditText")
-	private WebElement textboxeditname;
-		
-	
 	@AndroidFindBy(xpath="//android.view.View[1]/android.view.View[@index='0']")
 	private WebElement tickIcon;
 	
 	@AndroidFindBy(xpath="//android.widget.LinearLayout/android.widget.TextView[2][@text='1 image in total']")
     private WebElement ShareScreenTitle; 	
 	
-	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Profile Picture']")
-    private WebElement profilePictureScreenTitle;
-	
 	@AndroidFindBy(accessibility = "Cancel")
 	private WebElement btnCancelinShareScreen;
-	
-	@AndroidFindBy(accessibility = "Close")
-	private WebElement btnCancelinProfilepictureScreen;
-	//Close
-	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Upload']")
-	private WebElement btnUpload;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/back")
     private WebElement BackArrow; 
 
+	
+	
+	
+	
+	
+	@AndroidFindBy(className="android.widget.EditText")
+	private WebElement textboxeditname;
+			
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Profile Picture']")
+    private WebElement profilePictureScreenTitle;
+	
+	@AndroidFindBy(accessibility = "Close")
+	private WebElement btnCancelinProfilepictureScreen;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Upload']")
+	private WebElement btnUpload;
+	
 	@AndroidFindBy(xpath = "(//android.widget.TextView[@text=\"Photos\"])[2]")
 	private WebElement optionsPhotos;
 	
@@ -103,29 +103,7 @@ public class MyAccountPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/defaultRoomsLoader")
 	private WebElement loaderAnimation;
 	
-	//@Android
-	//android.widget.TextView[@text='Photos']
-	public String pagetitle() {
-		return pageTitle.getText();
-	}
 	
-
-	public void click (String option) {
-		if(option.equalsIgnoreCase("BChatId")) {
-			IDCopyIcon.click();
-		}
-		if(option.equalsIgnoreCase("Beldexaddress")) {
-			addressCopyIcon.click();
-		}		
-	}
-
-    public void ClickshareButton () {
-		btnShare.click();
-	}
-    
-    
-
-    
     public void EditDisplayName (String NewName) {
          EditdisplayNameIcon.click();
     	textboxeditname.click();
@@ -134,27 +112,16 @@ public class MyAccountPage extends ActionsClass {
     	
     	
     }
-    
-    public void click_tick_inDisplayName () { 	
-    tickIcon.click();
-    }
-    
+      
     public void clickProfileIcon () {
          profileIcon.click();
        
     } 
 
-    public  String shareScreenTitle() {
-    	 return ShareScreenTitle.getText();
-    }
-    
     public  String profilePictureScreentitle() {
    	 return profilePictureScreenTitle.getText();
    }
-    
-   public void clickcancel_In_share_Screen() {
-	btnCancelinShareScreen.click();
-}
+
    public void clickcancel_In_ProfilePicture_Screen() {
 		btnCancelinProfilepictureScreen.click();
 	}
@@ -205,4 +172,43 @@ public class MyAccountPage extends ActionsClass {
    public WebElement Loading_Animation () {
 	   return loaderAnimation;
    }
+
+   
+   
+   
+   
+   
+   
+   public void click_tick_inDisplayName () { 	
+	    tickIcon.click();
+	    }
+   
+	//@Android
+	//android.widget.TextView[@text='Photos']
+	public String pagetitle() {
+		return pageTitle.getText();
+	}
+    
+   public void clickcancel_In_share_Screen() {
+	btnCancelinShareScreen.click();
+}
+   
+	public void click (String option) {
+		if(option.equalsIgnoreCase("BChatId")) {
+			IDCopyIcon.click();
+		}
+		if(option.equalsIgnoreCase("Beldexaddress")) {
+			addressCopyIcon.click();
+		}		
+	}
+
+   public void ClickshareButton () {
+		btnShare.click();
+	}
+
+   public  String shareScreenTitle() {
+  	 return ShareScreenTitle.getText();
+  }
+  
+   
 }

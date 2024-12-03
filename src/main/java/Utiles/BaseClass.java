@@ -73,7 +73,7 @@ public class baseClass  {
 			 options.setCapability("appium:ignoreHiddenApiPolicyError", true);
 			 options.setCapability("appium:appium:fullReset",true);
 			 options.setCapability("appium:autoGrantPermissions", true);
-			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.6.0-arm64-v8a.apk");
+			options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.6.0-arm64-v8a (3).apk");
 			
 		  	 options.setCapability("appium:appPackage", "io.beldex.bchat");	
 			 //For To wait until the landing screen activity comes 
@@ -87,7 +87,7 @@ public class baseClass  {
 		}
 		 
 	catch(Exception E) {
-			try {
+			
 				UiAutomator2Options options = new UiAutomator2Options();
 				
 				options.setCapability("automationName", "UiAutomator2");	
@@ -100,7 +100,7 @@ public class baseClass  {
 				 options.setCapability("ignoreHiddenApiPolicyError", true);
 				 options.setCapability("appium:fullReset",true);
 				 options.setCapability("autoGrantPermissions", true);
-				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.5.3-arm64-v8a-27-09-2024-mainnet-apk.apk");
+				options.setApp(System.getProperty("user.dir")+"\\resources\\Bchat-2.6.0-arm64-v8a (3).apk");
 				
 			  	 options.setCapability("appPackage", "io.beldex.bchat");	
 				 //For To wait until the landing screen activity comes 
@@ -112,10 +112,8 @@ public class baseClass  {
 					 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 						landingpage =new LandingPage(driver);
 					  
-			}
-			catch(Exception E1) {
-				E1.printStackTrace();
-			}		    
+			
+				    
 		}
 		
 	}

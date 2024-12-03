@@ -18,10 +18,10 @@ public class HomePage extends ActionsClass {
 	AndroidDriver driver;
 	public HomePage(AndroidDriver driver) {
 		super(driver);
-		this.driver = driver;
+		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),this);
 	}
-
+	
 	@AndroidFindBy(id="io.beldex.bchat:id/bchatHeaderImage")
 	private WebElement pageTitle;
 	
@@ -52,27 +52,23 @@ public class HomePage extends ActionsClass {
 	private WebElement groupsIcon;
 	
 	//@AndroidFindBy(id="io.beldex.bchat:id/gradientView")
-	//private WebElement chathistory;
-	 
-	
-	
+	//private WebElement chathistory;	 	
 	@AndroidFindBy(id="io.beldex.bchat:id/emptyStateContainerText")
 	public WebElement BlankChatScreen;
 	
-	@AndroidFindBy (xpath="//android.view.View[@bounds='[480,1632][1026,1800]']")
+	@AndroidFindBy (xpath="//android.widget.TextView[@text=\"New Chat\"]")
 	private WebElement btnNewChat;
-	
-	
-	@AndroidFindBy (xpath="//android.view.View[@bounds='[480,1800][1026,1968]']")
+		
+	@AndroidFindBy (xpath="//android.widget.TextView[@text=\"Secret Group\"]")
 	private WebElement btnSecretGroup;
 	
-	@AndroidFindBy (xpath="//android.view.View[@bounds='[480,1968][1026,2136]']")
+	@AndroidFindBy (xpath="//android.widget.TextView[@text=\"Social Group\"]")
 	private WebElement btnSocialGroup;
 	
 	//@AndroidFindBy(xpath="//android.widget.ImageView[@bounds='[45,190][165,280]']")
 	//private WebElement backButton;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Note to Self']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Note to Self\"]")
 	private WebElement optionNoteToMyself;
 	
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Search people and groups']")
@@ -145,6 +141,18 @@ public class HomePage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Delete']")
 	private WebElement optionDelete;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/title\" and @text=\"Archive Chat\"]")
+	private WebElement optionarchiveChat;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/title\" and @text=\"Unarchive Chat\"]")
+	private WebElement optionUnarchiveChat;
+	
+	@AndroidFindBy(xpath="(//android.widget.TextView[@text=\"1\"])[1]")
+	private WebElement archivedchatsCount;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Archived Chats\"]")
+	private WebElement archivedchatspagetitle;	
+	
 	@AndroidFindBy(id="io.beldex.bchat:id/hopsWarningLayout")
 	private WebElement hopsWarning;
 
@@ -174,6 +182,12 @@ public class HomePage extends ActionsClass {
 	
 	@AndroidFindBy(xpath="(//android.view.View/android.view.View[2]/android.view.View[3])[1]")
 	private WebElement secondRequest;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/archiveChatCardView")
+	private WebElement optionarchivedchats;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Messages\"]")
+	private WebElement ElementMessages;
 	
 	public  String popuptitle() {
 		String popupTitle = PopupSaveSeed.getText();
@@ -426,6 +440,34 @@ public void Mute_Notificaion_of_Chat () {
     public WebElement Element_Of_chat_Item () {
     	 return FirstChatItem;
     }
+    
+    public void ArchiveFirstChat () {
+    	longPress(FirstChatItem);
+    	optionarchiveChat.click();
+    }
+    
+    public void openArchivedChats () {
+    	optionarchivedchats.click();
+    }
+    
+    public String archivedChatspageTitle () {
+    	return archivedchatspagetitle.getText();
+    }
+    
+    public void unarchivechats () {
+        longPressusingcoordinates(500, 630);	
+        optionUnarchiveChat.click();
+    }
+    
+    public int archivedChatsCount () {
+    	 
+    	int count = Integer.parseInt(archivedchatsCount.getText());
+    	return count;
+    }
+    
+    public WebElement Element_of_archivedChats () {
+    	return optionarchivedchats;
+    }
 //public List OldMessages () {
 //	int messagelist =oldMessages.getSize();
 //	 
@@ -435,5 +477,16 @@ public void Mute_Notificaion_of_Chat () {
 //	return null;
 //	
 //}
+    
+    public void openFirstArchivedChat () {
+    	  clickGesture(500, 630);	
+    }
 
+    public WebElement Element_Of_Messages () {
+    	 return ElementMessages ;
+    }
+    
+    public void open_NewScreen () {
+    	groupsIcon.click();
+    }
 }

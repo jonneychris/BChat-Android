@@ -5,23 +5,15 @@
     <listener class-name="Utiles.Listerners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
     <classes>
-      <class name="Bchat.TestScenarios.CreateSecret_Group_and_Its_Functionality">
+      <class name="Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow">
         <methods>
-          <include name="To_Validate_whether_able_to_set_group_name_with_mixed_values"/>
-          <include name="To_validate_whether_able_to_set_group_name_with_special_characters"/>
           <include name="openApp"/>
-          <include name="To_validate_whether_able_to_set_group_name_with_numerical_values"/>
-          <include name="To_validate_whether_able_to_set_group_name_with_space_in_between_values"/>
           <include name="closeApp"/>
-          <include name="To_validate_the_presence_of_placeholder_in_group_name_textbox"/>
+          <include name="To_Validate_the_navigation_to_message_details_screen"/>
+          <include name="To_Validate_the_working_of_Add_To_home_screen"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.CreateSecret_Group_and_Its_Functionality -->
+      </class> <!-- Bchat.TestScenarios.Home_Screen_And_Functionalities_In_Create_Account_Flow -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

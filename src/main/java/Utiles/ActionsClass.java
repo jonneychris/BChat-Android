@@ -90,6 +90,12 @@ public abstract class ActionsClass {
 					"duration",3000));
 			}
 
+	public void longPressusingcoordinates(int x, int y) {
+		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", 
+				ImmutableMap.of("x", x,"y", y ),
+				"duration",3000);
+		}
+	
 	public  static String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException {
 		
 		File Source= driver.getScreenshotAs(OutputType.FILE);

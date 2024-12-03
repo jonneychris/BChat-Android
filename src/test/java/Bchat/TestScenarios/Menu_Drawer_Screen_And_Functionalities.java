@@ -108,7 +108,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		recoveryphrasepage.clickCopyIcon();
 		recoveryphrasepage.ClickContinue();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		
 			}
 	
@@ -127,7 +127,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	@Test (priority = 1,groups ={"Regression","Smoke"} )
 	public void To_Validate_whether_entered_display_name_is_showing_in_profile_name () {
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.clickMenuDrawer();
 	    menupage =new MenuPage(driver);
 		Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -141,308 +141,22 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 
 	
 	/*
-	TC_250 Validate the working of the scrolling action in both upward and downward direction.
+	TC_250 Validate the working of the cancel icon in menu screen.
 	
 	*/
 	@Test (priority = 2,groups ={"Regression"} )
-	public void TC_250_To_Validate_Whether_Screen_is_Scrollable () throws InterruptedException {
+	public void TC_250_To_Validate_the_working_of_the_Cancel_Icon_in_Menu_Screen () throws InterruptedException {
 		
 		menupage =new MenuPage(driver);
 		Assert.assertEquals(menupage.pagetitle(),"Menu");
-		menupage.scroll_the_page(700, 750, 300, "down");
-		Assert.assertEquals(menupage.contentAbout(), "About");
+		menupage.click_Close_Icon();
+		homepage = new HomePage(driver);
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		
 		
 	}
 	
 
-	
-	/*
-	 * 
-	 * 
-	 * My Account Screen
-	 * 
-	 * 
-	 */
-	
-	
-	   /*
-			Validate whether able to copy the Bchat Id and beldex Address
-			*/
-		@Test(priority =3,groups ={"Regression","Smoke"} )
-		public void To_validate_whether_Able_to_Copy_Bchat_ID_and_Beldex_Address () {
-			
-			Assert.assertEquals(menupage.pagetitle(),"Menu");
-			menupage = new MenuPage(driver);
-			menupage.click_My_Account_option();
-			   myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.click("BchatId");
-		      myaccountpage.click("BchatId");
-		  try {
-		      
-			  Assert.assertEquals(Toast(), "Copied to clip board");	  
-		  }
-		  catch (StaleElementReferenceException e) {
-			  myaccountpage.click("BchatId");
-			  Assert.assertEquals(Toast(), "Copied to clip board");	
-		}
-		  catch (NoSuchElementException e) {
-			  myaccountpage.click("BchatId");
-			  Assert.assertEquals(Toast(), "Copied to clip board");	
-		}
-		  myaccountpage.click("BeldexAddress");
-		  myaccountpage.click("BeldexAddress");
-		  try {
-		  
-			  Assert.assertEquals(Toast(), "Copied to clip board");
-		  }
-		  catch (StaleElementReferenceException e) {
-			  myaccountpage.click("BeldexAddress");
-			  Assert.assertEquals(Toast(), "Copied to clip board");
-		}
-		  catch (NoSuchElementException e) {
-			  myaccountpage.click("BeldexAddress");
-			  Assert.assertEquals(Toast(), "Copied to clip board");
-		}
-		}
-		
-		/*
-		 Validate whether able to change the profile name.
-		 */
-		@Test(priority =4,groups ={"Regression","Smoke"}  )
-		public void To_Validate_Whether_Able_to_Change_the_profile_name () {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			 myaccountpage.EditDisplayName("John");
-			 myaccountpage.click_tick_inDisplayName();
-			 driver.navigate().back();
-			 homepage = new HomePage(driver);
-			 Assert.assertEquals(homepage.Pagetitle(),"BChat");
-			 homepage.clickMenuDrawer();
-			 menupage = new MenuPage(driver);
-			 Assert.assertEquals(menupage.getProfileName(),"John");
-			 menupage.click_My_Account_option();
-		}
-		 
-		 
-		 
-		 
-		/* 
-		Validate whether able to change the profile name multiple times.
-		*/
-		@Test(priority = 5,groups ={"Regression"} )
-		public void To_Validate_Whether_Able_to_change_Profile_Name_Multiple_times () {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			 myaccountpage.EditDisplayName("Abcd");
-			  myaccountpage.click_tick_inDisplayName();
-			  driver.navigate().back();
-			  homepage = new HomePage(driver);
-			  Assert.assertEquals(homepage.Pagetitle(),"BChat");
-			  homepage.clickMenuDrawer();
-			  menupage = new MenuPage(driver);
-			  Assert.assertEquals(menupage.getProfileName(),"Abcd");
-			  menupage.click_My_Account_option();
-			  
-			 myaccountpage.EditDisplayName("1234");
-			 myaccountpage.click_tick_inDisplayName();
-			 driver.navigate().back();
-			 homepage = new HomePage(driver);
-			 Assert.assertEquals(homepage.Pagetitle(),"BChat");
-			 homepage.clickMenuDrawer();
-			 menupage = new MenuPage(driver);
-			 Assert.assertEquals(menupage.getProfileName(),"1234");
-			 menupage.click_My_Account_option();
-			
-			 myaccountpage.EditDisplayName("xyzz");
-			 myaccountpage.click_tick_inDisplayName();
-			 driver.navigate().back();
-			 homepage = new HomePage(driver);
-			 Assert.assertEquals(homepage.Pagetitle(),"BChat");
-			 homepage.clickMenuDrawer();
-			 menupage = new MenuPage(driver);
-			 Assert.assertEquals(menupage.getProfileName(),"xyzz");
-			 menupage.click_My_Account_option();
-		}
-		
-		
-		
-		
-		/*
-		Validate the working of the share button QR code Functionality.
-	    */
-		@Test(priority = 6 ,groups ={"Regression","Smoke"} )
-		public void To_Validate_Working_of_Share_Button () {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.scroll_the_page(200, 600, 50, "down");
-			  myaccountpage.ClickshareButton();
-			  try{
-				  Assert.assertTrue(myaccountpage.shareScreenTitle().equals("1 image in total"));
-			  }
-			  catch (NoSuchElementException e) {
-				  myaccountpage.scroll_the_page(200, 600, 50, "down");
-				  myaccountpage.ClickshareButton();
-				  Assert.assertTrue(myaccountpage.shareScreenTitle().equals("1 image in total"));
-			}
-			  myaccountpage.clickcancel_In_share_Screen();
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-		}
-		
-		
-		
-		/*
-		Validate the navigation to home screen in both forward and backward direction.
-		*/
-		@Test(priority = 7,groups ={"Regression"} )
-		public void	To_Validate_the_navigation_to_home_screen () {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickBackArrow();
-			  homepage = new HomePage(driver);
-				Assert.assertEquals(homepage.Pagetitle(),"BChat");
-				homepage.clickMenuDrawer();
-				menupage = new MenuPage(driver);
-				menupage.click_My_Account_option();
-				  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-		}
-		
-		
-		/*
-		 Validate whether profile photo functionality is enable.
-		 */
-		@Test(priority =8,groups ={"Regression"} )
-		public void To_Validate_whether_profile_photo_functionality_is_enable () {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickProfileIcon();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");		  
-			  myaccountpage.clickcancel_In_ProfilePicture_Screen();
-			 
-			 
-		}
-		
-		/*
-		 Validate whether remove picture button in profile popup is not clickable when there is no profile picture
-		 */
-		@Test(priority = 9,groups ={"Regression"} )
-		public void To_Validate_whether_remove_picture_button_not_clickable_when_there_is_no_profile_picture () {
-			myaccountpage =new  MyAccountPage(driver);
-			Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			 myaccountpage.clickProfileIcon();
-			 myaccountpage.clickRemovePicture();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
-			  myaccountpage.clickcancel_In_ProfilePicture_Screen();
-		}
-	
-		/*
-		Validate whether able to upload picture using camera option of the device.
-		*/
-		@Test(priority = 10,groups ={"Regression","Smoke"} )
-		public void To_Validate_whether_able_to_upload_picture_using_camera_option_of_the_device () throws InterruptedException {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickProfileIcon();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
-			 myaccountpage.Set_Profile_Picture_from_Camera();
-			 try{
-				 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-				wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
-				myaccountpage.clickProfileIcon();
-			 }
-			 catch (NoSuchElementException e) {
-				 myaccountpage.clickProfileIcon();
-			}
-			 myaccountpage.clickRemovePicture();
-			 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-		}
-		
-		/*
-		 	Validate whether able to upload picture from gallery option of the device.
-		 */
-		@Test(priority = 11,groups ={"Regression","Smoke"} )
-		public void To_Validate_whether_able_to_upload_picture_from_gallery_option_in_device () throws InterruptedException {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			  myaccountpage.clickProfileIcon();
-			 Assert.assertEquals(myaccountpage.profilePictureScreentitle(), "Profile Picture");	
-			 try{
-				 myaccountpage.Set_Profile_Picture_from_Gallery();
-			 }
-			 catch (NoSuchElementException e) {
-				driver.navigate().back();
-				myaccountpage.Set_Profile_Picture_from_Gallery2();
-			}
-			try {
-				wait = new WebDriverWait(driver, Duration.ofSeconds(10));		
-				wait.until(ExpectedConditions.invisibilityOf(myaccountpage.Loading_Animation()));
-			}
-			catch (NoSuchElementException e) {
-				Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			}
-			}
-		
-			  		
-		
-		/*
-		Validate whether able to remove the uploaded profile photo.
-		*/
-		@Test(priority = 12,groups ={"Regression","Smoke"} )
-		public void To_Validate_whether_able_to_remove_the_uploaded_profile_photo () throws InterruptedException {
-			myaccountpage =new  MyAccountPage(driver);
-			  Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			myaccountpage.clickProfileIcon();
-			 myaccountpage.clickRemovePicture();
-			 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-            myaccountpage.clickBackArrow();
-		}
-		
-		
-		
-		/*
-		Validate the working of the upload profile photo without internet
-		Validate Whether Able to Edit display Name without internet
-		*/
-		@Test(priority = 13,groups ={"Regression"} )
-		public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () throws InterruptedException {			
-			turnOff_Mobile_Wifi();	
-			homepage = new HomePage(driver);
-			try {
-			Assert.assertTrue(homepage.hops_Warning().isDisplayed());
-			}
-			catch (NoSuchElementException e) {
-				Assert.assertTrue(homepage.hops_Warning().isDisplayed());
-			}
-			homepage.clickMenuDrawer();
-			menupage = new MenuPage(driver);
-			menupage.click_My_Account_option();
-			myaccountpage =new  MyAccountPage(driver);
-			 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-			myaccountpage.EditDisplayName("New"); 
-			myaccountpage.click_tick_inDisplayName();
-			 driver.navigate().back();
-			 homepage = new HomePage(driver);
-			 Assert.assertEquals(homepage.Pagetitle(),"BChat");
-			 homepage.clickMenuDrawer();
-			 menupage = new MenuPage(driver);
-			 Assert.assertEquals(menupage.getProfileName(),"New");
-			 menupage.click_My_Account_option();
-			
-			try{
-				myaccountpage.clickProfileIcon();
-				myaccountpage.clickUpload();			
-			Assert.assertEquals(Toast(),"Please check your internet connection");
-			turnOn_Mobile_Wifi();
-			}
-			catch (NoSuchElementException e) {
-				 Assert.assertEquals(myaccountpage.pagetitle(),"My Account");
-				 turnOn_Mobile_Wifi();
-			}
-			
-			myaccountpage.clickBackArrow();
-			
-		}
 	
 
 	
@@ -458,7 +172,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	/*
 	 Validate whether able to navigate back to the Menu screen
 	 */
-	@Test(priority = 14,groups ={"Regression"})
+	@Test(priority = 3,groups ={"Regression"})
 	public void To_Validate_whether_able_to_navigate_back_to_Menu_screen () {
 		homepage = new HomePage(driver);
 		homepage.clickMenuDrawer();
@@ -468,17 +182,17 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Assert.assertEquals(settingspage.pageTitle(),"Settings");
 		settingspage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		
 	}
 	
 	/*
 	Validate the working of the pay as you without enabling the wallet
 	*/
-	@Test(priority = 15,groups ={"Regression"})
+	@Test(priority = 4,groups ={"Regression"})
 	public void To_Validate_the_working_of_pay_as_you_without_enabling_the_wallet () {
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.clickMenuDrawer();	
 		menupage = new MenuPage(driver);
 		menupage.click_option_Settings();
@@ -491,7 +205,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	/*
 	 Validate the working of the Start wallet 
 	*/
-	@Test(priority = 16,groups ={"Regression","Smoke"})
+	@Test(priority = 5,groups ={"Regression","Smoke"})
 	public void To_Validate_the_working_of_Start_wallet () {
 		
 		try{
@@ -507,7 +221,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			Assert.assertEquals(settingspage.pageTitle(),"Settings");
 		}
 		settingspage.click_start_wallet();
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		homepage.clickMenuDrawer();
 		menupage.click_option_Wallet();
 		walletpage = new WalletPage(driver);
@@ -520,10 +234,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	/*
 	validate the working of the pay as you while enabling first time before entering into wallet
 	 */
-	@Test(priority = 17,groups ={"Regression"})
+	@Test(priority = 6,groups ={"Regression"})
 	public void To_validate_the_working_of_pay_as_you_while_enabling_first_time_before_entering_into_wallet () {
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.clickMenuDrawer();	
 		menupage = new MenuPage(driver);
 		menupage.click_option_Settings();
@@ -537,14 +251,14 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 	/*
 	 Validate the working of the Send Link Previews option in both On and Off condition.
 	*/
-	@Test(priority = 18,groups ={"Regression"})
+	@Test(priority = 7,groups ={"Regression"})
 	public void To_Validate_the_working_of_Send_Link_Previews_option_in_both_On_and_Off_condition () throws InterruptedException {
 		// to check in on condition
 		settingspage = new SettingsPage(driver);
 		Assert.assertEquals(settingspage.pageTitle(),"Settings");
 		settingspage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		homepage.clickSearch();
 		homepage.click_Option_Note_To_Myself();
 		notetomyself = new NoteToMyselfPage(driver);
@@ -557,7 +271,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		
 		//To check in off condition
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.clickMenuDrawer();	
 		menupage = new MenuPage(driver);
 		menupage.click_option_Settings();
@@ -567,7 +281,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		settingspage.click_Send_LinkPreview();
 		settingspage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(), "BChat");
+		Assert.assertEquals(homepage.Pagetitle(), "Chats");
 		homepage.clickSearch();
 		homepage.click_Option_Note_To_Myself();
 		notetomyself = new NoteToMyselfPage(driver);
@@ -596,7 +310,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 Validate whether able to navigate back to the Settings screen
 		 */
-		@Test(priority = 19,groups ={"Regression"})
+		@Test(priority = 8,groups ={"Regression"})
 		public void To_Validate_Whether_Able_To_Navigate_Back_To_The_Settings_Screen () {
 			try {
 			homepage = new HomePage(driver);
@@ -612,17 +326,17 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			Assert.assertEquals(notificationpage.pageTitle(),"Notifications");
 			notificationpage.click_Back_Arrow();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			
 		}
 		
 		/*
 		 Validate all options in the Nofication screen is enable if All Notications in ON Condition.
 		 */
-		@Test(priority = 20,groups ={"Regression"})
+		@Test(priority = 9,groups ={"Regression"})
 		public void To_Validate_all_options_in_Nofication_screen_is_enable_if_All_Notications_in_ON_Condition () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage = new MenuPage(driver);
 			menupage.click_Notification_option();
@@ -636,7 +350,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 Validate all options in the Nofication screen is enable if All Notications in Off Condition.
 		 */
-		@Test(priority = 21,groups ={"Regression"})
+		@Test(priority = 10,groups ={"Regression"})
 		public void To_Validate_all_options_in_Nofication_screen_is_enable_if_All_Notications_in_Off_Condition () {
 			
 			
@@ -651,7 +365,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		validate the navigation of the priority option
 		*/
-		@Test(priority = 22,groups ={"Regression"})
+		@Test(priority = 11,groups ={"Regression"})
 		public void To_validate_the_navigation_of_priority_option () {
 
 			notificationpage= new NotificationPage(driver);
@@ -667,7 +381,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the all radio buttons in the notification content.
 		*/
-		@Test(priority = 23,groups ={"Regression"})
+		@Test(priority = 12,groups ={"Regression"})
 		public void To_Validate_the_working_of_all_radio_buttons_in_notification_content () {
 			notificationpage= new NotificationPage(driver);
 			Assert.assertEquals(notificationpage.pageTitle(),"Notifications");
@@ -679,7 +393,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether the selected radio button is highlighted in the show option of the noftication content.
 		*/
-		@Test(priority = 24,groups ={"Regression"})
+		@Test(priority = 13,groups ={"Regression"})
 		public void To_Validate_whether_the_selected_radio_button_is_highlighted_in_show_option_of_noftication_content () {
 			notificationpage= new NotificationPage(driver);
 			Assert.assertEquals(notificationpage.pageTitle(),"Notifications");
@@ -702,7 +416,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the cancel button in Show popup screen
 		*/
-		@Test(priority = 25,groups ={"Regression"})
+		@Test(priority = 14,groups ={"Regression"})
 		public void To_Validate_the_working_of_cancel_button_in_Show_popup_screen () {
 			notificationpage= new NotificationPage(driver);
 			Assert.assertEquals(notificationpage.pageTitle(),"Notifications");
@@ -726,10 +440,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the home screen.
 		*/
-		@Test(priority = 26,groups ={"Regression"})
+		@Test(priority = 15,groups ={"Regression"})
 		public void To_Validate_whether_able_to_navigate_back_to_home_screen_from_Report_Issue () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage = new MenuPage(driver);
 			menupage.click_option_ReportIssue();
@@ -745,10 +459,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Validate the text box of the Report Issue Functionality using special Characters.
 		 Validate whether able to delete the send report
 		*/
-		@Test(priority = 29,groups ={"Regression"})
+		@Test(priority = 16,groups ={"Regression"})
 		public void To_Validate_the_textbox_of_Report_Issue_Functionality_using_special_Characters ()  {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			try{
 				homepage.clickMenuDrawer();
 			menupage = new MenuPage(driver);
@@ -789,7 +503,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the text box of the Report Issue Functionality using Alaphabats both in uppercase and lower case.
 		*/
-		@Test(priority = 30,groups ={"Regression"})
+		@Test(priority = 17,groups ={"Regression"})
 		public void To_Validate_textbox_of_Report_Issue_Functionality_using_Alaphabats_both_in_uppercase_and_lowercase ()  {
 			chatpage = new ChatPage(driver);
 			try {
@@ -836,7 +550,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the text box of the Report Issue Functionality is Allowing the Space in between the value.
 		*/
-		@Test(priority = 31,groups ={"Regression"})
+		@Test(priority = 18,groups ={"Regression"})
 		public void To_Validate_textbox_of_Report_Issue_Functionality_is_Allowing_Space_in_between_the_value ()    {
 			chatpage = new ChatPage(driver);
 			try {
@@ -868,7 +582,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the text box of the Report Issue Functionality by numerical value.
 		*/
-		@Test(priority = 32,groups ={"Regression"})
+		@Test(priority = 19,groups ={"Regression"})
 		public void To_Validate_textbox_of_Report_Issue_Functionality_by_numerical_value ()  {
 			chatpage = new ChatPage(driver);
 			try {
@@ -899,7 +613,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the presence of placeholder in the text box of Report Issue functionality.
 		*/
-		@Test (priority = 33,groups ={"Regression"})
+		@Test (priority = 20,groups ={"Regression"})
 		public void To_Validate_the_presence_of_placeholder_in_textbox_of_Report_Issue_functionality () {
 			chatpage = new ChatPage(driver);
 			try {
@@ -916,7 +630,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether the value entered in the text box of Report Issue functionality is editable and deletable.	
 		*/
-		@Test(priority = 34,groups ={"Regression"})
+		@Test(priority = 21,groups ={"Regression"})
 		public void To_Validate_whether_value_entered_in_textbox_of_Report_Issue_functionality_is_editable_and_deletable () {
 			chatpage = new ChatPage(driver);
 			try {
@@ -938,7 +652,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether crusher blink on clicking the text box of Report Issue functionality.
 		*/
-		@Test(priority = 35,groups ={"Regression"})
+		@Test(priority = 22,groups ={"Regression"})
 		public void To_Validate_whether_crusher_blink_on_clicking_textbox_of_Report_Issue_functionality () {
 			chatpage = new ChatPage(driver);
 			try {
@@ -956,7 +670,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		validate whether paste option is working on the text box Report Issue functionality.
 		*/
-		@Test(priority = 36,groups ={"Regression"})
+		@Test(priority = 23,groups ={"Regression"})
 		public void To_validate_whether_paste_option_is_working_on_textbox_Report_Issue_functionality () {
 			chatpage = new ChatPage(driver);
 			try {
@@ -988,7 +702,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able enter a lengthy value in the text box Report Issue functionality.
 		*/
-		@Test(priority = 37,groups ={"Regression"})
+		@Test(priority = 24,groups ={"Regression"})
 		public void To_Validate_whether_able_enter_lengthy_value_in_text_box_Report_Issue_functionality ()  {
 			chatpage = new ChatPage(driver);
 			try {
@@ -1026,7 +740,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether record option in the message functionality is enable.
 		*/
-		@Test(priority = 38,groups ={"Regression"})
+		@Test(priority = 25,groups ={"Regression"})
 		public void To_Validate_whether_record_option_in_message_functionality_is_enable () throws InterruptedException {
 			chatpage = new ChatPage(driver);
 			try {
@@ -1043,7 +757,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether the functions and icons response for the touch action.
 		*/
-		@Test(priority = 39,groups ={"Regression"})
+		@Test(priority = 26,groups ={"Regression"})
 		public void To_Validate_whether_the_functions_and_icons_response_fo_touch_action () {
 			chatpage = new ChatPage(driver);
 			try {
@@ -1077,7 +791,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		 Validate Message Requests Screen without any message request.
 		 Validate whether able to navigate out of the screen
 		 */
-		@Test(priority = 40,groups ={"Regression","Smoke"})
+		@Test(priority = 27,groups ={"Regression","Smoke"})
 		public void To_Validate_Message_Requests_Screen_without_any_message_request () {
 			homepage = new HomePage(driver);
 			try
@@ -1102,7 +816,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 pre for message request list in message request screen
 		 */
-		@Test(priority = 41,groups ={"Regression","Smoke"},invocationCount = 3)
+		@Test(priority = 28,groups ={"Regression","Smoke"},invocationCount = 3)
 		public void preSetup_For_Message_requests () throws InterruptedException {
 			
 			homepage = new HomePage(driver);
@@ -1128,7 +842,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether Message requests recevied from others is showing.
 		*/
-		@Test(priority = 42,groups ={"Regression","Smoke"})
+		@Test(priority = 29,groups ={"Regression","Smoke"})
 		public void To_Validate_whether_Message_requests_recevied_from_others_is_showing() throws InterruptedException {
 		     homepage = new HomePage(driver);
 			homepage.clickMenuDrawer();
@@ -1154,7 +868,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			Thread.sleep(1000);
 			createpasswordpage.clickOk();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 		    menupage =new MenuPage(driver);
 			menupage.click_option_Message_requests();
@@ -1174,7 +888,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the cancel button in all popup screen
 		*/
-		@Test(priority = 43,groups ={"Regression"})
+		@Test(priority = 30,groups ={"Regression"})
 		public void To_Validate_the_working_of_cancel_button_in_all_popup_screen () {
 			
 			messagerequestpage = new MessageRequestPage(driver);
@@ -1191,7 +905,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate working of the Accept in  the Message Request
 		*/
-		@Test(priority = 44,groups ={"Regression","Smoke"})
+		@Test(priority = 31,groups ={"Regression","Smoke"})
 		public void To_Validate_working_of_Accept_in_Message_Request () {
 			
 			messagerequestpage = new MessageRequestPage(driver);
@@ -1204,7 +918,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			chatpage.click_Send_Button();
 			driver.navigate().back();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			Assert.assertEquals(homepage.get_DisplayName_Or_Id_Of_ChatItem(),IdorName);
 			
 		}
@@ -1212,10 +926,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the Block in the Message request
 		*/
-		@Test(priority = 45,groups ={"Regression","Smoke"})
+		@Test(priority = 32,groups ={"Regression","Smoke"})
 		public void To_Validate_the_working_of_Block_in_Message_request () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage = new  MenuPage(driver);
 			menupage.click_option_Message_requests();
@@ -1225,7 +939,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			messagerequestpage.Block_First_request_In_List();
 			messagerequestpage.click_Back_Arrow();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage = new  MenuPage(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -1243,10 +957,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate working of the Delete in the Message request.
 		*/
-		@Test(priority = 46,groups ={"Regression","Smoke"})
+		@Test(priority = 33,groups ={"Regression","Smoke"})
 		public void To_Validate_working_of_the_Delete_in_Message_request () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage = new  MenuPage(driver);
 			menupage.click_option_Message_requests();
@@ -1272,10 +986,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the yes,I'm Safe option.
 		*/
-		@Test(priority = 47,groups ={"Regression"})
+		@Test(priority = 34,groups ={"Regression"})
 		public void To_Validate_the_working_of_yesIm_Safe_button () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 		    menupage =new MenuPage(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -1290,7 +1004,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether the value entered in the pin field is visible.
 		*/
-		@Test(priority = 48,groups ={"Regression"})
+		@Test(priority = 35,groups ={"Regression"})
 		public void To_Validate_whether_the_value_entered_in_pin_field_is_visible ()
 		{
 			recoveryseedpage = new RecoverySeedPage(driver); 
@@ -1305,7 +1019,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		Validate whether value entered in the pin field is deletable.
 		Validate whether value entered in the pin field is Editable.
 		*/
-		@Test(priority = 49,groups ={"Regression"})
+		@Test(priority = 36,groups ={"Regression"})
 		public void To_Validate_whether_value_entered_in_pin_field_is_deletable_and_Editable () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
@@ -1320,7 +1034,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		validate Whether able to navigate back to the previous screen from pin screen
 		*/
-		@Test(priority = 50,groups ={"Regression"})
+		@Test(priority = 37,groups ={"Regression"})
 		public void To_validate_Whether_able_to_navigate_back_to_previous_screen_from_pin_screen () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
@@ -1333,23 +1047,23 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the home screen
 		*/
-		@Test(priority = 51,groups ={"Regression"})
+		@Test(priority = 38,groups ={"Regression"})
 		public void To_Validate_whether_able_to_navigate_back_to_home_screen () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
 			recoveryseedpage.click_BackArrow();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		}
 		
 		
 		/*
 		Validate the password word functionality in the recover seed screen with Invalid pin.
 		*/
-		@Test(priority = 52,groups ={"Regression","Smoke"})
+		@Test(priority = 39,groups ={"Regression","Smoke"})
 		public void To_Validate_the_password_word_functionality_in_recover_seed_screen_with_Invalid_pin () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 		    menupage =new MenuPage(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -1378,7 +1092,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the password word functionality in the recover seed screen with valid pin.
 		*/
-		@Test(priority = 53,groups ={"Regression","Smoke"})
+		@Test(priority = 40,groups ={"Regression","Smoke"})
 		public void To_Validate_the_password_word_functionality_in_recover_seed_screen_with_valid_pin () {
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.Pin_Screen_title(), "Verify PIN");
@@ -1390,7 +1104,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to copy the seed.
 		*/
-		@Test(priority = 54,groups ={"Regression","Smoke"})
+		@Test(priority = 41,groups ={"Regression","Smoke"})
 		public void To_Validate_whether_able_to_copy_the_seed (){
 			recoveryseedpage = new RecoverySeedPage(driver);
 			Assert.assertEquals(recoveryseedpage.pageTitle(),"Recovery Seed");
@@ -1411,7 +1125,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 				recoveryseedpage.click_BackArrow();
 			}
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			
 		}
 		
@@ -1428,7 +1142,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of help functionality
 		*/
-		@Test(priority = 55,groups ={"Regression"} )
+		@Test(priority = 42,groups ={"Regression"} )
 		public void To_Validate_the_working_of_help_functionality () {
 			homepage = new HomePage(driver);
 			homepage.clickMenuDrawer();			
@@ -1442,7 +1156,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the to Gmail id in the Gmail screen.
 		*/
-		@Test(priority = 56,groups ={"Regression"} )
+		@Test(priority = 43,groups ={"Regression"} )
 		public void To_Validate_the_to_Gmail_id_in_Gmail_screen () {
 			menupage =new MenuPage(driver);
 			Assert.assertTrue(menupage.get_element_of_GmailScreen().isDisplayed());
@@ -1453,14 +1167,14 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the Home screen from gmail screen.
 		*/
-		@Test(priority = 57,groups ={"Regression"} )
+		@Test(priority = 44,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_navigate_back_to_Homescreen_from_gmailScreen () {
 			menupage =new MenuPage(driver);
 			Assert.assertTrue(menupage.get_element_of_GmailScreen().isDisplayed());
 			driver.navigate().back();
 			driver.navigate().back();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		}
 		
 		
@@ -1475,10 +1189,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate the working of the Invite functionality
 		*/
-		@Test(priority = 58,groups ={"Regression","Smoke"} )
+		@Test(priority = 45,groups ={"Regression","Smoke"} )
 		public void To_Validate_the_working_of_Invite_functionality () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage =new MenuPage(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -1489,13 +1203,13 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the Home screen from invite.
 		*/
-		@Test(priority = 59,groups ={"Regression","Smoke"} )
+		@Test(priority = 46,groups ={"Regression","Smoke"} )
 		public void To_Validate_whether_able_to_navigate_back_to_HomeScreen_From_invite () {
 			menupage =new MenuPage(driver);
 			Assert.assertTrue(menupage.get_Invite_Screen_element().isDisplayed());
 			menupage.click_cancel_In_Inivite();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		}
 		
 		
@@ -1511,10 +1225,10 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 Validate the working of about functionality
 		 */
-		@Test(priority = 60,groups ={"Regression"} )
+		@Test(priority = 47,groups ={"Regression"} )
 		public void To_Validate_the_working_of_about_functionality () {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage =new MenuPage(driver);
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
@@ -1529,13 +1243,13 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		Validate whether able to navigate back to the Home screen from about screen.
 		*/
-		@Test(priority = 61,groups ={"Regression"} )
+		@Test(priority = 48,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_navigate_back_to_HomeScreen_from_about_screen () {
 			menupage =new MenuPage(driver);
 			Assert.assertEquals(menupage.About_Screen_Title(), "About");
 			driver.navigate().back();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		}
 		
 		
@@ -1550,7 +1264,7 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 		/*
 		 validate the working of theme button
 		 */
-		@Test(priority = 62,groups ={"Regression","Smoke"} )
+		@Test(priority = 49,groups ={"Regression","Smoke"} )
 		public void To_validate_the_working_of_theme_Change_button () {
 			homepage = new HomePage(driver);
 			homepage.clickMenuDrawer();
@@ -1558,25 +1272,25 @@ public class Menu_Drawer_Screen_And_Functionalities extends baseClass{
 			Assert.assertEquals(menupage.pagetitle(),"Menu");
 			menupage.click_theme_ChnageButton();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		}
 		
 		/*
 		 validate whether able to click the theme change button multiple times
 		 */
-		@Test(priority = 63,groups ={"Regression"} )
+		@Test(priority = 50,groups ={"Regression"} )
 		public void To_validate_whether_able_to_change_theme_multiple_times () {
 			for(int i =0; i<=10;i++) {
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			homepage.clickMenuDrawer();
 			menupage =new MenuPage(driver);
 			menupage.click_theme_ChnageButton();
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			}
 			homepage = new HomePage(driver);
-			Assert.assertEquals(homepage.Pagetitle(),"BChat");
+			Assert.assertEquals(homepage.Pagetitle(),"Chats");
 			
 		}
 		 

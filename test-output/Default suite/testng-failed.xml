@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities">
+      <class name="Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities">
         <methods>
+          <include name="To_Validate_whether_able_to_join_socialGroup_without_internet_connection"/>
           <include name="openApp"/>
+          <include name="To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL"/>
           <include name="closeApp"/>
-          <include name="To_validate_whether_able_to_enable_pay_as_you_chat_using_shortcut"/>
+          <include name="To_Validate_Scanner_in_the_Join_SocialGroup_by_scanning_a_Invalid_BarCode"/>
         </methods>
-      </class> <!-- Bchat.TestScenarios.OneToOne_Chat_Screen_And_its_functionalities -->
+      </class> <!-- Bchat.TestScenarios.Join_SocialGroup_screen_And_its_Functionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

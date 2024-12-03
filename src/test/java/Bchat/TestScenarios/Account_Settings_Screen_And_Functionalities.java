@@ -92,7 +92,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		recoveryphrasepage.clickCopyIcon();
 		recoveryphrasepage.ClickContinue();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.clickMenuDrawer();
 		menupage = new MenuPage(driver);
 		menupage.click_Account_Settings();
@@ -100,9 +100,206 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	
 	
 	/*
+	 Validate whether able to change the profile name.
+	 */
+	@Test(priority =1,groups ={"Regression","Smoke"}  )
+	public void To_Validate_Whether_Able_to_Change_the_profile_name () {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		  Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		 accountsettingspage.EditDisplayName("John");
+		
+		 driver.navigate().back();
+		 homepage = new HomePage(driver);
+		 Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		 homepage.clickMenuDrawer();
+		 menupage = new MenuPage(driver);
+		 Assert.assertEquals(menupage.getProfileName(),"John");
+		 menupage.click_Account_Settings();
+	}
+	 	 
+	 
+	/* 
+	Validate whether able to change the profile name multiple times.
+	*/
+	@Test(priority = 2,groups ={"Regression"} )
+	public void To_Validate_Whether_Able_to_change_Profile_Name_Multiple_times () {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		 accountsettingspage.EditDisplayName("Abcd");
+		
+		  driver.navigate().back();
+		  homepage = new HomePage(driver);
+		  Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		  homepage.clickMenuDrawer();
+		  menupage = new MenuPage(driver);
+		  Assert.assertEquals(menupage.getProfileName(),"Abcd");
+		  
+		  menupage.click_Account_Settings();		  
+		 accountsettingspage.EditDisplayName("1234");		
+		 driver.navigate().back();
+		 homepage = new HomePage(driver);
+		 Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		 homepage.clickMenuDrawer();
+		 menupage = new MenuPage(driver);
+		 Assert.assertEquals(menupage.getProfileName(),"1234");		 
+		 menupage.click_Account_Settings();
+		
+		 accountsettingspage.EditDisplayName("xyzz");		 
+		 driver.navigate().back();
+		 homepage = new HomePage(driver);
+		 Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		 homepage.clickMenuDrawer();
+		 menupage = new MenuPage(driver);
+		 Assert.assertEquals(menupage.getProfileName(),"xyzz");		 
+		 menupage.click_Account_Settings();
+	}
+	
+
+	/*
+	 Validate whether profile photo functionality is enable.
+	 */
+	@Test(priority =3,groups ={"Regression"} )
+	public void To_Validate_whether_profile_photo_functionality_is_enable () {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		  accountsettingspage.open_ProfilePicture_Popup();
+		 Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");		  
+		  accountsettingspage.clickcancel_In_ProfilePicture_Screen();
+		  accountsettingspage.clickDone_button();
+		 
+	}
+	
+	/*
+	 Validate whether remove picture button in profile popup is not clickable when there is no profile picture
+	 */
+	@Test(priority = 4,groups ={"Regression"} )
+	public void To_Validate_whether_remove_picture_button_not_clickable_when_there_is_no_profile_picture () {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		 accountsettingspage.open_ProfilePicture_Popup();
+		 accountsettingspage.clickRemovePicture();
+		 Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");	
+		  accountsettingspage.clickcancel_In_ProfilePicture_Screen();
+		  accountsettingspage.clickDone_button();
+	}
+
+	/*
+	Validate whether able to upload picture using camera option of the device.
+	*/
+	@Test(priority = 5,groups ={"Regression","Smoke"} )
+	public void To_Validate_whether_able_to_upload_picture_using_camera_option_of_the_device () throws InterruptedException {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.open_ProfilePicture_Popup();
+		 Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");	
+		 accountsettingspage.Set_Profile_Picture_from_Camera();
+		 try{
+			
+			accountsettingspage.open_ProfilePicture_Popup();
+		 }
+		 catch (NoSuchElementException e) {
+			 accountsettingspage.open_ProfilePicture_Popup();
+		}
+		 accountsettingspage.clickRemovePicture();
+		 accountsettingspage.clickDone_button();
+		 Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+	}
+	
+	/*
+	 	Validate whether able to upload picture from gallery option of the device.
+	 */
+	@Test(priority = 6,groups ={"Regression","Smoke"} )
+	public void To_Validate_whether_able_to_upload_picture_from_gallery_option_in_device () throws InterruptedException {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		  accountsettingspage.open_ProfilePicture_Popup();
+		 Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");	
+		 try{
+			 accountsettingspage.Set_Profile_Picture_from_Gallery();
+		 }
+		 catch (NoSuchElementException e) {
+			driver.navigate().back();
+			accountsettingspage.open_ProfilePicture_Popup();
+			 Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");
+			accountsettingspage.Set_Profile_Picture_from_Gallery2();
+			accountsettingspage.clickDone_button();
+		}
+		
+			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		
+		}
+		
+	/*
+	Validate whether able to remove the uploaded profile photo.
+	*/
+	@Test(priority = 7,groups ={"Regression","Smoke"} )
+	public void To_Validate_whether_able_to_remove_the_uploaded_profile_photo () throws InterruptedException {
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		  accountsettingspage.open_ProfilePicture_Popup();	
+		  Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");	
+		 accountsettingspage.clickRemovePicture();
+		 accountsettingspage.clickDone_button();
+		 Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+          driver.navigate().back();
+	}	
+	
+	/*
+	Validate the working of the upload profile photo without internet
+	Validate Whether Able to Edit display Name without internet
+	*/
+	@Test(priority = 8,groups ={"Regression"} )
+	public void Validate_the_working_of_upload_profile_photo_and_Edit_Display_Name_without_internet () throws InterruptedException {			
+		turnOff_Mobile_Wifi();	
+		homepage = new HomePage(driver);
+		try {
+		Assert.assertTrue(homepage.hops_Warning().isDisplayed());
+		}
+		catch (NoSuchElementException e) {
+			Assert.assertTrue(homepage.hops_Warning().isDisplayed());
+		}
+		homepage.clickMenuDrawer();
+		menupage = new MenuPage(driver);
+		menupage.click_My_Account_option();
+		accountsettingspage  = new AccountSettingsPage(driver);
+		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+		accountsettingspage.EditDisplayName("New"); 
+		try { 
+			driver.navigate().back();
+		 homepage = new HomePage(driver);
+		 Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		}
+		catch (NoSuchElementException e) {
+			driver.navigate().back();
+			 Assert.assertEquals(homepage.Pagetitle(),"Chats");
+		}
+		homepage.clickMenuDrawer();
+		 menupage = new MenuPage(driver);
+		 Assert.assertEquals(menupage.getProfileName(),"New");
+		 menupage.click_Account_Settings();
+		
+		try{
+			accountsettingspage.open_ProfilePicture_Popup();
+			Assert.assertEquals(accountsettingspage.profilePictureScreentitle(), "Profile Picture");	
+			accountsettingspage.clickUpload();			
+		Assert.assertEquals(Toast(),"Please check your internet connection");
+		accountsettingspage.clickDone_button();
+		turnOn_Mobile_Wifi();
+		}
+		catch (NoSuchElementException e) {
+			 Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
+			 turnOn_Mobile_Wifi();
+		}
+		
+		
+		
+	}
+	
+	
+	/*
 	 * To Validate the working of the Show BChatId option
 	*/
-	@Test(priority = 1,groups ={"Regression"} )
+	@Test(priority = 9,groups ={"Regression"} )
 	public void To_validate_the_working_of_the_Show_BChatId_option () {
 	
 		accountsettingspage =new AccountSettingsPage(driver);
@@ -115,7 +312,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	To validate the working of the Show BeldexAddress option 
 	*/
-	@Test(priority = 2,groups ={"Regression"} )
+	@Test(priority = 10,groups ={"Regression"} )
 	public void To_validate_the_working_of_the_Show_Beldex_Address_option () {
 	
 		accountsettingspage =new AccountSettingsPage(driver);
@@ -129,7 +326,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	To validate the working of the show Qrcode option 
 	*/
-	@Test(priority = 3,groups ={"Regression","Smoke"} )
+	@Test(priority = 11,groups ={"Regression","Smoke"} )
 	public void To_validate_the_working_of_the_Show_QrCode_option () {
 	
 		accountsettingspage =new AccountSettingsPage(driver);
@@ -142,7 +339,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	To validate the working of the copy icon in the bchat id in both normal view and in the popup screen
 	*/
-	@Test(priority = 4,groups ={"Regression","Smoke"} )
+	@Test(priority = 12,groups ={"Regression","Smoke"} )
 	public void To_validate_the_working_of_copy_icon_in_Bchat_Id () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -163,16 +360,14 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	catch (NoSuchElementException e) {
 		accountsettingspage.clickCopyIcon();
 		Assert.assertEquals(Toast(),"Copied to clip board");
-	}
-	
-	
+	}	
 	}
 	
 	
 	/*
 	To validate the working of the copy icon in the beldex Address in both normal view and in the popup screen
 	*/
-	@Test(priority = 5,groups ={"Regression","Smoke"} )
+	@Test(priority = 13,groups ={"Regression","Smoke"} )
 	public void To_validate_the_working_of_copy_icon_in_Beldex_Address () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -202,7 +397,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	 To Validate the Navigation to the About BNS screen
 	 */
-	@Test(priority =6,groups ={"Regression"} )
+	@Test(priority =14,groups ={"Regression"} )
 	public void  To_Validate_the_Navigation_to_About_BNS_screen () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -216,7 +411,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	To validate the working of the share qr code.
 	*/
-	@Test(priority = 7,groups ={"Regression","Smoke"} )
+	@Test(priority = 15,groups ={"Regression","Smoke"} )
     public void To_validate_the_working_of_the_share_qr_code () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -230,7 +425,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	  Validate the verify function with invalid bns name
 	 */
-	@Test(priority = 8,groups ={"Regression","Smoke"} )
+	@Test(priority = 16,groups ={"Regression","Smoke"} )
 	public void To_Validate_the_verify_function_with_invalid_bns_name () throws InterruptedException {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -250,7 +445,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 //	/*
 //	  Validate the verify function with valid bns name
 //	 */
-//	@Test(priority = 9,groups ={"Regression","Smoke"} )
+//	@Test(priority = 16,groups ={"Regression","Smoke"} )
 //	public void To_Validate_the_verify_function_with_valid_bns_name () throws InterruptedException {
 //		accountsettingspage =new AccountSettingsPage(driver);
 //		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -264,7 +459,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	 Validate whether verify and link buttons are enabled without entering any value in bns name
 	 */
-	@Test(priority = 10,groups ={"Regression"} )
+	@Test(priority = 17,groups ={"Regression"} )
 	public void To_Validate_verify_and_link_buttons_are_enabled_without_entering_any_value_in_bns_name () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -280,7 +475,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	 validate the working cancel button in link bns popup screen
 	 */
-	@Test(priority = 11,groups ={"Regression"} )
+	@Test(priority = 18,groups ={"Regression"} )
 	public void To_validate_the_working_cancel_button_in_link_bns_popup_screen () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.get_Link_BNS_Popup_Screen_Title(), "Link BNS");
@@ -291,7 +486,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	validate whether verify button is enabled without the word .bdx in bns name
 	*/
-	@Test(priority = 12,groups ={"Regression"} )
+	@Test(priority = 19,groups ={"Regression"} )
 	public void To_validate_Whether_verify_button_is_enabled_without_the_word_bdx_in_bns_name () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -310,7 +505,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	 Validate whether link button is enabled for invalid bns name
 	 */
-	@Test(priority = 13,groups ={"Regression"} )
+	@Test(priority = 20,groups ={"Regression"} )
 	public void To_validate_whether_link_button_is_enabled_for_invalid_bns_name () {
 	 
 		accountsettingspage =new AccountSettingsPage(driver);
@@ -333,24 +528,22 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	accountsettingspage.click_Cancel_Button_In_Popup_Screen();
 	
 	}
-	
-	
-	
+		
 	/*
 	 Validate Whether the screen is scrollable.
 	 */
-	@Test(priority = 14,groups ={"Regression"} )
+	@Test(priority = 21,groups ={"Regression"} )
 	public void To_Validate_Whether_the_screen_is_scrollable () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
 		accountsettingspage.scroll_the_page(100, 100, 500, "down");
-		Assert.assertEquals(accountsettingspage.Content_changelog(), "Changelog");
-	
+		Assert.assertEquals(accountsettingspage.Content_changelog(), "Changelog");	
 	}
+	
 	/*
 	Validate the working of the FeedBack option
 	*/
-	@Test(priority = 15,groups ={"Regression"} )
+	@Test(priority = 22,groups ={"Regression"} )
 	public void To_Validate_the_working_of_the_FeedBack_option () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -358,12 +551,11 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		Assert.assertEquals(accountsettingspage.feedback_mail_Id(), "feedback@beldex.io");
 		
 	}
-	
-	
+		
 	/*
 	Validate whether able to navigate back to the my account screen from gamil
 	*/
-	@Test(priority = 16,groups ={"Regression"} )
+	@Test(priority = 23,groups ={"Regression"} )
 	public void To_Validate_whether_able_to_navigate_back_to_my_account_screen_from_gmail () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.feedback_mail_Id(), "feedback@beldex.io");
@@ -371,10 +563,11 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		driver.navigate().back();
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
 	}
+	
 	/*
  	Validate the working of the  FAQ option 
 	 */
-	@Test(priority = 17,groups ={"Regression"} )
+	@Test(priority = 24,groups ={"Regression"} )
 	public void To_Validate_the_working_of_the_FAQ_option () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -385,7 +578,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate whether able to navigate back to the my account screen From FAQ Screen.
 	*/
-	@Test(priority = 18,groups ={"Regression"} )
+	@Test(priority = 25,groups ={"Regression"} )
      public void To_Validate_whether_able_to_navigate_back_to_my_account_screen_From_FAQ_Screen () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.FAQ_Page_Title(), "Frequently Asked Questions");
@@ -396,7 +589,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	 Validate the working of the change log option
 	 */
-	@Test (priority =19,groups ={"Regression"} )
+	@Test (priority =26,groups ={"Regression"} )
 	public void To_Validate_the_working_of_change_log_option () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -408,7 +601,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate the working of the dropdown.
 	*/
-	@Test(priority = 20,groups ={"Regression"} )
+	@Test(priority = 27,groups ={"Regression"} )
 	public void To_Validate_the_working_of_the_dropdown () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.ChangeLog_PageTitle(), "Changelog");
@@ -419,7 +612,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate Whether screen is scrollable
 	*/
-	@Test(priority = 21,groups ={"Regression"} )
+	@Test(priority = 28,groups ={"Regression"} )
 	public void To_Validate_Whether_screen_is_scrollable () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.ChangeLog_PageTitle(), "Changelog");
@@ -432,7 +625,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate whether able to navigate back to the my Account Settings screen
 	*/
-	@Test(priority = 22,groups ={"Regression"} )
+	@Test(priority = 29,groups ={"Regression"} )
 	public void To_Validate_whether_able_to_navigate_back_to_my_account_screen_from_changeLog () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.ChangeLog_PageTitle(), "Changelog");
@@ -441,7 +634,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		
 	}
 
-	
+
 	
 	/*
 	 * 
@@ -455,7 +648,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate the working of the Hops Screen without Internet Connection.
 	*/
-	@Test(priority = 23,groups ={"Regression"})
+	@Test(priority = 30,groups ={"Regression"})
 	public void To_Validate_the_working_of_the_Hops_Screen_without_Internet_Connection () throws InterruptedException {
 		turnOff_Mobile_Wifi();
 		accountsettingspage = new AccountSettingsPage(driver);
@@ -490,7 +683,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate whether able to navigate back to the My Account Screen.
 	*/
-	@Test(priority = 24,groups ={"Regression"})
+	@Test(priority = 31,groups ={"Regression"})
 	public void To_Validate_whether_able_to_navigate_back_to_the_My_Account_Screen () {
 		
 		hopspage =new HopsPage(driver);
@@ -505,7 +698,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate the working of the Hops Screen with Internet Connection.
 	*/
-	@Test(priority = 25,groups ={"Regression"})
+	@Test(priority = 32,groups ={"Regression"})
 	public void To_Validate_the_working_of_the_Hops_Screen_with_Internet_Connection () {
 		accountsettingspage =new AccountSettingsPage(driver);
 		Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -550,7 +743,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	Validate whether the functions present in the App Lock screen response for the touch action.
 	Validate navigation to the functions in the App Lock screen in both forward and backward direction.
 	*/
-	@Test(priority = 26,groups ={"Regression"} )
+	@Test(priority = 33,groups ={"Regression"} )
 	public void To_Validate_navigation_to_the_functions_in_the_App_Lock_screen () {
 		 accountsettingspage =new AccountSettingsPage(driver);
 	        Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -573,7 +766,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate whether able to navigate back to the Account Settings Screen.
 	*/
-	@Test(priority = 27,groups ={"Regression"} )
+	@Test(priority = 34,groups ={"Regression"} )
 	public void To_Validate_whether_able_to_navigate_back_to_the_AccountSettings_Screen () {
 		
 
@@ -591,7 +784,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	 /*
 	Validate the Change password fields with Invalid Old password value
 	*/
-	@Test(priority = 28,groups ={"Regression","Smoke"} )
+	@Test(priority = 35,groups ={"Regression","Smoke"} )
 	public void To_Validate_the_Change_password_fields_with_Invalid_Old_password_value () {
 		accountsettingspage =new AccountSettingsPage(driver);
 	    Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -625,7 +818,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate whether next button clickable without entering the values in all fields
 	*/
-	@Test(priority = 29,groups ={"Regression"} )
+	@Test(priority = 36,groups ={"Regression"} )
 	public void To_Validate_whether_next_button_clickable_without_entering_the_values_in_all_fields () {
 		createpasswordpage =new CreatePasswordPage(driver);
 		Assert.assertEquals(createpasswordpage.pageTitle(),"Create Password");
@@ -647,7 +840,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	/*
 	Validate the password fields with valid Old password and valid New Password and invalid Reenter password
 	*/
-	 @Test(priority = 30,groups ={"Regression"} )
+	 @Test(priority = 37,groups ={"Regression"} )
 	 public void To_Validate_password_fields_with_valid_Old_password_and_valid_New_Password_and_invalid_ReEnter_password () {
 		 applockpage = new AppLockPage(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -685,7 +878,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	 /*
 	     Validate whether able to set the new password with old password value
 	     */
-	 @Test(priority = 31,groups ={"Regression"} )
+	 @Test(priority = 38,groups ={"Regression"} )
 	 public void To_Validate_whether_able_to_set_the_new_password_with_old_password_value () {
 		applockpage = new AppLockPage(driver);
 		Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -723,7 +916,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		Validate whether the value entered in all pin number fields is editable.
 		Validate whether the value entered in all pin number fields is deleteable.
 		*/
-		@Test(priority=32,groups ={"Regression"} )
+		@Test(priority=39,groups ={"Regression"} )
 		public void TC_To_validate_Whether_Values_In_Password_Fields_are_Editable_And_deletable () {
 			
 			
@@ -750,7 +943,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	 /*
 	Validate both the Password fields by entering values Below boundary value.
 	*/
-		@Test(priority =33,groups ={"Regression"} )
+		@Test(priority =40,groups ={"Regression"} )
 		public void TC_To_Validate_the_Password_number_fields_by_entering_values_below_boundary_value_in_any_one_field () {
 			
 			applockpage = new AppLockPage(driver);
@@ -793,7 +986,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		  /* 
 		Validate whether values entered in the pin number fields are visible
 		*/
-		@Test(priority = 34,groups ={"Regression"} )
+		@Test(priority = 41,groups ={"Regression"} )
 		public void To_Validate_whether_values_entered_in_the_pin_number_fields_are_visible () {
 			applockpage = new AppLockPage(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -825,7 +1018,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate the password fields with valid Old password and Valid New Password.
 		*/
-		@Test(priority = 35,groups ={"Regression","Smoke"} )
+		@Test(priority = 42,groups ={"Regression","Smoke"} )
 		public void To_Validate_password_fields_with_valid_Old_password_and_Valid_New_Password () {
 			applockpage = new AppLockPage(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -845,7 +1038,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		 Validate the scrolling in both upward and downward direction.
 		 */
-		@Test (priority = 36,groups ={"Regression"} )
+		@Test (priority = 43,groups ={"Regression"} )
 		public void To_Validate_the_scrolling_in_both_upward_and_downward_direction () {
 			accountsettingspage = new AccountSettingsPage(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -872,7 +1065,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		 Validate the working of the Ok and Cancel option in the Screenlock inactivity timeout functionality
 		 */
-		@Test (priority = 37,groups ={"Regression"} )
+		@Test (priority = 44,groups ={"Regression"} )
 		public void To_Validate_working_of_Ok_and_Cancel_option_in_Screenlock_inactivity_timeout_functionality () {
 			applockpage = new AppLockPage(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -892,7 +1085,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		 Validate the whether able to select all timing options in Screenlock inactivity timeout functionality
 		 Validate whether the selected option is displayed in the AppLock screen.
 		 */
-		@Test (priority = 38,groups ={"Regression"} )
+		@Test (priority = 45,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_select_all_timing_options_in_Screenlock_inactivity_timeout_functionality_And_Selected_option_Is_displayed_in_AppLock_Screen () {
 			applockpage = new AppLockPage(driver);
 			Assert.assertEquals(applockpage.pageTitle(),"App Lock");
@@ -926,7 +1119,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate whether able to navigate back to the Account Settings screen
 		*/
-		@Test(priority = 39,groups ={"Regression"} )
+		@Test(priority = 46,groups ={"Regression"} )
 		public void To_Validate_whether_Able_to_navigate_back_to_Account_Settings_screen () {
 			accountsettingspage = new AccountSettingsPage(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -944,7 +1137,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate the working of the enter is send option in the messaging screen in on condition.
 	    */
-	   @Test(priority = 40,groups ={"Regression"} )
+	   @Test(priority = 47,groups ={"Regression"} )
 		public void To_Validate_working_of_enterkey_is_send_option_in_messaging_screen_in_on_condition () {
 		  
 		   accountsettingspage =new AccountSettingsPage(driver);
@@ -971,7 +1164,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate the working of the enter is send option in the messaging screen in off condition.
 		*/
-	   @Test(priority =41 ,groups ={"Regression"} )
+	   @Test(priority =48 ,groups ={"Regression"} )
 	   public void To_Validate_working_of_enter_is_send_option_in_messaging_screen_in_off_condition () {
 		   	homepage = new HomePage(driver);
 		   	homepage.clickMenuDrawer();
@@ -1003,7 +1196,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	    Validate Whether option in message trimming are clickabble without enabled delete old messages
 		*/
-	   @Test(priority = 42,groups ={"Regression"} )
+	   @Test(priority = 49,groups ={"Regression"} )
 	   public void To_Validate_Whether_option_in_message_trimming_are_clickabble_without_enabled_delete_old_messages () {
 		   homepage = new HomePage(driver);
 			Assert.assertEquals(homepage.Pagetitle(),"BChat");
@@ -1024,7 +1217,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	  Validate the Whether able to change the value in the conversation length limit
 	   */
-	  @Test(priority = 43,groups ={"Regression"} )
+	  @Test(priority = 50,groups ={"Regression"} )
 	   public void To_Validate_the_Whether_able_to_change_the_value_in_the_conversation_length_limit () {
 		  
 		  chatsettingspage = new ChatSettingsPage(driver);
@@ -1043,7 +1236,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   Validate whether entered value in conversation length limit field is displayed chat Setting Screen.
 	    Validate whether the value entered in Conversation length limit field is editable and deleteable.
 	   */
-	  @Test(priority =44,groups ={"Regression"} )
+	  @Test(priority =51,groups ={"Regression"} )
 	  public void To_Validate_whether_entered_value_in_conversation_length_limit_field_is_displayed_In_Chat_Settings () {
 		  chatsettingspage = new ChatSettingsPage(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -1065,7 +1258,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	  Validate the working of the Ok and cancel buttons in conversation length
 		*/
-	  @Test(priority = 45,groups ={"Regression"} )
+	  @Test(priority = 52,groups ={"Regression"} )
 	  public void To_Validate_the_working_of_Ok_and_cancel_buttons_in_conversation_length () {
 		  chatsettingspage = new ChatSettingsPage(driver);
 	 	   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -1082,7 +1275,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	 Validate the working of the delete button in the Delete all old messages now
 		*/
-	  @Test(priority = 46,groups ={"Regression"} ) 
+	  @Test(priority = 53,groups ={"Regression"} ) 
 	  public void To_Validate_the_working_of_delete_button_in_Delete_all_old_messages_now () {
 		  chatsettingspage = new ChatSettingsPage(driver);
 		   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -1112,7 +1305,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	  Validate the working of the cancel button in the Delete all old messages now
 	    */
-	   @Test(priority =47,groups ={"Regression"}  )
+	   @Test(priority =54,groups ={"Regression"}  )
 	   public void To_Validate_working_of_cancel_button_in_Delete_all_old_messages_now () {
 		   chatsettingspage = new ChatSettingsPage(driver);
 		   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -1126,7 +1319,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	   Validate Conversation length limit field Whether allowing space.
 	   */
-	   @Test(priority = 48,groups ={"Regression"} )
+	   @Test(priority = 55,groups ={"Regression"} )
 	   public void To_Validate_Conversation_length_limit_field_Whether_allowing_space () {
 		   chatsettingspage = new ChatSettingsPage(driver);
 		   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -1139,7 +1332,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	   /*
 	   validate whether paste option is working on Conversation length limit field.
 	   */
-	   @Test(priority = 49,groups ={"Regression"} )
+	   @Test(priority = 56,groups ={"Regression"} )
 	   public void To_Validate_whether_paste_option_is_working_on_Conversation_length_limit_field () {
 		   chatsettingspage = new ChatSettingsPage(driver);
 		   Assert.assertEquals(chatsettingspage.pageTitle(),"Chat Settings");
@@ -1164,7 +1357,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate the Blocked Contacts screen when there is no blocked contact
 		*/
-		@Test (priority = 50,groups ={"Regression","Smoke"} )
+		@Test (priority = 57,groups ={"Regression","Smoke"} )
 		public void To_Validate_the_Blocked_Contacts_screen_when_there_is_no_blocked_contact () {
 		
 			accountsettingspage = new AccountSettingsPage(driver);
@@ -1180,7 +1373,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate whether blocked contacts is showing.
 		*/
-		@Test (priority = 51,groups ={"Regression","Smoke"} )
+		@Test (priority = 58,groups ={"Regression","Smoke"} )
 		public void To_Validate_whether_blocked_contacts_is_showing () {
 			 accountsettingspage = new AccountSettingsPage(driver);
 			 Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -1209,7 +1402,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate whether able to navigate back to Account settings screen.
 		*/
-		@Test(priority = 52,groups ={"Regression"} )
+		@Test(priority = 59,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_navigate_back_to_AccoutSettings_screen_from_Blocked_Screen () {
 			accountsettingspage = new AccountSettingsPage(driver);
 			  accountsettingspage.click_Blocked_contact_Option();
@@ -1225,7 +1418,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		 	Validate the working of the cancel button in the unblock users popup.
 		 */
-		@Test(priority = 53,groups ={"Regression"} )
+		@Test(priority = 60,groups ={"Regression"} )
 		public void To_Validate_the_working_of_cancel_button_in_unblock_users_popup () {
 			accountsettingspage = new AccountSettingsPage(driver);
 			  accountsettingspage.click_Blocked_contact_Option();
@@ -1239,7 +1432,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate whether able to unblock the blocked contacts.
 	    */
-		@Test(priority = 54,groups ={"Regression"} )
+		@Test(priority = 61,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_unblock_the_blocked_contacts () {
 			blockedcontactspage = new BlockedContactsPage(driver);
 			 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
@@ -1252,7 +1445,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 		Validate whether able to unblock by multiselect the contacts in the blocked contacts screen.
 		*/
-		@Test(priority = 55,groups ={"Regression"} )
+		@Test(priority = 62,groups ={"Regression"} )
 		public void To_Validate_whether_able_to__Unblock_By_multiselect_the_contacts_in_blocked_contacts_screen() {
 			blockedcontactspage = new BlockedContactsPage(driver);
 			 Assert.assertEquals(blockedcontactspage.pageTitle(),"Blocked Contacts");
@@ -1292,7 +1485,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 	     Validate whether able to navigate back to the Account Settings screen from clear data popup
 	 	*/
-		@Test(priority = 56,groups ={"Regression"} )
+		@Test(priority = 63,groups ={"Regression"} )
 		public void To_Validate_whether_able_to_navigate_back_to_Account_Settings_Screen () {
 			accountsettingspage= new AccountSettingsPage(driver);
 			Assert.assertEquals(accountsettingspage.pageTitle(),"Account Settings");
@@ -1308,7 +1501,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 	    Validate the working of the cancel button in all popup 
 		*/
-		@Test(priority = 57,groups ={"Regression"} )
+		@Test(priority = 64,groups ={"Regression"} )
 		public void To_Validate_the_working_of_cancel_button_in_all_popup () {
 			accountsettingspage= new AccountSettingsPage(driver);
 			accountsettingspage.click_Clear_Data_option();
@@ -1333,7 +1526,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 		/*
 	    Validate the working of the clear all data option 
 	     */
-		@Test(priority = 58,groups ={"Regression","Smoke"} )
+		@Test(priority = 65,groups ={"Regression","Smoke"} )
 		public void To_Validate_the_working_of_clear_all_data_option () {
 			accountsettingspage= new AccountSettingsPage(driver);
 			accountsettingspage.click_Clear_Data_option();
@@ -1356,7 +1549,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 	    /*
 	     Validate the working of the delete option.
 	    */
-		@Test(priority = 59,groups ={"Regression","Smoke"} )
+		@Test(priority = 66,groups ={"Regression","Smoke"} )
 		public void To_Validate_the_working_of_delete_option () throws InterruptedException {
 		        presetup();
 		        accountsettingspage= new AccountSettingsPage(driver);
@@ -1381,13 +1574,7 @@ public class Account_Settings_Screen_And_Functionalities extends baseClass {
 					Assert.assertEquals(landingpage.pageTitle(), "Welcome to");
 				}
 			
-		}
-		
-		
-		
-		
-		
-		
+		}		
 }
 
 

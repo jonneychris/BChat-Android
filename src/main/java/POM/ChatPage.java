@@ -194,7 +194,7 @@ public class ChatPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/quoteViewBodyTextView")
 	private WebElement replycard;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Message details']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Message Details']")
 	private WebElement messagedetailsScreentitle;
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/declineMessageRequestButton")
@@ -323,7 +323,13 @@ public class ChatPage extends ActionsClass {
 	
 	public void delete_second_message () {
 		longPress(SecondMessageCard);
-		btnDelete.click();
+		try{
+			btnDelete.click();
+		}
+		catch (org.openqa.selenium.NoSuchElementException e) {
+			longPress(SecondMessageCard);
+			btnDelete.click();
+		}
 	}
     public void click_DeleteForEveryone () {
 		optionDeleteForEveryone.click();

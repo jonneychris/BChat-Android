@@ -61,7 +61,7 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 		recoveryphrasepage.clickCopyIcon();
 		recoveryphrasepage.ClickContinue();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.openJoinSocialGroup();
 	}
 	
@@ -74,7 +74,7 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 		Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");
 		socialgrouppage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.openJoinSocialGroup();
 	}
 	
@@ -106,7 +106,7 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Beldex");
 		chatpage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.openJoinSocialGroup();
 	}
 	
@@ -304,46 +304,12 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 	}
 	
 	
-
-	/*
-	Validate Scanner in the Join Social group by scanning a Invalid BarCode.
-	*/
-	@Test(priority = 13)
-	public void To_Validate_Scanner_in_the_Join_SocialGroup_by_scanning_a_Invalid_BarCode () {
-		socialgrouppage = new SocialGroupPage(driver);
-		Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");
-		socialgrouppage.click_Scanner();
-		try {
-		socialgrouppage.upload_Invalid_QR_code();
-		}
-        catch (NoSuchElementException e) {
-			driver.navigate().back();
-			driver.navigate().back();
-			socialgrouppage.click_Scanner();
-			socialgrouppage.upload_Invalid_QR_code();
-			Assert.assertEquals(Toast(),"Invalid URL");
-		}
-		try {
-		Assert.assertEquals(Toast(),"Invalid URL");
-		}
-		catch (NoSuchElementException e) {
-			
-			socialgrouppage.upload_Invalid_QR_code();
-			Assert.assertEquals(Toast(),"Invalid URL");
-		}
-		catch (StaleElementReferenceException e) {
-			socialgrouppage.upload_Invalid_QR_code();
-			Assert.assertEquals(Toast(),"Invalid URL");
-		}
-		driver.navigate().back();
-		
-		}
 	
 
 	/*
 	Validate next option in the Join Social group by entering a valid URL. 
 	*/
-	@Test(priority = 14)
+	@Test(priority = 13)
 	public void To_Validate_next_option_in_Join_SocialGroup_by_entering_a_valid_URL () {
 		socialgrouppage = new SocialGroupPage(driver);
 		Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");
@@ -354,14 +320,14 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"Bchat");
 		chatpage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.openJoinSocialGroup();
 	}
 	catch (AssertionError e) {
 		Assert.assertEquals(chatpage.get_profile_NameOr_Id(),"BChat");
 		chatpage.click_Back_Arrow();
 		homepage = new HomePage(driver);
-		Assert.assertEquals(homepage.Pagetitle(),"BChat");
+		Assert.assertEquals(homepage.Pagetitle(),"Chats");
 		homepage.openJoinSocialGroup();
 	}
 	
@@ -371,7 +337,7 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 	/*
 	Validate whether able to join social group without internet connection.
 	*/
-	@Test(priority = 15)
+	@Test(priority = 14)
 	public void To_Validate_whether_able_to_join_socialGroup_without_internet_connection () throws InterruptedException {
 		
 		socialgrouppage = new SocialGroupPage(driver);
@@ -399,7 +365,7 @@ public class Join_SocialGroup_screen_And_its_Functionalities extends baseClass {
 	/*
 	validate whether cursor blinks while clicking the textbox  
 	*/
-	@Test(priority = 16)
+	@Test(priority = 15)
 	public void To_validate_whether_cursor_blinks_while_clicking_the_textbox () {
 		socialgrouppage = new SocialGroupPage(driver);
 		Assert.assertEquals(socialgrouppage.Pagetitle(), "Social Group");

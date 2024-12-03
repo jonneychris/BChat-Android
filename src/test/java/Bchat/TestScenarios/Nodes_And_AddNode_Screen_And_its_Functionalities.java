@@ -329,7 +329,7 @@ public class Nodes_And_AddNode_Screen_And_its_Functionalities extends baseClass{
 	Validate whether able to add node without Internet connection
 	*/
 	@Test(priority = 14)
-	public void To_Validate_whether_able_to_Add_Node_without_Internet_connection () {
+	public void To_Validate_whether_able_to_Add_Node_without_Internet_connection () throws InterruptedException {
 		
 		walletsettingspage = new WalletSettingsPage(driver);
 		Assert.assertEquals(walletsettingspage.Nodes_Screen_title(),"Nodes");

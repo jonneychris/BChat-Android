@@ -27,14 +27,12 @@ public class MenuPage extends ActionsClass {
 	@AndroidFindBy(id="io.beldex.bchat:id/drawer_close_icon")
 	private WebElement Closeicon;
 	
-	@AndroidFindBy(id="io.beldex.bchat:id/drawer_qrcode_img")
+	@AndroidFindBy(id="io.beldex.bchat:id/account_setting_img")
 	private WebElement Qrcode;
 	
-	@AndroidFindBy(xpath="//android.widget.TextView[@text='Account Settings']")
+	@AndroidFindBy(id="io.beldex.bchat:id/account_setting_img")
 	private WebElement optionAccountSettings;
 	
-	
-
 	@AndroidFindBy(xpath="//android.widget.TextView[@resource-id=\"io.beldex.bchat:id/navigation_title\" and @text=\"Settings\"]")
 	private WebElement optionSettings;
 	
@@ -82,8 +80,6 @@ public class MenuPage extends ActionsClass {
 	private WebElement optionThemeChange;
 	
  
-
-	
 	public String pagetitle() {
 	String title=	pagetitle.getText();
 	return title;

@@ -133,6 +133,148 @@ public class AccountSettingsPage extends ActionsClass{
 	@AndroidFindBy(xpath="//android.widget.TextView[1][@text='Initial Release']")
 	private WebElement firstLogContent;
 	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Edit\"]")
+	private WebElement btnEdit;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Done\"]")	
+	private WebElement btnDone;
+	
+	@AndroidFindBy(xpath="//android.widget.ScrollView/android.view.View[5]/android.view.View")
+	private WebElement CameraIcon;
+	
+	@AndroidFindBy(className="android.widget.EditText")
+	private WebElement textboxeditname;
+			
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Profile Picture']")
+    private WebElement profilePictureScreenTitle;
+	
+	@AndroidFindBy(accessibility = "Close")
+	private WebElement btnCancelinProfilepictureScreen;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Upload']")
+	private WebElement btnUpload;
+	
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@text=\"Photos\"])[2]")
+	private WebElement optionsPhotos;
+	
+	@AndroidFindBy(xpath = "(//android.widget.TextView[@text=\"Photos\"])[1]")
+	private WebElement optionsPhotos2;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Camera']")
+	private WebElement optionCamera;
+	
+	@AndroidFindBy(xpath="//android.widget.RelativeLayout[@index='2']")
+	private WebElement FirstFolderInGallery;
+	
+	@AndroidFindBy(xpath="//android.widget.ImageView[@index='1']")
+	private WebElement FirstImageInGallery;
+	
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/crop_image_menu_crop")
+	private WebElement btnCrop;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Remove Picture']")
+	private WebElement btnRemovePicture;
+	
+	
+	@AndroidFindBy(id = "com.oplus.camera:id/shutter_button")
+	private WebElement btntakePhoto;
+	
+	@AndroidFindBy(id="com.oplus.camera:id/done_button")
+	private WebElement btntickAfterTakingPhoto;
+	
+	@AndroidFindBy(accessibility = "Cancel")
+	private WebElement btnCancelInGalleryOption;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/defaultRoomsLoader")
+	private WebElement loaderAnimation;
+	
+	@AndroidFindBy(id="io.beldex.bchat:id/back")
+    private WebElement BackArrow; 
+	
+    public void EditDisplayName (String NewName) {
+         btnEdit.click();
+    	textboxeditname.click();
+    	textboxeditname.clear();
+    	textboxeditname.sendKeys(NewName);	
+    	btnDone.click();
+    }
+
+    public  String profilePictureScreentitle() {
+   	 return profilePictureScreenTitle.getText();
+   }
+
+   public void clickcancel_In_ProfilePicture_Screen() {
+		btnCancelinProfilepictureScreen.click();
+	}
+    
+   public void clickBackArrow () {
+	   BackArrow.click();
+   }
+   
+   public void clickDone_button () {
+	btnDone.click();   
+   }
+   
+   public void open_ProfilePicture_Popup () {
+	   btnEdit.click();
+	   CameraIcon.click();
+	   
+   }
+   
+   public void clickRemovePicture () {
+	   btnRemovePicture.click();
+   }
+  
+   public void clickUpload () {
+	   btnUpload.click();
+   }
+  
+   public void Set_Profile_Picture_from_Gallery () {
+	   
+	  btnUpload.click();
+	   optionsPhotos.click();
+ 	   FirstFolderInGallery.click();
+ 	   FirstImageInGallery.click();
+ 	   btnCrop.click();   
+ 	   btnDone.click();
+   }
+   
+   public void Set_Profile_Picture_from_Gallery2 () {
+	  
+	  
+	   btnUpload.click();
+		optionsPhotos2.click();
+	 	FirstFolderInGallery.click();
+	 	FirstImageInGallery.click();
+	  btnCrop.click();
+	  btnDone.click();
+	   }
+   
+   public void Set_Profile_Picture_from_Camera () throws InterruptedException {
+	   
+	   
+	   btnUpload.click();
+	   optionCamera.click();
+ 	   btntakePhoto.click();
+ 	   Thread.sleep(3000);
+ 	   btntickAfterTakingPhoto.click();
+ 	   btnCrop.click(); 
+ 	   btnDone.click();
+ 	  
+   }
+   
+   public void set_Profile_Picture_Without_Internet () {
+	   
+	   btnEdit.click();
+	   CameraIcon.click();
+	   btnUpload.click();
+   }
+   
+   public WebElement Loading_Animation () {
+	   return loaderAnimation;
+   }
+	
 	public void Click_back_arrow () {
 		btnBackArrow.click();
 	}

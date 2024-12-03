@@ -25,11 +25,11 @@ public class NewChatPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.EditText")
 	private WebElement BchatIDOrBNSNameTextBox;
 	
-	@AndroidFindBy(xpath="//android.widget.Button[@index='1']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Let's BChat\"]")
 	private WebElement btnLetsBChat;
+	//android.widget.Button[@index='1']
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Your Chat ID']")
-	private WebElement btnYourBchatId;
+
 	
 	@AndroidFindBy(accessibility = "Back")
 	private WebElement btnBackArrow;
@@ -40,7 +40,7 @@ public class NewChatPage extends ActionsClass {
 	@AndroidFindBy(xpath="//android.widget.TextView[@text='Scan QR']")
 	private WebElement ScanQRCodeTitle;
 	
-	@AndroidFindBy(xpath = "//android.widget.ImageView[@index='1']")
+	@AndroidFindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ImageView")
 	private WebElement btnScanner;
 	
 	@AndroidFindBy(xpath="(//android.widget.TextView[@text='Photos'])[1]")
@@ -69,6 +69,9 @@ public class NewChatPage extends ActionsClass {
 	
 	@AndroidFindBy(id="io.beldex.bchat:id/defaultRoomsLoader")
 	private WebElement imageLoader;
+	
+	@AndroidFindBy(xpath="//android.widget.TextView[@text=\"Cancel\"]")
+	private WebElement btnCancel;
 	
 	public String Pagetitle() {
 		String title = pageTitle.getText();
@@ -99,10 +102,11 @@ public class NewChatPage extends ActionsClass {
 		
 	}
 	
-	
-	public void click_Your_BchatId () {
-		btnYourBchatId.click();
+	public void Click_Cancel () {
+		btnCancel.click();
 	}
+	
+
 	
 	public void click_Lets_Bchat () {
 		btnLetsBChat.click();

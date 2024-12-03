@@ -36,13 +36,13 @@ public class SecretGroupPage extends ActionsClass {
 	@AndroidFindBy(className = "android.widget.Button")
 	private WebElement btnCreate;
 	
-	@AndroidFindBy(xpath="//android.view.View[1]/android.widget.CheckBox")
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View")
 	private WebElement firstContactInList;
 	
-	@AndroidFindBy(xpath="//android.view.View[2]/android.widget.CheckBox")
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View")
 	private WebElement secondContactInList;
 	
-	@AndroidFindBy(xpath="//android.view.View[3]/android.widget.CheckBox")
+	@AndroidFindBy(xpath="//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[3]/android.view.View")
 	private WebElement thirdContactInList;
 	
 	@AndroidFindBy(xpath = "//android.view.View[1][@index='5']")
@@ -53,6 +53,13 @@ public class SecretGroupPage extends ActionsClass {
 	
 	@AndroidFindBy(xpath="//android.widget.EditText[2]/android.view.View/android.widget.TextView")
 	private WebElement placeholderSearch;
+	
+	@AndroidFindBy(xpath="(//android.view.View[@content-desc=\"Custom CheckBox\"])[1]")
+	private WebElement tickElementOfFirstContact;
+
+	@AndroidFindBy(xpath="(//android.view.View[@content-desc=\"Custom CheckBox\"])[2]")
+	private WebElement tickElementOfSecondContact;
+	
 	
 	public String Pagetitle() {
 		String title = pageTitle.getText();
@@ -97,9 +104,8 @@ public class SecretGroupPage extends ActionsClass {
 	}
 	
 	public void multiselect_contacts_In_List () {	
-		for(int i=1;i<=2;i++) {
-			driver.findElement(By.xpath("//android.view.View["+i+"]/android.widget.CheckBox")).click();
-		}
+		firstContactInList.click();
+		secondContactInList.click();
 	}
 	
 	public void clear_TextBoxes () {
@@ -140,4 +146,13 @@ public class SecretGroupPage extends ActionsClass {
   public String getPlacholder_of_Search_textbox () {
 	    return placeholderSearch.getText();
    }
+  
+  public WebElement First_Contact_Selected () {
+	  return tickElementOfFirstContact ;
+  }
+  
+  public WebElement Second_Contact_Selected () {
+	  return tickElementOfSecondContact ;
+	  
+  }
 }
